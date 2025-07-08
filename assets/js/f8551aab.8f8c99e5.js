@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstm_32_doc=self.webpackChunkstm_32_doc||[]).push([[2224],{1976:(e,s,c)=>{c.r(s),c.d(s,{default:()=>h});c(6540);var a=c(1656),t=c(4848);function h(){return(0,t.jsxs)(a.A,{children:[(0,t.jsx)("h1",{children:"My React page"}),(0,t.jsx)("p",{children:"This is a React page"})]})}}}]);

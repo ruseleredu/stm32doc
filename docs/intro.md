@@ -1,4 +1,5 @@
 ---
+sidebar_label: 'Introdução'
 sidebar_position: 1
 ---
 
@@ -45,3 +46,14 @@ The `cd` command changes the directory you're working with. In order to work wit
 The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
 
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+
+
+
+* Git SCM: https://git-scm.com/downloads
+* GitHub Desktop: https://desktop.github.com/download/
+* Java: https://www.java.com/pt-BR/download
+* STM32CubeMX: https://www.st.com/en/development-tools/stm32cubemx.html
+* STM32CubeCLT: https://www.st.com/en/development-tools/stm32cubeclt.html
+* STMCUFinder: https://www.st.com/en/development-tools/st-mcu-finder-pc.html
+* Visual Studio Code: https://code.visualstudio.com/download
+

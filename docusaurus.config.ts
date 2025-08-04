@@ -67,6 +67,20 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      {
+        id: "labs", // Unique ID for this docs instance
+        path: "labs", // Path to your API docs folder
+        routeBasePath: "labs", // Base URL for these docs (e.g., yoursite.com/api/...)
+        sidebarPath: require.resolve("./sidebarslabs.js"), // Separate sidebar for LAB docs
+        // ... other options specific to your API docs
+      },
+    ],
+  ],
+  // ... rest of your config
 
   themeConfig: {
     // Replace with your project's social card
@@ -84,7 +98,14 @@ const config: Config = {
           position: "left",
           label: "Documentos",
         },
+        {
+          to: "/labs/intro", // Link to a page in your API docs
+          label: "Laboratórios",
+          position: "left",
+          activeBaseRegex: `/labs/`, // Highlight when any API doc is active
+        },
         { to: "/blog", label: "Projetos", position: "left" },
+
         {
           href: "https://github.com/ruseleredu/stm32doc",
           label: "GitHub",

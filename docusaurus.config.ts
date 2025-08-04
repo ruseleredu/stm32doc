@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "My STM32 Site",
-  tagline: "STM32 is cool",
+  title: "ELT73A - 2025.2",
+  tagline: "Sistemas Microcontrolados",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -72,9 +72,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "Sistemas Microcontrolados",
       logo: {
-        alt: "My Site Logo",
+        alt: "Sistemas Microcontrolados Logo",
         src: "img/logo.svg",
       },
       items: [
@@ -82,9 +82,9 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Documentos",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/blog", label: "Projetos", position: "left" },
         {
           href: "https://github.com/ruseleredu/stm32doc",
           label: "GitHub",
@@ -99,13 +99,13 @@ const config: Config = {
           title: "Documentos",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Docusaurus",
+              href: "https://docusaurus.io/docs",
             },
           ],
         },
         {
-          title: "Community",
+          title: "Recursos",
           items: [
             {
               label: "Stack Overflow",
@@ -122,8 +122,12 @@ const config: Config = {
           ],
         },
         {
-          title: "Downloads",
+          title: "IDEs e Ferramentas",
           items: [
+            {
+              label: "Visual Studio Code",
+              href: "https://code.visualstudio.com/download",
+            },
             {
               label: "Git SCM",
               href: "https://git-scm.com/downloads",
@@ -136,6 +140,11 @@ const config: Config = {
               label: "Java",
               href: "https://www.java.com/pt-BR/download",
             },
+          ],
+        },
+        {
+          title: "Ferramentas",
+          items: [
             {
               label: "STM32CubeMX",
               href: "https://www.st.com/en/development-tools/stm32cubemx.html",
@@ -148,17 +157,13 @@ const config: Config = {
               label: "STMCUFinder",
               href: "https://www.st.com/en/development-tools/st-mcu-finder-pc.html",
             },
-            {
-              label: "Visual Studio Code",
-              href: "https://code.visualstudio.com/download",
-            },
           ],
         },
         {
           title: "More",
           items: [
             {
-              label: "Blog",
+              label: "Projetos",
               to: "/blog",
             },
             {

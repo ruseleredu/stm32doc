@@ -129,12 +129,12 @@ const config: Config = {
           title: "Recursos",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "WeAct Studio",
+              href: "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              label: "ST STM32F411",
+              href: "https://www.st.com/en/microcontrollers-microprocessors/stm32f411.html",
             },
             {
               label: "STM32-base",

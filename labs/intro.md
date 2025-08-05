@@ -1,10 +1,10 @@
 ---
 sidebar_position: 1
+title: Introdução
+description: Introdução as aulas de laboratório
 ---
 
-# Tutorial Intro
-
-Let's discover **Docusaurus in less than 5 minutes**.
+# Aulas de Laboratório
 
 ## Getting Started
 

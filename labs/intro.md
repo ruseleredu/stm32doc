@@ -6,42 +6,109 @@ description: Introdução as aulas de laboratório
 
 # Aulas de Laboratório
 
-## Getting Started
+## Git commands
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
+How to config git
 
 ```bash
-npm init docusaurus@latest my-website classic
+git config --global user.name "Your Name"
+git config --global user.email yourmail@domain.tld
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
+It's recommended to verify that the your Git installation is not performing any transformation between LFs and CRLFs.
 
 ```bash
-cd my-website
-npm run start
+git config --global core.autocrlf false
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+```bash
+git config list --show-origin
+```
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+## Running STM32CubeMX in command-line mode
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- https://www.st.com/resource/en/user_manual/um1718-stm32cubemx-for-stm32-configuration-and-initialization-c-code-generation-stmicroelectronics.pdf
+
+To run STM32CubeMX in interactive command-line mode, use the following command line:
+
+```bash
+"%STM32CubeMX_PATH%\jre\bin\java" -jar "%STM32CubeMX_PATH%\STM32CubeMX.exe" -i
+```
+
+To run STM32CubeMX in command-line mode, getting commands from a script, use the following command line:
+
+```bash
+"%STM32CubeMX_PATH%\jre\bin\java" -jar "%STM32CubeMX_PATH%\STM32CubeMX.exe" -s ScriptToLoad.txt
+```
+
+To run STM32CubeMX in command-line mode getting commands from a script and without UI, use the following command line:
+
+```bash
+"%STM32CubeMX_PATH%\jre\bin\java" -jar "%STM32CubeMX_PATH%\STM32CubeMX.exe" -q ScriptToLoad.txt
+```
+
+To generate a script
+
+```bash
+export script ScriptToLoad.txt
+```
+
+### Load STM32CubeMX Script
+
+Call for Help (--help, -h, /?)
+
+```bash
+LoadMX --help
+```
+
+Run STM32CubeMX interactively
+
+```bash
+LoadMX -i
+```
+
+Opens STM32CubeMX and loads default values for Project Name, Script and Code Generation (STM32F411CEUx, BaseScript.txt and N)
+
+```bash
+LoadMX
+```
+
+Load with Project Name
+Opens STM32CubeMX with provided Project Name and loads default values for Script and Code Generation (BaseScript.txt and N)
+
+```bash
+LoadMX ProjectName
+```
+
+Opens STM32CubeMX with provided Project Name and Script Name and loads default value for Code Generation (N)
+
+```bash
+LoadMX ProjectName ScriptName.txt
+```
+
+Opens STM32CubeMX with provided Project Name, Script Name and generate code
+
+```bash
+LoadMX ProjectName ScriptName.txt Y
+```
+
+## References
+
+### STM32 Arm® Cortex® MCU wiki
+
+- https://wiki.st.com/stm32mcu/
+
+### MiniF4-STM32F401CEU6
+
+- https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1
+
+### STM32CubeF4 MCU Firmware Package
+
+- https://github.com/STMicroelectronics/STM32CubeF4
+- https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer
+
+### STM32 Development Tools
+
+- https://www.st.com/en/development-tools/stm32cubemx.html
+- https://www.st.com/en/development-tools/stm32cubeclt.html
+- https://www.st.com/en/development-tools/stm32cubeprog.html

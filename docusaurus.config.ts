@@ -133,6 +133,10 @@ const config: Config = {
               href: "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1",
             },
             {
+              label: "STM32 MCU wiki",
+              href: "https://wiki.st.com/stm32mcu/wiki/Main_Page",
+            },
+            {
               label: "ST STM32F411",
               href: "https://www.st.com/en/microcontrollers-microprocessors/stm32f411.html",
             },

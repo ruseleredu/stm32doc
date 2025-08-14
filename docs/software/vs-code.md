@@ -1,7 +1,7 @@
 ---
 id: vs-code
 title: Visual Studio Code
-description: Informações gerais sobre o VS Code.
+description: The open source AI code editor.
 slug: /vs-code
 ---
 

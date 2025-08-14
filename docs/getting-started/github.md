@@ -22,3 +22,5 @@ git config --global core.autocrlf false
 ```bash
 git config list --show-origin
 ```
+
+## GitHub Actions

@@ -8,7 +8,7 @@ description: Introdução as aulas de laboratório
 
 ## Git commands
 
-How to config git
+How to config [git](https://git-scm.com/)
 
 ```bash
 git config --global user.name "Your Name"
@@ -20,6 +20,8 @@ It's recommended to verify that the your Git installation is not performing any 
 ```bash
 git config --global core.autocrlf false
 ```
+
+The `git config --list --show-origin` command lists all the Git configuration variables and their values, along with the file path where each setting is defined. This is useful for troubleshooting and understanding which configuration file is overriding another.
 
 ```bash
 git config list --show-origin

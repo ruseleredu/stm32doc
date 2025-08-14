@@ -20,3 +20,7 @@ The cheapest alternative to both official ST options is a Chinese ST-LINK/V2 clo
 This debugger has a 10-pin IDC connector. The pinout of this connector can be found below.
 
 ![ST-LINK/V2 Clone](/img/ST-LINK_V2_Clone_Header.png)
+
+## Firmware
+
+[ST-LINK boards firmware upgrade](https://www.st.com/en/development-tools/stsw-link007.html)

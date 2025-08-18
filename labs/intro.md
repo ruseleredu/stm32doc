@@ -6,6 +6,36 @@ description: Introdução as aulas de laboratório
 
 # Aulas de Laboratório
 
+Organização para os templates: https://github.com/ELT73A-LAB-TPL
+
+| Laboratório     | Data       | Conteúdo                                                        | Template                                         |
+| --------------- | ---------- | --------------------------------------------------------------- | ------------------------------------------------ |
+| [LAB00](#lab00) | 18/08/2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; | [TPL00](https://github.com/ELT73A-LAB-TPL/LAB00) |
+| [LAB01](#lab01) | 25/08/2025 | Revisão da programação em C; Ambiente de desenvolvimento;       | [TPL01](https://github.com/ELT73A-LAB-TPL/LAB01) |
+
+## [LAB00](/labs/lab00)
+
+Apresentação da Disicplina; Materiais utilizados na disciplina;
+
+- [ ] Atividades de EaD e Lab;
+- [ ] Ambiente de desenvolvimento;
+- [ ] Crie uma organização no GitHub;
+- [ ] Adicione os membros do seu grupo;
+- [ ] Promova o professor como owner;
+- [ ] Projeto Final;
+
+## [LAB01](/labs/lab01)
+
+Revisão da programação em C; Ambiente de desenvolvimento;
+
+- Atividades de EaD e Lab;
+- Ambiente de desenvolvimento;
+- Materiais utilizados;
+- Avaliações;
+- Projeto Final;
+
+## Projeto Final
+
 ## Git commands
 
 How to config [git](https://git-scm.com/)

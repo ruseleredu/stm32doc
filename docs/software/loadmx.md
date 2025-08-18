@@ -5,6 +5,8 @@ description: Load STM32CubeMX Script.
 slug: /loadmx
 ---
 
+https://github.com/ELT73A-LAB-TPL/CubeMX
+
 ## Como carregar um script do STM32CubeMX
 
 Call for Help (--help, -h, /?)

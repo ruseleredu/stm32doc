@@ -129,8 +129,8 @@ const config: Config = {
             },
 
             {
-              label: "Docusaurus",
-              href: "https://docusaurus.io/docs",
+              label: "GitHub Training",
+              href: "https://githubtraining.github.io/training-manual/#/01_getting_ready_for_class",
             },
           ],
         },
@@ -142,8 +142,16 @@ const config: Config = {
               href: "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1",
             },
             {
+              label: "DeepBlue",
+              href: "https://deepbluembedded.com/",
+            },
+            {
               label: "STM32 MCU wiki",
               href: "https://wiki.st.com/stm32mcu/wiki/Main_Page",
+            },
+            {
+              label: "STM32World Wiki",
+              href: "https://stm32world.com/wiki/Main_Page",
             },
             {
               label: "ST STM32F411",
@@ -197,7 +205,7 @@ const config: Config = {
           title: "GitHub",
           items: [
             {
-              label: "ELT73A-LAB-TPL",
+              label: "LABs Templates",
               href: "https://github.com/orgs/ELT73A-LAB-TPL/repositories",
             },
             {
@@ -207,15 +215,19 @@ const config: Config = {
           ],
         },
         {
-          title: "More",
+          title: "YouTube",
           items: [
             {
-              label: "Projetos",
-              to: "/blog",
+              label: "Adriano Ruseler",
+              href: "https://www.youtube.com/@adrianoruseler653",
             },
             {
-              label: "GitHub Dicas",
-              href: "https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/",
+              label: "STM32World",
+              href: "https://www.youtube.com/@stm32world",
+            },
+            {
+              label: "STMicroelectronics",
+              href: "https://www.youtube.com/@stmicroelectronics/videos",
             },
           ],
         },

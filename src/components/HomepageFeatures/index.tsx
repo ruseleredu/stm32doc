@@ -3,50 +3,94 @@ import clsx from "clsx";
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 
+//import useBaseUrl from "@docusaurus/useBaseUrl";
+import GitHubImage from "/img/github-mark.png"; // Use @site alias for src folder
+import VSCodeImage from "/img/vscode.png";
+import STM32Image from "/img/STM32.png";
+
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<"svg">>;
+  Svg?: React.ComponentType<React.ComponentProps<"svg">>;
+  image?: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Easy to Use",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    title: "GitHub Repository",
+    // Svg: require("@site/static/img/github-mark.svg").default,
+    image: GitHubImage, // Use the imported image variable here
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        O{" "}
+        <a href="https://github.com/" target="_blank">
+          GitHub
+        </a>{" "}
+        é uma plataforma de desenvolvimento de software baseada em nuvem, criada
+        para hospedar e gerenciar projetos de código usando o sistema de
+        controle de versão
+        <a href="https://git-scm.com/downloads" target="_blank">
+          {" "}
+          Git
+        </a>
+        .
       </>
     ),
   },
   {
-    title: "Focus on What Matters",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    title: "Visual Studio Code",
+    // Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    image: VSCodeImage, // Use the imported image variable here
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        <a href="https://code.visualstudio.com/" target="_blank">
+          Visual Studio Code
+        </a>{" "}
+        é uma ferramenta leve, rápida e extremamente flexível, que se adapta ao
+        fluxo de trabalho de qualquer desenvolvedor, de iniciantes a
+        profissionais experientes.
       </>
     ),
   },
   {
-    title: "Powered by React",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    title: "Arm® Cortex® M4 32-bit RISC Core",
+    //Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    image: STM32Image, // Use the imported image variable here
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        A placa{" "}
+        <a
+          href="https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1"
+          target="_blank"
+        >
+          Black Pill
+        </a>{" "}
+        com o{" "}
+        <a
+          href="https://www.st.com/en/microcontrollers-microprocessors/stm32f411.html"
+          target="_blank"
+        >
+          STM32F411CEU6
+        </a>{" "}
+        é uma opção de excelente custo-benefício para quem precisa de mais poder
+        de computação e flexibilidade do que plataformas como o{" "}
+        <a href="https://www.arduino.cc/" target="_blank">
+          Arduino
+        </a>{" "}
+        podem oferecer.
       </>
     ),
   },
 ];
-
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, Svg, image, description }: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {Svg ? (
+          <Svg className={styles.featureSvg} role="img" />
+        ) : image ? (
+          <img src={image} className={styles.featureImage} alt={title} />
+        ) : null}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

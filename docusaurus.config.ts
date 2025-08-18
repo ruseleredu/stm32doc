@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "ELT73A - 2025.2",
+  title: "ELT73A-S22-2025.2",
   tagline: "Sistemas Microcontrolados",
   favicon: "img/favicon.ico",
 

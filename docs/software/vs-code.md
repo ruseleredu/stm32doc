@@ -5,7 +5,7 @@ description: The open source AI code editor.
 slug: /vs-code
 ---
 
-# Visual Studio Code
+## Visual Studio Code
 
 ```bash
 winget install -e --id Microsoft.VisualStudioCode

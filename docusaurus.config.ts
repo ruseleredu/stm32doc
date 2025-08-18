@@ -120,6 +120,15 @@ const config: Config = {
           title: "Documentos",
           items: [
             {
+              label: "GitHub Dicas",
+              href: "https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/",
+            },
+            {
+              label: "Git Tutorial",
+              href: "https://www.w3schools.com/git/default.asp?remote=github",
+            },
+
+            {
               label: "Docusaurus",
               href: "https://docusaurus.io/docs",
             },
@@ -185,6 +194,19 @@ const config: Config = {
           ],
         },
         {
+          title: "GitHub",
+          items: [
+            {
+              label: "ELT73A-LAB-TPL",
+              href: "https://github.com/orgs/ELT73A-LAB-TPL/repositories",
+            },
+            {
+              label: "Projetos",
+              href: "https://github.com/ruseleredu/ELT73A-Projects",
+            },
+          ],
+        },
+        {
           title: "More",
           items: [
             {
@@ -192,8 +214,8 @@ const config: Config = {
               to: "/blog",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              label: "GitHub Dicas",
+              href: "https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/",
             },
           ],
         },

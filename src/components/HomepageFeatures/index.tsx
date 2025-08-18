@@ -29,7 +29,10 @@ const FeatureList: FeatureItem[] = [
         é uma plataforma de desenvolvimento de software baseada em nuvem, criada
         para hospedar e gerenciar projetos de código usando o sistema de
         controle de versão
-        <a href="https://git-scm.com/downloads" target="_blank">
+        <a
+          href="https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/"
+          target="_blank"
+        >
           {" "}
           Git
         </a>

@@ -64,6 +64,10 @@ git config --global -e
 git config list --show-origin
 ```
 
+## Folha de dicas
+
+https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/
+
 ## Git Cheat Sheet
 
 Git is a free and open-source distributed version control system that is responsible for everything that happens locally on your computer that is related to GitHub. This cheat sheet contains the most important and common Git commands for easy reference.

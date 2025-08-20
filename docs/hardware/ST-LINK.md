@@ -24,3 +24,7 @@ This debugger has a 10-pin IDC connector. The pinout of this connector can be fo
 ## Firmware
 
 [ST-LINK boards firmware upgrade](https://www.st.com/en/development-tools/stsw-link007.html)
+
+# ST-LINK, ST-LINK/V2, ST-LINK/V2-1, STLINK-V3 boards firmware upgrade
+
+[ST-LINK, ST-LINK/V2, ST-LINK/V2-1, STLINK-V3 boards firmware upgrade](https://www.st.com/en/development-tools/stsw-link007.html)

@@ -24,6 +24,10 @@ winget --version
 ```
 
 ```bash
+winget upgrade --all
+```
+
+```bash
 uso: winget  [<comando>] [<opções>]
 ```
 

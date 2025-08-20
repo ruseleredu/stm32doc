@@ -79,6 +79,17 @@ const config: Config = {
         // ... other options specific to your API docs
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      {
+        id: "quiz", // Unique ID for this docs instance
+        path: "quiz", // Path to your API docs folder
+        routeBasePath: "quiz", // Base URL for these docs (e.g., yoursite.com/api/...)
+        sidebarPath: require.resolve("./sidebarsquiz.js"), // Separate sidebar for Quiz docs
+        // ... other options specific to your API docs
+      },
+    ],
   ],
   // ... rest of your config
 
@@ -103,6 +114,12 @@ const config: Config = {
           label: "Laboratórios",
           position: "left",
           activeBaseRegex: `/labs/`, // Highlight when any API doc is active
+        },
+        {
+          to: "/quiz/intro", // Link to a page in your API docs
+          label: "Questionários",
+          position: "left",
+          activeBaseRegex: `/quiz/`, // Highlight when any API doc is active
         },
         { to: "/blog", label: "Projetos", position: "left" },
 

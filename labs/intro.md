@@ -4,143 +4,65 @@ title: Introdução
 description: Introdução as aulas de laboratório
 ---
 
-# Aulas de Laboratório
+## Aulas de Laboratório
 
-Organização para os templates: https://github.com/ELT73A-LAB-TPL
+| LABs                 | start/open  | end/close            | Conteúdo                                                        |
+| -------------------- | ----------- | -------------------- | --------------------------------------------------------------- |
+| [LAB00](/labs/lab00) | 18-Aug-2025 | 25-Aug-2025 23:59:59 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
+| [LAB01](/labs/lab01) | 25-Aug-2025 | 01-Sep-2025 23:59:59 | Revisão da programação em C;                                    |
+| [LAB02](/labs/lab02) | 01-Sep-2025 | 08-Sep-2025 23:59:59 | Processo de compilação, gravação e commit de código;            |
+| [LAB03](/labs/lab03) | 15-Sep-2025 | 22-Sep-2025 23:59:59 | Interrupções via GPIO e Temporizadores (Timers);                |
+| [LAB04](/labs/lab04) | 22-Sep-2025 | 29-Sep-2025 23:59:59 | Módulo PWM; Conversor ADC;                                      |
+| [LAB05](/labs/lab05) | 29-Sep-2025 | 06-Oct-2025 23:59:59 | DMA: Direct memory access (Acesso direto à memória);            |
+| [LAB06](/labs/lab06) | 06-Oct-2025 | 13-Oct-2025 23:59:59 | Uso do STM32CubeMonitor; Visualização de variáveis;             |
+| [LAB07](/labs/lab07) | 13-Oct-2025 | 20-Oct-2025 23:59:59 | Uso do STM32CubeMonitor; MQTT, IoT;                             |
+|                      | 20-Oct-2025 | 27-Oct-2025 23:59:59 | Realização do SEI-SICITE 2025 no Campus Curitiba;               |
+| [LAB08](/labs/lab08) | 03-Nov-2025 | 10-Nov-2025 23:59:59 | Uso do STM32CubeMonitor; InfluDB;                               |
+| [LAB09](/labs/lab09) | 10-Nov-2025 | 17-Nov-2025 23:59:59 | Introdução ao FreeRTOS;                                         |
+|                      | 17-Nov-2025 | 24-Nov-2025 23:59:59 | Desenvolvimento do Projeto Final;                               |
+|                      | 24-Nov-2025 | 01-Dec-2025 23:59:59 | Desenvolvimento do Projeto Final;                               |
+|                      | 01-Dec-2025 | 08-Dec-2025 23:59:59 | Desenvolvimento do Projeto Final;                               |
+|                      | 08-Dec-2025 | 15-Dec-2025 23:59:59 | Desenvolvimento do Projeto Final;                               |
+|                      | 15-Dec-2025 | 22-Dec-2025 23:59:59 | Fechamento da disciplina;                                       |
 
-| Laboratório     | Data       | Conteúdo                                                        | Template                                         |
-| --------------- | ---------- | --------------------------------------------------------------- | ------------------------------------------------ |
-| [LAB00](#lab00) | 18/08/2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; | [TPL00](https://github.com/ELT73A-LAB-TPL/LAB00) |
-| [LAB01](#lab01) | 25/08/2025 | Revisão da programação em C; Ambiente de desenvolvimento;       | [TPL01](https://github.com/ELT73A-LAB-TPL/LAB01) |
+## Atividades Assíncronas (EAD)
 
-## [LAB00](/labs/lab00)
+| quiz | start/open  | end/close            | description                                                     |
+| ---- | ----------- | -------------------- | --------------------------------------------------------------- |
+|      | 18-Aug-2025 | 25-Aug-2025 23:59:59 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
+| Q01  | 25-Aug-2025 | 01-Sep-2025 23:59:59 | Revisão da programação em C;                                    |
+| Q02  | 01-Sep-2025 | 08-Sep-2025 23:59:59 | Processo de compilação, gravação e commit de código;            |
+| Q03  | 15-Sep-2025 | 22-Sep-2025 23:59:59 | Interrupções via GPIO e Temporizadores (Timers);                |
+| Q04  | 22-Sep-2025 | 29-Sep-2025 23:59:59 | Módulo PWM; Conversor ADC;                                      |
+| Q05  | 29-Sep-2025 | 06-Oct-2025 23:59:59 | DMA: Direct memory access (Acesso direto à memória);            |
+| Q06  | 06-Oct-2025 | 13-Oct-2025 23:59:59 | Uso do STM32CubeMonitor; Visualização de variáveis;             |
+| Q07  | 13-Oct-2025 | 20-Oct-2025 23:59:59 | Uso do STM32CubeMonitor; MQTT, IoT;                             |
+|      | 20-Oct-2025 | 27-Oct-2025 23:59:59 | Realização do SEI-SICITE 2025 no Campus Curitiba;               |
+| Q08  | 03-Nov-2025 | 10-Nov-2025 23:59:59 | Uso do STM32CubeMonitor; InfluDB;                               |
+| Q09  | 10-Nov-2025 | 17-Nov-2025 23:59:59 | Introdução ao FreeRTOS;                                         |
+| Q10  | 17-Nov-2025 | 24-Nov-2025 23:59:59 | Desenvolvimento do Projeto Final;                               |
+|      | 24-Nov-2025 | 01-Dec-2025 23:59:59 | Desenvolvimento do Projeto Final;                               |
+|      | 01-Dec-2025 | 08-Dec-2025 23:59:59 | Desenvolvimento do Projeto Final;                               |
+|      | 08-Dec-2025 | 15-Dec-2025 23:59:59 | Desenvolvimento do Projeto Final;                               |
+|      | 15-Dec-2025 | 22-Dec-2025 23:59:59 | Fechamento da disciplina;                                       |
 
-Apresentação da Disicplina; Materiais utilizados na disciplina;
+## Cronograma
 
-- [ ] Atividades de EaD e Lab;
-- [ ] Ambiente de desenvolvimento;
-- [ ] Crie uma organização no GitHub;
-- [ ] Adicione os membros do seu grupo;
-- [ ] Promova o professor como owner;
-- [ ] Projeto Final;
-
-## [LAB01](/labs/lab01)
-
-Revisão da programação em C; Ambiente de desenvolvimento;
-
-- Atividades de EaD e Lab;
-- Ambiente de desenvolvimento;
-- Materiais utilizados;
-- Avaliações;
-- Projeto Final;
-
-## Projeto Final
-
-## Git commands
-
-How to config [git](https://git-scm.com/)
-
-```bash
-git config --global user.name "Your Name"
-git config --global user.email yourmail@domain.tld
-```
-
-It's recommended to verify that the your Git installation is not performing any transformation between LFs and CRLFs.
-
-```bash
-git config --global core.autocrlf false
-```
-
-The `git config --list --show-origin` command lists all the Git configuration variables and their values, along with the file path where each setting is defined. This is useful for troubleshooting and understanding which configuration file is overriding another.
-
-```bash
-git config list --show-origin
-```
-
-## Running STM32CubeMX in command-line mode
-
-- https://www.st.com/resource/en/user_manual/um1718-stm32cubemx-for-stm32-configuration-and-initialization-c-code-generation-stmicroelectronics.pdf
-
-To run STM32CubeMX in interactive command-line mode, use the following command line:
-
-```bash
-"%STM32CubeMX_PATH%\jre\bin\java" -jar "%STM32CubeMX_PATH%\STM32CubeMX.exe" -i
-```
-
-To run STM32CubeMX in command-line mode, getting commands from a script, use the following command line:
-
-```bash
-"%STM32CubeMX_PATH%\jre\bin\java" -jar "%STM32CubeMX_PATH%\STM32CubeMX.exe" -s ScriptToLoad.txt
-```
-
-To run STM32CubeMX in command-line mode getting commands from a script and without UI, use the following command line:
-
-```bash
-"%STM32CubeMX_PATH%\jre\bin\java" -jar "%STM32CubeMX_PATH%\STM32CubeMX.exe" -q ScriptToLoad.txt
-```
-
-To generate a script
-
-```bash
-export script ScriptToLoad.txt
-```
-
-### Load STM32CubeMX Script
-
-Call for Help (--help, -h, /?)
-
-```bash
-LoadMX --help
-```
-
-Run STM32CubeMX interactively
-
-```bash
-LoadMX -i
-```
-
-Opens STM32CubeMX and loads default values for Project Name, Script and Code Generation (STM32F411CEUx, BaseScript.txt and N)
-
-```bash
-LoadMX
-```
-
-Load with Project Name
-Opens STM32CubeMX with provided Project Name and loads default values for Script and Code Generation (BaseScript.txt and N)
-
-```bash
-LoadMX ProjectName
-```
-
-Opens STM32CubeMX with provided Project Name and Script Name and loads default value for Code Generation (N)
-
-```bash
-LoadMX ProjectName ScriptName.txt
-```
-
-Opens STM32CubeMX with provided Project Name, Script Name and generate code
-
-```bash
-LoadMX ProjectName ScriptName.txt Y
-```
-
-## References
-
-### STM32 Arm® Cortex® MCU wiki
-
-- https://wiki.st.com/stm32mcu/
-
-### MiniF4-STM32F401CEU6
-
-- https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1
-
-### STM32CubeF4 MCU Firmware Package
-
-- https://github.com/STMicroelectronics/STM32CubeF4
-- https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer
-
-### STM32 Development Tools
-
-- https://www.st.com/en/development-tools/stm32cubemx.html
-- https://www.st.com/en/development-tools/stm32cubeclt.html
-- https://www.st.com/en/development-tools/stm32cubeprog.html
+| groups     | sessiondate | from  | to    | description                                                     |
+| ---------- | ----------- | ----- | ----- | --------------------------------------------------------------- |
+| ELT73A-S22 | 18-08-2025  | 20:20 | 23:00 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
+| ELT73A-S22 | 25-08-2025  | 20:20 | 23:00 | Revisão da programação em C;                                    |
+| ELT73A-S22 | 01-09-2025  | 20:20 | 23:00 | Processo de compilação, gravação e commit de código;            |
+| ELT73A-S22 | 15-09-2025  | 20:20 | 23:00 | Interrupções via GPIO e Temporizadores (Timers);                |
+| ELT73A-S22 | 22-09-2025  | 20:20 | 23:00 | Módulo PWM; Conversor ADC;                                      |
+| ELT73A-S22 | 29-09-2025  | 20:20 | 23:00 | DMA: Direct memory access (Acesso direto à memória);            |
+| ELT73A-S22 | 06-10-2025  | 20:20 | 23:00 | Uso do STM32CubeMonitor; Visualização de variáveis;             |
+| ELT73A-S22 | 13-10-2025  | 20:20 | 23:00 | Uso do STM32CubeMonitor; MQTT, IoT;                             |
+| ELT73A-S22 | 20-10-2025  | 20:20 | 23:00 | Realização do SEI-SICITE 2025 no Campus Curitiba;               |
+| ELT73A-S22 | 03-11-2025  | 20:20 | 23:00 | Uso do STM32CubeMonitor; InfluDB;                               |
+| ELT73A-S22 | 10-11-2025  | 20:20 | 23:00 | Introdução ao FreeRTOS;                                         |
+| ELT73A-S22 | 17-11-2025  | 20:20 | 23:00 | Desenvolvimento do Projeto Final;                               |
+| ELT73A-S22 | 24-11-2025  | 20:20 | 23:00 | Desenvolvimento do Projeto Final;                               |
+| ELT73A-S22 | 01-12-2025  | 20:20 | 23:00 | Desenvolvimento do Projeto Final;                               |
+| ELT73A-S22 | 08-12-2025  | 20:20 | 23:00 | Desenvolvimento do Projeto Final;                               |
+| ELT73A-S22 | 15-12-2025  | 20:20 | 23:00 | Fechamento da disciplina;                                       |

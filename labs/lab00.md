@@ -1,12 +1,21 @@
 ---
 sidebar_position: 3
 title: Laboratório 00
-description: Introdução as aulas de laboratório
+description: Apresentação da Disicplina; Materiais utilizados na disciplina;
 ---
 
 # Laboratório 00
 
 - [Template 00](https://github.com/ELT73A-LAB-TPL/LAB00)
+
+Apresentação da Disicplina; Materiais utilizados na disciplina;
+
+- [ ] Atividades de EaD e Lab;
+- [ ] Ambiente de desenvolvimento;
+- [x] Crie uma organização no GitHub;
+- [ ] Adicione os membros do seu grupo;
+- [ ] Promova o professor como owner;
+- [ ] Projeto Final;
 
 ## Git commands
 

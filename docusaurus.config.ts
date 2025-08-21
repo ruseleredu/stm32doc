@@ -137,6 +137,10 @@ const config: Config = {
           title: "Documentos",
           items: [
             {
+              label: "GitHub Docs",
+              href: "https://docs.github.com/pt",
+            },
+            {
               label: "GitHub Dicas",
               href: "https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/",
             },
@@ -148,6 +152,10 @@ const config: Config = {
             {
               label: "GitHub Training",
               href: "https://githubtraining.github.io/training-manual/#/01_getting_ready_for_class",
+            },
+            {
+              label: "GitHub CLI",
+              href: "https://cli.github.com/manual/",
             },
           ],
         },

@@ -18,3 +18,7 @@ winget upgrade --id GitHub.cli
 ```
 
 [winget.run](https://winget.run/)
+
+## GitHub CLI manual
+
+- [GitHub CLI manual](https://cli.github.com/manual/)

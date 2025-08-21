@@ -5,34 +5,32 @@ description: Folha de Dicas de Git do GitHub (pt-BR)
 slug: /github-git-cheat-sheet
 ---
 
-## Instale o Git
-
 - [GIT CHEAT SHEET](https://education.github.com/git-cheat-sheet-education.pdf)
 - [Folha de Dicas de Git do GitHub](https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/)
+- [Getting Git right](https://www.atlassian.com/git)
+- [Git Tutorial](https://www.w3schools.com/git/)
+- [GitHub Docs](https://docs.github.com/pt)
+
+## Instale o Git
 
 GitHub fornece clientes desktop que incluem uma interface gráfica para as ações mais comuns em um repositório e atualiza automaticamente para a linha de comando do Git para cenários avançados.
-GitHub para Windows
-
-windows.github.com
-GitHub para Mac
-
-mac.github.com
-
-Distribuições do Git para Linux e sistemas POSIX são disponíveis no site oficial do Git SCM.
-Git para todas as plataformas
-
-git-scm.com
 
 - [Download GitHub Desktop](https://desktop.github.com/download/)
 - [git-scm](http://git-scm.com)
+
+Verifique a versão instalada do git em seu computador:
 
 ```bash
 git --version
 ```
 
+Edite o arquivo de configuração global do git:
+
 ```bash
 git config --global -e
 ```
+
+Liste a origem dos arquivos de configuração:
 
 ```bash
 git config list --show-origin
@@ -40,22 +38,18 @@ git config list --show-origin
 
 ## Configure a ferramenta
 
-Configure informações de usuário para todos os repositórios locais
+Configure o nome e email de usuário para todos os repositórios locais ligados às suas transações de commit:
 
 ```bash
-git config --global user.name "[nome]"
-git config --global user.name “[firstname lastname]”
 git config --global user.name "Your Name"
-git config --global user.email yourmail@domain.tld
+git config --global user.email "you@example.com"
 ```
 
-Configura o nome que você quer ligado às suas transações de commit
+É recomendado verificar se a instalação do seu Git não está realizando nenhuma transformação entre LFs e CRLFs.
 
-$ git config --global user.email "[endereco-de-email]"
-
-Configura o email que você quer ligado às suas transações de commit
-
-It's recommended to verify that the your Git installation is not performing any transformation between LFs and CRLFs.
+```bash
+git config --global core.autocrlf false
+```
 
 ```bash
 git config --global core.autocrlf false

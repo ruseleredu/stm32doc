@@ -6,94 +6,111 @@ slug: /git-best-practices
 ---
 
 - [Git Best Practices](https://www.w3schools.com/git/git_best_practices.asp?remote=github)
+- [Primeiros passos com o Git](https://docs.github.com/pt/get-started/learning-to-code/getting-started-with-git)
 
-Summary of Git Best Practices
+- Repositório: uma pasta que salva todas as alterações feitas nos arquivos em seu projeto.
+- Commit: um snapshot do projeto em um determinado momento.
+- Branch: uma cópia do projeto em que você pode trabalhar em um conjunto de alterações.
+- Pull request: uma solicitação para mesclar as alterações de um branch em outro.
 
-Commit Often
-Write Clear Commit Messages
-Use Branches
-Pull Before You Push
-Review Changes Before Committing
-Keep Repositories Small
-Use .gitignore
-Tag Releases
+## Faça Commits com frequência
 
-## Commit Often
+:::tip Faça Commits com frequência
+Faça commits pequenos e frequentes para registrar seu progresso.
 
-Make small, frequent commits to capture your progress.
-
-This makes it easier to track changes and find bugs.
+Isso torna mais fácil rastrear alterações e encontrar bugs.
 
 ```bash
 git add .
-git commit -m "Add user authentication logic"
+git commit -m "Descrição breve das alterações realizadas!"
 ```
 
-## Write Clear Commit Messages
+:::
 
-Use descriptive messages that explain why a change was made, not just what changed.
+## Escreva mensagens claras de commit
 
-Good commit messages help you and your team understand the history of the project.
+:::tip Escreva mensagens claras de commit
+Use mensagens descritivas que expliquem por que uma alteração foi feita, e não apenas o que mudou.
 
-Be specific: Say what and why, not just "Update" or "Fix".
-Use the imperative mood: For example, "Add login validation" instead of "Added login validation".
+Boas mensagens de commit ajudam você e sua equipe a entender a história do projeto.
+
+Seja específico: diga o quê e por quê, não apenas “Atualizar” ou “Consertar”.
+Use o [modo imperativo](https://pt.wikipedia.org/wiki/Modo_imperativo): por exemplo, "Adicionar validação de login" em vez de "Adicionado a validação de login".
 
 ```bash
-git commit -m "Fix bug in user login validation"
+git commit -m "Mensagens clara que explica por que uma alteração foi feita!"
 ```
+
+:::
 
 ## Use Branches
 
-Create branches for features, fixes, and experiments to keep your main branch stable.
+:::tip Use Branches
+Crie Branches para recursos, correções e experimentos para manter seu Branch principal estável.
 
-This way, you can work on new ideas without affecting the main codebase.
+Dessa forma, você pode trabalhar em novas ideias sem afetar a base de código principal.
 
-Why? Branches let you test and develop independently, and make collaboration safer.
-Name branches clearly: For example, feature/login-form or bugfix/user-auth.
+Por que? As Branches permitem testar e desenvolver de forma independente e tornar a colaboração mais segura.
+Nomeie as Branches claramente: por exemplo, feature/login-form ou bugfix/user-auth.
 
 ```bash
 git checkout -b feature/login-form
 ```
 
-## Pull Before You Push
+:::
 
-Always git pull before pushing.
+## Efetuar Pull antes de Push
 
-This updates your local branch with changes from others, helps you avoid conflicts, and ensures your push will succeed.
+:::tip Efetuar Pull antes de Push
+Obtenha as alterações realizadas antes de enviar a sua alteração.
 
-Why? If someone else has pushed changes since your last pull, your push may be rejected or cause conflicts.
+Isso atualiza seu branch local com alterações de outras pessoas, ajuda a evitar conflitos e garante que seu push seja bem-sucedido.
 
-Pulling first lets you fix any issues locally.
+Por que? Se outra pessoa tiver enviado alterações desde seu último pull, seu push poderá ser rejeitado ou causar conflitos.
+
+Puxar primeiro permite corrigir quaisquer problemas localmente.
 
 ```bash
 git pull origin main
 git push origin main
 ```
 
-## Review Changes Before Committing
+:::
 
-Use git status and git diff to review your changes before you commit.
+## Revise as alterações antes de fazer o commit
 
-This helps you catch mistakes early.
+:::tip Revise as alterações antes de fazer o commit
+
+Revise as alterações antes de fazer o commit
+Use git status e git diff para revisar suas alterações antes de fazer o commit.
+
+Isso ajuda você a detectar erros antecipadamente.
 
 ```bash
 git status
 git diff
 ```
 
+:::
+
 ## Keep Repositories Small
+
+:::tip Keep Repositories Small
 
 Avoid adding large files or unnecessary dependencies.
 
 This keeps your repository fast and easy to clone.
+:::
 
-Tip: For large files (like videos or datasets), use Git LFS (Large File Storage) instead of adding them directly to your repo.
+:::tip
+For large files (like videos or datasets), use Git LFS (Large File Storage) instead of adding them directly to your repo.
+:::
 
 ## Use .gitignore
 
-Exclude files that shouldn't be tracked (like build artifacts, log files, or secrets) by adding them to a .gitignore file.
+:::tip Use .gitignore
 
-Note: .gitignore only prevents new files from being tracked.
+Exclude files that shouldn't be tracked (like build artifacts, log files, or secrets) by adding them to a .gitignore file.
 
 Files already tracked by Git will remain in the repository until you remove them with `git rm --cached <file>`.
 
@@ -104,8 +121,15 @@ node_modules/
 .env
 ```
 
+:::
+
+:::note
+.gitignore only prevents new files from being tracked.
+:::
+
 ## Tag Releases
 
+:::tip Tag Releases
 Use tags to mark release points (like v1.0) so you can easily find and reference important versions.
 
 This helps you keep track of your project's history and make it easier to roll back to previous versions if needed.
@@ -115,4 +139,8 @@ git tag v1.0
 git push origin v1.0
 ```
 
-Note: Good Git habits make it easier for your team (and your future self) to understand and build on your work.
+:::
+
+:::note
+Good Git habits make it easier for your team (and your future self) to understand and build on your work.
+:::

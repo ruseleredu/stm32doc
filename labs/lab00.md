@@ -6,11 +6,9 @@ description: Apresentação da Disicplina; Materiais utilizados na disciplina;
 
 # Laboratório 00
 
-| LABs                 | start/open  | end/close            | Conteúdo                                                        |
-| -------------------- | ----------- | -------------------- | --------------------------------------------------------------- |
-| [LAB00](/labs/lab00) | 18-Aug-2025 | 25-Aug-2025 23:59:59 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
-
-- [Template 00](https://github.com/ELT73A-LAB-TPL/LAB00)
+| Template                                               | start/open  | end/close   | Conteúdo                                                        |
+| ------------------------------------------------------ | ----------- | ----------- | --------------------------------------------------------------- |
+| [Template 00](https://github.com/ELT73A-LAB-TPL/LAB00) | 18-Aug-2025 | 25-Aug-2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
 
 Apresentação da Disicplina; Materiais utilizados na disciplina;
 
@@ -20,6 +18,13 @@ Apresentação da Disicplina; Materiais utilizados na disciplina;
 - [ ] Adicione os membros do seu grupo;
 - [ ] Promova o professor como owner;
 - [ ] Projeto Final;
+
+:::warning
+
+A documentação desta atividade de laboratório está em **processo de construção** e por isso pode estar imcompleta.
+
+Utilize como base a descrição apresentada no [Moodle da disciplina](https://moodle.utfpr.edu.br/course/view.php?id=29540).
+:::
 
 ## Git commands
 

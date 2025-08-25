@@ -28,3 +28,20 @@ Launching from command line
 ```bash
 code .
 ```
+
+extensions.json
+
+```json
+{
+  "recommendations": [
+    "formulahendry.code-runner",
+    "ms-vscode.cmake-tools",
+    "ms-vscode.cpptools-themes",
+    "ms-vscode.cpptools-extension-pack",
+    "ms-vscode.cpptools",
+    "pkief.material-icon-theme",
+    "esbenp.prettier-vscode"
+    // Add other relevant extensions
+  ]
+}
+```

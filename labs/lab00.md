@@ -10,6 +10,8 @@ description: Apresentação da Disicplina; Materiais utilizados na disciplina;
 | ------------------------------------------------------ | ----------- | ----------- | --------------------------------------------------------------- |
 | [Template 00](https://github.com/ELT73A-LAB-TPL/LAB00) | 18-Aug-2025 | 25-Aug-2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
 
+---
+
 Apresentação da Disicplina; Materiais utilizados na disciplina;
 
 - [ ] Atividades de EaD e Lab;

@@ -8,6 +8,8 @@ description: Introdução as aulas de laboratório
 | ------------------------------------------------------ | ----------- | ----------- | ---------------------------- |
 | [Template 01](https://github.com/ELT73A-LAB-TPL/LAB01) | 25-Aug-2025 | 01-Sep-2025 | Revisão da programação em C; |
 
+---
+
 GitHub e Revisão da programação em C; Ambiente de desenvolvimento;
 
 - [ ] Uso do GitHub;

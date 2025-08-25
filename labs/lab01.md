@@ -27,6 +27,39 @@ A documentação desta atividade de laboratório está em **processo de constru�
 Utilize como base a descrição apresentada no [Moodle da disciplina](https://moodle.utfpr.edu.br/course/view.php?id=29540).
 :::
 
+<details>
+<summary>Verifique o seu ambiente de desenvolvimento!</summary>
+
+Versão do [git](/docs/git) e configurações:
+
+```bash
+git --version
+git config --list --show-origin
+```
+
+Versão do [GitHub CLI](/docs/github-cli) e status de login:
+
+```bash
+gh --version
+gh auth status
+```
+
+Versão do [VS Code](/docs/vs-code) e extensões instaladas:
+
+```bash
+code -v
+code --list-extensions –show-versions
+```
+
+Versão do [gcc e gdb](/docs/mingw).
+
+```bash
+gcc --version
+gdb --version
+```
+
+</details>
+
 ## Requesitos
 
 - [VScode](/docs/vs-code)

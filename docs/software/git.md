@@ -11,6 +11,14 @@ Instalação, configuração e uso do [git](https://git-scm.com/) via linha de c
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TvY3fJ8hQas?si=IdyGGy73gPb4VBmD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+```bash
+winget install --id Git.Git
+```
+
+```bash
+winget upgrade --id Git.Git
+```
+
 ### Instalação e configuração do PortableGit com token de acesso
 
 Instalação e configuração do PortableGit com token de acesso

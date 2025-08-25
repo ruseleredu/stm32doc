@@ -1,0 +1,36 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import LoopList from "@site/src/components/LoopList";
+
+# Generating a List with React
+
+This example demonstrates how to use a loop in a React component to generate a list of items from **A to J**.
+
+<Tabs>
+  <TabItem value="component" label="React Component" default>
+    ```tsx title="LoopList.tsx"
+    import React from 'react';
+
+    const LoopList: React.FC = () => {
+      const items = Array.from({ length: 10 }, (_, i) => String.fromCharCode(65 + i));
+
+      return (
+        <div>
+          <h2>List of Items (A–J)</h2>
+          <ul>
+            {items.map((letter, index) => (
+              <li key={index}>{letter}</li>
+            ))}
+          </ul>
+        </div>
+      );
+    };
+
+    export default LoopList;
+    ```
+
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+    <LoopList />
+  </TabItem>
+</Tabs>

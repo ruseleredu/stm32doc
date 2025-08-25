@@ -15,6 +15,12 @@ winget install -e --id Microsoft.VisualStudioCode
 winget install -e --id MSYS2.MSYS2
 ```
 
+To start a new interactive UCRT64 shell from cmd, run the following command:
+
+```bash
+C:\msys64\msys2_shell.cmd -ucrt64
+```
+
 Update MSYS2: After installation, open the MSYS2 terminal (from the start menu).
 
 ```bash

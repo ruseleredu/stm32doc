@@ -2,6 +2,9 @@
 sidebar_position: 5
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Deploy your site
 
 Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
@@ -41,3 +44,48 @@ You can now deploy the `build` folder **almost anywhere** easily, **for free** o
     // highlight-end
   },
 ```
+
+<details>
+<summary>Descrição aqui com tabela de opções...</summary>
+
+<Tabs>
+  <TabItem value="apple" label="Apple" default>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="orange" label="Orange">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana" label="Banana">
+    This is a banana 🍌
+  </TabItem>
+</Tabs>
+
+</details>
+
+<details>
+<summary>Descrição aqui com tabela de opções e código...</summary>
+
+<Tabs>
+  <TabItem value="apple" label="Apple" default>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="orange" label="Orange">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="github-cli" label="GitHub CLI">
+    ```bash
+gh auth login
+```
+  </TabItem>
+</Tabs>
+
+</details>
+
+<details>
+<summary>Descrição aqui com código...</summary>
+
+```bash
+gh auth login
+```
+
+</details>

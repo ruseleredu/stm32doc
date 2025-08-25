@@ -51,16 +51,15 @@ git config --global user.email "you@example.com"
 git config --global core.autocrlf false
 ```
 
-```bash
-git config --global core.autocrlf false
-git config --global color.ui auto
-git config --global init.defaultBranch main
-```
-
-Configure Git to use Visual Studio Code (VS Code) as the default editor for tasks like writing commit messages or interactive rebases
+Configure o Git para usar o Visual Studio Code (VS Code) como editor padrão para tarefas como escrever mensagens de commit ou rebases interativos
 
 ```bash
 git config --global core.editor "code --wait"
+```
+
+```bash
+git config --global color.ui auto
+git config --global init.defaultBranch main
 ```
 
 ## Crie repositórios

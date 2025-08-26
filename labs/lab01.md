@@ -6,6 +6,7 @@ description: Introdução as aulas de laboratório
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import {LABsIncomplete} from '@site/src/components/AvisosSite';
 
 | Template                                               | start/open  | end/close   | Conteúdo                     |
 | ------------------------------------------------------ | ----------- | ----------- | ---------------------------- |
@@ -23,12 +24,7 @@ GitHub e Revisão da programação em C; Ambiente de desenvolvimento;
 - [ ] Comandos básicos, git e GitHub;
 - [ ] Revisão da programação em C;
 
-:::warning
-
-A documentação desta atividade de laboratório está em **processo de construção** e por isso pode estar imcompleta.
-
-Utilize como base a descrição apresentada no [Moodle da disciplina](https://moodle.utfpr.edu.br/course/view.php?id=29540).
-:::
+<LABsIncomplete />
 
 <details>
 <summary>Verifique o seu ambiente de desenvolvimento!</summary>

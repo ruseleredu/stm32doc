@@ -2,6 +2,8 @@ import React from "react";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import ThemeCodeBlock from '@theme/CodeBlock';
+import Admonition from '@theme/Admonition';
+import Details from '@theme/Details';
 
 export default function LabFromScratch({ repoName, opts = "" }) {
     // An array of your groups
@@ -35,8 +37,7 @@ export default function LabFromScratch({ repoName, opts = "" }) {
                         gh repo create ELT73A-S22-2025-2-{group}/{repoName} {opts}
                     </ThemeCodeBlock>
 
-                    <details>
-                        <summary>More options</summary> <br />
+                    <Details summary={<summary>More options for {group}</summary>}>
                         <p>
                             The gh repo create command is a function of the GitHub CLI (Command Line Interface) used to create a new repository on GitHub.
                         </p>
@@ -48,9 +49,10 @@ export default function LabFromScratch({ repoName, opts = "" }) {
                             <li><b>--add-license &lt;license&gt;</b>: Add a license to the repository, using the specified license (e.g., "mit", "apache-2.0", "gpl-3.0").</li>
                             <li><b>-c, --clone</b>: Clone the repository after creating it.</li>
                         </ul>
-                    </details>
+                    </Details>
 
                     <ThemeCodeBlock className="language-bash">
+                        gh repo view ELT73A-S22-2025-2-{group}/{repoName} --web
                         gh repo view ELT73A-S22-2025-2-{group}/{repoName} --web
                     </ThemeCodeBlock>
 

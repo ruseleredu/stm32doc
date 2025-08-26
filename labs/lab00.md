@@ -6,6 +6,8 @@ description: Apresentação da Disicplina; Materiais utilizados na disciplina;
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import {LABsIncomplete} from '@site/src/components/AvisosSite';
+
 
 # Laboratório 00
 
@@ -24,12 +26,7 @@ Apresentação da Disicplina; Materiais utilizados na disciplina;
 - [ ] Promova o professor como owner;
 - [ ] Projeto Final;
 
-:::warning
-
-A documentação desta atividade de laboratório está em **processo de construção** e por isso pode estar imcompleta.
-
-Utilize como base a descrição apresentada no [Moodle da disciplina](https://moodle.utfpr.edu.br/course/view.php?id=29540).
-:::
+<LABsIncomplete />
 
 <details>
 <summary>Verifique o seu ambiente de desenvolvimento!</summary>

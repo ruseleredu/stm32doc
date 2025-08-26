@@ -1,7 +1,7 @@
 ---
 id: github-cli-cheat-sheet
 title: Início rápido da CLI do GitHub
-description: Comece a usar GitHub CLI para trabalhar com GitHub na linha de comando.
+description: GitHub na linha de comando.
 slug: /github-cli-cheat-sheet
 ---
 

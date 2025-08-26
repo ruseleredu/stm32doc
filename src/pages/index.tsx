@@ -30,6 +30,12 @@ function HomepageHeader() {
           >
             LABs
           </Link>
+             <Link
+            className="button button--secondary button--lg"
+            to="/quiz/intro"
+          >
+            EaD
+          </Link>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro"

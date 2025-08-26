@@ -4,7 +4,7 @@ title: Introdução
 description: Introdução aos questionários.
 ---
 
-## Atividades Assíncronas (EAD)
+## Atividades Assíncronas (EaD)
 
 | quiz                | start/open  | end/close            | description                                                     |
 | ------------------- | ----------- | -------------------- | --------------------------------------------------------------- |

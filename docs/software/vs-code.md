@@ -10,6 +10,9 @@ slug: /vs-code
 ```bash
 winget install -e --id Microsoft.VisualStudioCode
 ```
+```bash
+winget update --id Microsoft.VisualStudioCode
+```
 
 ### Instalação do VScode e extensão para o STM32
 
@@ -43,5 +46,26 @@ extensions.json
     "esbenp.prettier-vscode"
     // Add other relevant extensions
   ]
+}
+```
+
+settings.json
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.docusaurus": true,
+    "**/build": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.docusaurus": true,
+    "**/build": true
+  }
 }
 ```

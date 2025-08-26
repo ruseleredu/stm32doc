@@ -4,7 +4,7 @@ title: Introdução
 description: Introdução as aulas de laboratório
 ---
 
-## Aulas de Laboratório
+## Aulas de Laboratório (LABs)
 
 | LABs                 | start/open  | end/close            | Conteúdo                                                        |
 | -------------------- | ----------- | -------------------- | --------------------------------------------------------------- |
@@ -25,7 +25,7 @@ description: Introdução as aulas de laboratório
 |                      | 08-Dec-2025 | 15-Dec-2025 23:59:59 | Desenvolvimento do Projeto Final;                               |
 |                      | 15-Dec-2025 | 22-Dec-2025 23:59:59 | Fechamento da disciplina;                                       |
 
-## Atividades Assíncronas (EAD)
+## Atividades Assíncronas (EaD)
 
 | quiz | start/open  | end/close            | description                                                     |
 | ---- | ----------- | -------------------- | --------------------------------------------------------------- |

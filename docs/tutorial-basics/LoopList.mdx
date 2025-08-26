@@ -1,52 +1,33 @@
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import LoopList from "@site/src/components/LoopList";
-import GeneratedTabs from "@site/src/components/GeneratedTabs";
-import MyTabs from "@site/src/components/MyTabs";
 
-## Generating a List with React
 
-This example demonstrates how to use a loop in a React component to generate a list of items from **A to J**.
+import LabFromTemplate from "@site/src/components/LabFromTemplate";
+import LabFromScratch from "@site/src/components/LabFromScratch";
 
-<Tabs>
-  <TabItem value="component" label="React Component" default>
-    ```tsx title="LoopList.tsx"
-    import React from 'react';
 
-    const LoopList: React.FC = () => {
-      const items = Array.from({ length: 10 }, (_, i) => String.fromCharCode(65 + i));
+To return a Docusaurus code block with a specific theme like Prism, you should use the ThemeCodeBlock component. 
 
-      return (
-        <div>
-          <h2>List of Items (A–J)</h2>
-          <ul>
-            {items.map((letter, index) => (
-              <li key={index}>{letter}</li>
-            ))}
-          </ul>
-        </div>
-      );
-    };
+## LabFromTemplate
 
-    export default LoopList;
-    ```
+### Use
+```bash
+import LabFromTemplate from "@site/src/components/LabFromTemplate";
+```
+```bash
+<LabFromTemplate labNumber="LAB00" />
+```
+### Result
+<LabFromTemplate labNumber="LAB00" />
 
-  </TabItem>
-  <TabItem value="preview" label="Preview">
-    <LoopList />
-  </TabItem>
-</Tabs>
+## LabFromScratch
 
-## Dynamic Tabs Example
-
-This example shows how to generate tabs dynamically using a loop in React.
-
-<GeneratedTabs />
-
-### Dynamic Tabs for My Groups
-
-<MyTabs />
-
-### LAB00 Instructions
-
-<MyTabs labNumber="LAB00" />
+### Use
+```bash
+import LabFromScratch from "@site/src/components/LabFromScratch";
+```
+```bash
+<LabFromScratch labNumber="LAB00" opts="-c"/>
+```
+### Result
+<LabFromScratch labNumber="LAB00" opts="-c opts added"/>

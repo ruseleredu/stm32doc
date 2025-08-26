@@ -6,7 +6,7 @@ description: Introdução as aulas de laboratório
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import MyTabs from '@site/src/components/MyTabs';
+
 
 # Laboratório 09
 
@@ -23,6 +23,3 @@ A documentação desta atividade de laboratório está em **processo de constru�
 Utilize como base a descrição apresentada no [Moodle da disciplina](https://moodle.utfpr.edu.br/course/view.php?id=29540).
 :::
 
-## LAB09 Instructions
-
-<MyTabs labNumber="LAB09" />

@@ -53,7 +53,6 @@ export default function LabFromScratch({ repoName, opts = "" }) {
 
                     <ThemeCodeBlock className="language-bash">
                         gh repo view ELT73A-S22-2025-2-{group}/{repoName} --web
-                        gh repo view ELT73A-S22-2025-2-{group}/{repoName} --web
                     </ThemeCodeBlock>
 
                 </TabItem>

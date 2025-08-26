@@ -1,16 +1,15 @@
 
 import React from 'react';
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-import ThemeCodeBlock from '@theme/CodeBlock';
+// import Tabs from "@theme/Tabs";
+// import TabItem from "@theme/TabItem";
+// import ThemeCodeBlock from '@theme/CodeBlock';
 import Admonition from '@theme/Admonition';
-import Details from '@theme/Details';
+// import Details from '@theme/Details';
 
 // import { LABsIncomplete, EaDIncomplete } from '@site/src/components/AvisosSite';
 
 // import {LABsIncomplete} from '@site/src/components/AvisosSite';
 // <LABsIncomplete />
-
 export function LABsIncomplete() {
     return (
         <>

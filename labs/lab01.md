@@ -7,6 +7,11 @@ description: Introdução as aulas de laboratório
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
+import LabFromTemplate from "@site/src/components/LabFromTemplate";
+
+# Laboratório 01
+<!-- Aviso de que este conteúdo está em construção! -->
+<LABsIncomplete />
 
 | Template                                               | start/open  | end/close   | Conteúdo                     |
 | ------------------------------------------------------ | ----------- | ----------- | ---------------------------- |
@@ -24,7 +29,6 @@ GitHub e Revisão da programação em C; Ambiente de desenvolvimento;
 - [ ] Comandos básicos, git e GitHub;
 - [ ] Revisão da programação em C;
 
-<LABsIncomplete />
 
 <details>
 <summary>Verifique o seu ambiente de desenvolvimento!</summary>
@@ -61,87 +65,9 @@ gdb --version
 
 ## Crie um novo repositório com base no template do LAB01
 
-<Tabs>
-  <TabItem value="A" label="A">
-    Grupo A: https://github.com/ELT73A-S22-2025-2-A
-```bash
-gh repo create ELT73A-S22-2025-2-A/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="B" label="B">
-    Grupo B: https://github.com/ELT73A-S22-2025-2-B
-```bash
-gh repo create ELT73A-S22-2025-2-B/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="C" label="C">
-    Grupo C: https://github.com/ELT73A-S22-2025-2-C
-```bash
-gh repo create ELT73A-S22-2025-2-C/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="D" label="D">
-    Grupo D: https://github.com/ELT73A-S22-2025-2-D
-```bash
-gh repo create ELT73A-S22-2025-2-D/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="E" label="E">
-    Grupo E: https://github.com/ELT73A-S22-2025-2-E
-```bash
-gh repo create ELT73A-S22-2025-2-E/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="F" label="F">
-    Grupo F: https://github.com/ELT73A-S22-2025-2-F
-```bash
-gh repo create ELT73A-S22-2025-2-F/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="G" label="G">
-    Grupo G: https://github.com/ELT73A-S22-2025-2-G
-```bash
-gh repo create ELT73A-S22-2025-2-G/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="H" label="H">
-    Grupo H: https://github.com/ELT73A-S22-2025-2-H
-```bash
-gh repo create ELT73A-S22-2025-2-H/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="I" label="I">
-    Grupo I: https://github.com/ELT73A-S22-2025-2-I
-```bash
-gh repo create ELT73A-S22-2025-2-I/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="J" label="J">
-    Grupo J: https://github.com/ELT73A-S22-2025-2-J
-```bash
-gh repo create ELT73A-S22-2025-2-J/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="K" label="K">
-    Grupo K: https://github.com/ELT73A-S22-2025-2-K
-```bash
-gh repo create ELT73A-S22-2025-2-K/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="L" label="L">
-    Grupo L: https://github.com/ELT73A-S22-2025-2-L
-```bash
-gh repo create ELT73A-S22-2025-2-L/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-  </TabItem>
-  <TabItem value="X" label="X">
-    Grupo X: https://github.com/ELT73A-S22-2025-2-X
-```bash
-gh repo create ELT73A-S22-2025-2-X/LAB01 --public -p ELT73A-LAB-TPL/LAB01
-```
-
-</TabItem>
-</Tabs>
+Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
+<!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
+<LabFromTemplate labNumber="LAB01" opts="-c" />
 
 ## Requesitos
 

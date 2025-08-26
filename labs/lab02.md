@@ -7,8 +7,11 @@ description: Introdução as aulas de laboratório
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
+import LabFromTemplate from "@site/src/components/LabFromTemplate";
 
 # Laboratório 02
+<!-- Aviso de que este conteúdo está em construção! -->
+<LABsIncomplete />
 
 | Template                                               | start/open  | end/close   | Conteúdo                                             |
 | ------------------------------------------------------ | ----------- | ----------- | ---------------------------------------------------- |
@@ -25,4 +28,8 @@ Processo de compilação, gravação e commit de código;
 - [ ] Promova o professor como owner;
 - [ ] Projeto Final;
 
-<LABsIncomplete />
+## Crie um novo repositório com base no template do LAB02
+
+Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
+<!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
+<LabFromTemplate labNumber="LAB02" opts="-c" />

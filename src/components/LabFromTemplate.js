@@ -36,18 +36,24 @@ export default function LabFromTemplate({ labNumber, opts = "" }) {
                             https://github.com/ELT73A-LAB-TPL/{labNumber}
                         </a></li>
                     </ul>
-
+                    <p>
+                        Use o comando abaixo para criar o repositório no GitHub com base no template do laboratório:
+                    </p>
                     <ThemeCodeBlock className="language-bash">
-                        gh repo create ELT73A-S22-2025-2-{group}/{labNumber} --public -p ELT73A-LAB-TPL/{labNumber} {opts}
+                        gh repo create ELT73A-S22-2025-2-{group}/{labNumber} --private -p ELT73A-LAB-TPL/{labNumber} {opts}
                     </ThemeCodeBlock>
-                    <Details summary={<summary>{group}</summary>}>
-                        <Admonition type="info" title={`${group} - Note`}>
-                            This is an {group} important note that provides additional details about the topic.
-                            <ThemeCodeBlock className="language-bash">
-                                gh repo create ELT73A-S22-2025-2-{group}/{labNumber} --public -p ELT73A-LAB-TPL/{labNumber} {opts}
-                            </ThemeCodeBlock>
-                        </Admonition>
-                    </Details>
+                    <p>Agora, acesse o diretório do repositório clonado:</p>
+                    <ThemeCodeBlock className="language-bash">
+                        cd {labNumber}
+                    </ThemeCodeBlock>
+                    <p>Abra o repositório clonado no VS Code:</p>
+                    <ThemeCodeBlock className="language-bash">
+                        code .
+                    </ThemeCodeBlock>
+                    <p>Verifique o status do repositório:</p>
+                    <ThemeCodeBlock className="language-bash">
+                        git status
+                    </ThemeCodeBlock>
                 </TabItem>
             ))}
         </Tabs>

@@ -7,8 +7,11 @@ description: Introdução as aulas de laboratório
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
+import LabFromTemplate from "@site/src/components/LabFromTemplate";
 
 # Laboratório 06
+<!-- Aviso de que este conteúdo está em construção! -->
+<LABsIncomplete />
 
 | Template                                               | start/open  | end/close   | Conteúdo                                            |
 | ------------------------------------------------------ | ----------- | ----------- | --------------------------------------------------- |
@@ -16,4 +19,8 @@ import {LABsIncomplete} from '@site/src/components/AvisosSite';
 
 ---
 
-<LABsIncomplete />
+## Crie um novo repositório com base no template do LAB06
+
+Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
+<!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
+<LabFromTemplate labNumber="LAB06" opts="-c" />

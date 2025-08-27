@@ -37,6 +37,12 @@ const config: Config = {
     locales: ["pt-BR"],
   },
 
+  // Diagrams can be rendered using Mermaid in a code block.
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
+
   presets: [
     [
       "classic",

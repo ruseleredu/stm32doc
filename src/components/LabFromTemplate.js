@@ -51,7 +51,7 @@ export default function LabFromTemplate({ labNumber, opts = "" }) {
                         </ThemeCodeBlock>
                         <p>Abra o repositório clonado no VS Code:</p>
                         <ThemeCodeBlock className="language-bash">
-                            code .
+                            code . --profile "STM32"
                         </ThemeCodeBlock>
                     </Details>
                 </TabItem>

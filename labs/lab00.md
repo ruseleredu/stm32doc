@@ -8,9 +8,10 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {VerifyDev2,GitConfig} from '@site/src/components/InstructionsSite';
+import {VerifyDev2,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
 
 # Laboratório 00
+
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
@@ -32,12 +33,17 @@ Apresentação da Disicplina; Materiais utilizados na disciplina;
 <VerifyDev2 />
 
 ## Crie um novo repositório com base no template do LAB00
+
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
+
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB00" opts="-c" />
 
 <!-- Configure o git -->
 <GitConfig />
+
+<!-- List of STM32Cube Tools -->
+<STM32Tools />
 
 ## Uso do git e GitHub
 

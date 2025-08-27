@@ -57,15 +57,65 @@ export function ComponentC() {
     );
 }
 
-
-export const ComponentD = () => {
+// Tabs example
+export function ComponentD() {
     return (
-        <div>
-            <h2>This is Component D</h2>
-            <p>An example of a component defined as an arrow function.</p>
-        </div>
+        <Tabs
+            defaultValue="componentA"
+            values={[
+                { label: 'Component A', value: 'componentA' },
+                { label: 'Component B', value: 'componentB' },
+                { label: 'Component C', value: 'componentC' },
+            ]}
+        >
+            <TabItem value="componentA">
+                <ComponentA />
+            </TabItem>
+            <TabItem value="componentB">
+                <ComponentB />
+            </TabItem>
+            <TabItem value="componentC">
+                <ComponentC />
+            </TabItem>
+        </Tabs>
     );
-};
+}
+
+
+export function CodeTabsExample() {
+    return (
+        <Tabs>
+            <TabItem value="javascript" label="JavaScript">
+                <pre>
+                    <code>
+                        {`function greet(name) {
+  return 'Hello, ' + name + '!';
+}`}
+                    </code>
+                </pre>
+            </TabItem>
+            <TabItem value="python" label="Python">
+                <pre>
+                    <code>
+                        {`def greet(name):
+    return 'Hello, ' + name`}
+                    </code>
+                </pre>
+            </TabItem>
+            <TabItem value="ruby" label="Ruby">
+                <pre>
+                    <code>
+                        {`def greet(name)
+  "Hello, #{name}!"
+end`}
+                    </code>
+                </pre>
+            </TabItem>
+        </Tabs>
+    );
+}
+
+
 
 export function UserStatus({ status }) {
     let statusMessage;

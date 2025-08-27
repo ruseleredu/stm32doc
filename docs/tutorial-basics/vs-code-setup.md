@@ -5,6 +5,7 @@ slug: /vscode-setup
 ---
 
 ## How to Setup VScode
+
 - https://youtu.be/0YoLbDPFZuw
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0YoLbDPFZuw?si=INZQFKgyBC8kgoB9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -15,7 +16,13 @@ Descrição: TODO!
 
 ---
 
-###  Workspace Setup (.vscode folder)
+- https://code.visualstudio.com/docs/configure/command-line
+
+```bash
+code --list-extensions --profile "DOCs"
+```
+
+### Workspace Setup (.vscode folder)
 
 For project-specific settings, create a `.vscode` folder at the root of your Docusaurus project.
 

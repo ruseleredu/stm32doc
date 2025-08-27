@@ -35,7 +35,7 @@ export function VerifyDev1() {
                     code -v
                 </ThemeCodeBlock>
                 <ThemeCodeBlock className="language-bash">
-                    code --list-extensions -show-versions
+                    code --list-extensions --show-versions
                 </ThemeCodeBlock>
             </Details>
         </div >

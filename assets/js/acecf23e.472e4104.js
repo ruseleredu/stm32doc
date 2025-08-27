@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstm_32_doc=self.webpackChunkstm_32_doc||[]).push([[1903],{9531:s=>{s.exports=JSON.parse('{"blogBasePath":"/stm32doc/blog","blogTitle":"Blog","authorsListPath":"/stm32doc/blog/authors"}')}}]);

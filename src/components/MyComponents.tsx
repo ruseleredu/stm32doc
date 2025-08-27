@@ -22,11 +22,6 @@ export function ComponentB() {
         <>
             <ThemeCodeBlock className="language-bash">
                 # This is the first line.
-                # This is the second line.
-
-                # This is the fourth line, after a blank line.
-                # This is the fifth line.
-                yes, only single line in!
             </ThemeCodeBlock>
         </>
     );
@@ -35,12 +30,35 @@ export function ComponentB() {
 export function ComponentC() {
     return (
         <div>
-            <Details summary={<summary>This is Component C</summary>}>
-                <p>It handles a different set of functionalities.</p>
+            <Details summary={<summary>Verifique o seu ambiente de desenvolvimento!</summary>}>
+                <p>Versão do git e configurações:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git --version
+                </ThemeCodeBlock>
+                <ThemeCodeBlock className="language-bash">
+                    git config --list --show-origin
+                </ThemeCodeBlock>
+
+                <p>Versão do GitHub CLI e status de login:</p>
+                <ThemeCodeBlock className="language-bash">
+                    gh --version
+                </ThemeCodeBlock>
+                <ThemeCodeBlock className="language-bash">
+                    gh auth status
+                </ThemeCodeBlock>
+
+                <p>Versão do VS Code e extensões instaladas:</p>
+                <ThemeCodeBlock className="language-bash">
+                    code -v
+                </ThemeCodeBlock>
+                <ThemeCodeBlock className="language-bash">
+                    code --list-extensions –show-versions
+                </ThemeCodeBlock>
             </Details>
         </div >
     );
 }
+
 
 export const ComponentD = () => {
     return (
@@ -52,26 +70,26 @@ export const ComponentD = () => {
 };
 
 export function UserStatus({ status }) {
-  let statusMessage;
+    let statusMessage;
 
-  switch (status) {
-    case 'online':
-      statusMessage = <p style={{ color: 'green' }}>🟢 User is online.</p>;
-      break;
-    case 'offline':
-      statusMessage = <p style={{ color: 'red' }}>🔴 User is offline.</p>;
-      break;
-    case 'away':
-      statusMessage = <p style={{ color: 'orange' }}>🟠 User is away.</p>;
-      break;
-    default:
-      statusMessage = <p>🟡 Status is unknown.</p>;
-  }
+    switch (status) {
+        case 'online':
+            statusMessage = <p style={{ color: 'green' }}>🟢 User is online.</p>;
+            break;
+        case 'offline':
+            statusMessage = <p style={{ color: 'red' }}>🔴 User is offline.</p>;
+            break;
+        case 'away':
+            statusMessage = <p style={{ color: 'orange' }}>🟠 User is away.</p>;
+            break;
+        default:
+            statusMessage = <p>🟡 Status is unknown.</p>;
+    }
 
-  return (
-    <div>
-      <h3>Current Status:</h3>
-      {statusMessage}
-    </div>
-  );
+    return (
+        <div>
+            <h3>Current Status:</h3>
+            {statusMessage}
+        </div>
+    );
 }

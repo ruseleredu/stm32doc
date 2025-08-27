@@ -36,24 +36,28 @@ export default function LabFromTemplate({ labNumber, opts = "" }) {
                             https://github.com/ELT73A-LAB-TPL/{labNumber}
                         </a></li>
                     </ul>
-                    <p>
-                        Use o comando abaixo para criar o repositório no GitHub com base no template do laboratório:
-                    </p>
-                    <ThemeCodeBlock className="language-bash">
-                        gh repo create ELT73A-S22-2025-2-{group}/{labNumber} --private -p ELT73A-LAB-TPL/{labNumber} {opts}
-                    </ThemeCodeBlock>
-                    <p>Agora, acesse o diretório do repositório clonado:</p>
-                    <ThemeCodeBlock className="language-bash">
-                        cd {labNumber}
-                    </ThemeCodeBlock>
-                    <p>Abra o repositório clonado no VS Code:</p>
-                    <ThemeCodeBlock className="language-bash">
-                        code .
-                    </ThemeCodeBlock>
-                    <p>Verifique o status do repositório:</p>
-                    <ThemeCodeBlock className="language-bash">
-                        git status
-                    </ThemeCodeBlock>
+                    <Admonition type="note" title="Cole o comando abaixo no prompt aberto na pasta de trabalho!">
+                        <p>
+                            Use o comando abaixo para criar o repositório no GitHub com base no template do laboratório {labNumber}:
+                        </p>
+                        <ThemeCodeBlock className="language-bash">
+                            gh repo create ELT73A-S22-2025-2-{group}/{labNumber} --private -p ELT73A-LAB-TPL/{labNumber} {opts}
+                        </ThemeCodeBlock>
+                    </Admonition>
+                    <Details summary={<summary>Abra o repositório clonado no VS Code</summary>}>
+                        <p>Acesse o diretório do repositório clonado:</p>
+                        <ThemeCodeBlock className="language-bash">
+                            cd {labNumber}
+                        </ThemeCodeBlock>
+                        <p>Verifique o status do repositório:</p>
+                        <ThemeCodeBlock className="language-bash">
+                            git status
+                        </ThemeCodeBlock>
+                        <p>Abra o repositório clonado no VS Code:</p>
+                        <ThemeCodeBlock className="language-bash">
+                            code .
+                        </ThemeCodeBlock>
+                    </Details>
                 </TabItem>
             ))}
         </Tabs>

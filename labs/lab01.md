@@ -8,6 +8,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
+import {VerifyDev2,GitConfig} from '@site/src/components/InstructionsSite';
 
 # Laboratório 01
 <!-- Aviso de que este conteúdo está em construção! -->
@@ -29,39 +30,9 @@ GitHub e Revisão da programação em C; Ambiente de desenvolvimento;
 - [ ] Comandos básicos, git e GitHub;
 - [ ] Revisão da programação em C;
 
+<!-- Verifique o seu ambiente dev, git, gh, code, gcc e gdb -->
+<VerifyDev2 />
 
-<details>
-<summary>Verifique o seu ambiente de desenvolvimento!</summary>
-
-Versão do [git](/docs/git) e configurações:
-
-```bash
-git --version
-git config --list --show-origin
-```
-
-Versão do [GitHub CLI](/docs/github-cli) e status de login:
-
-```bash
-gh --version
-gh auth status
-```
-
-Versão do [VS Code](/docs/vs-code) e extensões instaladas:
-
-```bash
-code -v
-code --list-extensions –show-versions
-```
-
-Versão do [gcc e gdb](/docs/mingw).
-
-```bash
-gcc --version
-gdb --version
-```
-
-</details>
 
 ## Crie um novo repositório com base no template do LAB01
 

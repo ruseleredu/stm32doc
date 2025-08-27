@@ -4,8 +4,29 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 
 ## Installation
 
+
 ```bash
-npm install
+npx create-docusaurus@latest stm32doc classic --typescript
+```
+
+[Diagrams](https://docusaurus.io/docs/markdown-features/diagrams)
+
+```bash
+npm install --save @docusaurus/theme-mermaid
+```
+
+[Math Equations](https://docusaurus.io/docs/markdown-features/math-equations)
+
+```bash
+npm install --save remark-math@6 rehype-katex@7
+```
+
+## Clone repo
+
+```bash
+git clone https://github.com/ruseleredu/stm32doc.git
+cd stm32doc
+npm i
 ```
 
 ## Local Development

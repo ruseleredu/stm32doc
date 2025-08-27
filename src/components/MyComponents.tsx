@@ -1,5 +1,3 @@
-// src/components/MyComponents.js
-
 import React from 'react';
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
@@ -52,7 +50,7 @@ export function ComponentC() {
                     code -v
                 </ThemeCodeBlock>
                 <ThemeCodeBlock className="language-bash">
-                    code --list-extensions –show-versions
+                    code --list-extensions --show-versions
                 </ThemeCodeBlock>
             </Details>
         </div >

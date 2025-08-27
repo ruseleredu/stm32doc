@@ -49,10 +49,6 @@ export default function LabFromTemplate({ labNumber, opts = "" }) {
                         <ThemeCodeBlock className="language-bash">
                             cd {labNumber}
                         </ThemeCodeBlock>
-                        <p>Verifique o status do repositório:</p>
-                        <ThemeCodeBlock className="language-bash">
-                            git status
-                        </ThemeCodeBlock>
                         <p>Abra o repositório clonado no VS Code:</p>
                         <ThemeCodeBlock className="language-bash">
                             code .

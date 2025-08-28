@@ -4,12 +4,16 @@ import TabItem from "@theme/TabItem";
 import ThemeCodeBlock from '@theme/CodeBlock';
 import Admonition from '@theme/Admonition';
 import Details from '@theme/Details';
+import Link from '@docusaurus/Link';
 
 export function ComponentA() {
     return (
         <>
             <Admonition type="info" title="This is Component A">
                 <p>It's designed for a specific purpose.</p>
+                <Link to="/docs/tutorial-basics/docusaurus-videos">
+                    Link interno para Docu YouTube videos
+                </Link>
             </Admonition>
         </>
     );

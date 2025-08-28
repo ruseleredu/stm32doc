@@ -206,17 +206,25 @@ const config: Config = {
               href: "https://git-scm.com/downloads",
             },
             {
+              label: "GitHub CLI",
+              href: "https://cli.github.com/",
+            },
+            {
               label: "GitHub Desktop",
               href: "https://desktop.github.com/download/",
             },
             {
-              label: "Java",
-              href: "https://www.java.com/pt-BR/download",
+              label: "MinGW MSYS2",
+              href: "https://www.msys2.org/",
+            },
+            {
+              label: "WinGet",
+              href: "https://winget.run/",
             },
           ],
         },
         {
-          title: "Ferramentas",
+          title: "STM32Cube",
           items: [
             {
               label: "STM32CubeMX",
@@ -227,8 +235,20 @@ const config: Config = {
               href: "https://www.st.com/en/development-tools/stm32cubeclt.html",
             },
             {
+              label: "STM32CubeProg",
+              href: "https://www.st.com/en/development-tools/stm32cubeprog.html",
+            },
+            {
+              label: "STM32CubeMonitor",
+              href: "https://www.st.com/en/development-tools/stm32cubemonitor.html",
+            },
+            {
               label: "STMCUFinder",
               href: "https://www.st.com/en/development-tools/st-mcu-finder-pc.html",
+            },
+            {
+              label: "STM32CubeIDE",
+              href: "https://www.st.com/en/development-tools/stm32cubeide.html",
             },
           ],
         },

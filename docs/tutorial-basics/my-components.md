@@ -35,6 +35,4 @@ import { ComponentA, ComponentC } from '@site/src/components/MyComponents';
 
 <LABsIncomplete />
 
-<CodeTabsExample />
-
 <ComponentD />

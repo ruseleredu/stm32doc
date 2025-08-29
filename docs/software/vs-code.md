@@ -35,9 +35,7 @@ Launching from command line
 code .
 ```
 
-extensions.json
-
-```json
+```json title=".vscode/extensions.json"
 {
   "recommendations": [
     "formulahendry.code-runner",
@@ -52,9 +50,7 @@ extensions.json
 }
 ```
 
-settings.json
-
-```json
+```json title=".vscode/settings.json"
 {
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
@@ -98,3 +94,43 @@ Como formatar o seu código em C no VScode
 Escolha e configuração de temas no VScode
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/p1kprMBB9fQ?si=iPNpFzCl0s-8u58V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## STM32Cube for Visual Studio Code Extension Pack
+
+[STM32Cube for Visual Studio Code Extension Pack](https://community.st.com/t5/stm32cube-for-visual-studio-code/new-stm32cube-for-visual-studio-code-extenstion-released-3-5-1/td-p/819484)
+
+[STMicroelectronics](https://marketplace.visualstudio.com/publishers/stmicroelectronics)
+
+### STM32Cube for Visual Studio Code
+
+- [STM32Cube for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension)
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+
+Only:
+
+- [STM32Cube CMake Support](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32cube-ide-build-cmake)
+- [STM32Cube Debug STLink GDB Server](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32cube-ide-debug-stlink-gdbserver)
+  STM32Cube Debug Core
+
+```json title=".vscode/extensions.json"
+{
+  "recommendations": [
+    "ms-vscode.cpptools", // (dependencies to ms-vscode.cpptools-extension-pack)
+    "ms-vscode.cpptools-themes", // (dependencies to ms-vscode.cpptools-extension-pack)
+    "ms-vscode.cmake-tools", // (dependencies to ms-vscode.cpptools-extension-pack)
+    "twxs.cmake", // (dependencies to ms-vscode.cpptools-extension-pack)
+    "ms-vscode.cpptools-extension-pack", // Provides CMake and C++ file coloring, completion & support
+    "dan-c-underwood.arm", // Provides syntax highlighting for the Arm Assembly language
+    "zixuanwang.linkerscript", // Provides syntax highlighting for linker scripts
+    "ms-vscode.hexeditor", // Provides hex editor fo viewing & anipulating files in their raw hexadecimal representation
+    "trond-snekvik.gnu-mapfiles", // Provides syntax highlighting and symbol listing for GNU linker .map files
+    "jeff-hykin.better-cpp-syntax", // Provides syntax highlighting for C++
+    "marus25.cortex-debug", // Provides debug support on Arm Cortex-M
+    "mcu-debug.debug-tracker-vscode", // Dependencies to "marus25.cortex-debug"
+    "mcu-debug.memory-view", // Dependencies to "marus25.cortex-debug"
+    "mcu-debug.peripheral-viewer", // Dependencies to "marus25.cortex-debug"
+    "mcu-debug.rtos-views" // Dependencies to "marus25.cortex-debug"
+  ]
+}
+```

@@ -158,6 +158,13 @@ export function STM32Tools() {
                     </li>
                 </ul>
             </TabItem>
+            <TabItem value="ST-MCU-FINDER" label="ST-MCU-FINDER">
+                <p><b>STM32 and STM8 product finder for desktops.</b></p>
+                <ul>
+                    <li><a href="https://www.st.com/en/development-tools/st-mcu-finder-pc.html#get-software" target="_blank">ST-MCU-FINDER-PC</a> allows exploring and connecting to the complete portfolio of STM32 Arm® Cortex®-M, STM32 Arm® Cortex®-A7, and STM8 microcontrollers, microprocessors, development boards and examples directly from the developer’s desktop environment.
+                    </li>
+                </ul>
+            </TabItem>
             <TabItem value="STM32CubeProg" label="STM32CubeProg">
                 <p><b><Link to="/docs/stm32cubeprg">STM32CubeProg</Link> is an all-in-one multi-OS software tool for programming STM32 products.</b></p>
                 <ul>

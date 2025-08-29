@@ -32,7 +32,7 @@ For project-specific settings, create a `.vscode` folder at the root of your Doc
 
 my-website/.vscode/settings.json
 
-```json
+```json title=".vscode/settings.json"
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -53,7 +53,7 @@ my-website/.vscode/settings.json
 
 my-website/.vscode/extensions.json
 
-```json
+```json title=".vscode/extensions.json"
 {
   "recommendations": [
     "streetsidesoftware.code-spell-checker",

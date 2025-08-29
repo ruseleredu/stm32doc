@@ -235,16 +235,16 @@ const config: Config = {
               href: "https://www.st.com/en/development-tools/stm32cubeclt.html",
             },
             {
+              label: "STMCUFinder",
+              href: "https://www.st.com/en/development-tools/st-mcu-finder-pc.html",
+            },
+            {
               label: "STM32CubeProg",
               href: "https://www.st.com/en/development-tools/stm32cubeprog.html",
             },
             {
               label: "STM32CubeMonitor",
               href: "https://www.st.com/en/development-tools/stm32cubemonitor.html",
-            },
-            {
-              label: "STMCUFinder",
-              href: "https://www.st.com/en/development-tools/st-mcu-finder-pc.html",
             },
             {
               label: "STM32CubeIDE",

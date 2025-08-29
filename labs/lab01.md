@@ -98,6 +98,41 @@ Escolha e configuração de temas no VScode
 <iframe width="560" height="315" src="https://www.youtube.com/embed/p1kprMBB9fQ?si=iPNpFzCl0s-8u58V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ```bash
+code --list-extensions --profile "C/C++"
+```
+
+```json title=".vscode/extensions.json"
+{
+  "recommendations": [
+    "formulahendry.code-runner",
+    "ms-vscode.cmake-tools",
+    "ms-vscode.cpptools",
+    "ms-vscode.cpptools-extension-pack",
+    "ms-vscode.cpptools-themes",
+    "pkief.material-icon-theme",
+    "yzhang.markdown-all-in-one"
+    // Add other relevant extensions
+  ]
+}
+```
+
+```json title=".vscode/settings.json"
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "editor.formatOnPaste": true,
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  }
+}
+```
+
+```bash
 mkdir helloworld
 cd helloworld
 code .

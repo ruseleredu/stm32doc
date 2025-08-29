@@ -6,6 +6,18 @@ import Admonition from '@theme/Admonition';
 import Details from '@theme/Details';
 import Link from '@docusaurus/Link';
 
+/*
+<Link to="/docs/stm32cubemx">STM32CubeMX</Link>
+<Link to="/docs/stm32cubeclt">STM32CubeCLT</Link>
+<Link to="/docs/stm32cubeprg">STM32CubeProg</Link>
+<Link to="/docs/stm32cubemon">STM32CubeMonitor</Link>
+<Link to="/docs/stm32cubeide">STM32CubeIDE</Link>
+
+<Link to="/docs/git">git</Link>
+<Link to="/docs/github-cli">GitHub CLI</Link>
+<Link to="/docs/vs-code">Visual Studio Code</Link>
+*/
+
 export function ComponentA() {
     return (
         <>
@@ -84,42 +96,6 @@ export function ComponentD() {
         </Tabs>
     );
 }
-
-
-export function CodeTabsExample() {
-    return (
-        <Tabs>
-            <TabItem value="javascript" label="JavaScript">
-                <pre>
-                    <code>
-                        {`function greet(name) {
-  return 'Hello, ' + name + '!';
-}`}
-                    </code>
-                </pre>
-            </TabItem>
-            <TabItem value="python" label="Python">
-                <pre>
-                    <code>
-                        {`def greet(name):
-    return 'Hello, ' + name`}
-                    </code>
-                </pre>
-            </TabItem>
-            <TabItem value="ruby" label="Ruby">
-                <pre>
-                    <code>
-                        {`def greet(name)
-  "Hello, #{name}!"
-end`}
-                    </code>
-                </pre>
-            </TabItem>
-        </Tabs>
-    );
-}
-
-
 
 export function UserStatus({ status }) {
     let statusMessage;

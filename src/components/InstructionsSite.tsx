@@ -7,7 +7,21 @@ import Details from '@theme/Details';
 import Link from '@docusaurus/Link';
 
 // import {VerifyDev1,VerifyDev1} from '@site/src/components/InstructionsSite';
+/*
+<Link to="/docs/stm32cubemx">STM32CubeMX</Link>
+<Link to="/docs/stm32cubeclt">STM32CubeCLT</Link>
+<Link to="/docs/stm32cubeprg">STM32CubeProg</Link>
+<Link to="/docs/stm32cubemon">STM32CubeMonitor</Link>
 
+<Link to="/docs/stm32cubeide">STM32CubeIDE</Link>
+
+<Link to="/docs/git">git</Link>
+<Link to="/docs/github-cli">GitHub CLI</Link>
+<Link to="/docs/vs-code">Visual Studio Code</Link>
+
+
+<Link to="/docs/stm32cubetools">STM32Cube Tools</Link>
+*/
 // import {VerifyDev1} from '@site/src/components/InstructionsSite';
 // <!-- Verifique o seu ambiente dev, git, gh e code -->
 // <VerifyDev1 />
@@ -15,7 +29,7 @@ export function VerifyDev1() {
     return (
         <div>
             <Details summary={<summary>Verifique o seu ambiente de desenvolvimento!</summary>}>
-                <p>Versão do git e configurações:</p>
+                <p>Versão do <Link to="/docs/git">git</Link> e configurações:</p>
                 <ThemeCodeBlock className="language-bash">
                     git --version
                 </ThemeCodeBlock>
@@ -23,7 +37,7 @@ export function VerifyDev1() {
                     git config --list --show-origin
                 </ThemeCodeBlock>
 
-                <p>Versão do GitHub CLI e status de login:</p>
+                <p>Versão do <Link to="/docs/github-cli">GitHub CLI</Link> e status de login:</p>
                 <ThemeCodeBlock className="language-bash">
                     gh --version
                 </ThemeCodeBlock>
@@ -31,7 +45,7 @@ export function VerifyDev1() {
                     gh auth status
                 </ThemeCodeBlock>
 
-                <p>Versão do VS Code e extensões instaladas:</p>
+                <p>Versão do <Link to="/docs/vs-code">Visual Studio Code</Link> e extensões instaladas:</p>
                 <ThemeCodeBlock className="language-bash">
                     code -v
                 </ThemeCodeBlock>
@@ -50,7 +64,7 @@ export function VerifyDev2() {
     return (
         <div>
             <Details summary={<summary>Verifique o seu ambiente de desenvolvimento!</summary>}>
-                <p>Versão do git e configurações:</p>
+                <p>Versão do <Link to="/docs/git">git</Link> e configurações:</p>
                 <ThemeCodeBlock className="language-bash">
                     git --version
                 </ThemeCodeBlock>
@@ -58,7 +72,7 @@ export function VerifyDev2() {
                     git config --list --show-origin
                 </ThemeCodeBlock>
 
-                <p>Versão do GitHub CLI e status de login:</p>
+                <p>Versão do <Link to="/docs/github-cli">GitHub CLI</Link> e status de login:</p>
                 <ThemeCodeBlock className="language-bash">
                     gh --version
                 </ThemeCodeBlock>
@@ -66,7 +80,7 @@ export function VerifyDev2() {
                     gh auth status
                 </ThemeCodeBlock>
 
-                <p>Versão do VS Code e extensões instaladas:</p>
+                <p>Versão do <Link to="/docs/vs-code">Visual Studio Code</Link> e extensões instaladas:</p>
                 <ThemeCodeBlock className="language-bash">
                     code -v
                 </ThemeCodeBlock>
@@ -108,7 +122,7 @@ export function GitConfig() {
                     git config --global core.autocrlf false
                 </ThemeCodeBlock>
 
-                <p>Configure o Git para usar o Visual Studio Code (VS Code) como editor padrão para tarefas como escrever mensagens de commit ou rebases interativos</p>
+                <p>Configure o <Link to="/docs/git">git</Link> para usar o <Link to="/docs/vs-code">Visual Studio Code</Link> como editor padrão para tarefas como escrever mensagens de commit ou rebases interativos</p>
                 <ThemeCodeBlock className="language-bash">
                     git config --global core.editor "code --wait"
                 </ThemeCodeBlock>

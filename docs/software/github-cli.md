@@ -5,6 +5,8 @@ description: GitHub CLI brings GitHub to your terminal. Free and open source.
 slug: /github-cli
 ---
 
+import ThemeCodeBlock from '@theme/CodeBlock';
+
 ## Intalação
 
 [Installing gh on Windows](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)
@@ -168,58 +170,32 @@ gh auth refresh -h github.com -s delete_repo
 ```
 
 ## License
+
 For more information, see: http://choosealicense.com/licenses/
-
-
-```bash
-MIT License
-
-Copyright (c) [year] [fullname]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
 
 ```bash
 gh repo license list
 ```
 
-| LICENSE KEY  | SPDX ID      | LICENSE NAME                            |
-| ------------ | ------------ | --------------------------------------- |
-| agpl-3.0     | AGPL-3.0     | GNU Affero General Public License v3.0  |
-| apache-2.0   | Apache-2.0   | Apache License 2.0                      |
-| bsd-2-clause | BSD-2-Clause | BSD 2-Clause "Simplified" License       |
-| bsd-3-clause | BSD-3-Clause | BSD 3-Clause "New" or "Revised" License |
-| bsl-1.0      | BSL-1.0      | Boost Software License 1.0              |
-| cc0-1.0      | CC0-1.0      | Creative Commons Zero v1.0 Universal    |
-| epl-2.0      | EPL-2.0      | Eclipse Public License 2.0              |
-| gpl-2.0      | GPL-2.0      | GNU General Public License v2.0         |
-| gpl-3.0      | GPL-3.0      | GNU General Public License v3.0         |
-| lgpl-2.1     | LGPL-2.1     | GNU Lesser General Public License v2.1  |
-| mit          | MIT          | MIT License                             |
-| mpl-2.0      | MPL-2.0      | Mozilla Public License 2.0              |
-| unlicense    | Unlicense    | The Unlicense                           |
-
+| LICENSE KEY  | SPDX ID      | LICENSE NAME                                                                              |
+| ------------ | ------------ | ----------------------------------------------------------------------------------------- |
+| agpl-3.0     | AGPL-3.0     | GNU Affero General Public License v3.0                                                    |
+| apache-2.0   | Apache-2.0   | Apache License 2.0                                                                        |
+| bsd-2-clause | BSD-2-Clause | BSD 2-Clause "Simplified" License                                                         |
+| bsd-3-clause | BSD-3-Clause | BSD 3-Clause "New" or "Revised" License                                                   |
+| bsl-1.0      | BSL-1.0      | Boost Software License 1.0                                                                |
+| cc0-1.0      | CC0-1.0      | Creative Commons Zero v1.0 Universal                                                      |
+| epl-2.0      | EPL-2.0      | Eclipse Public License 2.0                                                                |
+| gpl-2.0      | GPL-2.0      | GNU General Public License v2.0                                                           |
+| gpl-3.0      | GPL-3.0      | GNU General Public License v3.0                                                           |
+| lgpl-2.1     | LGPL-2.1     | GNU Lesser General Public License v2.1                                                    |
+| mit          | MIT          | MIT License                                                                               |
+| mpl-2.0      | MPL-2.0      | Mozilla Public License 2.0                                                                |
+| unlicense    | Unlicense    | <ThemeCodeBlock className="language-bash">gh repo license view unlicense</ThemeCodeBlock> |
 
 ```bash
 gh repo license view mit
 ```
-
 
 A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
@@ -249,4 +225,36 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
+
+## License
+
+For more information, see: http://choosealicense.com/licenses/
+
+```bash
+gh repo license list
+```
+
+| LICENSE KEY  | SPDX ID      | LICENSE NAME                                                                                 |
+| ------------ | ------------ | -------------------------------------------------------------------------------------------- |
+| agpl-3.0     | AGPL-3.0     | [GNU Affero General Public License v3.0](http://choosealicense.com/licenses/agpl-3.0/)       |
+| apache-2.0   | Apache-2.0   | [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)                        |
+| bsd-2-clause | BSD-2-Clause | [BSD 2-Clause "Simplified" License](https://choosealicense.com/licenses/bsd-2-clause/)       |
+| bsd-3-clause | BSD-3-Clause | [BSD 3-Clause "New" or "Revised" License](https://choosealicense.com/licenses/bsd-3-clause/) |
+| bsl-1.0      | BSL-1.0      | [Boost Software License 1.0](https://choosealicense.com/licenses/bsl-1.0/)                   |
+| cc0-1.0      | CC0-1.0      | [Creative Commons Zero v1.0 Universal](https://choosealicense.com/licenses/cc0-1.0/)         |
+| epl-2.0      | EPL-2.0      | [Eclipse Public License 2.0](https://choosealicense.com/licenses/epl-2.0/)                   |
+| gpl-2.0      | GPL-2.0      | [GNU General Public License v2.0](https://choosealicense.com/licenses/gpl-2.0/)              |
+| gpl-3.0      | GPL-3.0      | [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)              |
+| lgpl-2.1     | LGPL-2.1     | [GNU Lesser General Public License v2.1](https://choosealicense.com/licenses/lgpl-2.1/)      |
+| mit          | MIT          | [MIT License](https://choosealicense.com/licenses/mit/)                                      |
+| mpl-2.0      | MPL-2.0      | [Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)                   |
+| unlicense    | Unlicense    | [The Unlicense](https://choosealicense.com/licenses/unlicense/)                              |
+
+```bash
+gh repo license view mit
+```
+
+```bash
+gh repo license view unlicense
 ```

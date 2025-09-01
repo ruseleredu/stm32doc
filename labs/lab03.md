@@ -30,3 +30,9 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 <!-- List of STM32Cube Tools -->
 <STM32Tools />
+
+<!-- Verifique o seu ambiente dev, git, gh, code, gcc e gdb -->
+<VerifyDev2 />
+
+<!-- Configure o git -->
+<GitConfig />

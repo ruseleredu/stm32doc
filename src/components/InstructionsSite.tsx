@@ -237,3 +237,49 @@ export function STM32ToolsFull() {
         </Tabs>
     );
 }
+
+
+
+
+
+// import {DevTools} from '@site/src/components/InstructionsSite';
+// <!-- List of Dev Tools -->
+// <DevTools />
+export function DevTools() {
+    return (
+        <Tabs>
+            <TabItem value="git-scm" label="Git SCM" default>
+                <p><b>It is the most widely used source-code management tool among professional developers.</b></p>
+                <ul>
+                    <li><a href="https://git-scm.com/downloads/win" target="_blank">Git</a> is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+                    </li>
+                </ul>
+                <ThemeCodeBlock className="language-bash">
+                    winget install --id Git.Git -e --source winget
+                </ThemeCodeBlock>
+            </TabItem>
+            <TabItem value="gh" label="GitHub CLI">
+                <p><b>GitHub CLI brings GitHub to your terminal.</b></p>
+                <ul>
+                    <li><a href="https://cli.github.com/" target="_blank">GitHub CLI</a> is a command line tool that allows you to interact with GitHub from the command line. It is available for Windows, macOS, and Linux.
+                    </li>
+                </ul>
+                <ThemeCodeBlock className="language-bash">
+                    winget install --id GitHub.cli -e --source winget
+                </ThemeCodeBlock>
+
+            </TabItem>
+            <TabItem value="vscode" label="VS Code">
+                <p><b>Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.</b></p>
+                <ul>
+                    <li><a href="https://code.visualstudio.com/download" target="_blank">VS Code</a> is a free source-code editor made by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
+                    </li>
+                </ul>
+                <ThemeCodeBlock className="language-bash">
+                    winget install --id Microsoft.VisualStudioCode -e --source winget
+                </ThemeCodeBlock>
+            </TabItem>
+        </Tabs>
+    );
+}
+

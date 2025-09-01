@@ -23,12 +23,22 @@ import {VerifyDev2,GitConfig,STM32Tools} from '@site/src/components/Instructions
 
 Processo de compilação, gravação e commit de código;
 
-- [ ] Atividades de EaD e Lab;
-- [ ] Ambiente de desenvolvimento;
-- [ ] Crie uma organização no GitHub;
-- [ ] Adicione os membros do seu grupo;
-- [ ] Promova o professor como owner;
-- [ ] Projeto Final;
+- [ ] Crie uma conta no [my.st.com](https://www.st.com/content/st_com/en/user-registration.html);
+- [ ] Instale o [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html#get-software);
+- [ ] Instale o [STM32CubeCLT](https://www.st.com/en/development-tools/stm32cubeclt.html#get-software);
+- [ ] Instale o [ST-MCU-Finder](https://www.st.com/en/development-tools/st-mcu-finder-pc.html#get-software);
+- [ ] Instale o [STM32CubeProg](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software);
+- [ ] Crie um perfil no Visual Studio Code chamado `STM32`;
+- [ ] Instale [STM32Cube para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension);
+- [ ] Configure o Visual Studio Code;
+- [ ] Teste de geração e compilação de projeto para o STM32F411CEUx;
+- [ ] Teste de uso do [LoadMX](/docs/loadmx)
+
+<!-- Verifique o seu ambiente dev, git, gh, code, gcc e gdb -->
+<VerifyDev2 />
+
+<!-- Configure o git -->
+<GitConfig />
 
 ## Crie um novo repositório com base no template do LAB02
 
@@ -48,6 +58,8 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 code --list-extensions --profile "STM32"
 ```
 
+<details>
+ <summary>Recomendações de extensões e configurações para o VS Code.</summary>
 ```json title=".vscode/extensions.json"
 {
   "recommendations": [
@@ -90,62 +102,4 @@ code --list-extensions --profile "STM32"
 }
 ```
 
-```json title=".vscode/launch.json"
-{
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Build & Debug Microcontroller - ST-Link",
-      "cwd": "${workspaceFolder}",
-      "type": "cortex-debug",
-      "executable": "${command:cmake.launchTargetPath}",
-      // Let CMake extension decide executable: "${command:cmake.launchTargetPath}"
-      // Or fixed file path: "${workspaceFolder}/path/to/filename.elf"
-      "request": "launch",
-      "servertype": "stlink",
-      "device": "STM32F411CEUx", //MCU used
-      "interface": "swd",
-      "serialNumber": "", //Set ST-Link ID if you use multiple at the same time
-      "runToEntryPoint": "main",
-      "svdFile": "${config:STM32VSCodeExtension.cubeCLT.path}/STMicroelectronics_CMSIS_SVD/STM32F411.svd",
-      "v1": false, //Change it depending on ST Link version
-      "serverpath": "${config:STM32VSCodeExtension.cubeCLT.path}/STLink-gdb-server/bin/ST-LINK_gdbserver",
-      "stm32cubeprogrammer": "${config:STM32VSCodeExtension.cubeCLT.path}/STM32CubeProgrammer/bin",
-      "stlinkPath": "${config:STM32VSCodeExtension.cubeCLT.path}/STLink-gdb-server/bin/ST-LINK_gdbserver",
-      "armToolchainPath": "${config:STM32VSCodeExtension.cubeCLT.path}/GNU-tools-for-STM32/bin",
-      "gdbPath": "${config:STM32VSCodeExtension.cubeCLT.path}/GNU-tools-for-STM32/bin/arm-none-eabi-gdb",
-      "serverArgs": ["-m", "0"]
-      //"preLaunchTask": "Build + Flash"
-      /* If you use external loader, add additional arguments */
-      //"serverArgs": ["--extload", "path/to/ext/loader.stldr"],
-    },
-    {
-      "name": "Attach to Microcontroller - ST-Link",
-      "cwd": "${workspaceFolder}",
-      "type": "cortex-debug",
-      "executable": "${command:cmake.launchTargetPath}",
-      // Let CMake extension decide executable: "${command:cmake.launchTargetPath}"
-      // Or fixed file path: "${workspaceFolder}/path/to/filename.elf"
-      "request": "attach",
-      "servertype": "stlink",
-      "device": "STM32F411CEUx", //MCU used
-      "interface": "swd",
-      "serialNumber": "", //Set ST-Link ID if you use multiple at the same time
-      "runToEntryPoint": "main",
-      "svdFile": "${config:STM32VSCodeExtension.cubeCLT.path}/STMicroelectronics_CMSIS_SVD/STM32F411.svd",
-      "v1": false, //Change it depending on ST Link version
-      "serverpath": "${config:STM32VSCodeExtension.cubeCLT.path}/STLink-gdb-server/bin/ST-LINK_gdbserver",
-      "stm32cubeprogrammer": "${config:STM32VSCodeExtension.cubeCLT.path}/STM32CubeProgrammer/bin",
-      "stlinkPath": "${config:STM32VSCodeExtension.cubeCLT.path}/STLink-gdb-server/bin/ST-LINK_gdbserver",
-      "armToolchainPath": "${config:STM32VSCodeExtension.cubeCLT.path}/GNU-tools-for-STM32/bin",
-      "gdbPath": "${config:STM32VSCodeExtension.cubeCLT.path}/GNU-tools-for-STM32/bin/arm-none-eabi-gdb",
-      "serverArgs": ["-m", "0"]
-      /* If you use external loader, add additional arguments */
-      //"serverArgs": ["--extload", "path/to/ext/loader.stldr"],
-    }
-  ]
-}
-```
+</details>

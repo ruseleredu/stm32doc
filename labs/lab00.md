@@ -29,8 +29,38 @@ Apresentação da Disicplina; Materiais utilizados na disciplina;
 - [ ] Adicione os membros do seu grupo;
 - [ ] Promova o professor como owner;
 
+import {DevTools} from '@site/src/components/InstructionsSite';
+
+<!-- List of Dev Tools -->
+<DevTools />
+
+<Tabs>
+  <TabItem value="git" label="Git" default>
+    - [git](https://git-scm.com/) 
+```bash
+winget install -e --id Git.Git
+```
+  </TabItem>
+    <TabItem value="gh" label="GitHub CLI">
+    - [GitHub CLI](https://cli.github.com/)
+```bash
+winget install --id GitHub.cli
+```
+  </TabItem>
+    <TabItem value="vscode" label="VS Code">
+   - [VS Code](https://code.visualstudio.com/)
+   - [STM32Cube for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension)
+  ```bash
+winget install -e --id Microsoft.VisualStudioCode
+```
+  </TabItem>
+</Tabs>
+
 <!-- Verifique o seu ambiente dev, git, gh, code, gcc e gdb -->
 <VerifyDev2 />
+
+<!-- Configure o git -->
+<GitConfig />
 
 ## Crie um novo repositório com base no template do LAB00
 
@@ -38,9 +68,6 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB00" opts="-c" />
-
-<!-- Configure o git -->
-<GitConfig />
 
 <!-- List of STM32Cube Tools -->
 <STM32Tools />

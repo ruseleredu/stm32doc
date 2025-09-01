@@ -60,7 +60,6 @@ winget install -e --id Git.Git
 winget install --id GitHub.cli
 ```
   </TabItem>
-
 </Tabs>
 
 ```bash

@@ -34,6 +34,9 @@ GitHub e Revisão da programação em C; Ambiente de desenvolvimento;
 <!-- Verifique o seu ambiente dev, git, gh, code, gcc e gdb -->
 <VerifyDev2 />
 
+<!-- Configure o git -->
+<GitConfig />
+
 ## Crie um novo repositório com base no template do LAB01
 
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:

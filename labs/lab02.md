@@ -109,3 +109,68 @@ code --list-extensions --profile "STM32"
 ```
 
 </details>
+
+## Como carregar um script do STM32CubeMX
+
+- https://www.st.com/resource/en/user_manual/um1718-stm32cubemx-for-stm32-configuration-and-initialization-c-code-generation-stmicroelectronics.pdf
+
+To run STM32CubeMX in interactive command-line mode, use the following command line:
+
+```bash
+"%STM32CubeMX_PATH%\jre\bin\java" -jar "%STM32CubeMX_PATH%\STM32CubeMX.exe" -i
+```
+
+To generate a script
+
+```bash
+export script ScriptToLoad.txt
+```
+
+To run STM32CubeMX in command-line mode, getting commands from a script, use the following command line:
+
+```bash
+"%STM32CubeMX_PATH%\jre\bin\java" -jar "%STM32CubeMX_PATH%\STM32CubeMX.exe" -s ScriptToLoad.txt
+```
+
+Exemplo de arquivo txt de configuração:
+
+```bash title="ScriptToLoad.txt"
+load STM32F411CEUx
+set pin "PC14-OSC32_IN" RCC_OSC32_IN
+lock pin "PC14-OSC32_IN" false
+set pin "PC15-OSC32_OUT" RCC_OSC32_OUT
+lock pin "PC15-OSC32_OUT" false
+set pin "PH0 - OSC_IN" RCC_OSC_IN
+lock pin "PH0 - OSC_IN" false
+set pin "PH1 - OSC_OUT" RCC_OSC_OUT
+lock pin "PH1 - OSC_OUT" false
+set mode RCC "HSE-External-Oscillator"
+set mode RCC "LSE-External-Oscillator"
+set mode SYS "SysTick"
+```
+
+### [LoadMX](/docs/loadmx)
+
+Call for Help (--help, -h, /?)
+
+```bash
+LoadMX --help
+```
+
+Run STM32CubeMX interactively
+
+```bash
+LoadMX -i
+```
+
+Opens STM32CubeMX with provided Project Name and Script Name and loads default value for Code Generation (N)
+
+```bash
+LoadMX ProjectName ScriptToLoad.txt
+```
+
+Opens STM32CubeMX with provided Project Name, Script Name and generate code
+
+```bash
+LoadMX ProjectName ScriptToLoad.txt Y
+```

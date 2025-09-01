@@ -238,10 +238,6 @@ export function STM32ToolsFull() {
     );
 }
 
-
-
-
-
 // import {DevTools} from '@site/src/components/InstructionsSite';
 // <!-- List of Dev Tools -->
 // <DevTools />
@@ -257,6 +253,10 @@ export function DevTools() {
                 <ThemeCodeBlock className="language-bash">
                     winget install --id Git.Git -e --source winget
                 </ThemeCodeBlock>
+                <p>Configurações do <Link to="/docs/git">git</Link>:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git config --list --show-origin
+                </ThemeCodeBlock>
             </TabItem>
             <TabItem value="gh" label="GitHub CLI">
                 <p><b>GitHub CLI brings GitHub to your terminal.</b></p>
@@ -267,7 +267,10 @@ export function DevTools() {
                 <ThemeCodeBlock className="language-bash">
                     winget install --id GitHub.cli -e --source winget
                 </ThemeCodeBlock>
-
+                <p>Status de login do <Link to="/docs/github-cli">GitHub CLI</Link>:</p>
+                <ThemeCodeBlock className="language-bash">
+                    gh auth status
+                </ThemeCodeBlock>
             </TabItem>
             <TabItem value="vscode" label="VS Code">
                 <p><b>Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.</b></p>
@@ -278,8 +281,15 @@ export function DevTools() {
                 <ThemeCodeBlock className="language-bash">
                     winget install --id Microsoft.VisualStudioCode -e --source winget
                 </ThemeCodeBlock>
+                <p>Extensões instaladas do <Link to="/docs/vs-code">Visual Studio Code</Link> para o perfil STM32:</p>
+                <ThemeCodeBlock className="language-bash">
+                    code --list-extensions --profile "STM32"
+                </ThemeCodeBlock>
             </TabItem>
         </Tabs>
     );
 }
+
+
+
 

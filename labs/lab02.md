@@ -8,7 +8,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {VerifyDev2,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
+import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
 
 # Laboratório 02
 
@@ -20,6 +20,8 @@ import {VerifyDev2,GitConfig,STM32Tools} from '@site/src/components/Instructions
 | [Template 02](https://github.com/ELT73A-LAB-TPL/LAB02) | 01-Sep-2025 | 08-Sep-2025 | Processo de compilação, gravação e commit de código; |
 
 ---
+
+## Conteúdo
 
 Processo de compilação, gravação e commit de código;
 
@@ -34,11 +36,18 @@ Processo de compilação, gravação e commit de código;
 - [ ] Teste de geração e compilação de projeto para o STM32F411CEUx;
 - [ ] Teste de uso do [LoadMX](/docs/loadmx)
 
-<!-- Verifique o seu ambiente dev, git, gh, code, gcc e gdb -->
-<VerifyDev2 />
+## Verifique o seu ambiente de desenvolvimento
+
+<!-- List of Dev Tools -->
+<DevTools />
 
 <!-- Configure o git -->
 <GitConfig />
+
+---
+
+<!-- List of STM32Cube Tools -->
+<STM32Tools />
 
 ## Crie um novo repositório com base no template do LAB02
 
@@ -46,9 +55,6 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB02" opts="-c" />
-
-<!-- List of STM32Cube Tools -->
-<STM32Tools />
 
 ## Instalação do VScode e extensão para o STM32
 

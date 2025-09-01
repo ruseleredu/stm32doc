@@ -4,9 +4,6 @@ title: Organizações
 description: Organizações/Grupos das aulas de laboratório
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 # Organizações
 
 Como criar uma organização no GitHub

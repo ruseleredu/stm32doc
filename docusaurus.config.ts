@@ -96,6 +96,17 @@ const config: Config = {
         // ... other options specific to your API docs
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      {
+        id: "tpls", // Unique ID for this docs instance
+        path: "tpls", // Path to your API docs folder
+        routeBasePath: "tpls", // Base URL for these docs (e.g., yoursite.com/api/...)
+        sidebarPath: require.resolve("./sidebarstpls.js"), // Separate sidebar for Quiz docs
+        // ... other options specific to your API docs
+      },
+    ],
   ],
   // ... rest of your config
 

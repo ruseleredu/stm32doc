@@ -10,8 +10,8 @@ import {EaDIncomplete} from '@site/src/components/AvisosSite';
 
 <EaDIncomplete />
 
-| quiz                                                            | start/open  | end/close   | description                                      |
-| --------------------------------------------------------------- | ----------- | ----------- | ------------------------------------------------ |
+|                          Questionário                           | start/open  | end/close   | Descrição                                        |
+| :-------------------------------------------------------------: | ----------- | ----------- | ------------------------------------------------ |
 | [Q03](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957479) | 15-Sep-2025 | 22-Sep-2025 | Interrupções via GPIO e Temporizadores (Timers); |
 
 ---

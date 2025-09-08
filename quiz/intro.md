@@ -6,9 +6,9 @@ description: Introdução aos questionários.
 
 ## Atividades Assíncronas (EaD)
 
-| quiz                | start/open  | end/close   | description                                                     |
-| ------------------- | ----------- | ----------- | --------------------------------------------------------------- |
-|                     | 18-Aug-2025 | 25-Aug-2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
+|        quiz         | start/open  | end/close   | Descrição                                                       |
+| :-----------------: | ----------- | ----------- | --------------------------------------------------------------- |
+| [Q00](/quiz/quiz00) | 18-Aug-2025 | 25-Aug-2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
 | [Q01](/quiz/quiz01) | 25-Aug-2025 | 01-Sep-2025 | Revisão da programação em C;                                    |
 | [Q02](/quiz/quiz02) | 01-Sep-2025 | 08-Sep-2025 | Processo de compilação, gravação e commit de código;            |
 | [Q03](/quiz/quiz03) | 15-Sep-2025 | 22-Sep-2025 | Interrupções via GPIO e Temporizadores (Timers);                |

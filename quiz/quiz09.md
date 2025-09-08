@@ -11,8 +11,8 @@ import {EaDIncomplete} from '@site/src/components/AvisosSite';
 <EaDIncomplete />
 
 
-| quiz                                                            | start/open  | end/close   | description             |
-| --------------------------------------------------------------- | ----------- | ----------- | ----------------------- |
+|                          Questionário                           | start/open  | end/close   | Descrição               |
+| :-------------------------------------------------------------: | ----------- | ----------- | ----------------------- |
 | [Q09](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957596) | 10-Nov-2025 | 17-Nov-2025 | Introdução ao FreeRTOS; |
 
 ---

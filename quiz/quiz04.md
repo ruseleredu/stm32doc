@@ -10,8 +10,8 @@ import {EaDIncomplete} from '@site/src/components/AvisosSite';
 
 <EaDIncomplete />
 
-| quiz                                                            | start/open  | end/close   | description                |
-| --------------------------------------------------------------- | ----------- | ----------- | -------------------------- |
+|                          Questionário                           | start/open  | end/close   | Descrição                  |
+| :-------------------------------------------------------------: | ----------- | ----------- | -------------------------- |
 | [Q04](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957484) | 22-Sep-2025 | 29-Sep-2025 | Módulo PWM; Conversor ADC; |
 
 ---

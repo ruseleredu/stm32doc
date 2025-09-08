@@ -9,6 +9,7 @@ import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
 import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
+import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 09
 
@@ -20,6 +21,16 @@ import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSi
 | [LAB09](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1889891) | [Template 09](https://github.com/ELT73A-LAB-TPL/LAB09) | 10-Nov-2025 | 17-Nov-2025 | Introdução ao FreeRTOS; |
 
 ---
+
+
+## Internal links only
+<LabTable internal={true} />
+
+## External links only
+<LabTable internal={false} />
+
+## Show only one lab (index 0), internal
+<LabTable index={0} internal={true} />
 
 ## Conteúdo
 
@@ -55,3 +66,5 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB09" opts="-c" />
+
+

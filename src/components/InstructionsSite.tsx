@@ -273,7 +273,7 @@ export function DevTools() {
                 </ThemeCodeBlock>
             </TabItem>
             <TabItem value="vscode" label="VS Code">
-                <p><b>Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.</b></p>
+                <p><b>Visual Studio: IDE and Code Editor for Software Development.</b></p>
                 <ul>
                     <li><a href="https://code.visualstudio.com/download" target="_blank">VS Code</a> is a free source-code editor made by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
                     </li>

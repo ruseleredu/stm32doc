@@ -15,9 +15,9 @@ import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSi
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Template                                               | start/open  | end/close   | Conteúdo                   |
-| ------------------------------------------------------ | ----------- | ----------- | -------------------------- |
-| [Template 04](https://github.com/ELT73A-LAB-TPL/LAB04) | 22-Sep-2025 | 29-Sep-2025 | Módulo PWM; Conversor ADC; |
+| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                   |
+| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | -------------------------- |
+| [LAB04](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1770581) | [Template 04](https://github.com/ELT73A-LAB-TPL/LAB04) | 22-Sep-2025 | 29-Sep-2025 | Módulo PWM; Conversor ADC; |
 
 ---
 

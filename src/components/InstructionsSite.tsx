@@ -245,7 +245,7 @@ export function DevTools() {
     return (
         <Tabs>
             <TabItem value="git-scm" label="Git SCM" default>
-                <p><b>It is the most widely used source-code management tool among professional developers.</b></p>
+                <p><b><Link to="/docs/git">Git</Link> is the most widely used source-code management tool among professional developers.</b></p>
                 <ul>
                     <li><a href="https://git-scm.com/downloads/win" target="_blank">Git</a> is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
                     </li>
@@ -259,7 +259,7 @@ export function DevTools() {
                 </ThemeCodeBlock>
             </TabItem>
             <TabItem value="gh" label="GitHub CLI">
-                <p><b>GitHub CLI brings GitHub to your terminal.</b></p>
+                <p><b><Link to="/docs/github-cli">GitHub CLI</Link> brings GitHub to your terminal.</b></p>
                 <ul>
                     <li><a href="https://cli.github.com/" target="_blank">GitHub CLI</a> is a command line tool that allows you to interact with GitHub from the command line. It is available for Windows, macOS, and Linux.
                     </li>
@@ -273,7 +273,7 @@ export function DevTools() {
                 </ThemeCodeBlock>
             </TabItem>
             <TabItem value="vscode" label="VS Code">
-                <p><b>Visual Studio: IDE and Code Editor for Software Development.</b></p>
+                <p><b><Link to="/docs/vs-code">Visual Studio Code</Link>: IDE and Code Editor for Software Development.</b></p>
                 <ul>
                     <li><a href="https://code.visualstudio.com/download" target="_blank">VS Code</a> is a free source-code editor made by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
                     </li>

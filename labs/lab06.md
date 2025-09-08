@@ -15,9 +15,9 @@ import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSi
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Template                                               | start/open  | end/close   | Conteúdo                                            |
-| ------------------------------------------------------ | ----------- | ----------- | --------------------------------------------------- |
-| [Template 06](https://github.com/ELT73A-LAB-TPL/LAB06) | 06-Oct-2025 | 13-Oct-2025 | Uso do STM32CubeMonitor; Visualização de variáveis; |
+| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                                            |
+| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | --------------------------------------------------- |
+| [LAB06](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1776628) | [Template 06](https://github.com/ELT73A-LAB-TPL/LAB06) | 06-Oct-2025 | 13-Oct-2025 | Uso do STM32CubeMonitor; Visualização de variáveis; |
 
 ---
 

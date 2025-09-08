@@ -15,9 +15,9 @@ import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSi
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Template                                               | start/open  | end/close   | Conteúdo                |
-| ------------------------------------------------------ | ----------- | ----------- | ----------------------- |
-| [Template 09](https://github.com/ELT73A-LAB-TPL/LAB09) | 10-Nov-2025 | 17-Nov-2025 | Introdução ao FreeRTOS; |
+| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                |
+| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | ----------------------- |
+| [LAB09](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1889891) | [Template 09](https://github.com/ELT73A-LAB-TPL/LAB09) | 10-Nov-2025 | 17-Nov-2025 | Introdução ao FreeRTOS; |
 
 ---
 

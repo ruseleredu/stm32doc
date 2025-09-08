@@ -19,11 +19,13 @@ description: Introdução aos questionários.
 |                     | 20-Oct-2025 | 27-Oct-2025 | Realização do SEI-SICITE 2025 no Campus Curitiba;               |
 | [Q08](/quiz/quiz08) | 03-Nov-2025 | 10-Nov-2025 | Uso do STM32CubeMonitor; InfluDB;                               |
 | [Q09](/quiz/quiz09) | 10-Nov-2025 | 17-Nov-2025 | Introdução ao FreeRTOS;                                         |
-| [Q10](/quiz/quiz10) | 17-Nov-2025 | 24-Nov-2025 | Desenvolvimento do Projeto Final;                               |
+| [Q10](/quiz/quiz10) | 17-Nov-2025 | 24-Nov-2025 | FreeRTOS;                                                       |
 |                     | 24-Nov-2025 | 01-Dec-2025 | Desenvolvimento do Projeto Final;                               |
 |                     | 01-Dec-2025 | 08-Dec-2025 | Desenvolvimento do Projeto Final;                               |
 |                     | 08-Dec-2025 | 15-Dec-2025 | Desenvolvimento do Projeto Final;                               |
 |                     | 15-Dec-2025 | 22-Dec-2025 | Fechamento da disciplina;                                       |
+
+---
 
 ## Cronograma
 

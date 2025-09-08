@@ -15,9 +15,9 @@ import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSi
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Template                                               | start/open  | end/close   | Conteúdo                            |
-| ------------------------------------------------------ | ----------- | ----------- | ----------------------------------- |
-| [Template 07](https://github.com/ELT73A-LAB-TPL/LAB07) | 13-Oct-2025 | 20-Oct-2025 | Uso do STM32CubeMonitor; MQTT, IoT; |
+| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                            |
+| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | ----------------------------------- |
+| [LAB07](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1782502) | [Template 07](https://github.com/ELT73A-LAB-TPL/LAB07) | 13-Oct-2025 | 20-Oct-2025 | Uso do STM32CubeMonitor; MQTT, IoT; |
 
 ---
 

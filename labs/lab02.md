@@ -15,9 +15,9 @@ import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSi
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Template                                               | start/open  | end/close   | Conteúdo                                             |
-| ------------------------------------------------------ | ----------- | ----------- | ---------------------------------------------------- |
-| [Template 02](https://github.com/ELT73A-LAB-TPL/LAB02) | 01-Sep-2025 | 08-Sep-2025 | Processo de compilação, gravação e commit de código; |
+| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                                             |
+| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | ---------------------------------------------------- |
+| [LAB02](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1761057) | [Template 02](https://github.com/ELT73A-LAB-TPL/LAB02) | 01-Sep-2025 | 08-Sep-2025 | Processo de compilação, gravação e commit de código; |
 
 ---
 

@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Questionário 01
-description: Descrição 01
+description: Revisão da programação em C;
 ---
 
 import {EaDIncomplete} from '@site/src/components/AvisosSite';
@@ -9,6 +9,13 @@ import {EaDIncomplete} from '@site/src/components/AvisosSite';
 # Questionário 01
 
 <EaDIncomplete />
+
+| quiz                                                            | start/open  | end/close   | description                  |
+| --------------------------------------------------------------- | ----------- | ----------- | ---------------------------- |
+| [Q01](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1756081) | 25-Aug-2025 | 08-Sep-2025 | Revisão da programação em C; |
+
+---
+
 
 ### Free interactive C tutorial
 

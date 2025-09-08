@@ -15,9 +15,10 @@ import {VerifyDev2,GitConfig,STM32Tools,DevTools} from '@site/src/components/Ins
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Template                                               | start/open  | end/close   | Conteúdo                     |
-| ------------------------------------------------------ | ----------- | ----------- | ---------------------------- |
-| [Template 01](https://github.com/ELT73A-LAB-TPL/LAB01) | 25-Aug-2025 | 01-Sep-2025 | Revisão da programação em C; |
+
+| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                     |
+| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | ---------------------------- |
+| [LAB01](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1948813) | [Template 01](https://github.com/ELT73A-LAB-TPL/LAB01) | 25-Aug-2025 | 01-Sep-2025 | Revisão da programação em C; |
 
 ---
 

@@ -15,9 +15,10 @@ import {VerifyDev2,GitConfig,STM32Tools,DevTools} from '@site/src/components/Ins
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Template                                               | start/open  | end/close   | Conteúdo                                                        |
-| ------------------------------------------------------ | ----------- | ----------- | --------------------------------------------------------------- |
-| [Template 00](https://github.com/ELT73A-LAB-TPL/LAB00) | 18-Aug-2025 | 25-Aug-2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
+| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                                                        |
+| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | --------------------------------------------------------------- |
+| [LAB00](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1748058) | [Template 00](https://github.com/ELT73A-LAB-TPL/LAB00) | 18-Aug-2025 | 25-Aug-2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
+
 
 ---
 

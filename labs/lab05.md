@@ -15,9 +15,9 @@ import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSi
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Template                                               | start/open  | end/close   | Conteúdo                                             |
-| ------------------------------------------------------ | ----------- | ----------- | ---------------------------------------------------- |
-| [Template 05](https://github.com/ELT73A-LAB-TPL/LAB05) | 29-Sep-2025 | 06-Oct-2025 | DMA: Direct memory access (Acesso direto à memória); |
+| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                                             |
+| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | ---------------------------------------------------- |
+| [LAB05](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1773187) | [Template 05](https://github.com/ELT73A-LAB-TPL/LAB05) | 29-Sep-2025 | 06-Oct-2025 | DMA: Direct memory access (Acesso direto à memória); |
 
 ---
 

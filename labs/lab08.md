@@ -15,9 +15,9 @@ import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSi
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Template                                               | start/open  | end/close   | Conteúdo                          |
-| ------------------------------------------------------ | ----------- | ----------- | --------------------------------- |
-| [Template 08](https://github.com/ELT73A-LAB-TPL/LAB08) | 03-Nov-2025 | 10-Nov-2025 | Uso do STM32CubeMonitor; InfluDB; |
+| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                          |
+| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | --------------------------------- |
+| [LAB08](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1783994) | [Template 08](https://github.com/ELT73A-LAB-TPL/LAB08) | 03-Nov-2025 | 10-Nov-2025 | Uso do STM32CubeMonitor; InfluDB; |
 
 ---
 

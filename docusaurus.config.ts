@@ -253,32 +253,23 @@ const config: Config = {
           ],
         },
         {
-          title: "GitHub",
-          items: [
-            {
-              label: "LABs Templates",
-              href: "https://github.com/orgs/ELT73A-LAB-TPL/repositories",
-            },
-            {
-              label: "Projetos",
-              href: "https://github.com/ruseleredu/ELT73A-Projects",
-            },
-          ],
-        },
-        {
           title: "YouTube",
           items: [
             {
               label: "Adriano Ruseler",
-              href: "https://www.youtube.com/@adrianoruseler653",
+              href: "https://www.youtube.com/@adrianoruseler653/videos",
             },
             {
               label: "STM32World",
-              href: "https://www.youtube.com/@stm32world",
+              href: "https://www.youtube.com/@stm32world/videos",
             },
             {
               label: "STMicroelectronics",
               href: "https://www.youtube.com/@stmicroelectronics/videos",
+            },
+            {
+              label: "Microsoft Visual Studio",
+              href: "https://www.youtube.com/@visualstudio/videos",
             },
           ],
         },

@@ -83,3 +83,8 @@ description: Introdução as aulas de laboratório
 | Grupo S22-J | [ELT73A-S22-2025-2-J](https://github.com/ELT73A-S22-2025-2-J) |
 | Grupo S22-K | [ELT73A-S22-2025-2-K](https://github.com/ELT73A-S22-2025-2-K) |
 | Grupo S22-L | [ELT73A-S22-2025-2-L](https://github.com/ELT73A-S22-2025-2-L) |
+
+
+## Projeto Final
+- https://github.com/ruseleredu/ELT73A-Projects
+  

@@ -38,7 +38,46 @@ winget upgrade --id GitHub.cli
 
 - [GitHub CLI manual](https://cli.github.com/manual/)
 
-## gh config
+## Display or change configuration settings
+
+```bash
+gh config --help
+```
+
+```bash
+Display or change configuration settings for gh.
+
+Current respected settings:
+- `git_protocol`: the protocol to use for git clone and push operations `{https | ssh}` (default `https`)
+- `editor`: the text editor program to use for authoring text
+- `prompt`: toggle interactive prompting in the terminal `{enabled | disabled}` (default `enabled`)
+- `prefer_editor_prompt`: toggle preference for editor-based interactive prompting in the terminal `{enabled | disabled}` (default `disabled`)
+- `pager`: the terminal pager program to send standard output to
+- `http_unix_socket`: the path to a Unix socket through which to make an HTTP connection
+- `browser`: the web browser to use for opening URLs
+- `color_labels`: whether to display labels using their RGB hex color codes in terminals that support truecolor `{enabled | disabled}` (default `disabled`)
+- `accessible_colors`: whether customizable, 4-bit accessible colors should be used `{enabled | disabled}` (default `disabled`)
+- `accessible_prompter`: whether an accessible prompter should be used `{enabled | disabled}` (default `disabled`)
+- `spinner`: whether to use a animated spinner as a progress indicator `{enabled | disabled}` (default `enabled`)
+
+USAGE
+  gh config <command> [flags]
+
+AVAILABLE COMMANDS
+  clear-cache:   Clear the cli cache
+  get:           Print the value of a given configuration key
+  list:          Print a list of configuration keys and values
+  set:           Update configuration with a value for the given key
+
+INHERITED FLAGS
+  --help   Show help for command
+
+LEARN MORE
+  Use `gh <command> <subcommand> --help` for more information about a command.
+  Read the manual at https://cli.github.com/manual
+  Learn about exit codes using `gh help exit-codes`
+  Learn about accessibility experiences using `gh help accessibility`
+```
 
 ```bash
 gh config set editor "code --wait"
@@ -52,23 +91,49 @@ gh config set browser ""
 gh config get browser
 ```
 
-### Start interactive setup
+## Authenticate gh and git with GitHub
 
 - [gh auth login](https://cli.github.com/manual/gh_auth_login)
+
+```bash
+gh auth --help
+```
+
+```bash
+Authenticate gh and git with GitHub
+
+USAGE
+  gh auth <command> [flags]
+
+AVAILABLE COMMANDS
+  login:         Log in to a GitHub account
+  logout:        Log out of a GitHub account
+  refresh:       Refresh stored authentication credentials
+  setup-git:     Setup git with GitHub CLI
+  status:        Display active account and authentication state on each known GitHub host
+  switch:        Switch active GitHub account
+  token:         Print the authentication token gh uses for a hostname and account
+```
+
+### Log in to a GitHub account
 
 ```bash
 gh auth login
 ```
 
+### Log out of a GitHub account
+
 ```bash
 gh auth logout
 ```
 
-Display active account and authentication state on each known GitHub host.
+### Display active account and authentication state on each known GitHub host
 
 ```bash
 gh auth status
 ```
+
+## Work with GitHub organizations.
 
 List organizations for the authenticated user.
 
@@ -77,7 +142,19 @@ gh org list
 ```
 
 ```bash
-gh repo list ELT73A-2025-1-X
+Work with GitHub organizations.
+
+USAGE
+  gh org <command> [flags]
+
+GENERAL COMMANDS
+  list:          List organizations for the authenticated user.
+
+INHERITED FLAGS
+  --help   Show help for command
+
+EXAMPLES
+  $ gh org list
 ```
 
 ### Work with GitHub repositories.
@@ -107,6 +184,21 @@ Flags:
   -s, --source string          Specify path to local repository to use as source
   -t, --team name              The name of the organization team to be granted access
   -p, --template repository    Make the new repository based on a template repository
+```
+
+```bash
+EXAMPLES
+  # Create a repository interactively
+  $ gh repo create
+
+  # Create a new remote repository and clone it locally
+  $ gh repo create my-project --public --clone
+
+  # Create a new remote repository in a different organization
+  $ gh repo create my-org/my-project --public
+
+  # Create a remote repository from the current directory
+  $ gh repo create my-project --private --source=. --remote=upstream
 ```
 
 ```bash
@@ -177,84 +269,54 @@ For more information, see: http://choosealicense.com/licenses/
 gh repo license list
 ```
 
-| LICENSE KEY  | SPDX ID      | LICENSE NAME                                                                              |
-| ------------ | ------------ | ----------------------------------------------------------------------------------------- |
-| agpl-3.0     | AGPL-3.0     | GNU Affero General Public License v3.0                                                    |
-| apache-2.0   | Apache-2.0   | Apache License 2.0                                                                        |
-| bsd-2-clause | BSD-2-Clause | BSD 2-Clause "Simplified" License                                                         |
-| bsd-3-clause | BSD-3-Clause | BSD 3-Clause "New" or "Revised" License                                                   |
-| bsl-1.0      | BSL-1.0      | Boost Software License 1.0                                                                |
-| cc0-1.0      | CC0-1.0      | Creative Commons Zero v1.0 Universal                                                      |
-| epl-2.0      | EPL-2.0      | Eclipse Public License 2.0                                                                |
-| gpl-2.0      | GPL-2.0      | GNU General Public License v2.0                                                           |
-| gpl-3.0      | GPL-3.0      | GNU General Public License v3.0                                                           |
-| lgpl-2.1     | LGPL-2.1     | GNU Lesser General Public License v2.1                                                    |
-| mit          | MIT          | MIT License                                                                               |
-| mpl-2.0      | MPL-2.0      | Mozilla Public License 2.0                                                                |
-| unlicense    | Unlicense    | <ThemeCodeBlock className="language-bash">gh repo license view unlicense</ThemeCodeBlock> |
+| LICENSE KEY    | SPDX ID      | LICENSE NAME                                                                                 |
+| -------------- | ------------ | -------------------------------------------------------------------------------------------- |
+| `agpl-3.0`     | AGPL-3.0     | [GNU Affero General Public License v3.0](http://choosealicense.com/licenses/agpl-3.0/)       |
+| `apache-2.0`   | Apache-2.0   | [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)                        |
+| `bsd-2-clause` | BSD-2-Clause | [BSD 2-Clause "Simplified" License](https://choosealicense.com/licenses/bsd-2-clause/)       |
+| `bsd-3-clause` | BSD-3-Clause | [BSD 3-Clause "New" or "Revised" License](https://choosealicense.com/licenses/bsd-3-clause/) |
+| `bsl-1.0`      | BSL-1.0      | [Boost Software License 1.0](https://choosealicense.com/licenses/bsl-1.0/)                   |
+| `cc0-1.0`      | CC0-1.0      | [Creative Commons Zero v1.0 Universal](https://choosealicense.com/licenses/cc0-1.0/)         |
+| `epl-2.0`      | EPL-2.0      | [Eclipse Public License 2.0](https://choosealicense.com/licenses/epl-2.0/)                   |
+| `gpl-2.0`      | GPL-2.0      | [GNU General Public License v2.0](https://choosealicense.com/licenses/gpl-2.0/)              |
+| `gpl-3.0`      | GPL-3.0      | [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)              |
+| `lgpl-2.1`     | LGPL-2.1     | [GNU Lesser General Public License v2.1](https://choosealicense.com/licenses/lgpl-2.1/)      |
+| `mit`          | MIT          | [MIT License](https://choosealicense.com/licenses/mit/)                                      |
+| `mpl-2.0`      | MPL-2.0      | [Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)                   |
+| `unlicense`    | Unlicense    | [The Unlicense](https://choosealicense.com/licenses/unlicense/)                              |
 
 ```bash
-gh repo license view mit
-```
-
-A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
-
-To implement: Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.
-
-For more information, see: http://choosealicense.com/licenses/mit/
-
-```bash
-MIT License
-
-Copyright (c) [year] [fullname]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-## License
-
-For more information, see: http://choosealicense.com/licenses/
-
-```bash
-gh repo license list
-```
-
-| LICENSE KEY  | SPDX ID      | LICENSE NAME                                                                                 |
-| ------------ | ------------ | -------------------------------------------------------------------------------------------- |
-| agpl-3.0     | AGPL-3.0     | [GNU Affero General Public License v3.0](http://choosealicense.com/licenses/agpl-3.0/)       |
-| apache-2.0   | Apache-2.0   | [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)                        |
-| bsd-2-clause | BSD-2-Clause | [BSD 2-Clause "Simplified" License](https://choosealicense.com/licenses/bsd-2-clause/)       |
-| bsd-3-clause | BSD-3-Clause | [BSD 3-Clause "New" or "Revised" License](https://choosealicense.com/licenses/bsd-3-clause/) |
-| bsl-1.0      | BSL-1.0      | [Boost Software License 1.0](https://choosealicense.com/licenses/bsl-1.0/)                   |
-| cc0-1.0      | CC0-1.0      | [Creative Commons Zero v1.0 Universal](https://choosealicense.com/licenses/cc0-1.0/)         |
-| epl-2.0      | EPL-2.0      | [Eclipse Public License 2.0](https://choosealicense.com/licenses/epl-2.0/)                   |
-| gpl-2.0      | GPL-2.0      | [GNU General Public License v2.0](https://choosealicense.com/licenses/gpl-2.0/)              |
-| gpl-3.0      | GPL-3.0      | [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)              |
-| lgpl-2.1     | LGPL-2.1     | [GNU Lesser General Public License v2.1](https://choosealicense.com/licenses/lgpl-2.1/)      |
-| mit          | MIT          | [MIT License](https://choosealicense.com/licenses/mit/)                                      |
-| mpl-2.0      | MPL-2.0      | [Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)                   |
-| unlicense    | Unlicense    | [The Unlicense](https://choosealicense.com/licenses/unlicense/)                              |
-
-```bash
-gh repo license view mit
+gh repo license --help
 ```
 
 ```bash
-gh repo license view unlicense
+View a specific repository license by license key or SPDX ID.
+
+Run `gh repo license list` to see available commonly used licenses.
+For even more licenses, visit <https://choosealicense.com/appendix>.
+
+USAGE
+  gh repo license view {<license-key> | <spdx-id>} [flags]
+
+FLAGS
+  -w, --web   Open https://choosealicense.com/ in the browser
+
+INHERITED FLAGS
+  --help   Show help for command
+
+EXAMPLES
+  # View the MIT license from SPDX ID
+  $ gh repo license view MIT
+
+  # View the MIT license from license key
+  $ gh repo license view mit
+
+  # View the GNU AGPL-3.0 license from SPDX ID
+  $ gh repo license view AGPL-3.0
+
+  # View the GNU AGPL-3.0 license from license key
+  $ gh repo license view agpl-3.0
+
+  # Create a LICENSE.md with the MIT license
+  $ gh repo license view MIT > LICENSE.md
 ```

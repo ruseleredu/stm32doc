@@ -1,10 +1,9 @@
 ---
 sidebar_position: 2
 title: Template 00
-description: Apresentação da Disicplina; Materiais utilizados na disciplina;
+description: Template 00
 slug: /tpl00
 ---
 
-
-Apresentação da Disicplina; Materiais utilizados na disciplina;
-
+## Template
+- https://github.com/ELT73A-LAB-TPL/LAB00

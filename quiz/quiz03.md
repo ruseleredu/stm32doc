@@ -5,13 +5,15 @@ description: Descrição 03
 ---
 
 import {EaDIncomplete} from '@site/src/components/AvisosSite';
+import QuizTable from '@site/src/components/QuizTable';
 
 # Questionário 03
 
 <EaDIncomplete />
 
-|                          Questionário                           | start/open  | end/close   | Descrição                                        |
-| :-------------------------------------------------------------: | ----------- | ----------- | ------------------------------------------------ |
-| [Q03](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957479) | 15-Sep-2025 | 22-Sep-2025 | Interrupções via GPIO e Temporizadores (Timers); |
+<!-- Tabela com link para atividade, inicio, fim e descrição do Quiz! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <QuizTable index={3} internal={false} />
+</div>
 
 ---

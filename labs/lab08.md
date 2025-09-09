@@ -9,15 +9,17 @@ import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
 import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
+import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 08
 
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                          |
-| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | --------------------------------- |
-| [LAB08](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1783994) | [Template 08](https://github.com/ELT73A-LAB-TPL/LAB08) | 03-Nov-2025 | 10-Nov-2025 | Uso do STM32CubeMonitor; InfluDB; |
+<!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <LabTable index={8} internal={false} />
+</div>
 
 ---
 

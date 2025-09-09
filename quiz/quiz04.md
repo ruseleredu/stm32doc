@@ -5,14 +5,15 @@ description: Módulo PWM; Conversor ADC;
 ---
 
 import {EaDIncomplete} from '@site/src/components/AvisosSite';
+import QuizTable from '@site/src/components/QuizTable';
 
 # Questionário 04
 
 <EaDIncomplete />
 
-|                          Questionário                           | start/open  | end/close   | Descrição                  |
-| :-------------------------------------------------------------: | ----------- | ----------- | -------------------------- |
-| [Q04](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957484) | 22-Sep-2025 | 29-Sep-2025 | Módulo PWM; Conversor ADC; |
+<!-- Tabela com link para atividade, inicio, fim e descrição do Quiz! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <QuizTable index={4} internal={false} />
+</div>
 
 ---
-

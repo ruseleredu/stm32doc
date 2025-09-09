@@ -5,14 +5,20 @@ description: Processo de compilação, gravação e commit de código;
 ---
 
 import {EaDIncomplete} from '@site/src/components/AvisosSite';
+import QuizTable from '@site/src/components/QuizTable';
 
 # Questionário 02
 
 <EaDIncomplete />
 
-|                          Questionário                           | start/open  | end/close   | Descrição                                            |
-| :-------------------------------------------------------------: | ----------- | ----------- | ---------------------------------------------------- |
-| [Q02](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1930561) | 01-Sep-2025 | 08-Sep-2025 | Processo de compilação, gravação e commit de código; |
-
+<!-- Tabela com link para atividade, inicio, fim e descrição do Quiz! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <QuizTable index={2} internal={false} />
+</div>
 
 ---
+
+## Git e GitHub
+
+- [Folha de Dicas de Git do GitHub](/docs/github-git-cheat-sheet)
+- [Melhores práticas do Git](/docs/git-best-practices)

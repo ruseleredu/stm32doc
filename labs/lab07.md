@@ -9,15 +9,17 @@ import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
 import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
+import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 07
 
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                            |
-| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | ----------------------------------- |
-| [LAB07](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1782502) | [Template 07](https://github.com/ELT73A-LAB-TPL/LAB07) | 13-Oct-2025 | 20-Oct-2025 | Uso do STM32CubeMonitor; MQTT, IoT; |
+<!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <LabTable index={7} internal={false} />
+</div>
 
 ---
 

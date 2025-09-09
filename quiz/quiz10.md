@@ -11,25 +11,11 @@ import QuizTable from '@site/src/components/QuizTable';
 
 <EaDIncomplete />
 
-|                          Questionário                           | start/open  | end/close   | Descrição |
-| :-------------------------------------------------------------: | ----------- | ----------- | --------- |
-| [Q10](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957598) | 17-Nov-2025 | 24-Nov-2025 | FreeRTOS; |
-
+<!-- Tabela com link para atividade, inicio, fim e descrição do Quiz! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <QuizTable index={10} internal={false} />
+</div>
 
 ---
-## FreeRTOS
 
 
-
-
-## Quizzes
-
-
-## Internal quiz links
-<QuizTable internal={true} />
-
-## External quiz links (Moodle)
-<QuizTable internal={false} />
-
-## Show only one quiz (index 2), external
-<QuizTable index={2} internal={false} />

@@ -1,6 +1,6 @@
 // src/components/DataTable.tsx
 import React from "react";
-import Link from "@docusaurus/Link";
+// import Link from "@docusaurus/Link";
 
 export type Column<T> = {
     header: string;                      // column header label
@@ -15,14 +15,11 @@ interface DataTableProps<T> {
 
 export default function DataTable<T>({ columns, rows }: DataTableProps<T>) {
     return (
-        <table className="border-collapse border border-gray-300 w-full text-sm">
+        <table className="border-collapse border border-gray-300 w-full text-sm mx-auto">
             <thead>
                 <tr className="bg-gray-100">
                     {columns.map((col, i) => (
-                        <th
-                            key={i}
-                            className={`border border-gray-300 px-3 py-1 ${col.className ?? ""}`}
-                        >
+                        <th className={`border border-gray-300 px-3 py-1 text-center ${col.className || ""}`}>
                             {col.header}
                         </th>
                     ))}
@@ -32,10 +29,7 @@ export default function DataTable<T>({ columns, rows }: DataTableProps<T>) {
                 {rows.map((row, rowIndex) => (
                     <tr key={rowIndex}>
                         {columns.map((col, colIndex) => (
-                            <td
-                                key={colIndex}
-                                className={`border border-gray-300 px-3 py-1 ${col.className ?? ""}`}
-                            >
+                            <td className={`border border-gray-300 px-3 py-1 ${col.className || ""}`}>
                                 {col.accessor(row)}
                             </td>
                         ))}

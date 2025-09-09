@@ -5,14 +5,15 @@ description: Uso do STM32CubeMonitor; MQTT, IoT;
 ---
 
 import {EaDIncomplete} from '@site/src/components/AvisosSite';
+import QuizTable from '@site/src/components/QuizTable';
 
 # Questionário 07
 
 <EaDIncomplete />
 
-|                          Questionário                           | start/open  | end/close   | Descrição                           |
-| :-------------------------------------------------------------: | ----------- | ----------- | ----------------------------------- |
-| [Q07](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957590) | 13-Oct-2025 | 20-Oct-2025 | Uso do STM32CubeMonitor; MQTT, IoT; |
+<!-- Tabela com link para atividade, inicio, fim e descrição do Quiz! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <QuizTable index={7} internal={false} />
+</div>
 
 ---
-

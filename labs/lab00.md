@@ -9,16 +9,17 @@ import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
 import {VerifyDev2,GitConfig,STM32Tools,DevTools} from '@site/src/components/InstructionsSite';
+import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 00
 
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                                                        |
-| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | --------------------------------------------------------------- |
-| [LAB00](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1748058) | [Template 00](https://github.com/ELT73A-LAB-TPL/LAB00) | 18-Aug-2025 | 25-Aug-2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
-
+<!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <LabTable index={0} internal={false} />
+</div>
 
 ---
 

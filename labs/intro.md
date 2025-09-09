@@ -4,6 +4,8 @@ title: Introdução
 description: Introdução as aulas de laboratório
 ---
 
+import LabTable from '@site/src/components/LabTable';
+
 ## Aulas de Laboratório (LABs)
 
 | LABs                 | start/open  | end/close   | Conteúdo                                                        |

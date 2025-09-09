@@ -4,6 +4,8 @@ title: Introdução
 description: Introdução aos questionários.
 ---
 
+import QuizTable from '@site/src/components/QuizTable';
+
 ## Atividades Assíncronas (EaD)
 
 |        quiz         | start/open  | end/close   | Descrição                                                       |
@@ -47,3 +49,31 @@ description: Introdução aos questionários.
 | ELT73A-S22 | 01-12-2025  | 20:20 | 23:00 | Desenvolvimento do Projeto Final;                               |
 | ELT73A-S22 | 08-12-2025  | 20:20 | 23:00 | Desenvolvimento do Projeto Final;                               |
 | ELT73A-S22 | 15-12-2025  | 20:20 | 23:00 | Fechamento da disciplina;                                       |
+
+
+## Quizzes
+
+
+### Internal quiz links
+<div style={{ display: "flex", justifyContent: "center" }}>
+<QuizTable internal={true} />
+</div>
+
+### External quiz links (Moodle)
+<div style={{ display: "flex", justifyContent: "center" }}>
+<QuizTable internal={false} />
+</div>
+
+### Show only one quiz (index 2), external
+<div style={{ display: "flex", justifyContent: "center" }}>
+<QuizTable index={2} internal={false} />
+</div>
+
+
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <QuizTable internal={false} />
+</div>
+
+
+---
+

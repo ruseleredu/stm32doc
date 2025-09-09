@@ -5,15 +5,16 @@ description: Introdução ao FreeRTOS;
 ---
 
 import {EaDIncomplete} from '@site/src/components/AvisosSite';
+import QuizTable from '@site/src/components/QuizTable';
 
 # Questionário 09
 
 <EaDIncomplete />
 
-
-|                          Questionário                           | start/open  | end/close   | Descrição               |
-| :-------------------------------------------------------------: | ----------- | ----------- | ----------------------- |
-| [Q09](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957596) | 10-Nov-2025 | 17-Nov-2025 | Introdução ao FreeRTOS; |
+<!-- Tabela com link para atividade, inicio, fim e descrição do Quiz! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <QuizTable index={9} internal={false} />
+</div>
 
 ---
 

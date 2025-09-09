@@ -9,16 +9,17 @@ import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
 import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
+import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 04
 
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                   |
-| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | -------------------------- |
-| [LAB04](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1770581) | [Template 04](https://github.com/ELT73A-LAB-TPL/LAB04) | 22-Sep-2025 | 29-Sep-2025 | Módulo PWM; Conversor ADC; |
-
+<!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <LabTable index={4} internal={false} />
+</div>
 ---
 
 ## Conteúdo

@@ -32,9 +32,8 @@ export default function QuizTable({ index, internal = true }: QuizTableProps) {
 
     const columns: Column<QuizRow>[] = [
         {
-            header: "Questionário",
+            header: "Quiz",
             accessor: (row) => renderLink(row.quiz, row.hrefi, row.hrefe, internal),
-            className: "text-center",
         },
         { header: "Início", accessor: (row) => row.start },
         { header: "Fim", accessor: (row) => row.end },

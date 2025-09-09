@@ -9,16 +9,17 @@ import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
 import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
+import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 05
 
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                                             |
-| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | ---------------------------------------------------- |
-| [LAB05](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1773187) | [Template 05](https://github.com/ELT73A-LAB-TPL/LAB05) | 29-Sep-2025 | 06-Oct-2025 | DMA: Direct memory access (Acesso direto à memória); |
-
+<!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <LabTable index={5} internal={false} />
+</div>
 ---
 
 ## Conteúdo

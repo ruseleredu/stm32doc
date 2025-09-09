@@ -9,16 +9,17 @@ import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
 import {VerifyDev2,GitConfig,STM32Tools,DevTools} from '@site/src/components/InstructionsSite';
+import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 01
 
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-
-| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                     |
-| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | ---------------------------- |
-| [LAB01](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1948813) | [Template 01](https://github.com/ELT73A-LAB-TPL/LAB01) | 25-Aug-2025 | 01-Sep-2025 | Revisão da programação em C; |
+<!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <LabTable index={1} internal={false} />
+</div>
 
 ---
 

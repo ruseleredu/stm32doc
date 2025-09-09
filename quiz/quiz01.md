@@ -5,17 +5,18 @@ description: Revisão da programação em C;
 ---
 
 import {EaDIncomplete} from '@site/src/components/AvisosSite';
+import QuizTable from '@site/src/components/QuizTable';
 
 # Questionário 01
 
 <EaDIncomplete />
 
-|                          Questionário                           | start/open  | end/close   | Descrição                    |
-| :-------------------------------------------------------------: | ----------- | ----------- | ---------------------------- |
-| [Q01](https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1756081) | 25-Aug-2025 | 08-Sep-2025 | Revisão da programação em C; |
+<!-- Tabela com link para atividade, inicio, fim e descrição do Quiz! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <QuizTable index={1} internal={false} />
+</div>
 
 ---
-
 
 ### Free interactive C tutorial
 

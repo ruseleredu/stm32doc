@@ -16,9 +16,10 @@ import LabTable from '@site/src/components/LabTable';
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
-| Tarefa                                                              | Template                                               | start/open  | end/close   | Conteúdo                |
-| ------------------------------------------------------------------- | ------------------------------------------------------ | ----------- | ----------- | ----------------------- |
-| [LAB09](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1889891) | [Template 09](https://github.com/ELT73A-LAB-TPL/LAB09) | 10-Nov-2025 | 17-Nov-2025 | Introdução ao FreeRTOS; |
+<!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <LabTable index={9} internal={false} />
+</div>
 
 ---
 
@@ -31,6 +32,12 @@ import LabTable from '@site/src/components/LabTable';
 
 ## Show only one lab (index 0), internal
 <LabTable index={0} internal={true} />
+
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <LabTable index={9} internal={false} />
+</div>
+
+
 
 ## Conteúdo
 

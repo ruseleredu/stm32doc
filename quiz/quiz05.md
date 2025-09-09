@@ -17,3 +17,19 @@ import QuizTable from '@site/src/components/QuizTable';
 </div>
 
 ---
+
+
+## Instruções do LAB
+
+Esta atividade de laboratório tem como objetivo configurar o TIM2, ADC e PWM do STM32. Cada item equivale a 10% da nota.
+
+- [ ] Crie um repositório (LAB05) via template (https://github.com/ELT73A-LAB-TPL/LAB05) na organização e clone;
+- [ ] Carregue o arquivo de configuração TIM2EXTI0ADC1PWM.txt
+- [ ] Gere o código, commit e push dos arquivos gerados;
+- [ ] Adicione o código para piscar o LED via interrupção do User KEY;
+- [ ] Configure TIMER2 para 1s;
+- [ ] Adicione o código de configuração do ADC;
+- [ ] Adicione o código de leitura do ADC;
+- [ ] Adicione o código de atualização do PWM;
+- [ ] Commit e push dos arquivos modificados;
+- [ ] Envie o link do repositório no GitHub (hyperlink);

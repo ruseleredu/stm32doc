@@ -176,3 +176,28 @@ Opens STM32CubeMX with provided Project Name, Script Name and generate code
 ```bash
 LoadMX ProjectName ScriptToLoad.txt Y
 ```
+
+
+
+## Instruções
+
+Esta atividade de laboratório tem como objetivo verificar a configuração adequada do ambiente de desenvolvimento para o STM32.
+
+- [ ] Crie uma organização baseada no nome do grupo;
+- [ ] Adicione os membros do seu grupo a organização;
+- [ ] Adicione o professor como membro da organização;
+- [ ] Crie um projeto em branco na pasta EmptyTest;
+- [ ] Importe um projeto em branco na pasta CubeMxTest;
+- [ ] Commit e push dos arquivos gerados;
+- [ ] Envie o link da organização (hyperlink);
+- [ ] Envie o link do repositório no GitHub (hyperlink);
+
+
+## Avaliação
+
+- [ ] Crie uma organização baseada no nome do grupo - 10%
+- [ ] Adicione os membros do seu grupo a organização - 10%
+- [ ] Adicione o professor como membro da organização - 10%
+- [ ] Crie um projeto em branco na pasta EmptyTest - 25%
+- [ ] Importe um projeto em branco na pasta CubeMxTest - 25%
+- [ ] Envie o link da organização e do repositório no GitHub (hyperlink) - 20%

@@ -17,3 +17,18 @@ import QuizTable from '@site/src/components/QuizTable';
 </div>
 
 ---
+
+## Instruções
+
+Esta atividade de laboratório tem como objetivo verificar a configuração adequada dos periféricos e debug via ST/Link do STM32.
+
+- [ ] Crie um repositório na organização chamado LAB03;
+- [ ] Clone o repositório para a sua máquina local;
+- [ ] Crie e importe um projeto em branco;
+- [ ] Configure SYS Debug para Serial Wire e RCC Clock
+- [ ] Configure User KEY e Blue LED
+- [ ] Gere o código, commit e push dos arquivos gerados;
+- [ ] Crie um novo branch chamado new-feature;
+- [ ] Adicione o código para piscar o LED!
+- [ ] Commit e push dos arquivos gerados;
+- [ ] Envie o link do repositório no GitHub (hyperlink);

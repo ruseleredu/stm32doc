@@ -18,4 +18,3 @@ import QuizTable from '@site/src/components/QuizTable';
 
 ---
 
-

@@ -20,3 +20,24 @@ import QuizTable from '@site/src/components/QuizTable';
 
 ## FreeRTOS
 
+
+## Instruções do LAB
+
+Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item equivale a 10% da nota.
+
+- [ ] Crie um repositório (LAB09) via template (https://github.com/ELT73A-LAB-TPL/LAB09) na organização e clone;
+- [ ] Importe e compile o código da pasta TIM2EXTI0ADC1PWMDMARTOS
+- [ ] Verifique a configuração dos periféricos;
+- [ ] Verifique o breakpoint EXTI0;
+- [ ] Verifique a leitura dos ADCs uso das filas (Queues);
+- [ ] Verifique a operação das tarefas (Tasks);
+- [ ] Verifique a operação do Mutex e Semaphores;
+- [ ] Verifique a operação do Event flags;
+- [ ] Verifique a operação do PWM;
+- [ ] Envie o link do repositório no GitHub (hyperlink);
+
+
+## Avaliação
+- [ ] Uso do template e código - 20%
+- [ ] Verificação do FreeRTOS - 70%
+- [ ] Link do repositório no GitHub (hyperlink) - 10%

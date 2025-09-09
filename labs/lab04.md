@@ -56,3 +56,29 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB04" opts="-c" />
+
+
+
+## Instruções do LAB
+
+Esta atividade de laboratório tem como objetivo verificar a interrupção via GPIO com User KEY e interrupção via TIMER 2 do STM32. Cada item equivale a 10% da nota.
+
+- [ ] Crie um repositório na organização chamado LAB04 e clone para a sua máquina local;
+- [ ] Crie e importe um projeto em branco;
+- [ ] Configure SYS Debug para Serial Wire e RCC Clock;
+- [ ] Configure User KEY e Blue LED;
+- [ ] Configure TIMER2 para 1s;
+- [ ] Gere o código, commit e push dos arquivos gerados;
+- [ ] Adicione o código para piscar o LED via interrupção do User KEY!
+- [ ] Adicione o código para piscar o LED via interrupção do TIM2!
+- [ ] Commit e push dos arquivos gerados;
+- [ ] Envie o link do repositório no GitHub (hyperlink);
+
+## Avaliação
+
+- [ ] Repositório criado no GitHub - 10%
+- [ ] Configuração dos periféricos - 20%
+- [ ] Configuração do TIMER2 para 1s - 20%
+- [ ] Código para piscar o LED via interrupção do User KEY -15%
+- [ ] Código para piscar o LED via interrupção do TIM2 - 15%
+- [ ] Link do repositório no GitHub (hyperlink) - 20%

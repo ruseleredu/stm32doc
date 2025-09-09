@@ -57,3 +57,29 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB06" opts="-c" />
+
+
+
+
+## Instruções do LAB
+
+Esta atividade de laboratório tem como objetivo utilizar o STM32CubeMonitor. Cada item equivale a 10% da nota.
+
+- [ ] Crie um repositório (LAB06) via template (https://github.com/ELT73A-LAB-TPL/LAB06) na organização e clone;
+- [ ] Importe e compile o código da pasta TIM2EXTI0ADC1PWM
+- [ ] Verifique a configuração dos periféricos;
+- [ ] Verifique o STM32CubeMonitor;
+- [ ] Configure o executável e probes no STM32CubeMonitor;
+- [ ] Deploy e Dashboard no STM32CubeMonitor;
+- [ ] Adicione Write Panel para a variável BLUELED;
+- [ ] Adicione Single value para o LED;
+- [ ] Commit e push do Node-RED export flow;
+- [ ] Envie o link do repositório no GitHub (hyperlink);
+
+## Avaliação
+- [ ] Uso do template e código - 30%
+- [ ] Configuração do STM32CubeMonitor - 20%
+- [ ] Write Panel para a variável BLUELED - 10%
+- [ ] Single value para o LED - 10%
+- [ ] Commit e push do Node-RED export flow - 10%
+- [ ] Link do repositório no GitHub (hyperlink) - 10%

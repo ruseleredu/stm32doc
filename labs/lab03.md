@@ -24,6 +24,7 @@ import LabTable from '@site/src/components/LabTable';
 ---
 
 ## Conteúdo
+Arquitetura de microcontroladores; Pinos de propósito geral (GPIO);
 
 Interrupções via GPIO e Temporizadores (Timers);
 
@@ -57,3 +58,29 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB03" opts="-c" />
+
+
+
+
+Esta atividade de laboratório tem como objetivo verificar a configuração adequada dos periféricos e debug via ST/Link do STM32.
+
+- [ ] Crie um repositório na organização chamado LAB03;
+- [ ] Clone o repositório para a sua máquina local;
+- [ ] Crie e importe um projeto em branco;
+- [ ] Configure SYS Debug para Serial Wire e RCC Clock
+- [ ] Configure User KEY e Blue LED
+- [ ] Gere o código, commit e push dos arquivos gerados;
+- [ ] Crie um novo branch chamado new-feature;
+- [ ] Adicione o código para piscar o LED!
+- [ ] Commit e push dos arquivos gerados;
+- [ ] Envie o link do repositório no GitHub (hyperlink);
+
+## Avaliação
+
+- [ ] Crie um repositório na organização chamado LAB03 - 10%
+- [ ] Clone, crie e importe um projeto em branco - 20%
+- [ ] Configure os periféricos - 20%
+- [ ] Gere o código, commit e push dos arquivos gerados - 10%
+- [ ] Crie um novo branch chamado new-feature - 10%
+- [ ] Adicione o código para piscar o LED - 10%
+- [ ] Commit, push e envie o link do repositório no GitHub (hyperlink) - 20%

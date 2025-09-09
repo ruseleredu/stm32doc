@@ -32,12 +32,12 @@ export default function QuizTable({ index, internal = true }: QuizTableProps) {
 
     const columns: Column<QuizRow>[] = [
         {
-            header: "Quiz",
+            header: "Questionário",
             accessor: (row) => renderLink(row.quiz, row.hrefi, row.hrefe, internal),
             className: "text-center",
         },
-        { header: "Start/Open", accessor: (row) => row.start },
-        { header: "End/Close", accessor: (row) => row.end },
+        { header: "Início", accessor: (row) => row.start },
+        { header: "Fim", accessor: (row) => row.end },
         { header: "Descrição", accessor: (row) => row.descricao },
     ];
 

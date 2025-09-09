@@ -47,8 +47,8 @@ export default function LabTable({ index, internal = true }: LabTableProps) {
                     internal
                 ),
         },
-        { header: "Start/Open", accessor: (row) => row.start },
-        { header: "End/Close", accessor: (row) => row.end },
+        { header: "Início", accessor: (row) => row.start },
+        { header: "Fim", accessor: (row) => row.end },
         { header: "Conteúdo", accessor: (row) => row.conteudo },
     ];
 

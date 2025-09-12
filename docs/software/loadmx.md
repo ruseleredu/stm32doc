@@ -9,6 +9,8 @@ https://github.com/ELT73A-LAB-TPL/CubeMX
 
 ## Running STM32CubeMX in command-line mode
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TUagA1g-9xs?si=_OAT_R9G2BTdQ_EP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 - https://www.st.com/resource/en/user_manual/um1718-stm32cubemx-for-stm32-configuration-and-initialization-c-code-generation-stmicroelectronics.pdf
 
 To run STM32CubeMX in interactive command-line mode, use the following command line:

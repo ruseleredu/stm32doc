@@ -138,8 +138,13 @@ const config: Config = {
           position: "left",
           activeBaseRegex: `/quiz/`, // Highlight when any API doc is active
         },
+        /*  {
+            to: "/tpls/intro", // Link to a page in your API docs
+            label: "Templates",
+            position: "left",
+            activeBaseRegex: `/tpls/`, // Highlight when any API doc is active
+          }, */
         { to: "/blog", label: "Projetos", position: "left" },
-
         {
           href: "https://github.com/ruseleredu/stm32doc",
           label: "GitHub",

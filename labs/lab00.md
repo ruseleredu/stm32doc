@@ -84,3 +84,32 @@ git log
 To implement: Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.
 
 For more information, see: http://choosealicense.com/licenses/mit/
+
+
+
+## Instruções
+
+Esta atividade de laboratório tem como objetivo verificar a configuração inicial do ambiente de desenvolvimento. Cada item equivale a 10% da nota.
+
+- [ ] Crie um conta no GitHub;
+- [ ] Crie um repositório chamado LAB00;
+- [ ] Instale e configure o git localmente;
+- [ ] Clone o repositório para a sua máquina local;
+- [ ] Instale o Visual Studio;
+- [ ] Baixe e execute o arquivo check.bat;
+- [ ] Commit e push dos arquivos gerados;
+- [ ] Envie o link do seu perfil;
+- [ ] Envie o link do repositório no GitHub;
+- [ ] Envie o link da orgnização no GitHub;
+
+## Avaliação
+
+- [ ] Crie um conta no GitHub - 10%
+- [ ] Crie um repositório chamado LAB00 - 10%
+- [ ] Crie uma organização baseada no nome do grupo - 10%
+- [ ] Adicione os membros do seu grupo a organização - 10%
+- [ ] Adicione o professor como membro da organização - 10%
+- [ ] Detalhes do check.bat; TODO
+- [ ] Link do seu perfil - 5%
+- [ ] Link do repositório no GitHub - 5%
+- [ ] Link da orgnização no GitHub - 5%

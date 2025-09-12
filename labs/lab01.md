@@ -201,25 +201,30 @@ gh repo create ELT73A-S22-2025-2-X/LAB01 --public -c -l mit --add-readme -g C
 - [Melhores práticas do Git](/docs/git-best-practices).
 - [Folha de Dicas de Git do GitHub](/docs/github-git-cheat-sheet).
 
-## Referências
 
-### Free interactive C tutorial
 
-- [W3Schools C Tutorial](https://www.w3schools.com/c/)
-- [tutorialspoint C Tutorial](https://www.tutorialspoint.com/cprogramming/index.htm)
-- [geeksforgeeks C Tutorial](https://www.geeksforgeeks.org/c/c-programming-language/)
-- [geeksforgeeks.org bit-fields-c](https://www.geeksforgeeks.org/c/bit-fields-c/)
-- [learn-c.org](https://www.learn-c.org/)
-- [includehelp.com/c](https://www.includehelp.com/c/)
 
-### Online compiler and debugger for C
+## Instruções TODO
 
-- https://leetcode.com/playground/
-- https://www.onlinegdb.com/online_c_compiler
-- https://www.jdoodle.com/c-online-compiler
-- https://www.programiz.com/c-programming/online-compiler/
-- https://replit.com
-- https://onecompiler.com/c
-- https://codeanywhere.com/languages/c
-- https://www.mycompiler.io/pt/new/c
-- https://www.codechef.com/ide
+Esta atividade de laboratório tem como objetivo verificar a configuração adequada do ambiente de desenvolvimento para o STM32.
+
+- [ ] Crie uma organização baseada no nome do grupo;
+- [ ] Adicione os membros do seu grupo a organização;
+- [ ] Adicione o professor como membro da organização;
+- [ ] Crie um projeto em branco na pasta EmptyTest;
+- [ ] Importe um projeto em branco na pasta CubeMxTest;
+- [ ] Commit e push dos arquivos gerados;
+- [ ] Envie o link da organização (hyperlink);
+- [ ] Envie o link do repositório no GitHub (hyperlink);
+
+
+## Avaliação TODO
+
+- [ ] Crie uma organização baseada no nome do grupo - 10%
+- [ ] Adicione os membros do seu grupo a organização - 10%
+- [ ] Adicione o professor como membro da organização - 10%
+- [ ] Crie um projeto em branco na pasta EmptyTest - 25%
+- [ ] Importe um projeto em branco na pasta CubeMxTest - 25%
+- [ ] Envie o link da organização e do repositório no GitHub (hyperlink) - 20%
+
+

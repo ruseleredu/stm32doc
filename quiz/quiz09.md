@@ -36,8 +36,3 @@ Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item 
 - [ ] Verifique a operação do PWM;
 - [ ] Envie o link do repositório no GitHub (hyperlink);
 
-
-## Avaliação
-- [ ] Uso do template e código - 20%
-- [ ] Verificação do FreeRTOS - 70%
-- [ ] Link do repositório no GitHub (hyperlink) - 10%

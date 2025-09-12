@@ -60,8 +60,6 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 <LabFromTemplate labNumber="LAB03" opts="-c" />
 
 
-
-
 Esta atividade de laboratório tem como objetivo verificar a configuração adequada dos periféricos e debug via ST/Link do STM32.
 
 - [ ] Crie um repositório na organização chamado LAB03;

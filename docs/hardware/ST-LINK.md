@@ -31,3 +31,13 @@ This debugger has a 10-pin IDC connector. The pinout of this connector can be fo
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9T8UbRHPN5s?si=Uf5Qu4DArpjdfRXB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+```bash
+stlinkupgrade
+```
+
+```bash
+stlinkupgrade -force_prog
+```

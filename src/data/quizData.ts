@@ -42,7 +42,8 @@ export const quizData: QuizRow[] = [
         hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957479",
         start: "15-Sep-2025",
         end: "22-Sep-2025",
-        descricao: "Interrupções via GPIO e Temporizadores (Timers);",
+        descricao: "Arquitetura de microcontroladores; Pinos de propósito geral (GPIO);",
+        //  descricao: "Interrupções via GPIO e Temporizadores (Timers);",
     },
     {
         quiz: "Q04",

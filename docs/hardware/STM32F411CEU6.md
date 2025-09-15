@@ -23,3 +23,8 @@ git clone https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1.git
 Neste video eu demonstro como soldo a barra de pinos dos meus kits, passando algumas dicas que facilitam o processo.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/naxIyfggwVY?si=SNB5uxyJAXp-U0xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Datasheet
+
+- [WeAct BlackPill STM32F411CEU6](/pdf/MiniF4x1Cx_V31.pdf)
+- [STM32F411xC Datasheet](/pdf/DS10314.pdf)

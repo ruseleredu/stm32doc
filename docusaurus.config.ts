@@ -142,9 +142,11 @@ const config: Config = {
             to: "/tpls/intro", // Link to a page in your API docs
             label: "Templates",
             position: "left",
-            activeBaseRegex: `/tpls/`, // Highlight when any API doc is active
+            activeBaseRegex: `/tpls/`, // Highlight when any API doc is active - [Calendário Acadêmico](/pdf/UTFPR-CTAcademicCalendar2025.pdf)
           }, */
         { to: "/blog", label: "Projetos", position: "left" },
+        // { href: "/pdf/UTFPR-CTAcademicCalendar2025.pdf", label: "Calendário", position: "right" },
+        { href: "https://www.utfpr.edu.br/alunos/calendario", label: "Calendário", position: "right" },
         {
           href: "https://github.com/ruseleredu/stm32doc",
           label: "GitHub",

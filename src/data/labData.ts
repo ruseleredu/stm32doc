@@ -65,7 +65,8 @@ export const labData: LabRow[] = [
 
         start: "15-Sep-2025",
         end: "22-Sep-2025",
-        conteudo: "Interrupções via GPIO e Temporizadores (Timers);",
+        conteudo: "Arquitetura de microcontroladores; Pinos de propósito geral (GPIO);",
+        //  conteudo: "Interrupções via GPIO e Temporizadores (Timers);",
     },
     {
         tarefa: "LAB04",

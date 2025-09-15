@@ -82,3 +82,22 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pinagem é descrita na figura a seguir.
 
 ![ST-LINK/V2 Clone](/img/ST-LINK_V2_Clone_Header.png)
+
+
+
+
+```c title="Core/Scr/main.c"
+/* Infinite loop */
+/* USER CODE BEGIN WHILE */
+while (1)
+{
+  // highlight-next-line
+  // Place your code HERE!
+  /* USER CODE END WHILE */
+
+  /* USER CODE BEGIN 3 */
+  // highlight-next-line
+  // Place your code HERE!
+}
+/* USER CODE END 3 */
+```

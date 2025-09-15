@@ -145,8 +145,8 @@ const config: Config = {
             activeBaseRegex: `/tpls/`, // Highlight when any API doc is active - [Calendário Acadêmico](/pdf/UTFPR-CTAcademicCalendar2025.pdf)
           }, */
         { to: "/blog", label: "Projetos", position: "left" },
-        // { href: "/pdf/UTFPR-CTAcademicCalendar2025.pdf", label: "Calendário", position: "right" },
-        { href: "https://www.utfpr.edu.br/alunos/calendario", label: "Calendário", position: "right" },
+        { href: "https://ruseleredu.github.io/stm32doc/assets/files/UTFPR-CTAcademicCalendar2025-268081c8b6239f53ca49523f814aaf59.pdf", label: "Calendário", position: "right" },
+        // { href: "https://www.utfpr.edu.br/alunos/calendario", label: "Calendário", position: "right" },
         {
           href: "https://github.com/ruseleredu/stm32doc",
           label: "GitHub",

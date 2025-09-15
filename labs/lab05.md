@@ -83,3 +83,12 @@ Esta atividade de laboratório tem como objetivo configurar o TIM2, ADC e PWM do
 - [ ] Código de configuração e leitura do ADC - 10%
 - [ ] Código de atualização do PWM - 10%
 - [ ] Link do repositório no GitHub (hyperlink) - 20%
+
+## Diagrama de pinos do STM32F4x1
+
+---
+
+![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
+
+---
+

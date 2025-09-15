@@ -83,3 +83,11 @@ Esta atividade de laboratório tem como objetivo utilizar o STM32CubeMonitor. Ca
 - [ ] Single value para o LED - 10%
 - [ ] Commit e push do Node-RED export flow - 10%
 - [ ] Link do repositório no GitHub (hyperlink) - 10%
+
+## Diagrama de pinos do STM32F4x1
+
+---
+
+![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
+
+---

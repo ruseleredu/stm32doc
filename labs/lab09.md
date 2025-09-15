@@ -95,3 +95,12 @@ Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item 
 - [ ] Verificação do FreeRTOS - 70%
 - [ ] Link do repositório no GitHub (hyperlink) - 10%
 
+
+## Diagrama de pinos do STM32F4x1
+
+---
+
+![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
+
+---
+

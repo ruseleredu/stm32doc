@@ -83,3 +83,13 @@ Esta atividade de laboratório tem como objetivo utilizar o InfluxDB e STM32Cube
 - [ ] Leitura do ADC e injeção de dados no InfluxDB - 20%
 - [ ] Commit e push do Node-RED export flow - 20%
 - [ ] Link do repositório no GitHub (hyperlink) - 10%
+
+
+## Diagrama de pinos do STM32F4x1
+
+---
+
+![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
+
+---
+

@@ -83,6 +83,15 @@ Esta atividade de laboratório tem como objetivo verificar a interrupção via G
 - [ ] Código para piscar o LED via interrupção do TIM2 - 15%
 - [ ] Link do repositório no GitHub (hyperlink) - 20%
 
+## Diagrama de pinos do STM32F4x1
+
+---
+
+![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
+
+---
+
+
 ### Using GPIO EXTI0 Interrupt to Toggle BLUE LED Flag on WeActStudio STM32F411CEU6 board
 
 Learn how to use the GPIO EXTI0 interrupt feature on the STM32F411CEU6 microcontroller to toggle a flag that controls a BLUE LED. This step-by-step guide covers configuring the GPIO pin, setting up the external interrupt, and writing the interrupt handler to efficiently manage LED toggling. Ideal for beginners and hobbyists working on STM32-based projects.

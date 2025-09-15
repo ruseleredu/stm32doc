@@ -82,3 +82,12 @@ Esta atividade de laboratório tem como objetivo verificar a configuração adeq
 - [ ] Crie um novo branch chamado new-feature - 10%
 - [ ] Adicione o código para piscar o LED - 10%
 - [ ] Commit, push e envie o link do repositório no GitHub (hyperlink) - 20%
+
+
+## Diagrama de pinos do STM32F4x1
+
+---
+
+![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
+
+---

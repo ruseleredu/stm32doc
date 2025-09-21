@@ -289,6 +289,10 @@ const config: Config = {
               label: "Microsoft Visual Studio",
               href: "https://www.youtube.com/@visualstudio/videos",
             },
+            {
+              label: "Ben Eater",
+              href: "https://www.youtube.com/@BenEater/videos",
+            },
           ],
         },
       ],

@@ -6,8 +6,12 @@ slug: /wokwi-led
 
 import { LEDBullet } from '@site/src/components/LEDBullet'
 
+## Online STM32 Simulator
+A faster way to prototype STM32 projects
+- https://wokwi.com/stm32
 
-## Por que Wokwi?
+
+## Por que [Wokwi](https://docs.wokwi.com/)?
 
 <LEDBullet title="Comece agora mesmo">
   Sem espera por componentes ou download de software grande. Seu navegador tem tudo o que você precisa para começar a codificar seu próximo projeto de IoT em segundos.

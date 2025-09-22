@@ -68,7 +68,27 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 <LabFromTemplate labNumber="LAB04" opts="-c" />
 
 
-
+## Como fazer commit da atualizações
+Verifique o status do repositório
+```bash
+git status
+```
+Adicione os arquivos modificados
+```bash
+git add .
+```
+Realize o commit das alterações
+```bash
+git commit -m "My message for this commit!"
+```
+Envie para o repositório remoto (GitHub)
+```bash
+git push
+```
+Vizualize o log de alterações
+```bash
+git log
+```
 
 ## Diagrama de pinos do STM32F4x1
 
@@ -85,3 +105,26 @@ Learn how to use the GPIO EXTI0 interrupt feature on the STM32F411CEU6 microcont
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1yOwjK1VTw0?si=6uM4VFDyQ1gFk6GS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+
+
+
+## Como carregar um script do STM32CubeMX
+
+Call for Help (--help, -h, /?)
+
+```bash
+LoadMX --help
+```
+
+Run STM32CubeMX interactively with [LoadMX](/docs/loadmx)
+
+```bash
+LoadMX -i
+```
+
+To generate a script
+
+```bash
+export script ScriptToLoad.txt
+```

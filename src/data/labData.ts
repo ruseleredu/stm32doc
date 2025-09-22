@@ -78,7 +78,8 @@ export const labData: LabRow[] = [
 
         start: "22-Sep-2025",
         end: "29-Sep-2025",
-        conteudo: "Módulo PWM; Conversor ADC;",
+        conteudo: "Interrupções via GPIO e Temporizadores (Timers);",
+        //   conteudo: "Módulo PWM; Conversor ADC;",
     },
     {
         tarefa: "LAB05",
@@ -90,7 +91,8 @@ export const labData: LabRow[] = [
 
         start: "29-Sep-2025",
         end: "06-Oct-2025",
-        conteudo: "DMA: Direct memory access (Acesso direto à memória);",
+        conteudo: "Módulo PWM; Conversor ADC;",
+        // conteudo: "DMA: Direct memory access (Acesso direto à memória);",
     },
     {
         tarefa: "LAB06",
@@ -102,7 +104,8 @@ export const labData: LabRow[] = [
 
         start: "06-Oct-2025",
         end: "13-Oct-2025",
-        conteudo: "Uso do STM32CubeMonitor; Visualização de variáveis;",
+        //conteudo: "Uso do STM32CubeMonitor; Visualização de variáveis;",
+        conteudo: "DMA: Direct memory access (Acesso direto à memória);",
     },
     {
         tarefa: "LAB07",
@@ -114,7 +117,8 @@ export const labData: LabRow[] = [
 
         start: "13-Oct-2025",
         end: "20-Oct-2025",
-        conteudo: "Uso do STM32CubeMonitor; MQTT, IoT;",
+        conteudo: "Uso do STM32CubeMonitor; Visualização de variáveis;",
+        // conteudo: "Uso do STM32CubeMonitor; MQTT, IoT;",
     },
     {
         tarefa: "LAB08",
@@ -126,7 +130,8 @@ export const labData: LabRow[] = [
 
         start: "03-Nov-2025",
         end: "10-Nov-2025",
-        conteudo: "Uso do STM32CubeMonitor; InfluDB;",
+        conteudo: "Uso do STM32CubeMonitor; MQTT, IoT;",
+        // conteudo: "Uso do STM32CubeMonitor; InfluDB;",
     },
     {
         tarefa: "LAB09",
@@ -138,7 +143,9 @@ export const labData: LabRow[] = [
 
         start: "10-Nov-2025",
         end: "17-Nov-2025",
+        // conteudo: "Uso do STM32CubeMonitor; InfluDB;",
         conteudo: "Introdução ao FreeRTOS;",
+        // conteudo: "FreeRTOS: Tarefas, Filas e Semáforos;",
     },
 
 ];

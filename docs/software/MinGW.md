@@ -79,3 +79,8 @@ C:\msys64\mingw64\bin
 ```bash
 arm-none-eabi-gcc --version
 ```
+
+## CLang
+```bash
+pacman -Sy --needed mingw-w64-ucrt-x86_64-clang
+```

@@ -67,6 +67,10 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB04" opts="-c" />
 
+Generate code with TIM2 and EXT INT
+```bash
+LoadMX TIM2EXTI0 TIM2EXTI0.txt
+```
 
 ## Como fazer commit da atualizações
 Verifique o status do repositório
@@ -99,6 +103,11 @@ git log
 ---
 
 
+O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pinagem é descrita na figura a seguir.
+
+![ST-LINK/V2 Clone](/img/ST-LINK_V2_Clone_Header.png)
+
+
 ### Using GPIO EXTI0 Interrupt to Toggle BLUE LED Flag on WeActStudio STM32F411CEU6 board
 
 Learn how to use the GPIO EXTI0 interrupt feature on the STM32F411CEU6 microcontroller to toggle a flag that controls a BLUE LED. This step-by-step guide covers configuring the GPIO pin, setting up the external interrupt, and writing the interrupt handler to efficiently manage LED toggling. Ideal for beginners and hobbyists working on STM32-based projects.
@@ -106,6 +115,47 @@ Learn how to use the GPIO EXTI0 interrupt feature on the STM32F411CEU6 microcont
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1yOwjK1VTw0?si=6uM4VFDyQ1gFk6GS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
+
+Inicialize o Timer 2 com suporte a rotina de interrupção:
+```c title="Src/main.c"
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_TIM2_Init();
+  /* USER CODE BEGIN 2 */
+  // highlight-next-line
+  HAL_TIM_Base_Start_IT(&htim2);
+  /* USER CODE END 2 */
+```
+
+Toggle no LED interno via interrupção do User Key:
+```c title="Src/stm32f4xx_it.c"
+void EXTI0_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI0_IRQn 0 */
+
+  /* USER CODE END EXTI0_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(User_KEY_EXTI0_Pin);
+  /* USER CODE BEGIN EXTI0_IRQn 1 */
+  // highlight-next-line
+  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+  /* USER CODE END EXTI0_IRQn 1 */
+}
+```
+
+Toggle no LED interno via interrupção do Timer 2 (1s):
+```c title="Src/stm32f4xx_it.c"
+void TIM2_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM2_IRQn 0 */
+
+  /* USER CODE END TIM2_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim2);
+  /* USER CODE BEGIN TIM2_IRQn 1 */
+  // highlight-next-line
+  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+  /* USER CODE END TIM2_IRQn 1 */
+}
+```
 
 
 

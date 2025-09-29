@@ -4,10 +4,23 @@
         <title>ELT73A-S22-2025.2 Blog</title>
         <link>https://github.com/stm32doc/blog</link>
         <description>ELT73A-S22-2025.2 Blog</description>
-        <lastBuildDate>Thu, 26 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 23 Sep 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
+        <item>
+            <title><![CDATA[Just a test blog]]></title>
+            <link>https://github.com/stm32doc/blog/my-blog-test</link>
+            <guid>https://github.com/stm32doc/blog/my-blog-test</guid>
+            <pubDate>Tue, 23 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[All these will be part of the blog post summary.]]></description>
+            <content:encoded><![CDATA[<p>All these will be part of the blog post summary.</p>
+<p>But anything from here on down will not be.</p>
+<ul>
+<li><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">https://docusaurus.io/docs/blog</a></li>
+<li><a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog</a></li>
+</ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Welcome]]></title>
             <link>https://github.com/stm32doc/blog/welcome</link>

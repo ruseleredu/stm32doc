@@ -104,3 +104,30 @@ Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item 
 
 ---
 
+
+
+
+```c title="Src/stm32f4xx_it.c"
+/* USER CODE BEGIN Includes */
+// highlight-next-line
+#include <stdbool.h>
+/* USER CODE END Includes */
+
+/* USER CODE BEGIN PV */
+// highlight-next-line
+extern bool BLUELED;
+/* USER CODE END PV */
+```
+
+
+```c title="Src/main.c"
+/* USER CODE BEGIN Includes */
+  // highlight-next-line
+#include <stdbool.h>
+/* USER CODE END Includes */
+
+/* USER CODE BEGIN PV */
+  // highlight-next-line
+bool BLUELED = 0;
+/* USER CODE END PV */
+```

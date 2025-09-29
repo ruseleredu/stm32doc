@@ -6,6 +6,13 @@ description: Introdução as aulas de laboratório
 
 import LabTable from '@site/src/components/LabTable';
 
+## Tabela dos LABs com links internos
+<LabTable internal={true} />
+
+## Tabela dos LABs com links externos 
+<LabTable internal={false} />
+
+
 ## Aulas de Laboratório (LABs)
 
 | LABs                 | start/open  | end/close   | Conteúdo                                                        |

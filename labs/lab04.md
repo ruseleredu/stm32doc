@@ -157,7 +157,63 @@ void TIM2_IRQHandler(void)
 }
 ```
 
+## Com uso do flag BLUELED
 
+```c title="Src/main.c"
+/* USER CODE BEGIN Includes */
+// highlight-next-line
+#include <stdbool.h>
+/* USER CODE END Includes */
+```
+
+```c title="Src/main.c"
+/* USER CODE BEGIN PV */
+// highlight-next-line
+bool BLUELED = 0;
+/* USER CODE END PV */
+```
+
+```c title="Scr/main.c"
+/* Infinite loop */
+/* USER CODE BEGIN WHILE */
+while (1)
+{
+// highlight-start
+  // Verify BLUELED Flag
+    if (BLUELED)
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // LED ON
+    else
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET); // LED OFF
+    // highlight-end
+  /* USER CODE END WHILE */
+
+  /* USER CODE BEGIN 3 */
+
+}
+/* USER CODE END 3 */
+```
+
+```c title="Src/stm32f4xx_it.c"
+/* USER CODE BEGIN PV */
+// highlight-next-line
+extern bool BLUELED;
+/* USER CODE END PV */
+```
+
+```c title="Src/stm32f4xx_it.c"
+void EXTI0_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI0_IRQn 0 */
+  // Toggle BLUELED FLAG
+  // highlight-next-line
+  BLUELED = !BLUELED;
+  /* USER CODE END EXTI0_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(User_KEY_EXTI0_Pin);
+  /* USER CODE BEGIN EXTI0_IRQn 1 */
+  
+  /* USER CODE END EXTI0_IRQn 1 */
+}
+```
 
 ## Como carregar um script do STM32CubeMX
 

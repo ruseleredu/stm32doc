@@ -27,7 +27,9 @@ const config: Config = {
   projectName: "stm32doc", // Usually your repo name.
 
   onBrokenLinks: "throw",
+
   markdown: {
+    mermaid: true, // Diagrams can be rendered using Mermaid in a code block.
     hooks: {
       onBrokenMarkdownLinks: "warn", // or 'throw'
     },
@@ -41,10 +43,6 @@ const config: Config = {
     locales: ["pt-BR"],
   },
 
-  // Diagrams can be rendered using Mermaid in a code block.
-  markdown: {
-    mermaid: true,
-  },
   themes: ["@docusaurus/theme-mermaid"],
 
   presets: [

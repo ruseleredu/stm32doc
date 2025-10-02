@@ -28,3 +28,4 @@ Neste video eu demonstro como soldo a barra de pinos dos meus kits, passando alg
 
 - [WeAct BlackPill STM32F411CEU6](/pdf/MiniF4x1Cx_V31.pdf)
 - [STM32F411xC Datasheet](/pdf/DS10314.pdf)
+

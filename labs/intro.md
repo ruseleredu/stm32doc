@@ -76,9 +76,12 @@ import LabTable from '@site/src/components/LabTable';
 | ELT73A-S22 | 08-12-2025  | 20:20 | 23:00 | Desenvolvimento do Projeto Final;                               |
 | ELT73A-S22 | 15-12-2025  | 20:20 | 23:00 | Fechamento da disciplina;                                       |
 
-### Calendário Acadêmico
+## Calendário Acadêmico
 
 - [Calendário Acadêmico](/pdf/UTFPR-CTAcademicCalendar2025.pdf)
+
+## SECAEL IX
+- [SECAEL IX](https://docs.google.com/spreadsheets/d/1JibZozfXF75Ss6v3PUNut_AvwGgvme89BmMZbbBd1uw/edit?gid=0#gid=0)
 
 ## Organizações
 

@@ -44,3 +44,6 @@ PlatformIO IDE has built-in UI in PlatformIO Home to manage PlatformIO Account. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lbhBO_BxT9I?si=66wYh60_ObPK8yoB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+
+PlatformIO STM32 Black Pill

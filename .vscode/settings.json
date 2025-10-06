@@ -25,5 +25,11 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  }
+  },
+  // Settings for pasteImage extension: Paste with Ctrl+Alt+V
+  "pasteImage.forceUnixStyleSeparator": true,
+  "pasteImage.basePath": "${projectRoot}/static",
+  "pasteImage.path": "${projectRoot}/static/img/${currentFileNameWithoutExt}",
+  "pasteImage.prefix": "/",
+  "pasteImage.showFilePathConfirmInputBox": false
 }

@@ -245,3 +245,63 @@ By following these steps, you'll have a highly optimized and efficient VS Code e
 ## Doc Writer Profile Template
 
 https://code.visualstudio.com/docs/configure/profiles#_doc-writer-profile-template
+
+
+## Streamlining image insertion  Using the "Paste Image" VS Code Extension (Recommended)
+
+Streamlining image insertion is a huge time-saver when writing Docusaurus documentation.
+
+There are two primary ways to set this up in VS Code for Docusaurus: using a popular community extension or leveraging a built-in VS Code feature. The key is to make sure the image is saved into your Docusaurus **static asset folder** and the path in your Markdown file is an **absolute path** starting from the root of your site (e.g., `/img/screenshot.png`).
+
+Docusaurus documentation recommends placing assets like images in the `static` folder (usually `static/img`) and referencing them using an absolute path. Docusaurus automatically handles these paths and resolves them correctly during the build process.
+
+Here are the two methods:
+
+-----
+
+
+
+This is the most popular and flexible method. You can configure the extension to save the image to your `static/img` folder and insert the correct absolute path into your Markdown file.
+
+### Step 1: Install the Extension
+
+1.  Open VS Code.
+2.  Go to the **Extensions** view (`Ctrl+Shift+X` or `Cmd+Shift+X`).
+3.  Search for **`Paste Image`** (by **Mushan**).
+4.  Click **Install**.
+
+### Step 2: Configure the Extension
+
+You need to tell the extension where to save the image and what path to use in your Markdown. You can do this in your VS Code `settings.json` file.
+
+1.  Open the **Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P`).
+2.  Type `Open Settings (JSON)` and select it.
+3.  Add the following configuration for your Docusaurus project.
+
+**Recommended Settings:**
+
+This configuration will save the image to a folder structure like `static/img/doc-file-name/image-name.png` and insert a path like `/img/doc-file-name/image-name.png` into your Markdown/MDX file.
+
+**Example `settings.json` entry:**
+
+```json
+{
+  // Settings for pasteImage extension: Paste with Ctrl+Alt+V
+  "pasteImage.forceUnixStyleSeparator": true,
+  "pasteImage.basePath": "${projectRoot}/static",
+  "pasteImage.path": "${projectRoot}/static/img/${currentFileNameWithoutExt}",
+  "pasteImage.prefix": "/",
+  "pasteImage.showFilePathConfirmInputBox": false
+}
+```
+
+### Step 3: Paste Your Image
+
+1.  Take a screenshot (it should be in your clipboard).
+2.  Go to your Markdown/MDX file in VS Code.
+3.  Use the keyboard shortcut:
+      * **Windows/Linux:** `Ctrl + Alt + V`
+      * **macOS:** `Cmd + Alt + V`
+      * *Alternatively, open the Command Palette and search for **"Paste Image"***.
+
+The image will be saved to your Docusaurus project, and the correct Markdown link will be inserted\!

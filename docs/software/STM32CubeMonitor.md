@@ -9,7 +9,9 @@ slug: /stm32cubemon
 
 The STM32CubeMonitor family of tools helps to fine-tune and diagnose STM32 applications at run-time by reading and visualizing their variables in real-time. In addition to specialized versions (power, RF, USB-PD), the versatile STM32CubeMonitor provides a flow-based graphical editor to build custom dashboards simply, and quickly add widgets such as gauges, bar graphs and plots. With non-intrusive monitoring, STM32CubeMonitor preserves the real-time behavior of applications, and perfectly complements traditional debugging tools to perform application profiling.
 
-https://www.st.com/en/development-tools/stm32cubemonitor.html
+![](/img/STM32CubeMonitor/2025-10-06-11-03-48.png)
+
+- https://www.st.com/en/development-tools/stm32cubemonitor.html
 
 
 ## YouTube Videos
@@ -73,4 +75,7 @@ Download Node.js: https://nodejs.org/en
 Getting Started with STM32CubeMonitor:  https://youtu.be/e8mp8NqBuhc
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K8nFO8rguiA?si=w_6E1dx1manhg1o1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 

@@ -264,6 +264,7 @@ Here are the two methods:
 This is the most popular and flexible method. You can configure the extension to save the image to your `static/img` folder and insert the correct absolute path into your Markdown file.
 
 ### Step 1: Install the Extension
+- [Paste Image](https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image)
 
 1.  Open VS Code.
 2.  Go to the **Extensions** view (`Ctrl+Shift+X` or `Cmd+Shift+X`).

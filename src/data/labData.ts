@@ -104,8 +104,7 @@ export const labData: LabRow[] = [
 
         start: "06-Oct-2025",
         end: "13-Oct-2025",
-        //conteudo: "Uso do STM32CubeMonitor; Visualização de variáveis;",
-        conteudo: "DMA: Direct memory access (Acesso direto à memória);",
+        conteudo: "Uso do STM32CubeMonitor; Visualização de variáveis;",
     },
     {
         tarefa: "LAB07",
@@ -117,7 +116,8 @@ export const labData: LabRow[] = [
 
         start: "13-Oct-2025",
         end: "20-Oct-2025",
-        conteudo: "Uso do STM32CubeMonitor; Visualização de variáveis;",
+        //  conteudo: "Uso do STM32CubeMonitor; Visualização de variáveis;",
+        conteudo: "DMA: Direct memory access (Acesso direto à memória);",
         // conteudo: "Uso do STM32CubeMonitor; MQTT, IoT;",
     },
     {

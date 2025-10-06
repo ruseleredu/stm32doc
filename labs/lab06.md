@@ -91,3 +91,26 @@ Esta atividade de laboratório tem como objetivo utilizar o STM32CubeMonitor. Ca
 ![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
 
 ---
+
+
+## Como fazer commit da atualizações
+Verifique o status do repositório
+```bash
+git status
+```
+Adicione os arquivos modificados
+```bash
+git add .
+```
+Realize o commit das alterações
+```bash
+git commit -m "My message for this commit!"
+```
+Envie para o repositório remoto (GitHub)
+```bash
+git push
+```
+Vizualize o log de alterações
+```bash
+git log
+```

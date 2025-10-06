@@ -14,3 +14,15 @@ STM32CubeProgrammer offers a wide range of features to program STM32 internal me
 STM32CubeProgrammer also allows option programming and upload, programming content verification, and programming automation through scripting.
 
 https://www.st.com/en/development-tools/stm32cubeprog.html
+
+## Error: Unable to get core ID
+- Error: Unable to get core ID
+- Error: No STM32 target found! If your product embeds Debug Authentication, please perform a discovery using Debug Authentication
+
+stm32cubeprog-hwRstPulse.png
+
+- Aperte o Reset antes de conectar
+- Clique em conectar
+- Solte o botão de reset!
+
+![hwRstPulse](/img/software/stm32cubeprog-hwRstPulse.png)

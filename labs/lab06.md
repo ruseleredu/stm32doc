@@ -27,16 +27,11 @@ import LabTable from '@site/src/components/LabTable';
 
 Uso do STM32CubeMonitor; Visualização de variáveis;
 
-- [ ] Crie uma conta no [my.st.com](https://www.st.com/content/st_com/en/user-registration.html);
-- [ ] Instale o [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html#get-software);
-- [ ] Instale o [STM32CubeCLT](https://www.st.com/en/development-tools/stm32cubeclt.html#get-software);
-- [ ] Instale o [ST-MCU-Finder](https://www.st.com/en/development-tools/st-mcu-finder-pc.html#get-software);
+- [ ] Verifique sua conta no [my.st.com](https://www.st.com/content/st_com/en/user-registration.html);
+- [ ] Instale o [STM32CubeMonitor](https://www.st.com/en/development-tools/stm32cubemonitor.html#get-software);
+- [ ] Instale o [Node.js](https://nodejs.org/en/download/current);
 - [ ] Instale o [STM32CubeProg](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software);
-- [ ] Crie um perfil no Visual Studio Code chamado `STM32`;
-- [ ] Instale [STM32Cube para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension);
-- [ ] Configure o Visual Studio Code;
-- [ ] Teste de geração e compilação de projeto para o STM32F411CEUx;
-- [ ] Teste de uso do [LoadMX](/docs/loadmx)
+
 
 ## Verifique o seu ambiente de desenvolvimento
 

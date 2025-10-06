@@ -54,9 +54,6 @@ Source code: https://github.com/ELT73A-LAB-TPL/LAB07
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Q_IJaPvlHw0?si=QecQgaJ6OR1NFcUh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-
-
-
 ### How to Update STM32 Variables Using inject node in STM32CubeMonitor
 
 Learn how to easily update variables on your STM32 device by pressing a button in STM32CubeMonitor. This step-by-step tutorial covers everything from configuring the button node to formatting the payload and sending data to the probe out node. Perfect for anyone working on real-time debugging or interactive control with STM32CubeMonitor!  
@@ -75,7 +72,4 @@ Download Node.js: https://nodejs.org/en
 Getting Started with STM32CubeMonitor:  https://youtu.be/e8mp8NqBuhc
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K8nFO8rguiA?si=w_6E1dx1manhg1o1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-
 

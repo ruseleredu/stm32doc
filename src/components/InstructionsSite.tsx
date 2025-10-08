@@ -173,7 +173,7 @@ export function STM32Tools() {
                 </ul>
             </TabItem>
             <TabItem value="STM32CubeMonitor" label="STM32CubeMonitor">
-                <p><b><Link to="/docs/stm32cubemon">STM32CubeMonitor</Link> is a Monitoring tool to test STM32 applications at run-time.</b></p>
+                <p><b><Link to="/docs/category/stm32cubemonitor">STM32CubeMonitor</Link> is a Monitoring tool to test STM32 applications at run-time.</b></p>
                 <ul>
                     <li><a href="https://www.st.com/en/development-tools/stm32cubemonitor.html#get-software" target="_blank">STM32CubeMonitor</a> family of tools helps to fine-tune and diagnose STM32 applications at run-time by reading and visualizing their variables in real-time. With non-intrusive monitoring, STM32CubeMonitor preserves the real-time behavior of applications, and perfectly complements traditional debugging tools to perform application profiling.
                     </li>

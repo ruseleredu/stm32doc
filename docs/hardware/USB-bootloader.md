@@ -21,7 +21,6 @@ STM32 Flash loader demonstrator (UM0462) (replaced by STM32CubeProgrammer)
 - https://github.com/Karim-Bouanane/Custom-Bootloader-for-STM32-Black-Pill-using-USB-CDC
 
 
-
 ## YouTube
 A reference tutorial on firmware flashing the STM32F103 BLACKPILL micro controller board.
 - https://www.youtube.com/watch?v=HBgqfAhp-jM

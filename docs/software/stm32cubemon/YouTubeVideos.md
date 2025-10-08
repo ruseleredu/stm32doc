@@ -1,20 +1,10 @@
 ---
-id: stm32cubemon
-title: STM32CubeMonitor
+id: stm32cubemonvideos
+title: YouTube Videos
 description: Monitoring tool to test STM32 applications at run-time.
-slug: /stm32cubemon
+slug: /stm32cubemonvideos
 ---
 
-## Monitoring tool to test STM32 applications at run-time
-
-The STM32CubeMonitor family of tools helps to fine-tune and diagnose STM32 applications at run-time by reading and visualizing their variables in real-time. In addition to specialized versions (power, RF, USB-PD), the versatile STM32CubeMonitor provides a flow-based graphical editor to build custom dashboards simply, and quickly add widgets such as gauges, bar graphs and plots. With non-intrusive monitoring, STM32CubeMonitor preserves the real-time behavior of applications, and perfectly complements traditional debugging tools to perform application profiling.
-
-![](/img/STM32CubeMonitor/2025-10-06-11-03-48.png)
-
-- https://www.st.com/en/development-tools/stm32cubemonitor.html
-
-
-## YouTube Videos
 
 ### Step-by-Step Guide to Installing STM32CubeMonitor
 Discover how to install STM32CubeMonitor, a powerful tool for monitoring and debugging STM32 microcontrollers in real-time. This guide walks you through the entire installation process, from downloading the software to setting it up on your system, ensuring a smooth start to your debugging journey. 
@@ -73,3 +63,6 @@ Getting Started with STM32CubeMonitor:  https://youtu.be/e8mp8NqBuhc
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K8nFO8rguiA?si=w_6E1dx1manhg1o1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## List of specific ST nodes
+
+- [List of specific ST nodes](https://wiki.st.com/stm32mcu/wiki/STM32CubeMonitor:List_of_specific_ST_nodes)

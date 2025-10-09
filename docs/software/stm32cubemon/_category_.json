@@ -1,5 +1,6 @@
 {
   "label": "STM32CubeMonitor",
+  "position": 5,
   "link": {
     "type": "generated-index",
     "description": "STM32CubeMonitor Related Docs."

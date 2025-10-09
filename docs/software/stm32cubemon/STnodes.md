@@ -9,6 +9,10 @@ slug: /stm32cubemonstnodes
 
 - [List of specific ST nodes](https://wiki.st.com/stm32mcu/wiki/STM32CubeMonitor:List_of_specific_ST_nodes)
 
+```bash
+C:\Users\<Your_Username>\.STMicroelectronics\stm32cubemonitor\node_modules
+```
+
 ## Design nodes
 These nodes are used to create flows from target to variable, rendered in dashboard view. Design nodes are not visible on the dashboard. 
 
@@ -16,6 +20,22 @@ These nodes are used to create flows from target to variable, rendered in dashbo
 This allows the user to define and/or select a probe configuration (probe name, protocol and frequency). This node opens and closes the connection, and send commands to the selected probe.
 
 - [STM32CubeMonitor:How to select the target](https://wiki.st.com/stm32mcu/wiki/STM32CubeMonitor:How_to_select_the_target) 
+
+### acq stlink out
+Allow to define and/or select a probe configuration (probe name, protocol and frequency), open and close the connection and send commands to the selected probe.
+
+topicstring
+The topic possible values are
+read to send a command of one shot read
+start to send a command to START acquisition
+stop to send a command to STOP acquisition
+payloadobject
+The payload is an object representing the variables group configuration defined in the variables node. The payload object holds several properties summarizing what have been set in the configuration panel of the variables node.
+groupname string
+variablelist array of variable
+modestring
+frequencynumber (0 for sequential loop)
+accesspointnumber
 
 ### Acquisition in
 This allows user to define and/or select a probe configuration (probe name, protocol and frequency). This node receives data from the selected probe.

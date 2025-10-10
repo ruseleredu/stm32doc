@@ -109,6 +109,8 @@ Vizualize o log de alterações
 git log
 ```
 
+## User Code
+### Timer 2 com interrupção e saída PWM no canal 1
 Inicialize o Timer 2 com suporte a rotina de interrupção e saída PWM no canal 1:
 ```c title="Src/main.c"
   /* Initialize all configured peripherals */
@@ -122,7 +124,7 @@ Inicialize o Timer 2 com suporte a rotina de interrupção e saída PWM no canal
 ```
 
 
-
+### User Key
 Toggle no LED interno via interrupção do User Key:
 ```c title="Src/stm32f4xx_it.c"
 void EXTI0_IRQHandler(void)
@@ -138,7 +140,7 @@ void EXTI0_IRQHandler(void)
 }
 ```
 
-
+### ADC1 na interrupção do Timer 2
 Inicie o ADC1 na interrupção do Timer 2:
 ```c title="Src/stm32f4xx_it.c"
 void TIM2_IRQHandler(void)
@@ -154,6 +156,7 @@ void TIM2_IRQHandler(void)
 }
 ```
 
+### Leitura do AN1 e atualização do valor de comparação do PWM
 Na interrupção do ADC1, faça a leitura do AN1 e atualize o valor de comparação do PWM:  
 TIM2->CCR1 = HAL_ADC_GetValue(&hadc1);
 
@@ -172,7 +175,7 @@ void ADC_IRQHandler(void)
 }
 ```
 
-## Uso de variáveis
+### Tratamento do sinal de leitura do AN1
 
 ```c title="Src/stm32f4xx_it.c"
 void ADC_IRQHandler(void)
@@ -192,7 +195,6 @@ void ADC_IRQHandler(void)
   /* USER CODE END ADC_IRQn 1 */
 }
 ```
-
 
 ## Como carregar um script do STM32CubeMX com [LoadMX](/docs/loadmx)
 

@@ -23,22 +23,6 @@ import LabTable from '@site/src/components/LabTable';
 
 ---
 
-
-## Internal links only
-<LabTable internal={true} />
-
-## External links only
-<LabTable internal={false} />
-
-## Show only one lab (index 0), internal
-<LabTable index={0} internal={true} />
-
-<div style={{ display: "flex", justifyContent: "center" }}>
-  <LabTable index={9} internal={false} />
-</div>
-
-
-
 ## Conteúdo
 
 Introdução ao FreeRTOS;
@@ -105,29 +89,89 @@ Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item 
 ---
 
 
-
-
-```c title="Src/stm32f4xx_it.c"
-/* USER CODE BEGIN Includes */
-// highlight-next-line
-#include <stdbool.h>
-/* USER CODE END Includes */
-
-/* USER CODE BEGIN PV */
-// highlight-next-line
-extern bool BLUELED;
-/* USER CODE END PV */
+## User Code
+### Timer 2 com interrupção e saída PWM no canal 1
+Inicialize o Timer 2 com suporte a rotina de interrupção e saída PWM no canal 1:
+```c title="Src/main.c"
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_ADC1_Init();
+  MX_TIM2_Init();
+  /* USER CODE BEGIN 2 */
+  // highlight-next-line
+  HAL_TIM_PWM_Start_IT(&htim2,TIM_CHANNEL_1);
+  /* USER CODE END 2 */
 ```
 
 
-```c title="Src/main.c"
-/* USER CODE BEGIN Includes */
-  // highlight-next-line
-#include <stdbool.h>
-/* USER CODE END Includes */
+### User Key
+Toggle no LED interno via interrupção do User Key:
+```c title="Src/stm32f4xx_it.c"
+void EXTI0_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI0_IRQn 0 */
 
-/* USER CODE BEGIN PV */
+  /* USER CODE END EXTI0_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(User_KEY_EXTI0_Pin);
+  /* USER CODE BEGIN EXTI0_IRQn 1 */
   // highlight-next-line
-bool BLUELED = 0;
-/* USER CODE END PV */
+  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+  /* USER CODE END EXTI0_IRQn 1 */
+}
+```
+
+### ADC1 na interrupção do Timer 2
+Inicie o ADC1 na interrupção do Timer 2:
+```c title="Src/stm32f4xx_it.c"
+void TIM2_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM2_IRQn 0 */
+
+  /* USER CODE END TIM2_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim2);
+  /* USER CODE BEGIN TIM2_IRQn 1 */
+  // highlight-next-line
+  HAL_ADC_Start_IT(&hadc1);
+  /* USER CODE END TIM2_IRQn 1 */
+}
+```
+
+### Leitura do AN1 e atualização do valor de comparação do PWM
+Na interrupção do ADC1, faça a leitura do AN1 e atualize o valor de comparação do PWM:  
+TIM2->CCR1 = HAL_ADC_GetValue(&hadc1);
+
+
+```c title="Src/stm32f4xx_it.c"
+void ADC_IRQHandler(void)
+{
+  /* USER CODE BEGIN ADC_IRQn 0 */
+
+  /* USER CODE END ADC_IRQn 0 */
+  HAL_ADC_IRQHandler(&hadc1);
+  /* USER CODE BEGIN ADC_IRQn 1 */
+  // highlight-next-line
+  TIM2->CCR1 = HAL_ADC_GetValue(&hadc1);
+  /* USER CODE END ADC_IRQn 1 */
+}
+```
+
+### Tratamento do sinal de leitura do AN1
+
+```c title="Src/stm32f4xx_it.c"
+void ADC_IRQHandler(void)
+{
+  /* USER CODE BEGIN ADC_IRQn 0 */
+  // highlight-start
+  uint16_t adc1in1;
+  float voltage;
+  // highlight-end
+  /* USER CODE END ADC_IRQn 0 */
+  HAL_ADC_IRQHandler(&hadc1);
+  /* USER CODE BEGIN ADC_IRQn 1 */
+  // highlight-start
+  adc1in1 = HAL_ADC_GetValue(&hadc1);
+  voltage = (adc1in1*3.3)/4095;
+  // highlight-end
+  /* USER CODE END ADC_IRQn 1 */
+}
 ```

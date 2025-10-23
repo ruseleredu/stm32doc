@@ -1,8 +1,8 @@
 ---
-id: vs-code
-title: Visual Studio Code
+id: vs-code-intro
+title: Intro
 description: The open source AI code editor.
-slug: /vs-code
+slug: /vs-code-intro
 ---
 
 ## Visual Studio Code

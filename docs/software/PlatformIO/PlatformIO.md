@@ -1,8 +1,9 @@
 ---
-id: platformio
-title: PlatformIO
+id: platformio-intro
+title: Intro
+sidebar_position: 1
 description: Your Gateway to Embedded Software Development Excellence.
-slug: /platformio
+slug: /platformio-intro
 ---
 
 # PlatformIO

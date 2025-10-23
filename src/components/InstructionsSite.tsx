@@ -45,7 +45,7 @@ export function VerifyDev1() {
                     gh auth status
                 </ThemeCodeBlock>
 
-                <p>Versão do <Link to="/docs/vs-code">Visual Studio Code</Link> e extensões instaladas:</p>
+                <p>Versão do <Link to="/docs/vs-code-intro">Visual Studio Code</Link> e extensões instaladas:</p>
                 <ThemeCodeBlock className="language-bash">
                     code -v
                 </ThemeCodeBlock>
@@ -80,7 +80,7 @@ export function VerifyDev2() {
                     gh auth status
                 </ThemeCodeBlock>
 
-                <p>Versão do <Link to="/docs/vs-code">Visual Studio Code</Link> e extensões instaladas:</p>
+                <p>Versão do <Link to="/docs/vs-code-intro">Visual Studio Code</Link> e extensões instaladas:</p>
                 <ThemeCodeBlock className="language-bash">
                     code -v
                 </ThemeCodeBlock>
@@ -122,7 +122,7 @@ export function GitConfig() {
                     git config --global core.autocrlf false
                 </ThemeCodeBlock>
 
-                <p>Configure o <Link to="/docs/git">git</Link> para usar o <Link to="/docs/vs-code">Visual Studio Code</Link> como editor padrão para tarefas como escrever mensagens de commit ou rebases interativos</p>
+                <p>Configure o <Link to="/docs/git">git</Link> para usar o <Link to="/docs/vs-code-intro">Visual Studio Code</Link> como editor padrão para tarefas como escrever mensagens de commit ou rebases interativos</p>
                 <ThemeCodeBlock className="language-bash">
                     git config --global core.editor "code --wait"
                 </ThemeCodeBlock>
@@ -273,7 +273,7 @@ export function DevTools() {
                 </ThemeCodeBlock>
             </TabItem>
             <TabItem value="vscode" label="VS Code">
-                <p><b><Link to="/docs/vs-code">Visual Studio Code</Link>: IDE and Code Editor for Software Development.</b></p>
+                <p><b><Link to="/docs/vs-code-intro">Visual Studio Code</Link>: IDE and Code Editor for Software Development.</b></p>
                 <ul>
                     <li><a href="https://code.visualstudio.com/download" target="_blank">VS Code</a> is a free source-code editor made by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
                     </li>
@@ -281,7 +281,7 @@ export function DevTools() {
                 <ThemeCodeBlock className="language-bash">
                     winget install --id Microsoft.VisualStudioCode -e --source winget
                 </ThemeCodeBlock>
-                <p>Extensões instaladas do <Link to="/docs/vs-code">Visual Studio Code</Link> para o perfil STM32:</p>
+                <p>Extensões instaladas do <Link to="/docs/vs-code-intro">Visual Studio Code</Link> para o perfil STM32:</p>
                 <ThemeCodeBlock className="language-bash">
                     code --list-extensions --profile "STM32"
                 </ThemeCodeBlock>

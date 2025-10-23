@@ -57,7 +57,7 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 ## Requesitos
 
-- [VScode](/docs/vs-code)
+- [VScode](/docs/vs-code-intro)
 - [MinGW](/docs/mingw)
 
 ```bash

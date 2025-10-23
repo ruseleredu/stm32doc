@@ -1,8 +1,9 @@
 ---
-id: github
-title: GitHub
+id: github-intro
+title: Intro
+sidebar_position: 1
 description: Crie e lance software em uma única plataforma colaborativa.
-slug: /github
+slug: /github-intro
 ---
 
 ## Criando uma conta no GitHub

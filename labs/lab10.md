@@ -1,6 +1,6 @@
 ---
-sidebar_position: 10
-title: Laboratório 07
+sidebar_position: 13
+title: Laboratório 10
 description: Introdução as aulas de laboratório
 ---
 
@@ -11,21 +11,21 @@ import LabFromTemplate from "@site/src/components/LabFromTemplate";
 import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
-# Laboratório 07
+# Laboratório 10
 
 <!-- Aviso de que este conteúdo está em construção! -->
 <LABsIncomplete />
 
 <!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
 <div style={{ display: "flex", justifyContent: "center" }}>
-  <LabTable index={7} internal={false} />
+  <LabTable index={10} internal={false} />
 </div>
 
 ---
 
 ## Conteúdo
 
-Uso do STM32CubeMonitor; MQTT, IoT;
+Introdução ao FreeRTOS;
 
 - [ ] Crie uma conta no [my.st.com](https://www.st.com/content/st_com/en/user-registration.html);
 - [ ] Instale o [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html#get-software);
@@ -50,38 +50,35 @@ Uso do STM32CubeMonitor; MQTT, IoT;
 <!-- List of STM32Cube Tools -->
 <STM32Tools />
 
-## Crie um novo repositório com base no template do LAB07
+## Crie um novo repositório com base no template do LAB10
 
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
 
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
-<LabFromTemplate labNumber="LAB07" opts="-c" />
+<LabFromTemplate labNumber="LAB10" opts="-c" />
 
 
+## Instruções do LAB - TODO
 
-## Instruções do LAB
+Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item equivale a 10% da nota.
 
-Esta atividade de laboratório tem como objetivo utilizar o DMA, MQTT e STM32CubeMonitor. Cada item equivale a 10% da nota.
-
-- [ ] Crie um repositório (LAB07) via template (https://github.com/ELT73A-LAB-TPL/LAB07) na organização e clone;
-- [ ] Importe e compile o código da pasta TIM2EXTI0ADC1PWMDMA
+- [ ] Crie um repositório (LAB09) via template (https://github.com/ELT73A-LAB-TPL/LAB09) na organização e clone;
+- [ ] Importe e compile o código da pasta TIM2EXTI0ADC1PWMDMARTOS
 - [ ] Verifique a configuração dos periféricos;
-- [ ] Configure o executável e probes no STM32CubeMonitor;
-- [ ] Configure o MQTT no Node-RED;
-- [ ] Teste de injeção de dados no MQTT;
-- [ ] Comfiguração do APP para MQTT;
-- [ ] Acionamento do LED via MQTT;
-- [ ] Commit e push do Node-RED export flow;
+- [ ] Verifique o breakpoint EXTI0;
+- [ ] Verifique a leitura dos ADCs uso das filas (Queues);
+- [ ] Verifique a operação das tarefas (Tasks);
+- [ ] Verifique a operação do Mutex e Semaphores;
+- [ ] Verifique a operação do Event flags;
+- [ ] Verifique a operação do PWM;
 - [ ] Envie o link do repositório no GitHub (hyperlink);
 
 ## Avaliação
 - [ ] Uso do template e código - 20%
-- [ ] Configuração do STM32CubeMonitor - 20%
-- [ ] Configuração e teste do MQTT - 20%
-- [ ] Comfiguração do APP e acionamento do LED - 20%
-- [ ] Commit e push do Node-RED export flow - 20%
+- [ ] Verificação do FreeRTOS - 70%
 - [ ] Link do repositório no GitHub (hyperlink) - 10%
-  
+
+
 ## Diagrama de pinos do STM32F4x1
 
 ---
@@ -89,6 +86,7 @@ Esta atividade de laboratório tem como objetivo utilizar o DMA, MQTT e STM32Cub
 ![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
 
 ---
+
 
 ## User Code
 ### Timer 2 com interrupção e saída PWM no canal 1
@@ -175,27 +173,4 @@ void ADC_IRQHandler(void)
   // highlight-end
   /* USER CODE END ADC_IRQn 1 */
 }
-```
-
-
-## Como fazer commit da atualizações
-Verifique o status do repositório
-```bash
-git status
-```
-Adicione os arquivos modificados
-```bash
-git add .
-```
-Realize o commit das alterações
-```bash
-git commit -m "My message for this commit!"
-```
-Envie para o repositório remoto (GitHub)
-```bash
-git push
-```
-Vizualize o log de alterações
-```bash
-git log
 ```

@@ -29,7 +29,6 @@ Introdução ao FreeRTOS;
 
 - [ ] Crie uma conta no [my.st.com](https://www.st.com/content/st_com/en/user-registration.html);
 - [ ] Instale o [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html#get-software);
-- [ ] Instale o [STM32CubeCLT](https://www.st.com/en/development-tools/stm32cubeclt.html#get-software);
 - [ ] Instale o [ST-MCU-Finder](https://www.st.com/en/development-tools/st-mcu-finder-pc.html#get-software);
 - [ ] Instale o [STM32CubeProg](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software);
 - [ ] Crie um perfil no Visual Studio Code chamado `STM32`;

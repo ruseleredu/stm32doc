@@ -144,6 +144,20 @@ export const labData: LabRow[] = [
         start: "10-Nov-2025",
         end: "17-Nov-2025",
         // conteudo: "Uso do STM32CubeMonitor; InfluDB;",
+        conteudo: "Introdução ao uso do PlatformIO;",
+        // conteudo: "FreeRTOS: Tarefas, Filas e Semáforos;",
+    },
+    {
+        tarefa: "LAB10",
+        hrefi: "/labs/lab10",
+        hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1889891", // external
+        templateLabel: "Template 10",
+        templateHrefi: "/tpls/tpl10",
+        templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB10",
+
+        start: "10-Nov-2025",
+        end: "17-Nov-2025",
+        // conteudo: "Uso do STM32CubeMonitor; InfluDB;",
         conteudo: "Introdução ao FreeRTOS;",
         // conteudo: "FreeRTOS: Tarefas, Filas e Semáforos;",
     },

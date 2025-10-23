@@ -3,6 +3,7 @@ id: vs-code-intro
 title: Intro
 description: The open source AI code editor.
 slug: /vs-code-intro
+sidebar_position: 1
 ---
 
 ## Visual Studio Code

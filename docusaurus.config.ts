@@ -2,7 +2,19 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const formatter = new Intl.DateTimeFormat('pt-BR', {
+  timeZone: 'America/Sao_Paulo',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hourCycle: 'h23', // Use 24-hour format
+});
+const utc3Time = formatter.format(new Date());
+
+const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} STM32 Docs for ELT73A, Inc. Built with Docusaurus at: ${utc3Time}. `;
 
 const config: Config = {
   title: "ELT73A-S22-2025.2",
@@ -298,7 +310,8 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} STM32 Docs for ELT73A, Inc. Built with Docusaurus.`,
+      //copyright: `Copyright © ${new Date().getFullYear()} STM32 Docs for ELT73A, Inc. Built with Docusaurus.`,
+      copyright: COPYRIGHT_STRING,
     },
     prism: {
       theme: prismThemes.github,

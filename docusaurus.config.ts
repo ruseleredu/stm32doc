@@ -14,7 +14,7 @@ const formatter = new Intl.DateTimeFormat('pt-BR', {
 });
 const utc3Time = formatter.format(new Date());
 
-const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} STM32 Docs for ELT73A, Inc. Built with Docusaurus at: ${utc3Time}. `;
+const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} stm32doc, Inc. Built with Docusaurus at ${utc3Time}.`;
 
 const config: Config = {
   title: "ELT73A-S22-2025.2",

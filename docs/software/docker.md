@@ -26,3 +26,9 @@ slug: /docker
 - node-red-contrib-influxdb: https://flows.nodered.org/node/node-red-contrib-influxdb
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/18n_P9-RhiM?si=ZEt5EWogHNk5YuCZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+### Docker stack for getting started on IOT on the Raspberry PI 
+- https://github.com/SensorsIot/IOTstack
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_DO2wHI6JWQ?si=9zueoF0gEkm-G-MY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

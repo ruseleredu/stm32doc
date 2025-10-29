@@ -64,6 +64,8 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
+          // 👇 Add this line for the last update time on docs
+          showLastUpdateTime: true,
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/ruseleredu/stm32doc/edit/main/",
         },
@@ -97,6 +99,7 @@ const config: Config = {
         routeBasePath: "labs", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarslabs.js"), // Separate sidebar for LAB docs
         // ... other options specific to your API docs
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -108,6 +111,7 @@ const config: Config = {
         routeBasePath: "quiz", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarsquiz.js"), // Separate sidebar for Quiz docs
         // ... other options specific to your API docs
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -119,6 +123,7 @@ const config: Config = {
         routeBasePath: "tpls", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarstpls.js"), // Separate sidebar for Quiz docs
         // ... other options specific to your API docs
+        showLastUpdateTime: true,
       },
     ],
   ],

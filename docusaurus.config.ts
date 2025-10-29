@@ -13,8 +13,32 @@ const formatter = new Intl.DateTimeFormat('pt-BR', {
   hourCycle: 'h23', // Use 24-hour format
 });
 const utc3Time = formatter.format(new Date());
+const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} stm32doc, Inc. Built with Docusaurus at ${utc3Time} UTC-3.`;
+// 1. Import the labData array
+// https://gemini.google.com/share/c52111cbf825
+// Adjust the path as needed.
+const { labData } = require('./src/data/labData');
+// OR: import { labData } from './src/data/labData'; 
 
-const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} stm32doc, Inc. Built with Docusaurus at ${utc3Time}.`;
+// 2. Create the Docusaurus-compatible array format
+const labDropdownItems = labData.map(lab => ({
+  // Docusaurus expects 'label'. We use your 'conteudo' property for the text.
+  //label: lab.conteudo,
+  label: `${lab.tarefa} - ${lab.conteudo}`,
+  // Docusaurus expects 'to' (for internal links). We use your 'hrefi' property.
+  to: lab.hrefi,
+}));
+
+const { quizData } = require('./src/data/quizData');
+
+// 2. Create the Docusaurus-compatible array format
+const quizDropdownItems = quizData.map(quiz => ({
+  // Docusaurus expects 'label'. We use your 'descricao' property for the text.
+  //label: lab.conteudo,
+  label: `${quiz.quiz} - ${quiz.descricao}`,
+  // Docusaurus expects 'to' (for internal links). We use your 'hrefi' property.
+  to: quiz.hrefi,
+}));
 
 const config: Config = {
   title: "ELT73A-S22-2025.2",
@@ -141,6 +165,7 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
+          //  type: "dropdown",
           sidebarId: "tutorialSidebar",
           position: "left",
           label: "Documentos",
@@ -148,14 +173,22 @@ const config: Config = {
         {
           to: "/labs/intro", // Link to a page in your API docs
           label: "Laboratórios",
+          type: "dropdown",
           position: "left",
           activeBaseRegex: `/labs/`, // Highlight when any API doc is active
+          items: [
+            ...labDropdownItems,
+          ],
         },
         {
           to: "/quiz/intro", // Link to a page in your API docs
           label: "Questionários",
+          type: "dropdown",
           position: "left",
           activeBaseRegex: `/quiz/`, // Highlight when any API doc is active
+          items: [
+            ...quizDropdownItems,
+          ],
         },
         /*  {
             to: "/tpls/intro", // Link to a page in your API docs

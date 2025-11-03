@@ -176,3 +176,50 @@ void ADC_IRQHandler(void)
   /* USER CODE END ADC_IRQn 1 */
 }
 ```
+
+
+## STM32CubeMonitor 
+### InfluxDB Inject Test
+
+```javascript
+let adc1Value = Math.floor(Math.random()*4096); 
+let adc2Value = Math.floor(Math.random()*4096); 
+
+msg.topic = "InfluxData"
+msg.payload = {
+    "adc1in1": adc1Value,
+    "voltage1": (adc1Value * 3.3) / 4095,
+    "adc1in2": adc2Value,
+    "voltage2": (adc2Value * 3.3) / 4095,
+    "blueled": Math.round(Math.random())
+}
+return msg;
+```
+
+### InfluxDB Query Test
+```sql
+from(bucket: "Grupo-X")
+  |> range(start: -1h)
+  |> filter(fn: (r) => r["_measurement"] == "test")
+  |> filter(fn: (r) => r["_field"] == "adc1in1" or r["_field"] == "adc1in2" or r["_field"] == "blueled" or r["_field"] == "voltage1" or r["_field"] == "voltage2")
+  |> last()
+```
+
+```javascript
+let adc1Value = msg.payload[0]._value;
+let adc2Value = msg.payload[1]._value;
+let led = msg.payload[2]._value;
+let vol1 = msg.payload[3]._value;
+let vol2 = msg.payload[4]._value;
+
+msg.topic = "InfluxData"
+msg.payload = {
+    "adc1in1": adc1Value,
+    "voltage1": vol1,
+    "adc1in2": adc2Value,
+    "voltage2": vol2,
+    "blueled": led
+}
+return msg;
+```
+

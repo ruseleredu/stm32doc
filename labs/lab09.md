@@ -25,14 +25,10 @@ import LabTable from '@site/src/components/LabTable';
 
 ## Conteúdo
 
-Introdução ao FreeRTOS;
+Introdução ao uso do PlatformIO;
 
-- [ ] Crie uma conta no [my.st.com](https://www.st.com/content/st_com/en/user-registration.html);
-- [ ] Instale o [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html#get-software);
-- [ ] Instale o [ST-MCU-Finder](https://www.st.com/en/development-tools/st-mcu-finder-pc.html#get-software);
-- [ ] Instale o [STM32CubeProg](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software);
-- [ ] Crie um perfil no Visual Studio Code chamado `STM32`;
-- [ ] Instale [STM32Cube para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension);
+- [ ] Crie um perfil no Visual Studio Code chamado `STM32IO`;
+- [ ] Instale o [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode);
 - [ ] Configure o Visual Studio Code;
 - [ ] Teste de geração e compilação de projeto para o STM32F411CEUx;
 - [ ] Teste de uso do [LoadMX](/docs/loadmx)

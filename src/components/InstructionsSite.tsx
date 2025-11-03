@@ -184,6 +184,43 @@ export function STM32Tools() {
 }
 
 
+// import {STM32Tools} from '@site/src/components/InstructionsSite';
+// <!-- List of STM32Cube Tools -->
+// <STM32Toolsv2 />
+export function STM32Toolsv2() {
+    return (
+        <Tabs>
+            <TabItem value="STM32CubeMX" label="STM32CubeMX" default>
+                <p><b><Link to="/docs/stm32cubemx">STM32CubeMX</Link> is an initialization code generator.</b></p>
+                <ul>
+                    <li><a href="https://www.st.com/en/development-tools/stm32cubemx.html#get-software" target="_blank">STM32CubeMX</a> is a graphical tool that allows a very easy configuration of STM32 microcontrollers and microprocessors, as well as the generation of the corresponding initialization C code for the Arm® Cortex®-M core or a partial Linux® Device Tree for Arm® Cortex®-A core, through a step-by-step process.
+                    </li>
+                </ul>
+            </TabItem>
+            <TabItem value="ST-MCU-FINDER" label="ST-MCU-FINDER">
+                <p><b>STM32 and STM8 product finder for desktops.</b></p>
+                <ul>
+                    <li><a href="https://www.st.com/en/development-tools/st-mcu-finder-pc.html#get-software" target="_blank">ST-MCU-FINDER-PC</a> allows exploring and connecting to the complete portfolio of STM32 Arm® Cortex®-M, STM32 Arm® Cortex®-A7, and STM8 microcontrollers, microprocessors, development boards and examples directly from the developer’s desktop environment.
+                    </li>
+                </ul>
+            </TabItem>
+            <TabItem value="STM32CubeProg" label="STM32CubeProg">
+                <p><b><Link to="/docs/stm32cubeprg">STM32CubeProg</Link> is an all-in-one multi-OS software tool for programming STM32 products.</b></p>
+                <ul>
+                    <li><a href="https://www.st.com/en/development-tools/stm32cubeprog.html#get-software" target="_blank">STM32CubeProg</a> provides an easy-to-use and efficient environment for reading, writing, and verifying device memory through both the debug interface (JTAG and SWD) and the bootloader interface (UART and USB DFU, I2C, SPI, and CAN). STM32CubeProgrammer is delivered in GUI (graphical user interface) and CLI (command-line interface) versions.
+                    </li>
+                </ul>
+            </TabItem>
+            <TabItem value="STM32CubeMonitor" label="STM32CubeMonitor">
+                <p><b><Link to="/docs/category/stm32cubemonitor">STM32CubeMonitor</Link> is a Monitoring tool to test STM32 applications at run-time.</b></p>
+                <ul>
+                    <li><a href="https://www.st.com/en/development-tools/stm32cubemonitor.html#get-software" target="_blank">STM32CubeMonitor</a> family of tools helps to fine-tune and diagnose STM32 applications at run-time by reading and visualizing their variables in real-time. With non-intrusive monitoring, STM32CubeMonitor preserves the real-time behavior of applications, and perfectly complements traditional debugging tools to perform application profiling.
+                    </li>
+                </ul>
+            </TabItem>
+        </Tabs>
+    );
+}
 
 
 // import {STM32ToolsFull} from '@site/src/components/InstructionsSite';
@@ -290,6 +327,66 @@ export function DevTools() {
     );
 }
 
-
+// import {DevToolsv2} from '@site/src/components/InstructionsSite';
+// <!-- List of Dev Tools -->
+// <DevToolsv2 />
+export function DevToolsv2() {
+    return (
+        <Tabs>
+            <TabItem value="git-scm" label="Git SCM" default>
+                <p><b><Link to="/docs/git">Git</Link> is the most widely used source-code management tool among professional developers.</b></p>
+                <ul>
+                    <li><a href="https://git-scm.com/downloads/win" target="_blank">Git</a> is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+                    </li>
+                </ul>
+                <ThemeCodeBlock className="language-bash">
+                    winget install --id Git.Git -e --source winget
+                </ThemeCodeBlock>
+                <p>Configurações do <Link to="/docs/git">git</Link>:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git config --list --show-origin
+                </ThemeCodeBlock>
+            </TabItem>
+            <TabItem value="gh" label="GitHub CLI">
+                <p><b><Link to="/docs/github-cli">GitHub CLI</Link> brings GitHub to your terminal.</b></p>
+                <ul>
+                    <li><a href="https://cli.github.com/" target="_blank">GitHub CLI</a> is a command line tool that allows you to interact with GitHub from the command line. It is available for Windows, macOS, and Linux.
+                    </li>
+                </ul>
+                <ThemeCodeBlock className="language-bash">
+                    winget install --id GitHub.cli -e --source winget
+                </ThemeCodeBlock>
+                <p>Status de login do <Link to="/docs/github-cli">GitHub CLI</Link>:</p>
+                <ThemeCodeBlock className="language-bash">
+                    gh auth status
+                </ThemeCodeBlock>
+            </TabItem>
+            <TabItem value="vscode" label="VS Code">
+                <p><b><Link to="/docs/vs-code-intro">Visual Studio Code</Link>: IDE and Code Editor for Software Development.</b></p>
+                <ul>
+                    <li><a href="https://code.visualstudio.com/download" target="_blank">VS Code</a> is a free source-code editor made by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
+                    </li>
+                </ul>
+                <ThemeCodeBlock className="language-bash">
+                    winget install --id Microsoft.VisualStudioCode -e --source winget
+                </ThemeCodeBlock>
+                <p>Extensões instaladas do <Link to="/docs/vs-code-intro">Visual Studio Code</Link> para o perfil STM32:</p>
+                <ThemeCodeBlock className="language-bash">
+                    code --list-extensions --profile "STM32"
+                </ThemeCodeBlock>
+            </TabItem>
+            <TabItem value="stm32-vscode-extension" label="STM32CubeIDE">
+                <p><b><Link to="/docs/stm32-vscode-extension">STM32CubeIDE for Visual Studio Code</Link>: development experience for STM32 microcontrollers.</b></p>
+                <ul>
+                    <li><a href="https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension" target="_blank">STM32CubeIDE for Visual Studio Code</a> is designed to enhance the development experience for STM32 microcontrollers by providing a comprehensive and updatable set of tools. The extension pack allow users to install one single pack bringing a full STM32 IDE experience into VS Code.
+                    </li>
+                </ul>
+                <ThemeCodeBlock className="language-bash">
+                    code --install-extension stmicroelectronics.stm32-vscode-extension --profile "STM32"
+                </ThemeCodeBlock>
+            </TabItem>
+        </Tabs>
+    );
+}
 
 

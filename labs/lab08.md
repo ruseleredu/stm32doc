@@ -8,7 +8,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
+import {DevTools,GitConfig,STM32Tools,DevToolsv2,STM32Toolsv2} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 08
@@ -40,7 +40,7 @@ Uso do STM32CubeMonitor; InfluDB;
 ## Verifique o seu ambiente de desenvolvimento
 
 <!-- List of Dev Tools -->
-<DevTools />
+<DevToolsv2 />
 
 <!-- Configure o git -->
 <GitConfig />
@@ -48,7 +48,7 @@ Uso do STM32CubeMonitor; InfluDB;
 ---
 
 <!-- List of STM32Cube Tools -->
-<STM32Tools />
+<STM32Toolsv2 />
 
 ## Crie um novo repositório com base no template do LAB08
 
@@ -56,9 +56,6 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB08" opts="-c" />
-
-
-
 
 ## Instruções do LAB
 

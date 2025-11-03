@@ -284,8 +284,8 @@ const config: Config = {
               href: "https://desktop.github.com/download/",
             },
             {
-              label: "MinGW MSYS2",
-              href: "https://www.msys2.org/",
+              label: "PlatformIO",
+              href: "https://platformio.org//install/ide?install=vscode",
             },
             {
               label: "WinGet",

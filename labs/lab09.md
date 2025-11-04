@@ -25,13 +25,16 @@ import LabTable from '@site/src/components/LabTable';
 
 ## Conteúdo
 
-Introdução ao uso do PlatformIO;
+Introdução ao uso do [PlatformIO](/docs/platformio-intro);
 
 - [ ] Crie um perfil no Visual Studio Code chamado `STM32IO`;
 - [ ] Instale o [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode);
 - [ ] Configure o Visual Studio Code;
+- [ ] Configure o [PlatformIO Core](https://platformio.org/install/cli);
+- [ ] Edite a variável de ambiente `Path` e adicione `%USERPROFILE%\.platformio\penv\Scripts\`;
+- [ ] Instale os drivers for [ST-LINK](https://docs.platformio.org/en/latest/plus/debug-tools/stlink.html#debugging-tool-stlink) debug tool
 - [ ] Teste de geração e compilação de projeto para o STM32F411CEUx;
-- [ ] Teste de uso do [LoadMX](/docs/loadmx)
+
 
 ## Verifique o seu ambiente de desenvolvimento
 

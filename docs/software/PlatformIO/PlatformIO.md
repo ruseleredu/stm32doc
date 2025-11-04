@@ -45,6 +45,7 @@ PlatformIO IDE has built-in UI in PlatformIO Home to manage PlatformIO Account. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lbhBO_BxT9I?si=66wYh60_ObPK8yoB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
+- [Tutorials and Examples](https://docs.platformio.org/en/latest/tutorials/index.html)
+- [STM32Cube HAL and Nucleo-F401RE: debugging and unit testing](https://docs.platformio.org/en/latest/tutorials/ststm32/stm32cube_debugging_unit_testing.html)
 
 PlatformIO STM32 Black Pill

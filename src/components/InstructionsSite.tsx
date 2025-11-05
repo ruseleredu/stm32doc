@@ -385,6 +385,18 @@ export function DevToolsv2() {
                     code --install-extension stmicroelectronics.stm32-vscode-extension --profile "STM32"
                 </ThemeCodeBlock>
             </TabItem>
+            <TabItem value="stm32-platformio" label="PlatformIO">
+                <p><b><Link to="/docs/platformio-intro">PlatformIO IDE for VSCode</Link>: Your Gateway to Embedded Software Development Excellence.</b></p>
+                <ul>
+                    <li><a href="https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide" target="_blank">PlatformIO IDE for VSCode</a> Unlock the true potential of embedded software development with PlatformIO’s collaborative ecosystem, embracing declarative principles, test-driven methodologies, and modern toolchains for unrivaled success.
+                    </li>
+                </ul>
+                <ThemeCodeBlock className="language-bash">
+                    code --install-extension platformio.platformio-ide --profile "STM32IO"
+                </ThemeCodeBlock>
+                <p>You need to edit the system environment variable called <b>Path</b> and append <b>%USERPROFILE%\.platformio\penv\Scripts\</b> path in the beginning of the list.</p>
+
+            </TabItem>
         </Tabs>
     );
 }

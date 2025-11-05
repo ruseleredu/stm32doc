@@ -8,7 +8,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsIncomplete} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
+import {STM32Toolsv2,GitConfig,DevToolsv2} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 09
@@ -39,7 +39,7 @@ Introdução ao uso do [PlatformIO](/docs/platformio-intro);
 ## Verifique o seu ambiente de desenvolvimento
 
 <!-- List of Dev Tools -->
-<DevTools />
+<DevToolsv2 />
 
 <!-- Configure o git -->
 <GitConfig />
@@ -47,7 +47,7 @@ Introdução ao uso do [PlatformIO](/docs/platformio-intro);
 ---
 
 <!-- List of STM32Cube Tools -->
-<STM32Tools />
+<STM32Toolsv2 />
 
 ## Crie um novo repositório com base no template do LAB09
 

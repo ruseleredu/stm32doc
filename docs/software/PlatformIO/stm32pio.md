@@ -1,7 +1,7 @@
 ---
 id: platformio-stm32pio
 title: stm32pio
-sidebar_position: 3
+sidebar_position: 4
 description: Small cross-platform Python app that can create and update PlatformIO projects from STM32CubeMX .ioc files.
 slug: /platformio-stm32pio
 ---

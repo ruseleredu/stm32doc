@@ -1,7 +1,7 @@
 ---
 id: platform-ststm32
 title: ST STM32
-sidebar_position: 2
+sidebar_position: 3
 description: ST STM32 development platform for PlatformIO 
 slug: /platform-ststm32
 ---

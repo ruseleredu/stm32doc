@@ -2,6 +2,7 @@
 sidebar_position: 13
 title: Laboratório 10
 description: Introdução as aulas de laboratório
+draft: true  # <--- Use this key
 ---
 
 import Tabs from "@theme/Tabs";

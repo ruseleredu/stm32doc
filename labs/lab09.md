@@ -87,51 +87,100 @@ Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item 
 ---
 
 
-## User Code
-### Timer 2 com interrupção e saída PWM no canal 1
-Inicialize o Timer 2 com suporte a rotina de interrupção e saída PWM no canal 1:
-```c title="Src/main.c"
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_ADC1_Init();
-  MX_TIM2_Init();
-  /* USER CODE BEGIN 2 */
-  // highlight-next-line
-  HAL_TIM_PWM_Start_IT(&htim2,TIM_CHANNEL_1);
-  /* USER CODE END 2 */
-```
-
-
-### User Key
-Toggle no LED interno via interrupção do User Key:
-```c title="Src/stm32f4xx_it.c"
-void EXTI0_IRQHandler(void)
+## VS Code
+### Configuração do terminal
+ 
+```json title="settings.json"
 {
-  /* USER CODE BEGIN EXTI0_IRQn 0 */
-
-  /* USER CODE END EXTI0_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(User_KEY_EXTI0_Pin);
-  /* USER CODE BEGIN EXTI0_IRQn 1 */
-  // highlight-next-line
-  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-  /* USER CODE END EXTI0_IRQn 1 */
+    // highlight-next-line
+    "terminal.integrated.defaultProfile.windows": "PIO CLI",
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        // highlight-start
+        "PIO CLI": {
+            "path": "cmd.exe",
+            "args": [
+                "/k",
+                "${env:USERPROFILE}\\.platformio\\penv\\Scripts\\activate.bat && pio --version"
+            ],
+            "icon": "python",
+            "overrideName": true
+        }
+        // highlight-end
+    }
 }
 ```
+
+## STM32Cube HAL: debugging and unit testing
+- [Tutorials and Examples](https://docs.platformio.org/en/latest/tutorials/index.html)
+- [STM32Cube HAL and Nucleo-F401RE: debugging and unit testing](https://docs.platformio.org/en/latest/tutorials/ststm32/stm32cube_debugging_unit_testing.html)
+
+### User Key
+Toggle no LED interno:
+```c title="src/main.h"
+#ifndef MAIN_H
+#define MAIN_H
+
+#include "stm32f4xx_hal.h"
+
+#define LED_PIN                                GPIO_PIN_13
+#define LED_GPIO_PORT                          GPIOC
+#define LED_GPIO_CLK_ENABLE()                  __HAL_RCC_GPIOC_CLK_ENABLE()
+
+#endif // MAIN_H
+```
+
 
 ### ADC1 na interrupção do Timer 2
 Inicie o ADC1 na interrupção do Timer 2:
-```c title="Src/stm32f4xx_it.c"
-void TIM2_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM2_IRQn 0 */
+```c title="src/main.c"
+#include "main.h"
 
-  /* USER CODE END TIM2_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim2);
-  /* USER CODE BEGIN TIM2_IRQn 1 */
-  // highlight-next-line
-  HAL_ADC_Start_IT(&hadc1);
-  /* USER CODE END TIM2_IRQn 1 */
+void LED_Init();
+
+int main(void)
+{
+  HAL_Init();
+  LED_Init();
+
+  while (1)
+  {
+    HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
+    HAL_Delay(1000);
+  }
 }
+
+void LED_Init()
+{
+  LED_GPIO_CLK_ENABLE();
+  GPIO_InitTypeDef GPIO_InitStruct;
+  GPIO_InitStruct.Pin = LED_PIN;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+  HAL_GPIO_Init(LED_GPIO_PORT, &GPIO_InitStruct);
+}
+
+void SysTick_Handler(void)
+{
+  HAL_IncTick();
+}
+```
+
+```ini title="platformio.ini"
+[env:blackpill_f411ce]
+platform = ststm32
+board = blackpill_f411ce
+framework = stm32cube
+upload_protocol = stlink
+debug_tool = stlink
 ```
 
 ### Leitura do AN1 e atualização do valor de comparação do PWM

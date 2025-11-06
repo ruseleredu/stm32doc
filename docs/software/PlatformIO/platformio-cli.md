@@ -13,6 +13,63 @@ slug: /platformio-cli
 
 ## CLI Guide
 - https://docs.platformio.org/en/latest/core/userguide/index.html#piocore-userguide
+
+
+%USERPROFILE%
+```json
+{
+    "terminal.integrated.defaultProfile.windows": "PlatformIO CLI",
+
+    "terminal.integrated.profiles.windows": {
+
+        "PlatformIO CLI": {
+            "path": "cmd.exe",
+            "args": [
+                "/k",
+                "${env:USERPROFILE}\\.platformio\\penv\\Scripts\\activate.bat && pio --version"
+            ],
+            "icon": "python",
+            "overrideName": true 
+        }
+    }
+}
+```
+
+## Get started
+
+### Configuration
+- https://docs.platformio.org/en/latest/projectconf/index.html?utm_source=vscode&utm_medium=walkthrough&utm_campaign=get-started
+```ini
+; Common configuration
+[env]
+platform = espressif32@^5
+framework = arduino
+board = esp32doit-devkit-v1
+monitor_speed = 921600
+monitor_filter = esp32_exception_decoder
+lib_deps =
+    nanopb/Nanopb @ ^0.4.6
+    infineon/TLV493D-Magnetic-Sensor @ ^1.0.3
+build_flags =
+    -D ARDUINO_LOOP_STACK_SIZE=2048
+    -D CORE_DEBUG_LEVEL=ARDUHAL_LOG_LEVEL_DEBUG
+    -Wno-nonnull-compare
+
+; Production environment
+[env:release]
+build_flags =
+    ${env.build_flags}
+    -D PRODUCTION=1
+
+; Development environment
+[env:develop]
+build_type = debug
+lib_deps =
+    ${env.lib_deps}
+    bakercp/PacketSerial @ 1.4.0
+debug_extra_cmds =
+    set remote hardware-watchpoint-limit 2
+```
   
 ### pio boards
 - https://docs.platformio.org/en/latest/core/userguide/cmd_boards.html#cmd-boards

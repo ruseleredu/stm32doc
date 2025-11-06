@@ -6,8 +6,10 @@ description: Your Gateway to Embedded Software Development Excellence.
 slug: /platformio-intro
 ---
 
-# PlatformIO
+# PlatformIO IDE for VSCode
 
+- https://docs.platformio.org/en/latest/integration/ide/vscode.html?utm_source=vscode&utm_medium=walkthrough&utm_campaign=get-started
+  
 ## Arquivo de configuração do Projeto
 
 [platformio.ini](https://docs.platformio.org/en/latest/projectconf/index.html)

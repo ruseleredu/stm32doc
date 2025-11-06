@@ -8,15 +8,6 @@ slug: /platformio-intro
 
 # PlatformIO
 
-## Recursos
-
-ST STM32: development platform for PlatformIO
-[platform-ststm32](https://github.com/platformio/platform-ststm32)
-
-```bash
-git clone https://github.com/platformio/platform-ststm32.git
-```
-
 ## Arquivo de configuração do Projeto
 
 [platformio.ini](https://docs.platformio.org/en/latest/projectconf/index.html)

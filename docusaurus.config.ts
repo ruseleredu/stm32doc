@@ -2,6 +2,10 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+/* Enabling math equations */
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+
 const formatter = new Intl.DateTimeFormat('pt-BR', {
   timeZone: 'America/Sao_Paulo',
   year: 'numeric',
@@ -81,6 +85,18 @@ const config: Config = {
 
   themes: ["@docusaurus/theme-mermaid"],
 
+  // Include the KaTeX CSS in your config under stylesheets:
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi",
+      crossorigin: "anonymous",
+    },
+  ],
+
+
   presets: [
     [
       "classic",
@@ -89,9 +105,12 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // 👇 Add this line for the last update time on docs
+          showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/ruseleredu/stm32doc/edit/main/",
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
@@ -123,6 +142,7 @@ const config: Config = {
         routeBasePath: "labs", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarslabs.js"), // Separate sidebar for LAB docs
         // ... other options specific to your API docs
+        showLastUpdateAuthor: true,
         showLastUpdateTime: true,
       },
     ],
@@ -135,6 +155,7 @@ const config: Config = {
         routeBasePath: "quiz", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarsquiz.js"), // Separate sidebar for Quiz docs
         // ... other options specific to your API docs
+        showLastUpdateAuthor: true,
         showLastUpdateTime: true,
       },
     ],
@@ -147,6 +168,7 @@ const config: Config = {
         routeBasePath: "tpls", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarstpls.js"), // Separate sidebar for Quiz docs
         // ... other options specific to your API docs
+        showLastUpdateAuthor: true,
         showLastUpdateTime: true,
       },
     ],

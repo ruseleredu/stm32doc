@@ -45,8 +45,8 @@ const quizDropdownItems = quizData.map(quiz => ({
 }));
 
 const config: Config = {
-  title: "ELT73A-S22-2025.2",
-  tagline: "Sistemas Microcontrolados",
+  title: "ELT73A - Sistemas Microcontrolados",
+  tagline: 'Desenvolver e implementar soluções para problemas de controle e automação utilizando microcontroladores.',
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -179,7 +179,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Sistemas Microcontrolados",
+      title: "ELT73A",
       logo: {
         alt: "Sistemas Microcontrolados Logo",
         src: "img/logo.svg",

@@ -146,8 +146,13 @@ set pin "PH0 - OSC_IN" RCC_OSC_IN
 lock pin "PH0 - OSC_IN" false
 set pin "PH1 - OSC_OUT" RCC_OSC_OUT
 lock pin "PH1 - OSC_OUT" false
+set pin "PA13" SYS_JTMS-SWDIO
+lock pin "PA13" false
+set pin "PA14" SYS_JTCK-SWCLK
+lock pin "PA14" false
 set mode RCC "HSE-External-Oscillator"
 set mode RCC "LSE-External-Oscillator"
+set mode SYS "Serial_Wire"
 set mode SYS "SysTick"
 ```
 

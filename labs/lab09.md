@@ -120,7 +120,7 @@ Esta atividade de laboratório tem como objetivo utilizar o PlatformIO. Cada ite
 - [STM32Cube HAL and Nucleo-F401RE: debugging and unit testing](https://docs.platformio.org/en/latest/tutorials/ststm32/stm32cube_debugging_unit_testing.html)
 
 ### Pisca LED
-Toggle no LED interno:
+Definição do pino no arquivo main.h
 ```c title="src/main.h"
 #ifndef MAIN_H
 #define MAIN_H
@@ -134,9 +134,7 @@ Toggle no LED interno:
 #endif // MAIN_H
 ```
 
-
-### ADC1 na interrupção do Timer 2
-Inicie o ADC1 na interrupção do Timer 2:
+Inicie LED_Init:
 ```c title="src/main.c"
 #include "main.h"
 
@@ -220,3 +218,15 @@ void ADC_IRQHandler(void)
   /* USER CODE END ADC_IRQn 1 */
 }
 ```
+
+
+
+## Frameworks
+- [STM32F411CE (128k RAM. 512k Flash)](https://docs.platformio.org/en/latest/boards/ststm32/genericSTM32F411CE.html) 
+  
+| Name                                                                                                |                                                                                                                                                 Description                                                                                                                                                 |
+| :-------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [Arduino](https://docs.platformio.org/en/latest/frameworks/arduino.html#framework-arduino)          |                                      Arduino Wiring-based Framework allows writing cross-platform software to control devices attached to a wide range of Arduino boards to create all kinds of creative coding, interactive objects, spaces or physical experiences.                                       |
+| [CMSIS](https://docs.platformio.org/en/latest/frameworks/cmsis.html#framework-cmsis)                |                                                                                                               Vendor-independent hardware abstraction layer for the Cortex-M processor series                                                                                                               |
+| [LibOpenCM3](https://docs.platformio.org/en/latest/frameworks/libopencm3.html#framework-libopencm3) |                                                                                              The libopencm3 project aims to create an open-source firmware library for various ARM Cortex-M microcontrollers.                                                                                               |
+| [STM32Cube](https://docs.platformio.org/en/latest/frameworks/stm32cube.html#framework-stm32cube)    | STM32Cube embedded software libraries, including: The HAL hardware abstraction layer, enabling portability between different STM32 devices via standardized API calls; The Low-Layer (LL) APIs, a light-weight, optimized, expert oriented set of APIs designed for both performance and runtime efficiency |

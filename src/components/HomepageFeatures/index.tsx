@@ -7,6 +7,7 @@ import styles from "./styles.module.css";
 import GitHubImage from "/img/github-mark.png"; // Use @site alias for src folder
 import VSCodeImage from "/img/vscode.png";
 import STM32Image from "/img/STM32.png";
+import PIOimage from "/img/platformio.png";
 
 type FeatureItem = {
   title: string;
@@ -84,10 +85,27 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
+  {
+    title: "PlatformIO IDE",
+    //Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    image: PIOimage, // Use the imported image variable here
+    description: (
+      <>
+        O{" "}
+        <a
+          href="https://platformio.org/"
+          target="_blank"
+        >
+          PlatformIO
+        </a>{" "}
+        é um ecossistema de desenvolvimento multiplataforma e de arquitetura cruzada projetado para engenheiros de sistemas embarcados e desenvolvedores que criam aplicações para produtos embarcados, especialmente na área de Internet das Coisas (IoT).
+      </>
+    ),
+  },
 ];
 function Feature({ title, Svg, image, description }: FeatureItem) {
   return (
-    <div className={clsx("col col--4")}>
+    <div className={clsx("col col--3")}>
       <div className="text--center">
         {Svg ? (
           <Svg className={styles.featureSvg} role="img" />

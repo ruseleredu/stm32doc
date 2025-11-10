@@ -59,22 +59,20 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 ## Instruções do LAB
 
-Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item equivale a 10% da nota.
+Esta atividade de laboratório tem como objetivo utilizar o PlatformIO. Cada item equivale a 10% da nota.
 
-- [ ] Crie um repositório (LAB09) via template (https://github.com/ELT73A-LAB-TPL/LAB09) na organização e clone;
-- [ ] Importe e compile o código da pasta TIM2EXTI0ADC1PWMDMARTOS
-- [ ] Verifique a configuração dos periféricos;
-- [ ] Verifique o breakpoint EXTI0;
-- [ ] Verifique a leitura dos ADCs uso das filas (Queues);
-- [ ] Verifique a operação das tarefas (Tasks);
-- [ ] Verifique a operação do Mutex e Semaphores;
-- [ ] Verifique a operação do Event flags;
-- [ ] Verifique a operação do PWM;
+- [ ] Crie um perfil no Visual Studio Code chamado `STM32IO`;
+- [ ] Instale o [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode);
+- [ ] Configure o Visual Studio Code;
+- [ ] Configure o [PlatformIO Core](https://platformio.org/install/cli);
+- [ ] Edite a variável de ambiente `Path` e adicione `%USERPROFILE%\.platformio\penv\Scripts\`;
+- [ ] Instale os drivers for [ST-LINK](https://docs.platformio.org/en/latest/plus/debug-tools/stlink.html#debugging-tool-stlink) debug tool
 - [ ] Envie o link do repositório no GitHub (hyperlink);
+
 
 ## Avaliação
 - [ ] Uso do template e código - 20%
-- [ ] Verificação do FreeRTOS - 70%
+- [ ] Verificação do PLatformIO - 70%
 - [ ] Link do repositório no GitHub (hyperlink) - 10%
 
 
@@ -85,7 +83,6 @@ Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item 
 ![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
 
 ---
-
 
 ## VS Code
 ### Configuração do terminal
@@ -122,7 +119,7 @@ Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item 
 - [Tutorials and Examples](https://docs.platformio.org/en/latest/tutorials/index.html)
 - [STM32Cube HAL and Nucleo-F401RE: debugging and unit testing](https://docs.platformio.org/en/latest/tutorials/ststm32/stm32cube_debugging_unit_testing.html)
 
-### User Key
+### Pisca LED
 Toggle no LED interno:
 ```c title="src/main.h"
 #ifndef MAIN_H
@@ -182,6 +179,7 @@ framework = stm32cube
 upload_protocol = stlink
 debug_tool = stlink
 ```
+
 
 ### Leitura do AN1 e atualização do valor de comparação do PWM
 Na interrupção do ADC1, faça a leitura do AN1 e atualize o valor de comparação do PWM:  

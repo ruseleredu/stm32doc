@@ -7,6 +7,9 @@ slug: /platformio-frameworks
 ---
 
 ## Frameworks
+The term "PlatformIO framework" refers to the supported software development kits (SDKs) or programming environments that the PlatformIO Ecosystem allows you to use for building embedded software.
+
+PlatformIO itself is an open-source, cross-platform, and multiple-framework professional tool for embedded systems and IoT development. It is often used as a powerful extension for IDEs like Visual Studio Code (VS Code).
 
 | Name                                                                                                |                                                                                                                                                 Description                                                                                                                                                 |
 | :-------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |

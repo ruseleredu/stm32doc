@@ -179,44 +179,44 @@ debug_tool = stlink
 ```
 
 
-### Leitura do AN1 e atualização do valor de comparação do PWM
-Na interrupção do ADC1, faça a leitura do AN1 e atualize o valor de comparação do PWM:  
-TIM2->CCR1 = HAL_ADC_GetValue(&hadc1);
+## Arduino
 
 
-```c title="Src/stm32f4xx_it.c"
-void ADC_IRQHandler(void)
+Inicie LED_Init:
+```c title="src/main.c"
+#include <Arduino.h>
+
+#ifndef LED_BUILTIN
+  #define LED_BUILTIN PC13
+#endif
+
+void setup()
 {
-  /* USER CODE BEGIN ADC_IRQn 0 */
-
-  /* USER CODE END ADC_IRQn 0 */
-  HAL_ADC_IRQHandler(&hadc1);
-  /* USER CODE BEGIN ADC_IRQn 1 */
-  // highlight-next-line
-  TIM2->CCR1 = HAL_ADC_GetValue(&hadc1);
-  /* USER CODE END ADC_IRQn 1 */
+  // initialize LED digital pin as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
 }
+
+void loop()
+{
+  // turn the LED on (HIGH is the voltage level)
+  digitalWrite(LED_BUILTIN, HIGH);
+  // wait for a second
+  delay(1000);
+  // turn the LED off by making the voltage LOW
+  digitalWrite(LED_BUILTIN, LOW);
+   // wait for a second
+  delay(1000);
+}
+
 ```
-
-### Tratamento do sinal de leitura do AN1
-
-```c title="Src/stm32f4xx_it.c"
-void ADC_IRQHandler(void)
-{
-  /* USER CODE BEGIN ADC_IRQn 0 */
-  // highlight-start
-  uint16_t adc1in1;
-  float voltage;
-  // highlight-end
-  /* USER CODE END ADC_IRQn 0 */
-  HAL_ADC_IRQHandler(&hadc1);
-  /* USER CODE BEGIN ADC_IRQn 1 */
-  // highlight-start
-  adc1in1 = HAL_ADC_GetValue(&hadc1);
-  voltage = (adc1in1*3.3)/4095;
-  // highlight-end
-  /* USER CODE END ADC_IRQn 1 */
-}
+ 
+```ini title="platformio.ini"
+[env:blackpill_f411ce]
+platform = ststm32
+board = blackpill_f411ce
+framework = arduino
+upload_protocol = stlink
+debug_tool = stlink
 ```
 
 

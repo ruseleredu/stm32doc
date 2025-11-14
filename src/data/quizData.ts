@@ -100,5 +100,12 @@ export const quizData: QuizRow[] = [
         end: "24-Nov-2025",
         descricao: "FreeRTOS: Tarefas, Filas e Semáforos;",
     },
-
+    {
+        quiz: "Q11",
+        hrefi: "/quiz/quiz11",
+        hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957598",
+        start: "17-Nov-2025",
+        end: "24-Nov-2025",
+        descricao: "Uso do display de OLED SSD1306;",
+    },
 ];

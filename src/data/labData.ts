@@ -151,6 +151,18 @@ export const labData: LabRow[] = [
         end: "17-Nov-2025",
         conteudo: "Introdução ao FreeRTOS;",
     },
+    {
+        tarefa: "LAB11",
+        hrefi: "/labs/lab11",
+        hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1889891", // external
+        templateLabel: "Template 11",
+        templateHrefi: "/tpls/tpl11",
+        templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB11",
+
+        start: "10-Nov-2025",
+        end: "17-Nov-2025",
+        conteudo: "Introdução ao Display OLED SSD1306;",
+    },
 
 ];
 // src/components/LabTable.tsx

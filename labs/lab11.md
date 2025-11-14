@@ -18,7 +18,7 @@ import LabTable from '@site/src/components/LabTable';
 
 <!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
 <div style={{ display: "flex", justifyContent: "center" }}>
-  <LabTable index={9} internal={false} />
+  <LabTable index={11} internal={false} />
 </div>
 
 ---
@@ -27,8 +27,13 @@ import LabTable from '@site/src/components/LabTable';
 
 Uso do display OLED SSD1306
 
+Recursos:
 - https://github.com/afiskon/stm32-ssd1306
-
+- https://www.makerhero.com/blog/controlando-um-display-oled-com-a-biblioteca-ssd1306/
+- https://www.makerhero.com/blog/display-oled-i2c-raspberry-pi-pico/
+- https://github.com/John-Hatton/BlackPill_I2C_Display
+- https://controllerstech.com/oled-display-using-i2c-stm32/
+- https://www.youtube.com/watch?v=HtyPPSO52GY
 
 
 Introdução ao uso do [PlatformIO](/docs/platformio-intro);
@@ -55,12 +60,12 @@ Introdução ao uso do [PlatformIO](/docs/platformio-intro);
 <!-- List of STM32Cube Tools -->
 <STM32Toolsv2 />
 
-## Crie um novo repositório com base no template do LAB09
+## Crie um novo repositório com base no template do LAB11
 
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
 
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
-<LabFromTemplate labNumber="LAB09" opts="-c" />
+<LabFromTemplate labNumber="LAB11" opts="-c" />
 
 
 ## Instruções do LAB

@@ -25,7 +25,7 @@ import LabTable from '@site/src/components/LabTable';
 
 ## Conteúdo
 
-Uso do STM32CubeMonitor; InfluDB;
+Uso do STM32CubeMonitor; InfluxDB;
 
 - [ ] Crie uma conta no [my.st.com](https://www.st.com/content/st_com/en/user-registration.html);
 - [ ] Instale o [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html#get-software);

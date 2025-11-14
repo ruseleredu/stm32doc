@@ -34,6 +34,7 @@ Recursos:
 - https://github.com/John-Hatton/BlackPill_I2C_Display
 - https://controllerstech.com/oled-display-using-i2c-stm32/
 - https://www.youtube.com/watch?v=HtyPPSO52GY
+- https://learn.adafruit.com/monochrome-oled-breakouts/downloads
 
 
 Introdução ao uso do [PlatformIO](/docs/platformio-intro);

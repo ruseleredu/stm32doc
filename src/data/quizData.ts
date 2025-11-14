@@ -43,7 +43,6 @@ export const quizData: QuizRow[] = [
         start: "15-Sep-2025",
         end: "22-Sep-2025",
         descricao: "Arquitetura de microcontroladores; Pinos de propósito geral (GPIO);",
-        //  descricao: "Interrupções via GPIO e Temporizadores (Timers);",
     },
     {
         quiz: "Q04",
@@ -52,7 +51,6 @@ export const quizData: QuizRow[] = [
         start: "22-Sep-2025",
         end: "29-Sep-2025",
         descricao: "Interrupções via GPIO e Temporizadores (Timers);",
-        // descricao: "Módulo PWM; Conversor ADC;",
     },
     {
         quiz: "Q05",
@@ -61,7 +59,6 @@ export const quizData: QuizRow[] = [
         start: "29-Sep-2025",
         end: "06-Oct-2025",
         descricao: "Módulo PWM; Conversor ADC;",
-        // descricao: "DMA: Direct memory access (Acesso direto à memória);",
     },
     {
         quiz: "Q06",
@@ -70,7 +67,6 @@ export const quizData: QuizRow[] = [
         start: "06-Oct-2025",
         end: "13-Oct-2025",
         descricao: "DMA: Direct memory access (Acesso direto à memória);",
-        // descricao: "Uso do STM32CubeMonitor; Visualização de variáveis;",
     },
     {
         quiz: "Q07",
@@ -79,7 +75,6 @@ export const quizData: QuizRow[] = [
         start: "13-Oct-2025",
         end: "20-Oct-2025",
         descricao: "Uso do STM32CubeMonitor; Visualização de variáveis;",
-        // descricao: "Uso do STM32CubeMonitor; MQTT, IoT;",
     },
     {
         quiz: "Q08",
@@ -88,7 +83,6 @@ export const quizData: QuizRow[] = [
         start: "03-Nov-2025",
         end: "10-Nov-2025",
         descricao: "Uso do STM32CubeMonitor; MQTT, IoT;",
-        // descricao: "Uso do STM32CubeMonitor; InfluDB;",
     },
     {
         quiz: "Q09",
@@ -104,7 +98,6 @@ export const quizData: QuizRow[] = [
         hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957598",
         start: "17-Nov-2025",
         end: "24-Nov-2025",
-        // descricao: "FreeRTOS;",
         descricao: "FreeRTOS: Tarefas, Filas e Semáforos;",
     },
 

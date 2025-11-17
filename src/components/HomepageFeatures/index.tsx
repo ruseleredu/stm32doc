@@ -57,6 +57,23 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: "PlatformIO IDE",
+    //Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    image: PIOimage, // Use the imported image variable here
+    description: (
+      <>
+        O{" "}
+        <a
+          href="https://platformio.org/"
+          target="_blank"
+        >
+          PlatformIO
+        </a>{" "}
+        é um ecossistema de desenvolvimento multiplataforma e de arquitetura cruzada projetado para engenheiros de sistemas embarcados e desenvolvedores que criam aplicações para produtos embarcados, especialmente na área de Internet das Coisas (IoT).
+      </>
+    ),
+  },
+  {
     title: "Arm® Cortex® M4 32-bit RISC Core",
     //Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     image: STM32Image, // Use the imported image variable here
@@ -82,23 +99,6 @@ const FeatureList: FeatureItem[] = [
           Arduino
         </a>{" "}
         podem oferecer.
-      </>
-    ),
-  },
-  {
-    title: "PlatformIO IDE",
-    //Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    image: PIOimage, // Use the imported image variable here
-    description: (
-      <>
-        O{" "}
-        <a
-          href="https://platformio.org/"
-          target="_blank"
-        >
-          PlatformIO
-        </a>{" "}
-        é um ecossistema de desenvolvimento multiplataforma e de arquitetura cruzada projetado para engenheiros de sistemas embarcados e desenvolvedores que criam aplicações para produtos embarcados, especialmente na área de Internet das Coisas (IoT).
       </>
     ),
   },

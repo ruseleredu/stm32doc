@@ -30,7 +30,7 @@ function HomepageHeader() {
           >
             LABs
           </Link>
-             <Link
+          <Link
             className="button button--secondary button--lg"
             to="/quiz/intro"
           >
@@ -56,7 +56,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="Desenvolver e implementar soluções para problemas de controle e automação utilizando microcontroladores."
     >
       <HomepageHeader />
       <main>

@@ -31,11 +31,17 @@ Display OLED 0.96″ 128×64 I2C Azul
 
 Recursos:
 - https://github.com/afiskon/stm32-ssd1306
+- https://www.youtube.com/watch?v=97_Vyph9EzM
 - https://lvgl.io/tools/imageconverter
+- https://github.com/sbrin/lopaka
+- https://github.com/olikraus/u8g2
+- https://www.youtube.com/watch?v=Eyvzw_ujcS0
+  
 
 ![](/img/lab11/2025-11-17-16-31-45.png)
 
 More:
+- https://www.youtube.com/watch?v=97_Vyph9EzM
 - https://github.com/lexus2k/ssd1306
 - https://www.makerhero.com/blog/controlando-um-display-oled-com-a-biblioteca-ssd1306/
 - https://www.makerhero.com/blog/display-oled-i2c-raspberry-pi-pico/

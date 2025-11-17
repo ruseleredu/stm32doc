@@ -38,12 +38,15 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--secondary button--lg"
+            to="/projects/intro"
+          >
+            Projetos
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
             to="/docs/intro"
           >
             Docs
-          </Link>
-          <Link className="button button--secondary button--lg" to="/blog">
-            Projetos
           </Link>
         </div>
       </div>

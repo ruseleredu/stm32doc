@@ -163,6 +163,19 @@ const config: Config = {
       "@docusaurus/plugin-content-docs",
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       {
+        id: "projects", // Unique ID for this docs instance
+        path: "projects", // Path to your API docs folder
+        routeBasePath: "projects", // Base URL for these docs (e.g., yoursite.com/api/...)
+        sidebarPath: require.resolve("./sidebarsproj.js"), // Separate sidebar for Quiz docs
+        // ... other options specific to your API docs
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      {
         id: "tpls", // Unique ID for this docs instance
         path: "tpls", // Path to your API docs folder
         routeBasePath: "tpls", // Base URL for these docs (e.g., yoursite.com/api/...)
@@ -212,13 +225,13 @@ const config: Config = {
             ...quizDropdownItems,
           ],
         },
-        /*  {
-            to: "/tpls/intro", // Link to a page in your API docs
-            label: "Templates",
-            position: "left",
-            activeBaseRegex: `/tpls/`, // Highlight when any API doc is active - [Calendário Acadêmico](/pdf/UTFPR-CTAcademicCalendar2025.pdf)
-          }, */
-        { to: "/blog", label: "Projetos", position: "left" },
+        {
+          to: "/projects/intro", // Link to a page in your API docs
+          label: "Projetos",
+          position: "left",
+          activeBaseRegex: `/projects/`, // Highlight when any API doc is active
+        },
+        { to: "/blog", label: "Blog", position: "right" },
         { href: "https://ruseleredu.github.io/stm32doc/assets/files/UTFPR-CTAcademicCalendar2025-268081c8b6239f53ca49523f814aaf59.pdf", label: "Calendário", position: "right" },
         // { href: "https://www.utfpr.edu.br/alunos/calendario", label: "Calendário", position: "right" },
         {

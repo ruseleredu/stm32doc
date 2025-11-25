@@ -18,3 +18,4 @@ Fritzing is an electronics design and prototyping platform for makers, hobbyists
 
 ## Compile Fritzing From Source
 - https://siytek.com/build-fritzing-windows/
+- https://www.junian.net/dev/visual-studio-community-download-links/

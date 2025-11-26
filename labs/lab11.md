@@ -150,6 +150,27 @@ Esta atividade de laboratório tem como objetivo utilizar o PlatformIO. Cada ite
 }
 ```
 
+## SSD1306 files
+
+```c title="CMakeLists.txt"
+# Add sources to executable
+target_sources(${CMAKE_PROJECT_NAME} PRIVATE
+    # Add user sources here
+    // highlight-start
+    ${CMAKE_CURRENT_SOURCE_DIR}/Drivers/ssd1306/ssd1306.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Drivers/ssd1306/ssd1306_fonts.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Drivers/ssd1306/ssd1306_tests.c
+    // highlight-end
+)
+
+# Add include paths
+target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
+    # Add user defined include paths
+    // highlight-next-line
+    ${CMAKE_CURRENT_SOURCE_DIR}/Drivers/ssd1306
+)
+```
+
 ## STM32Cube HAL: debugging and unit testing
 - [Tutorials and Examples](https://docs.platformio.org/en/latest/tutorials/index.html)
 - [STM32Cube HAL and Nucleo-F401RE: debugging and unit testing](https://docs.platformio.org/en/latest/tutorials/ststm32/stm32cube_debugging_unit_testing.html)

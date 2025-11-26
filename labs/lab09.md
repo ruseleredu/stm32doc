@@ -174,8 +174,10 @@ void SysTick_Handler(void)
 platform = ststm32
 board = blackpill_f411ce
 framework = stm32cube
+// highlight-start
 upload_protocol = stlink
 debug_tool = stlink
+// highlight-end
 ```
 
 
@@ -215,8 +217,10 @@ void loop()
 platform = ststm32
 board = blackpill_f411ce
 framework = arduino
+// highlight-start
 upload_protocol = stlink
 debug_tool = stlink
+// highlight-end
 ```
 
 

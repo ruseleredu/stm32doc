@@ -389,6 +389,16 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: [
+        "autohotkey",
+        "arduino",
+        "apacheconf",
+        "nginx",
+        "bash",
+        "matlab",
+        "powershell",
+        "ini",
+      ],
     },
   } satisfies Preset.ThemeConfig,
 };

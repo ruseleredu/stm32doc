@@ -20,7 +20,12 @@ Gitea is a painless, self-hosted, all-in-one software development service. It in
   
 ## Installation with Docker
 
+### gitea
 - https://docs.gitea.com/installation/install-with-docker
+
+```bash
+docker-compose.yml
+```
 
 ```yml
 networks:
@@ -43,6 +48,72 @@ services:
     ports:
       - "3000:3000"
       - "222:22"
+```
+
+### forgejo
+- https://forgejo.org/docs/latest/admin/installation/docker/
+
+```bash
+docker-compose.yml
+```
+
+```yml
+networks:
+  forgejo:
+    external: false
+
+services:
+  server:
+    image: codeberg.org/forgejo/forgejo:13
+    container_name: forgejo
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    networks:
+      - forgejo
+    volumes:
+      - ./forgejo:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - '3000:3000'
+      - '222:22'
+```
+
+### gogs
+
+- https://hub.docker.com/r/gogs/gogs
+
+```bash
+docker-compose.yml
+```
+
+```yml
+networks:
+  gogs:
+    external: false
+services:
+  server:
+    image: gogs/gogs:latest
+    container_name: gogs
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    networks:
+      - gogs
+    volumes:
+      - ./gogs:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3000:3000"
+      - "222:22"
+```
+
+```bash
+docker compose up -d
 ```
 
 ## CLI for Gitea

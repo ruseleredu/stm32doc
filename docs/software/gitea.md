@@ -38,6 +38,7 @@ services:
     environment:
       - USER_UID=1000
       - USER_GID=1000
+      - DB_TYPE=sqlite
     restart: always
     networks:
       - gitea
@@ -48,6 +49,60 @@ services:
     ports:
       - "3000:3000"
       - "222:22"
+```
+
+
+```yml
+services:
+  gitea:
+    image: gitea/gitea:latest
+    container_name: gitea
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - DB_TYPE=sqlite
+      - GITEA__server__ROOT_URL=https://yourdomain.com/
+      - GITEA__server__HTTP_PORT=3000
+    volumes:
+      - ./gitea:/data
+    networks:
+      - gitea_net
+
+  apache:
+    image: httpd:latest
+    container_name: apache
+    depends_on:
+      - gitea
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./apache/conf:/usr/local/apache2/conf
+      - ./apache/logs:/usr/local/apache2/logs
+    networks:
+      - gitea_net
+
+networks:
+  gitea_net:
+    driver: bridge
+```
+
+```apacheconf
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+LoadModule ssl_module modules/mod_ssl.so
+
+<VirtualHost *:80>
+    ServerName yourdomain.com
+
+    ProxyPreserveHost On
+    ProxyPass / http://gitea:3000/
+    ProxyPassReverse / http://gitea:3000/
+
+    ErrorLog /usr/local/apache2/logs/error.log
+    CustomLog /usr/local/apache2/logs/access.log combined
+</VirtualHost>
+
 ```
 
 ### forgejo

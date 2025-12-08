@@ -226,12 +226,26 @@ const config: Config = {
           ],
         },
         {
-          to: "/projects/intro", // Link to a page in your API docs
           label: "Projetos",
+          to: "/projects/intro", // Link to a page in your UTFPR docs
+          type: "dropdown",
           position: "left",
-          activeBaseRegex: `/projects/`, // Highlight when any API doc is active
+          items: [
+            {
+              to: "/projects/2025.2", // Link to a page in your PJTS docs
+              label: "Semestre 2025.2",
+            },
+            {
+              to: "/projects/2025.1", // Link to a page in your PJTS docs
+              label: "Semestre 2025.1",
+            },
+            {
+              to: "/projects/2024.2", // Link to a page in your PJTS docs
+              label: "Semestre 2024.2",
+            },
+          ],
         },
-        { to: "/blog", label: "Blog", position: "right" },
+        // { to: "/blog", label: "Blog", position: "right" },
         { href: "https://ruseleredu.github.io/stm32doc/assets/files/UTFPR-CTAcademicCalendar2025-268081c8b6239f53ca49523f814aaf59.pdf", label: "Calendário", position: "right" },
         // { href: "https://www.utfpr.edu.br/alunos/calendario", label: "Calendário", position: "right" },
         {

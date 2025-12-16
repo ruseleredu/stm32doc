@@ -4,7 +4,7 @@ description: Projetos desenvolvidos no semestre 2026.1.
 sidebar_position: 1
 ---
 
-## Projeto final
+## Projeto Final 2026.1
 
 O Projeto final tem os seguintes critérios de avaliação (Percentagem da nota):
 
@@ -22,5 +22,32 @@ A partir dos requisitos a equipe tem liberdade para usar tantos componentes e t�
 
 Documente o projeto em um repositório no GitHub e elabore um video breve de apresentação;
 
+- Somente projetos realizados no VS Code serão aceitos;
+- Utilize Markdown para documentar o projeto!
+
+:::tip
+Fluxograma com [meirmaid](https://mermaid.js.org/), utilize o [editor](https://mermaid.live) e dê uma olhada na [documentação](https://mermaid.js.org/syntax/stateDiagram.html);
+:::
+
+- https://mermaid.js.org/
+- https://mermaid.live
+- https://mermaid.js.org/syntax/stateDiagram.html
+
+
+:::info
+
+Informações para o desenvolvimento do projeto!
+
+:::
+
+:::warning[VS Code deve ser a IDE de uso!]
+
 Somente projetos realizados no VS Code serão aceitos;
 
+:::
+
+:::danger[O código deve compilar!]
+
+O código deve compilar!
+
+:::

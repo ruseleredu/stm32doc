@@ -232,6 +232,10 @@ const config: Config = {
           position: "left",
           items: [
             {
+              to: "/projects/2026.1", // Link to a page in your PJTS docs
+              label: "Semestre 2026.1",
+            },
+            {
               to: "/projects/2025.2", // Link to a page in your PJTS docs
               label: "Semestre 2025.2",
             },

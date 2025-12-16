@@ -4,7 +4,7 @@ description: Projetos desenvolvidos no semestre 2024.2.
 sidebar_position: 1
 ---
 
-## Projeto final
+## Projeto Final 2024.2
 
 O Projeto final tem os seguintes critérios de avaliação (Percentagem da nota):
 

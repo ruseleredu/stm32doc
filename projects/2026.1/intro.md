@@ -42,7 +42,7 @@ Informações para o desenvolvimento do projeto!
 
 :::warning[VS Code deve ser a IDE de uso!]
 
-Somente projetos realizados no VS Code serão aceitos;
+Somente projetos realizados no VS Code serão aceitos!
 
 :::
 
@@ -51,3 +51,65 @@ Somente projetos realizados no VS Code serão aceitos;
 O código deve compilar!
 
 :::
+
+
+### gitignore
+
+<details>
+  <summary>.gitignore</summary>
+
+A [.gitignore](https://git-scm.com/docs/gitignore) file tells Git which files and directories to intentionally ignore, preventing them from being tracked in your repository, which keeps it clean of build artifacts, logs, temporary files, and IDE settings. 
+
+  ```bash
+  # Ignore STM32CubeMX-generated files
+*.ioc
+*.bak
+MX/
+
+# Ignore build directories
+build/
+out/
+Debug/
+Release/
+
+# Ignore object files and compiled binaries
+*.o
+*.a
+*.so
+*.exe
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+
+# Ignore CMake cache and generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Ignore Ninja build artifacts
+build/
+*.ninja
+.ninja_deps
+.ninja_log
+rules.ninja
+
+# Ignore VS Code settings and workspace files
+.vscode/
+*.code-workspace
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore user-specific configuration files
+*.user
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+```
+</details>

@@ -250,7 +250,8 @@ const config: Config = {
           ],
         },
         // { to: "/blog", label: "Blog", position: "right" },
-        { href: "https://ruseleredu.github.io/stm32doc/assets/files/CT2026-330805e7bda31ab7e272d3b2b0c96cf3.pdf", label: "Calendário", position: "right" },
+        // { href: "https://ruseleredu.github.io/stm32doc/assets/files/CT2026-330805e7bda31ab7e272d3b2b0c96cf3.pdf", label: "Calendário", position: "right" },
+        { to: "/pdf/CT2026.pdf", label: "Calendário", position: "right", target: '_blank' },
         // { href: "https://www.utfpr.edu.br/alunos/calendario", label: "Calendário", position: "right" },
         {
           href: "https://github.com/ruseleredu/stm32doc",

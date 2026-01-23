@@ -93,6 +93,13 @@ Arquiteturas computacionais; Programação de Microcontroladores; Operações de
 |                     | 08-Dec-2025 | 15-Dec-2025 23:59:59 | Desenvolvimento do Projeto Final;                               |
 |                     | 15-Dec-2025 | 22-Dec-2025 23:59:59 | Fechamento da disciplina;                                       |
 
+
+## Calendário Acadêmico de 2026
+
+![Calendário Acadêmico de 2026](/img/CT2026.png)
+
+[Calendário Acadêmico de 2026](/pdf/CT2026.pdf)
+
 ## Referências
 
 - Git SCM: https://git-scm.com/downloads

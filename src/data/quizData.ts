@@ -26,7 +26,7 @@ export const quizData: QuizRow[] = [
         hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1756081",
         start: "23-Mar-2026",
         end: "30-Mar-2026",
-        descricao: "Revisão da programação em C;",
+        descricao: "Revisão da programação em C; Ambiente de desenvolvimento VS Code; Uso do git e GitHub; ",
     },
     {
         quiz: "Q02",
@@ -34,7 +34,7 @@ export const quizData: QuizRow[] = [
         hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1930561",
         start: "30-Mar-2026",
         end: "06-Apr-2026",
-        descricao: "Processo de compilação, gravação e commit de código;",
+        descricao: "Processo de compilação, gravação e commit de código; STM32 para VSCode; ",
     },
     {
         quiz: "Q03",
@@ -63,18 +63,18 @@ export const quizData: QuizRow[] = [
     {
         quiz: "Q06",
         hrefi: "/quiz/quiz06",
-        hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957569",
+        hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957590",
         start: "04-May-2026",
         end: "11-May-2026",
-        descricao: "DMA: Direct memory access (Acesso direto à memória);",
+        descricao: "Uso do STM32CubeMonitor; Visualização de variáveis;",
     },
     {
         quiz: "Q07",
         hrefi: "/quiz/quiz07",
-        hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957590",
+        hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957569",
         start: "11-May-2026",
         end: "18-May-2026",
-        descricao: "Uso do STM32CubeMonitor; Visualização de variáveis;",
+        descricao: "DMA: Direct memory access (Acesso direto à memória);",
     },
     {
         quiz: "Q08",

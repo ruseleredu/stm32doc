@@ -26,8 +26,8 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl00",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB00",
 
-        start: "18-Aug-2025",
-        end: "25-Aug-2025",
+        start: "16-Mar-2026",
+        end: "30-Mar-2026",
         conteudo: "Apresentação da Disciplina; Materiais utilizados na disciplina;",
     },
     {
@@ -38,9 +38,9 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl01",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB01",
 
-        start: "25-Aug-2025",
-        end: "01-Sep-2025",
-        conteudo: "Revisão da programação em C;",
+        start: "23-Mar-2026",
+        end: "30-Mar-2026",
+        conteudo: "Ambiente de desenvolvimento VS Code; Uso do git e GitHub;",
     },
     {
         tarefa: "LAB02",
@@ -51,9 +51,9 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl02",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB02",
 
-        start: "01-Sep-2025",
-        end: "08-Sep-2025",
-        conteudo: "Processo de compilação, gravação e commit de código;",
+        start: "30-Mar-2026",
+        end: "06-Apr-2026",
+        conteudo: "Processo de compilação, gravação e commit de código; STM32 para VSCode;",
     },
     {
         tarefa: "LAB03",
@@ -63,8 +63,8 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl03",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB03",
 
-        start: "15-Sep-2025",
-        end: "22-Sep-2025",
+        start: "06-Apr-2026",
+        end: "13-Apr-2026",
         conteudo: "Arquitetura de microcontroladores; Pinos de propósito geral (GPIO);",
     },
     {
@@ -75,8 +75,8 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl04",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB04",
 
-        start: "22-Sep-2025",
-        end: "29-Sep-2025",
+        start: "13-Apr-2026",
+        end: "20-Apr-2026",
         conteudo: "Interrupções via GPIO e Temporizadores (Timers);",
     },
     {
@@ -87,8 +87,8 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl05",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB05",
 
-        start: "29-Sep-2025",
-        end: "06-Oct-2025",
+        start: "27-Apr-2026",
+        end: "04-May-2026",
         conteudo: "Módulo PWM; Conversor ADC;",
     },
     {
@@ -99,8 +99,8 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl06",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB06",
 
-        start: "06-Oct-2025",
-        end: "13-Oct-2025",
+        start: "04-May-2026",
+        end: "11-May-2026",
         conteudo: "Uso do STM32CubeMonitor; Visualização de variáveis;",
     },
     {
@@ -111,8 +111,8 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl07",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB07",
 
-        start: "13-Oct-2025",
-        end: "20-Oct-2025",
+        start: "11-May-2026",
+        end: "18-May-2026",
         conteudo: "DMA: Direct memory access (Acesso direto à memória);",
     },
     {
@@ -123,8 +123,8 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl08",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB08",
 
-        start: "03-Nov-2025",
-        end: "10-Nov-2025",
+        start: "18-May-2026",
+        end: "25-May-2026",
         conteudo: "Uso do STM32CubeMonitor; MQTT, IoT;",
     },
     {
@@ -135,9 +135,9 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl09",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB09",
 
-        start: "10-Nov-2025",
-        end: "17-Nov-2025",
-        conteudo: "Introdução ao uso do PlatformIO;",
+        start: "25-May-2026",
+        end: "01-Jun-2026",
+        conteudo: "Uso do STM32CubeMonitor; InfluDB;",
     },
     {
         tarefa: "LAB10",
@@ -147,9 +147,9 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl10",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB10",
 
-        start: "10-Nov-2025",
-        end: "17-Nov-2025",
-        conteudo: "Introdução ao FreeRTOS;",
+        start: "01-Jun-2026",
+        end: "08-Jun-2026",
+        conteudo: "Introdução ao uso do PlatformIO;",
     },
     {
         tarefa: "LAB11",
@@ -159,8 +159,8 @@ export const labData: LabRow[] = [
         templateHrefi: "/tpls/tpl11",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB11",
 
-        start: "10-Nov-2025",
-        end: "17-Nov-2025",
+        start: "08-Jun-2026",
+        end: "15-Jun-2026",
         conteudo: "Introdução ao Display OLED SSD1306;",
     },
 

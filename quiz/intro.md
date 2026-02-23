@@ -28,6 +28,7 @@ import QuizTable from '@site/src/components/QuizTable';
 | ELT73A-S22 | 06-07-2026  | 20:20 | 23:00 | Desenvolvimento do Projeto Final;                                                  |
 | ELT73A-S22 | 13-07-2026  | 20:20 | 23:00 | Fechamento da disciplina;                                                          |
 
+
  ## Atividades Assíncronas (EaD)
 
 
@@ -71,8 +72,8 @@ import QuizTable from '@site/src/components/QuizTable';
 | Q14  | 29-Jun-2026 | 06-Jul-2026 23:59:59 | Desenvolvimento do Projeto Final;                                                  |
 | Q15  | 06-Jul-2026 | 13-Jul-2026 23:59:59 | Desenvolvimento do Projeto Final;                                                  |
 | Q16  | 13-Jul-2026 | 20-Jul-2026 23:59:59 | Fechamento da disciplina;                                                          |
-
-
+ 
+---
 | quiz | start/open  | end                  | close                |
 | ---- | ----------- | -------------------- | -------------------- |
 | Q00  | 09-Mar-2026 | 15-Mar-2026 23:59:59 | 22-Mar-2026 23:59:59 |
@@ -90,6 +91,7 @@ import QuizTable from '@site/src/components/QuizTable';
 | Q12  | 01-Jun-2026 | 07-Jun-2026 23:59:59 | 14-Jun-2026 23:59:59 |
 | Q13  | 08-Jun-2026 | 14-Jun-2026 23:59:59 | 21-Jun-2026 23:59:59 |
 | Q14  | 15-Jun-2026 | 21-Jun-2026 23:59:59 | 28-Jun-2026 23:59:59 |
+
 
 
 ### Internal quiz links

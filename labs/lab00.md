@@ -6,15 +6,15 @@ description: Apresentação da Disicplina; Materiais utilizados na disciplina;
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {LABsIncomplete} from '@site/src/components/AvisosSite';
+import {LABsApoio} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
 import {VerifyDev2,GitConfig,STM32Tools,DevTools} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 00
 
-<!-- Aviso de que este conteúdo está em construção! -->
-<LABsIncomplete />
+<!-- Info de que este conteúdo é de apoio! -->
+<LABsApoio />
 
 <!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
 <div style={{ display: "flex", justifyContent: "center" }}>

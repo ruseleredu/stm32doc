@@ -13,8 +13,8 @@ import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 06
 
-<!-- Aviso de que este conteúdo está em construção! -->
-<LABsIncomplete />
+<!-- Info de que este conteúdo é de apoio! -->
+<LABsApoio />
 
 <!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
 <div style={{ display: "flex", justifyContent: "center" }}>

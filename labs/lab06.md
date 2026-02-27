@@ -6,7 +6,7 @@ description: Introdução as aulas de laboratório
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {LABsIncomplete} from '@site/src/components/AvisosSite';
+import {LABsApoio} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
 import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';

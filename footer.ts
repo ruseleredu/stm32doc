@@ -11,7 +11,9 @@ const formatter = new Intl.DateTimeFormat("pt-BR", {
     hourCycle: "h23", // Use 24-hour format
 });
 const utc3Time = formatter.format(new Date());
-const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} stm32doc. Built with <a href="https://docusaurus.io/" style="color: #ffffff; font-weight: bold;" target="_blank" rel="noopener noreferrer">Docusaurus</a> at ${utc3Time} UTC-3.`;
+const doclink = '<a href="https://docusaurus.io/" style="color: #ffffff; font-weight: bold;" target="_blank" rel="noopener noreferrer">Docusaurus</a>';
+const gitlink = '<a href="https://github.com/ruseleredu/stm32doc" style="color: #ffffff; font-weight: bold;" target="_blank" rel="noopener noreferrer">stm32doc</a>';
+const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} ${gitlink}. Built with ${doclink} at ${utc3Time} UTC-3.`;
 
 const footer: ThemeConfig["footer"] = {
     style: "dark",
@@ -187,7 +189,7 @@ const footer: ThemeConfig["footer"] = {
             ],
         },
         {
-            title: "IDEs e Ferramentas",
+            title: "Ferramentas",
             items: [
                 {
                     label: "Visual Studio Code",

@@ -212,8 +212,12 @@ const footer: ThemeConfig["footer"] = {
                     href: "https://platformio.org//install/ide?install=vscode",
                 },
                 {
-                    label: "WinGet",
-                    href: "https://winget.run/",
+                    label: "Node.js",
+                    href: "https://nodejs.org/en/download/",
+                },
+                {
+                    label: "Java",
+                    href: "https://www.java.com/pt-BR/download/",
                 },
             ],
         },

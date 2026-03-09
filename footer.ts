@@ -197,7 +197,7 @@ const footer: ThemeConfig["footer"] = {
                 },
                 {
                     label: "Git SCM",
-                    href: "https://git-scm.com/downloads",
+                    href: "https://git-scm.com/install/windows",
                 },
                 {
                     label: "GitHub CLI",

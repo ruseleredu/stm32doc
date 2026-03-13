@@ -29,8 +29,8 @@ export default function LabFromTemplate({ labNumber, opts = "" }) {
             {groups.map((group) => (
                 <TabItem key={group} value={group.toLowerCase()} label={group}>
                     <ul>
-                        <li><b>Grupo S22-{group}:</b> <a href={`https://github.com/ELT73A-S22-2025-2-${group}`} target="_blank" rel="noopener noreferrer">
-                            https://github.com/ELT73A-S22-2025-2-{group}
+                        <li><b>Grupo S22-{group}:</b> <a href={`https://github.com/ELT73A-S22-2026-1-${group}`} target="_blank" rel="noopener noreferrer">
+                            https://github.com/ELT73A-S22-2026-1-{group}
                         </a> </li>
                         <li> <b>LAB Template:</b> <a href={`https://github.com/ELT73A-LAB-TPL/${labNumber}`} target="_blank" rel="noopener noreferrer">
                             https://github.com/ELT73A-LAB-TPL/{labNumber}
@@ -41,7 +41,7 @@ export default function LabFromTemplate({ labNumber, opts = "" }) {
                             Use o comando abaixo para criar o repositório no GitHub com base no template do laboratório {labNumber}:
                         </p>
                         <ThemeCodeBlock className="language-bash">
-                            gh repo create ELT73A-S22-2025-2-{group}/{labNumber} --private -p ELT73A-LAB-TPL/{labNumber} {opts}
+                            gh repo create ELT73A-S22-2026-1-{group}/{labNumber} --private -p ELT73A-LAB-TPL/{labNumber} {opts}
                         </ThemeCodeBlock>
                         <p>Abra o repositório clonado no VS Code:</p>
                         <ThemeCodeBlock className="language-bash">

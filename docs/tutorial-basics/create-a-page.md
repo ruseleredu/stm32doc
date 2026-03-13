@@ -187,6 +187,44 @@ Feel free to play around and edit this post as much as you like.
 A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
 
 
+## Some math equations
 $$
 I = \int_0^{2\pi} \sin(x)\,dx
 $$
+
+
+
+The Quadratic Formula
+
+$$
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}
+$$
+
+Cauchy's Integral Formula
+
+$$
+f(a) = \frac{1}{2\pi i} \oint\frac{f(z)}{z-a}dz
+$$
+
+Angle Sum Formula for Cosines
+
+$$
+\cos(\theta+\phi)=\cos(\theta)\cos(\phi)−\sin(\theta)\sin(\phi)
+$$
+Gauss' Divergence Theorem
+$$
+\int_D ({\nabla\cdot} F)dV=\int_{\partial D} F\cdot ndS
+$$
+Curl of a Vector Field
+$$
+ \vec{\nabla} \times \vec{F} = \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i} + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j} + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k} 
+$$
+Standard Deviation
+$$
+\sigma = \sqrt{ \frac{1}{N} \sum_{i=1}^N (x_i -\mu)^2} 
+$$
+Definition of Christoffel Symbols
+$$
+(\nabla_X Y)^k = X^i (\nabla_i Y)^k = X^i \left( \frac{\partial Y^k}{\partial x^i} + \Gamma_{im}^k Y^m \right)
+$$
+

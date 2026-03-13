@@ -184,7 +184,7 @@ export function STM32Tools() {
 }
 
 
-// import {STM32Tools} from '@site/src/components/InstructionsSite';
+// import {STM32Toolsv2} from '@site/src/components/InstructionsSite';
 // <!-- List of STM32Cube Tools -->
 // <STM32Toolsv2 />
 export function STM32Toolsv2() {

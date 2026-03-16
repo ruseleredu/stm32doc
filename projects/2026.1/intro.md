@@ -16,7 +16,7 @@ O Projeto final tem os seguintes critérios de avaliação (Percentagem da nota)
 6) Documentação no GitHub (15%);
 7) Video de apresentação (15%); Ex: https://youtu.be/th4r7HzCY8c
 
-**Data limite de entrega: ??/??/2026**
+**Data limite de entrega: 13/07/2026**
 
 A partir dos requisitos a equipe tem liberdade para usar tantos componentes e técnicas quanto achar necessário. 
 

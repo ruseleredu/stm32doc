@@ -8,7 +8,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsApoio} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {VerifyDev2,GitConfig,STM32Tools,DevTools} from '@site/src/components/InstructionsSite';
+import {VerifyDev2,GitConfig,STM32Tools,STM32Toolsv2,DevTools,DevToolsv2} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 00
@@ -44,7 +44,7 @@ Apresentação da Disicplina; Materiais utilizados na disciplina;
 ---
 
 <!-- List of STM32Cube Tools -->
-<STM32Tools />
+<STM32Toolsv2 />
 
 ## Crie um novo repositório com base no template do LAB00
 

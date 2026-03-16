@@ -93,6 +93,19 @@ Abaixo estão os links para as organizações do GitHub de cada grupo:
 
 import GroupTable from '@site/src/components/GroupTable';
 
+```bash
+- name: Fetch Group Statuses
+        run: |
+          node scripts/check-groups.js 2026-1
+          node scripts/check-groups.js 2026-2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+```bash
+set GITHUB_TOKEN=your_token_here && node scripts/check-groups.js 2026-1
+```
 
 ## Turma Atual
-<GroupTable yearSuffix="2025-2" />
+
+<GroupTable semester="2026-1" />

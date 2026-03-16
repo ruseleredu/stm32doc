@@ -1,3 +1,12 @@
+name: Deploy Docusaurus
+
+on:
+  push:
+    branches:
+      - main # Runs every time you push code to main
+  workflow_dispatch: # Allows you to run this manually from the "Actions" tab
+  #schedule:
+  #  - cron: '0 0 * * *' # Runs automatically every day at midnight UTC
 jobs:
   deploy:
     runs-on: ubuntu-latest

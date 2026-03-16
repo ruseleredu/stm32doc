@@ -1,7 +1,7 @@
 ---
-id: lab-tabs
+id: components-showcase
 title: Components Show Case
-slug: /lab-tabs
+slug: /components-showcase
 ---
 
 import { LABsIncomplete, EaDIncomplete , LABsApoio } from '@site/src/components/AvisosSite';
@@ -13,7 +13,7 @@ import {DevTools,DevToolsv2} from '@site/src/components/InstructionsSite';
 
 
 ```bash
-import { LABsIncomplete, EaDIncomplete , LABsApoio } from '@site/src/components/AvisosSite';
+import {LABsIncomplete,EaDIncomplete,LABsApoio} from '@site/src/components/AvisosSite';
 ```
 
 ### LABsIncomplete

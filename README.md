@@ -75,3 +75,13 @@ npm i baseline-browser-mapping@latest -D
 ```bash
 npm audit fix
 ```
+
+## Upgrade groups status
+
+```bash
+node scripts/check-groups.js 2026-1
+```
+
+```bash
+node scripts/check-groups.js 2025-2
+```

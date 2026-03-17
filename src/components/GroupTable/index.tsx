@@ -2,7 +2,7 @@ import React from 'react';
 import statusData from '@site/src/data/groupStatus.json';
 
 const GroupTable = ({ semester = '2026-1' }) => {
-    const groups = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
+    const groups = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'X'];
 
     // Grab the specific semester data from the JSON
     const semesterInfo = statusData?.semesters?.[semester];

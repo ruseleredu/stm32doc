@@ -5,6 +5,7 @@ description: Introdução as aulas de laboratório
 ---
 
 import LabTable from '@site/src/components/LabTable';
+import GroupTable from '@site/src/components/GroupTable';
 
 ## Tabela dos LABs com links internos
 <LabTable internal={true} />
@@ -131,21 +132,7 @@ import LabTable from '@site/src/components/LabTable';
 
 ## Organizações
 
-| Grupo       | Organização                                                   | Status |
-| ----------- | ------------------------------------------------------------- | :----: |
-| Grupo S22-A | [ELT73A-S22-2026-1-A](https://github.com/ELT73A-S22-2026-1-A) | Empty  |
-| Grupo S22-B | [ELT73A-S22-2026-1-B](https://github.com/ELT73A-S22-2026-1-B) | Empty  |
-| Grupo S22-C | [ELT73A-S22-2026-1-C](https://github.com/ELT73A-S22-2026-1-C) | Empty  |
-| Grupo S22-D | [ELT73A-S22-2026-1-D](https://github.com/ELT73A-S22-2026-1-D) | Empty  |
-| Grupo S22-E | [ELT73A-S22-2026-1-E](https://github.com/ELT73A-S22-2026-1-E) | Empty  |
-| Grupo S22-F | [ELT73A-S22-2026-1-F](https://github.com/ELT73A-S22-2026-1-F) | Empty  |
-| Grupo S22-G | [ELT73A-S22-2026-1-G](https://github.com/ELT73A-S22-2026-1-G) | Empty  |
-| Grupo S22-H | [ELT73A-S22-2026-1-H](https://github.com/ELT73A-S22-2026-1-H) | Empty  |
-| Grupo S22-I | [ELT73A-S22-2026-1-I](https://github.com/ELT73A-S22-2026-1-I) | Empty  |
-| Grupo S22-J | [ELT73A-S22-2026-1-J](https://github.com/ELT73A-S22-2026-1-J) | Empty  |
-| Grupo S22-K | [ELT73A-S22-2026-1-K](https://github.com/ELT73A-S22-2026-1-K) | Empty  |
-| Grupo S22-L | [ELT73A-S22-2026-1-L](https://github.com/ELT73A-S22-2026-1-L) | Empty  |
-
+<GroupTable semester="2026-1" />
 
 ## Projeto Final
 

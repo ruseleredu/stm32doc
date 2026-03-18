@@ -33,7 +33,6 @@ const footer: ThemeConfig["footer"] = {
                     label: "Git Tutorial",
                     href: "https://www.w3schools.com/git/default.asp?remote=github",
                 },
-
                 {
                     label: "GitHub Training",
                     href: "https://githubtraining.github.io/training-manual/#/01_getting_ready_for_class",
@@ -192,10 +191,6 @@ const footer: ThemeConfig["footer"] = {
             title: "Ferramentas",
             items: [
                 {
-                    label: "Visual Studio Code",
-                    href: "https://code.visualstudio.com/download",
-                },
-                {
                     label: "Git SCM",
                     href: "https://git-scm.com/install/windows",
                 },
@@ -206,6 +201,14 @@ const footer: ThemeConfig["footer"] = {
                 {
                     label: "GitHub Desktop",
                     href: "https://desktop.github.com/download/",
+                },
+                {
+                    label: "VS Code",
+                    href: "https://code.visualstudio.com/download",
+                },
+                {
+                    label: "STM32CubeIDE",
+                    href: "https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension",
                 },
                 {
                     label: "PlatformIO",

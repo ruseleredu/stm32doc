@@ -45,6 +45,7 @@ The Windows installer modifies your PATH. When using Windows Terminal, you will 
 
 ## GitHub CLI manual
 
+- [Início rápido da CLI do GitHub](https://docs.github.com/pt/github-cli/github-cli/quickstart)
 - [GitHub CLI manual](https://cli.github.com/manual/)
 
 ## Display or change configuration settings

@@ -5,6 +5,8 @@ description: Git is a free and open source distributed version control system de
 slug: /git
 ---
 
+import {GitConfig} from '@site/src/components/InstructionsSite';
+
 ### Instalação, configuração e uso do git via linha de comando
 
 Instalação, configuração e uso do [git](https://git-scm.com/) via linha de comando.
@@ -43,34 +45,13 @@ Uso do Git e GitHub no STM32CubeIDE
 git --version
 ```
 
-How to config [git](https://git-scm.com/)
+How to config [git](https://git-scm.com/docs/git-config)
 
-```bash
-git config --global user.name "Your Name"
-git config --global user.email yourmail@domain.tld
-```
+<!-- Configure o git -->
+<GitConfig />
 
-It's recommended to verify that the your Git installation is not performing any transformation between LFs and CRLFs.
+--- 
 
-```bash
-git config --global core.autocrlf false
-git config --global color.ui auto
-git config --global init.defaultBranch main
-```
-
-Configure Git to use Visual Studio Code (VS Code) as the default editor for tasks like writing commit messages or interactive rebases
-
-```bash
-git config --global core.editor "code --wait"
-```
-
-```bash
-git config --global -e
-```
-
-```bash
-git config list --show-origin
-```
 
 ## Folha de dicas
 

@@ -1,6 +1,6 @@
 ---
 id: github-git-cheat-sheet
-title: Folha de Dicas de Git do GitHub
+title: Folha de Dicas
 description: Folha de Dicas de Git do GitHub (pt-BR)
 slug: /github-git-cheat-sheet
 ---
@@ -128,27 +128,39 @@ Descarta os conjuntos de alterações mais recentes em stash
 
 Revise edições e crie uma transação de commit
 
-$ git status
+```bash
+git status
+```
 
 Lista todos os arquivos novos ou modificados para serem commitados
 
-$ git diff
+```bash
+git diff
+```
 
 Mostra diferenças no arquivo que ainda não foram preparadas
 
-$ git add [arquivo]
+```bash
+git add [arquivo]
+```
 
 Faz o snapshot de um arquivo na preparação para versionamento
 
-$ git diff --staged
+```bash
+git diff --staged
+```
 
 Mostra a diferença entre arquivos preparados e suas últimas versões
 
-$ git reset [arquivo]
+```bash
+git reset [arquivo]
+```
 
 Retira o arquivo da área de preparação, mas preserva seu conteúdo
 
-$ git commit -m "[mensagem descritiva]"
+```bash
+git commit -m "[mensagem descritiva]"
+```
 
 Grava o snapshot permanentemente do arquivo no histórico de versão
 
@@ -156,23 +168,33 @@ Grava o snapshot permanentemente do arquivo no histórico de versão
 
 Nomeie uma série de commits e combine os esforços completos
 
-$ git branch
+```bash
+git branch
 
+```
 Lista todos os branches locais no repositório atual
 
-$ git branch [nome-do-branch]
+```bash
+git branch [nome-do-branch]
+```
 
 Cria um novo branch
 
-$ git switch -c [nome-do-branch]
+```bash
+git switch -c [nome-do-branch]
+```
 
 Muda para o branch especificado e atualiza o diretório de trabalho
 
-$ git merge [nome-do-branch]
+```bash
+git merge [nome-do-branch]
+```
 
 Combina o histórico do branch especificado ao branch atual
 
-$ git branch -d [nome-do-branch]
+```bash
+git branch -d [nome-do-branch]
+```
 
 Exclui o branch especificado
 
@@ -180,19 +202,27 @@ Exclui o branch especificado
 
 Navegue e inspecione a evolução dos arquivos do projeto
 
-$ git log
+```bash
+git log
+```
 
 Lista o histórico de versões para o branch atual
 
-$ git log --follow [arquivo]
+```bash
+git log --follow [arquivo]
+```
 
 Lista o histórico de versões para um arquivo, incluindo mudanças de nome
 
-$ git diff [primerio-branch]...[segundo-branch]
+```bash
+git diff [primerio-branch]...[segundo-branch]
+```
 
 Mostra a diferença de conteúdo entre dois branches
 
-$ git show [commit]
+```bash
+git show [commit]
+```
 
 Retorna mudanças de metadata e conteúdo para o commit especificado
 
@@ -200,11 +230,15 @@ Retorna mudanças de metadata e conteúdo para o commit especificado
 
 Apague enganos e crie um histórico substituto
 
-$ git reset [commit]
+```bash
+git reset [commit]
+```
 
 Desfaz todos os commits depois de [commit], preservando mudanças locais
 
-$ git reset --hard [commit]
+```bash
+git reset --hard [commit]
+```
 
 Descarta todo histórico e mudanças para o commit especificado
 
@@ -212,18 +246,26 @@ Descarta todo histórico e mudanças para o commit especificado
 
 Registre um repositório remoto e troque o histórico de versão
 
-$ git fetch [nome-remoto]
+```bash
+git fetch [nome-remoto]
+```
 
 Baixe todo o histórico de um repositório remoto
 
-$ git merge [nome-remoto]/[branch]
+```bash
+git merge [nome-remoto]/[branch]
+```
 
 Combina o branch remoto ao branch local atual
 
-$ git push [alias] [branch]
+```bash
+git push [alias] [branch]
+```
 
 Envia todos os commits do branch local para o GitHub
 
-$ git pull
+```bash
+git pull
+```
 
 Baixa o histórico e incorpora as mudanças

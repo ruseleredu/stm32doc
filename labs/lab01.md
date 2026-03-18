@@ -55,6 +55,10 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB01" opts="-c" />
 
+## GitHub
+
+O GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.
+
 ## Requesitos
 
 - [VScode](/docs/vs-code-intro)

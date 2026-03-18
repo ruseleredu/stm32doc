@@ -7,8 +7,9 @@ slug: /github-desktop
 
 ## [Download GitHub Desktop](https://desktop.github.com/download/)
 
-Focus on what matters instead of fighting with Git. Whether you're new to Git or a seasoned user, GitHub Desktop simplifies your development workflow. 
+Focus on what matters instead of fighting with Git. Whether you're new to Git or a seasoned user, [GitHub Desktop](https://github.com/desktop/desktop) simplifies your development workflow. 
 
+GitHub Desktop is an open-source Electron-based GitHub app. It is written in TypeScript and uses React.
 
 ### WinGet
 

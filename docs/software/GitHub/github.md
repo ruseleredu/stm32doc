@@ -2,9 +2,17 @@
 id: github-intro
 title: Intro
 sidebar_position: 1
-description: Crie e lance software em uma única plataforma colaborativa.
+description: O GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.
 slug: /github-intro
 ---
+
+import {GitConfig,VerifyDev1} from '@site/src/components/InstructionsSite';
+
+O GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.
+
+## [Documentos do GitHub](https://docs.github.com/pt)
+
+Obtenha ajuda, onde quer que você esteja em sua jornada no GitHub.
 
 ## Criando uma conta no GitHub
 
@@ -16,17 +24,12 @@ Iniciando o uso do GitHub
 
 How to config git
 
-```bash
-git config --global user.name "Your Name"
-git config --global user.email yourmail@domain.tld
-```
+--- 
 
-It's recommended to verify that the your Git installation is not performing any transformation between LFs and CRLFs.
+<!-- Configure o git -->
+<GitConfig />
 
-```bash
-git config --global core.autocrlf false
-```
+---
 
-```bash
-git config list --show-origin
-```
+<!-- Verifique o seu ambiente dev, git, gh e code -->
+<VerifyDev1 />

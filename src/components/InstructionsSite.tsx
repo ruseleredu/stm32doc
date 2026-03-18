@@ -127,6 +127,16 @@ export function GitConfig() {
                     git config --global core.editor "code --wait"
                 </ThemeCodeBlock>
 
+                <p>Habilite a coloração automática da saída da linha de comando do <Link to="/docs/git">Git</Link>:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git config --global color.ui auto
+                </ThemeCodeBlock>
+
+                <p>Configura o <Link to="/docs/git">Git</Link> para usar main como o nome do branch padrão sempre que você inicializar um novo repositório localmente:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git config --global init.defaultBranch main
+                </ThemeCodeBlock>
+
                 <p>Liste as configurações aplicadas:</p>
                 <ThemeCodeBlock className="language-bash">
                     git config --list --show-origin

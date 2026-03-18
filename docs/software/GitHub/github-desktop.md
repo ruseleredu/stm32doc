@@ -5,11 +5,10 @@ description: Whether you're new to Git or a seasoned user, GitHub Desktop simpli
 slug: /github-desktop
 ---
 
+## [Download GitHub Desktop](https://desktop.github.com/download/)
 
-GitHub Desktop
+Focus on what matters instead of fighting with Git. Whether you're new to Git or a seasoned user, GitHub Desktop simplifies your development workflow. 
 
-## Download GitHub Desktop 
-- https://desktop.github.com/download/
 
 ### WinGet
 

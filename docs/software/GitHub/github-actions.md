@@ -12,7 +12,7 @@ Automatize, personalize e execute seus fluxos de trabalho de desenvolvimento do 
 
 ## YouTube Videos
 
-### Run GitHub Actions Locally with act  and vscode
+### Run GitHub Actions Locally with act and vscode
 
 - GitHub CLI: https://cli.github.com/
 - Run your GitHub Actions locally: https://nektosact.com/

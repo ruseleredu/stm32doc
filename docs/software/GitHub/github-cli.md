@@ -7,32 +7,41 @@ slug: /github-cli
 
 import ThemeCodeBlock from '@theme/CodeBlock';
 
-## Intalação
+## [Installing gh on Windows](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)
 
-[Installing gh on Windows](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)
+### WinGet
 
-### Zip
+[WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget/) is a command line tool enabling users to discover, install, upgrade, remove and configure applications on Windows 10, Windows 11, and Windows Server 2025 computers. This tool is the client interface to the Windows Package Manager service.
 
-- https://github.com/cli/cli/tags
-- https://github.com/cli/cli/releases/download/v2.78.0/gh_2.78.0_windows_amd64.zip
+The [GitHub CLI package](https://winget.run/pkg/GitHub/cli) is supported by Microsoft with updates powered by [microsoft/winget-pkgs](https://github.com/microsoft/winget-pkgs/tree/master/manifests/g/GitHub/cli/).
+
+- To install:
+
+```pwsh
+winget install --id GitHub.cli
+```
+
+- To upgrade:
+
+```pwsh
+winget upgrade --id GitHub.cli
+```
+
+- Verify installation:
 
 ```bash
 gh --version
 ```
 
-### WinGet
+:::note
+The Windows installer modifies your PATH. When using Windows Terminal, you will need to **open a new window** for the changes to take effect. (Simply opening a new tab will _not_ be sufficient.)
+:::
 
-WinGet is a command line tool enabling users to discover, install, upgrade, remove and configure applications on Windows 10, Windows 11, and Windows Server 2025 computers. This tool is the client interface to the Windows Package Manager service.
+### Precompiled binaries
 
-```bash
-winget install --id GitHub.cli
-```
+[GitHub CLI releases](https://github.com/cli/cli/releases/latest) contain precompiled `exe` and `msi` binaries for `386`, `amd64` and `arm64` architectures.
 
-```bash
-winget upgrade --id GitHub.cli
-```
 
-[winget.run](https://winget.run/)
 
 ## GitHub CLI manual
 

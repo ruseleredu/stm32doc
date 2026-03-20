@@ -1,6 +1,6 @@
 ---
 id: github-cli
-title: GitHub CLI
+title: CLI
 description: GitHub CLI brings GitHub to your terminal. Free and open source.
 slug: /github-cli
 ---

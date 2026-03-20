@@ -1,6 +1,6 @@
 ---
 id: github-actions
-title: GitHub Actions
+title: Actions
 description: GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. 
 slug: /github-actions
 ---

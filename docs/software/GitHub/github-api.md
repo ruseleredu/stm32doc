@@ -1,6 +1,6 @@
 ---
 id: github-api
-title: GitHub API
+title: API
 description: Crie integrações, recupere dados e automatize seus fluxos de trabalho com a API REST do GitHub.
 slug: /github-api
 ---

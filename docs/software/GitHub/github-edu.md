@@ -1,6 +1,6 @@
 ---
 id: github-edu
-title: GitHub EDU
+title: EDU
 description: Crie integrações, recupere dados e automatize seus fluxos de trabalho com a API REST do GitHub.
 slug: /github-edu
 ---

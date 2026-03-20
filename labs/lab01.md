@@ -25,15 +25,16 @@ import LabTable from '@site/src/components/LabTable';
 
 ## Conteúdo
 
-GitHub e Revisão da programação em C; Ambiente de desenvolvimento;
+Git e GitHub; Ambiente de desenvolvimento;
 
+- [ ] Uso do Git;
 - [ ] Uso do GitHub;
 - [ ] Crie uma organização no GitHub;
 - [ ] Adicione os membros do seu grupo;
 - [ ] Promova o professor como owner;
 - [ ] Ambiente de desenvolvimento;
 - [ ] Comandos básicos, git e GitHub;
-- [ ] Revisão da programação em C;
+
 
 ## Verifique o seu ambiente de desenvolvimento
 
@@ -55,9 +56,28 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB01" opts="-c" />
 
+## Git e GitHub
+
+- [ ] Definições;
+- [ ] Uso do GitHub;
+- 
 ## GitHub
 
 O GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.
+
+- https://docs.github.com/pt/get-started/learning-about-github/github-glossary
+
+
+## Static Badge
+- https://shields.io/badges
+
+![Version](https://img.shields.io/badge/github-repo-blue?logo=github)
+
+![LAB status](https://img.shields.io/badge/LAB_01-OK-green?logo=github)
+
+![LAB status](https://img.shields.io/badge/LAB_01-OK-blue?logo=github)
+
+![LAB status](https://img.shields.io/badge/LAB_01-TODO-red?logo=github)
 
 ## Requesitos
 

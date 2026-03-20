@@ -5,17 +5,30 @@ description: This glossary introduces common Git and GitHub terminology.
 slug: /github-glossary-en
 ---
 
-# GitHub glossary
+# [GitHub glossary](https://docs.github.com/en/get-started/learning-about-github/github-glossary)
 
 This glossary introduces common Git and GitHub terminology.
 
+
+| Glossário GitHub (pt-BR)                                          | GitHub glossary (en)                                        |
+| ----------------------------------------------------------------- | ----------------------------------------------------------- |
+| Este glossário apresenta a terminologia comum do Git e de GitHub. | This glossary introduces common Git and GitHub terminology. |
+
+
 ## @mention
 
-To notify a person on GitHub by using `@` before their username. Users in an organization on GitHub can also be a part of a team that can be mentioned.
+| @mention                                                                                                                                                                               | @mention                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Para notificar uma pessoa no GitHub usando `@` antes do nome de usuário dela. Os usuários de uma organização no GitHub também podem fazer parte de uma equipe que pode ser mencionada. | To notify a person on GitHub by using `@` before their username. Users in an organization on GitHub can also be a part of a team that can be mentioned. |
+
 
 ## access token
 
-A token that is used in place of a password when performing Git operations over HTTPS with Git on the command line or the API. Also called a personal access token.
+| token de acesso                                                                                                                                                         | access token                                                                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Um token usado no lugar de uma senha quando operações do Git são executadas via HTTPS com o Git na linha de comando ou na API. Também chamado de personal access token. | A token that is used in place of a password when performing Git operations over HTTPS with Git on the command line or the API. Also called a personal access token. |
+
+
 
 ## API preview
 
@@ -72,6 +85,14 @@ To remove a user's ability to collaborate on an organization's repositories.
 ## branch
 
 A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or main branch allowing you to work freely without disrupting the "live" version. When you've made the changes you want to make, you can merge your branch back into the main branch to publish your changes.
+
+## branch
+
+## term
+
+| Nome  (pt-BR) | Name  (en)  |
+| ------------- | ----------- |
+| Descrição     | description |
 
 ## branch restriction
 

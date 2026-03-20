@@ -5,7 +5,7 @@ description: Este glossário apresenta a terminologia comum do Git e de GitHub.
 slug: /github-glossary
 ---
 
-# Glossário GitHub
+# [Glossário GitHub](https://docs.github.com/pt/get-started/learning-about-github/github-glossary)
 
 Este glossário apresenta a terminologia comum do Git e de GitHub.
 
@@ -496,13 +496,6 @@ Um aplicativo de terceiros que se integra ao GitHub. Geralmente, são GitHub App
 
 Também conhecida como CI. Um processo que executa builds e testes automatizados depois que uma pessoa faz commit de uma alteração em um repositório configurado no GitHub. A CI é uma melhor prática comum no desenvolvimento de software que ajuda a detectar erros.
 
-## Jekyll
-
-Gerador de site estático para sites pessoais, de projeto ou da organização.
-
-## keychain
-
-Sistema de gerenciamento de senhas no macOS.
 
 ## label
 

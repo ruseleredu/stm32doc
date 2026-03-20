@@ -1,6 +1,6 @@
 ---
 id: github-readme
-title: GitHub README
+title: README
 description: Essential information about a software project.
 slug: /github-readme
 ---

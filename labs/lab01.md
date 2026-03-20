@@ -60,7 +60,7 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 - [ ] Definições;
 - [ ] Uso do GitHub;
-- 
+  
 ## GitHub
 
 O GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.

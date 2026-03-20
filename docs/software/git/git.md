@@ -1,6 +1,6 @@
 ---
 id: git
-title: Git
+title: Intro
 description: Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 slug: /git
 ---
@@ -55,7 +55,10 @@ How to config [git](https://git-scm.com/docs/git-config)
 
 ## Folha de dicas
 
-https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/
+- https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/
+
+## Git Glossary
+- https://www.kernel.org/pub/software/scm/git/docs/gitglossary.html
 
 ## Git Cheat Sheet
 

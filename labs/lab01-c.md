@@ -1,7 +1,6 @@
 ---
-sidebar_position: 4
-title: Laboratório 01
-description: Ambiente de desenvolvimento VS Code; Uso do git e GitHub;
+title: Laboratório 01 - C
+description: Uso e setup do C
 ---
 
 import Tabs from "@theme/Tabs";
@@ -220,13 +219,13 @@ gh repo create ELT73A-S22-2026-1-X/lab01-push --private
 ```
 
 ```bash
-git remote add origin https://github.com/ELT73A-S22-2026-1-X/lab01-push.git
-# git remote set-url origin https://github.com/ELT73A-S22-2026-1-X/lab01-push.git
+git remote add origin https://github.com/ELT73A-S22-2026-1-X/lab01-init.git
 git branch -M main
 git push -u origin main
 ```
 
 ### clone an existing repository from the command line
+
 
 ```bash
 git clone https://github.com/ELT73A-S22-2026-1-X/lab01-init.git
@@ -237,10 +236,10 @@ git clone https://github.com/ELT73A-S22-2026-1-X/lab01-init.git
 ```bash
 # download a repository on GitHub to our machine
 # Replace `owner/repo` with the owner and name of the repository to clone
-git clone https://github.com/ELT73A-S22-2026-1-X/lab01-init.git
+git clone https://github.com/owner/repo.git
 
 # change into the `repo` directory
-cd lab01-init
+cd repo
 
 # create a new branch to store any new changes
 git branch my-branch
@@ -248,11 +247,10 @@ git branch my-branch
 # switch to that branch (line of development)
 git checkout my-branch
 
-# make changes, for example, edit `file1.md`  using the text editor
-echo "# file 1 in lab01-init" >> file1.md
+# make changes, for example, edit `file1.md` and `file2.md` using the text editor
 
 # stage the changed files
-git add file1.md
+git add file1.md file2.md
 
 # take a snapshot of the staging area (anything that's been added)
 git commit -m "my snapshot"
@@ -264,11 +262,8 @@ git push --set-upstream origin my-branch
 ### [Contribuir para uma ramificação existente no GitHub](https://docs.github.com/pt/get-started/using-git/about-git#exemplo-contribuir-para-uma-ramifica%C3%A7%C3%A3o-existente-no-github)
 
 ```bash
-# Replace `owner/repo` with the owner and name of the repository to clone
-git clone https://github.com/ELT73A-S22-2026-1-X/lab01-init.git
-
 # change into the `repo` directory
-cd lab01-init
+cd repo
 
 # update all remote tracking branches, and the currently checked out branch
 git pull
@@ -277,7 +272,6 @@ git pull
 git checkout feature-a
 
 # make changes, for example, edit `file1.md` using the text editor
-echo "# Add feature-a in lab01-init" >> file1.md
 
 # stage the changed file
 git add file1.md
@@ -287,25 +281,7 @@ git commit -m "edit file1"
 
 # push changes to github
 git push
-```
-
-### Mesclar feature-a
-
-```bash
-# Switch to the main branch
-git checkout main
-
-# Pull the latest changes from GitHub
-git pull origin main
-
-# Merge feature-a into your current branch (main)
-git merge feature-a
-
-# Remove a Remote Branch
-git push origin --delete feature-a
-
-```
-
+```` 
 
 ## Criando diagramas
 
@@ -350,6 +326,47 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 
 ![LAB status](https://img.shields.io/badge/LAB_01-TODO-red?logo=github)
 
+## Requesitos
+
+- [VScode](/docs/vs-code-intro)
+- [MinGW](/docs/mingw)
+
+```bash
+C:\msys64\msys2_shell.cmd -ucrt64
+```
+
+```bash
+pacman -Syu
+```
+
+```bash
+pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
+```
+
+## VScode com compilador GCC e o depurador GDB
+
+Configure o Visual Studio Code para usar o compilador GCC e o depurador GDB
+
+- [Using GCC with MinGW](https://code.visualstudio.com/docs/cpp/config-mingw)
+- [Get the latest version of MinGW-w64 via MSYS2](https://www.msys2.org/)
+
+```bash
+pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-R3l4Bc5jH4?si=WbfLdQtISBTG98d-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Check your MinGW installation
+
+C:\msys64\ucrt64\bin
+
+Verifique a versão do [gcc](https://gcc.gnu.org/) e [gdb](https://sourceware.org/gdb/).
+
+```bash
+gcc --version
+gdb --version
+```
+
 ## Como formatar o seu código em C no VScode
 
 Como formatar o seu código em C no VScode
@@ -386,15 +403,121 @@ code --list-extensions --profile "Markdown"
 }
 ```
 
+```json title=".vscode/extensions.json"
+{
+  "recommendations": [
+    /* Markdown & Documentation */
+    "yzhang.markdown-all-in-one",
+    "tomasdahlqvist.markdown-admonitions",
+    "bierner.markdown-footnotes",
+    "bierner.markdown-mermaid",
+    "davidanson.vscode-markdownlint",
+    "streetsidesoftware.code-spell-checker",
+
+    /* Git & GitHub */
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "github.remotehub",
+
+    /* Formatting & UI */
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "pkief.material-icon-theme",
+    "christian-kohler.path-intellisense"
+  ]
+}
+```
+
+
 ```json title=".vscode/settings.json"
 {
   "workbench.iconTheme": "material-icon-theme",
   "editor.formatOnSave": true,
+  "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "editor.formatOnPaste": true,
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   }
+}
+```
+
+
+
+```json title=".vscode/settings.json"
+{
+  // Editor Layout for Writing
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "off",
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Markdown Specifics
+  "markdown.extension.toc.updateOnSave": true,
+  "markdown.preview.doubleClickToSwitchToEditor": true,
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.mermaid.theme": "dark",
+  
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "on",
+      "strings": "on"
+    }
+  },
+
+  // Git & GitHub Integration
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "githubIssues.queries": [
+    {
+      "label": "My Open Issues",
+      "query": "is:open assignee:@me"
+    }
+  ],
+  "githubPullRequests.pullTooltipPrecision": "minutes"
+}
+```
+
+```json title=".vscode/tasks.json"
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "GH: View Repo on Web",
+      "type": "shell",
+      "command": "gh repo view --web",
+      "problemMatcher": [],
+      "group": "none"
+    },
+    {
+      "label": "GH: List Open PRs",
+      "type": "shell",
+      "command": "gh pr list",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Git: Quick Sync (Commit & Push)",
+      "type": "shell",
+      "command": "git add . && git commit -m 'docs: update documentation' && git push",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
 }
 ```
 
@@ -431,6 +554,12 @@ Description of the repository
 gh repo edit -d "Description of the repository"
 ```
 
+Repository home page URL
+
+```bash
+gh repo edit -h "https://ruseleredu.github.io/stm32doc/"
+```
+
 Make the repository available as a template repository
 
 ```bash
@@ -442,7 +571,7 @@ gh repo edit  --template
 Create a new remote repository in a different organization
 
 ```bash
-gh repo create ELT73A-S22-2026-1-X/LAB01 --public -c -l mit --add-readme -g C
+gh repo create ELT73A-S22-2025-2-X/LAB01 --public -c -l mit --add-readme -g C
 ```
 
 ## Uso do git e GitHub
@@ -455,11 +584,13 @@ gh repo create ELT73A-S22-2026-1-X/LAB01 --public -c -l mit --add-readme -g C
 
 ## Instruções TODO
 
-Esta atividade de laboratório tem como objetivo verificar a configuração adequada do ambiente de desenvolvimento e uso do Git e GitHub.
+Esta atividade de laboratório tem como objetivo verificar a configuração adequada do ambiente de desenvolvimento para o STM32.
 
 - [ ] Crie uma organização baseada no nome do grupo;
 - [ ] Adicione os membros do seu grupo a organização;
 - [ ] Adicione o professor como membro da organização;
+- [ ] Crie um projeto em branco na pasta EmptyTest;
+- [ ] Importe um projeto em branco na pasta CubeMxTest;
 - [ ] Commit e push dos arquivos gerados;
 - [ ] Envie o link da organização (hyperlink);
 - [ ] Envie o link do repositório no GitHub (hyperlink);
@@ -470,6 +601,8 @@ Esta atividade de laboratório tem como objetivo verificar a configuração adeq
 - [ ] Crie uma organização baseada no nome do grupo - 10%
 - [ ] Adicione os membros do seu grupo a organização - 10%
 - [ ] Adicione o professor como membro da organização - 10%
+- [ ] Crie um projeto em branco na pasta EmptyTest - 25%
+- [ ] Importe um projeto em branco na pasta CubeMxTest - 25%
 - [ ] Envie o link da organização e do repositório no GitHub (hyperlink) - 20%
 
 

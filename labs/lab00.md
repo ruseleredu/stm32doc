@@ -67,11 +67,11 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 Create a new remote repository in a different organization
 
 ```bash
-gh repo create ELT73A-S22-2025-2-X/LAB00c --public -c -l mit --add-readme -g C
+gh repo create ELT73A-S22-2026-1-X/LAB00c --public -c -l mit --add-readme -g C
 ```
 
 ```bash
-gh repo create ELT73A-S22-2025-2-A/LAB00 --public -p ELT73A-LAB-TPL/LAB00
+gh repo create ELT73A-S22-2026-1-A/LAB00 --public -p ELT73A-LAB-TPL/LAB00
 ```
 
 How to commit updates

@@ -105,6 +105,8 @@ const config: Config = {
         path: "labs", // Path to your API docs folder
         routeBasePath: "labs", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarslabs.js"), // Separate sidebar for LAB docs
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
         // ... other options specific to your API docs
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
@@ -118,6 +120,8 @@ const config: Config = {
         path: "quiz", // Path to your API docs folder
         routeBasePath: "quiz", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarsquiz.js"), // Separate sidebar for Quiz docs
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
         // ... other options specific to your API docs
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,

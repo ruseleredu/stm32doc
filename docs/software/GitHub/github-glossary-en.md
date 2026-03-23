@@ -76,7 +76,13 @@ The user-generated description found on a profile: [Adding a bio to your profile
 
 ## blame
 
-The "blame" feature in Git describes the last modification to each line of a file, which generally displays the revision, author and time. This is helpful, for example, in tracking down when a feature was added, or which commit led to a particular bug.
+| blame                                                                                                                                                                                                                                                          | blame                                                                                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| O recurso "blame" no Git descreve a última modificação em cada linha de um arquivo e normalmente mostra a revisão, autor e horário. É útil, por exemplo, para rastrear quando um recurso foi adicionado ou identificar qual commit levou a um erro específico. | The "blame" feature in Git describes the last modification to each line of a file, which generally displays the revision, author and time. This is helpful, for example, in tracking down when a feature was added, or which commit led to a particular bug. |
+
+```bash
+git blame README.md
+```
 
 ## block
 
@@ -84,15 +90,11 @@ To remove a user's ability to collaborate on an organization's repositories.
 
 ## branch
 
-A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or main branch allowing you to work freely without disrupting the "live" version. When you've made the changes you want to make, you can merge your branch back into the main branch to publish your changes.
+| branch                                                                                                                                                                                                                                                                                                                                                   | branch                                                                                                                                                                                                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Um branch é uma versão paralela de um repositório. Está no repositório, mas não afeta a ramificação principal ou primária e permite que você trabalhe à vontade, sem prejudicar a versão "online". Depois de fazer as alterações desejadas, você poderá fazer uma mesclagem do branch novamente com a ramificação principal para publicar as alterações. | A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or main branch allowing you to work freely without disrupting the "live" version. When you've made the changes you want to make, you can merge your branch back into the main branch to publish your changes. |
 
-## branch
 
-## term
-
-| Nome  (pt-BR) | Name  (en)  |
-| ------------- | ----------- |
-| Descrição     | description |
 
 ## branch restriction
 
@@ -118,6 +120,20 @@ A check is a type of status check on GitHub. See [Status checks](#status-checks)
 
 You can use `git checkout` on the command line to create a new branch, change your current working branch to a different branch, or even to switch to a different version of a file from a different branch with `git checkout [branchname] [path to file]`. The "checkout" action updates all or part of the working tree with a tree object or blob from the object database, and updates the index and HEAD if the whole working tree is pointing to a new branch.
 
+
+## fazer checkout
+
+Use `git checkout` na linha de comando para criar um branch, alterar o branch de trabalho atual para outro branch ou até alternar para uma versão diferente de um arquivo de outro branch com `git checkout [branchname] [path to file]`. A ação de "check-out" atualiza toda ou parte da árvore de trabalho com um objeto de árvore ou um blob do banco de dados de objetos e atualiza o índice e o HEAD se toda a árvore de trabalho está apontando para um novo branch.
+
+## checkout
+
+| fazer checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                             | checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Use `git checkout` na linha de comando para criar um branch, alterar o branch de trabalho atual para outro branch ou até alternar para uma versão diferente de um arquivo de outro branch com `git checkout [branchname] [path to file]`. A ação de "check-out" atualiza toda ou parte da árvore de trabalho com um objeto de árvore ou um blob do banco de dados de objetos e atualiza o índice e o HEAD se toda a árvore de trabalho está apontando para um novo branch. | You can use `git checkout` on the command line to create a new branch, change your current working branch to a different branch, or even to switch to a different version of a file from a different branch with `git checkout [branchname] [path to file]`. The "checkout" action updates all or part of the working tree with a tree object or blob from the object database, and updates the index and HEAD if the whole working tree is pointing to a new branch. |
+
+
+
+
 ## cherry-picking
 
 To choose a subset of changes from a series of changes (typically commits) and record them as a new series of changes on top of a different codebase. In Git, this is performed by the `git cherry-pick` command to extract the change introduced by an existing commit on another branch and to record it based on the tip of the current branch as a new commit. For more information, see [git-cherry-pick](https://git-scm.com/docs/git-cherry-pick) in the Git documentation.
@@ -132,7 +148,10 @@ A working tree is clean if it corresponds to the revision referenced by the curr
 
 ## clone
 
-A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. When you make a clone, you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. The repository you cloned is still connected to the remote version so that you can push your local changes to the remote to keep them synced when you're online.
+| clone                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | clone                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Um clone é uma cópia de um repositório que fica em seu computador em vez de ficar em algum outro lugar em um servidor de site. Clonar significa o ato de fazer essa cópia. Quando você faz um clone, é possível editar os arquivos no seu editor preferido e usar o Git para acompanhar as alterações sem precisar ficar online. O repositório clonado ainda está conectado à versão remota, ou seja, você poderá enviar as alterações locais por push ao repositório remoto para mantê-las sincronizadas quando estiver online. | A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. When you make a clone, you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. The repository you cloned is still connected to the remote version so that you can push your local changes to the remote to keep them synced when you're online. |
+
 
 ## clustering
 
@@ -156,7 +175,12 @@ A collaborator is a person with read and write access to a repository who has be
 
 ## commit
 
-A commit, or "revision", is an individual change to a file (or set of files). When you make a commit to save your work, Git creates a unique ID (a.k.a. the "SHA" or "hash") that allows you to keep record of the specific changes committed along with who made them and when. Commits usually contain a commit message which is a brief description of what changes were made.
+| confirmar                                                                                                                                                                                                                                                                                                                                                                                                                                       | commit                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Commit, ou "revisão", é uma alteração individual em um arquivo (ou conjunto de arquivos). Quando você faz um commit para salvar seu trabalho, o Git cria uma ID exclusiva (também conhecida como o "SHA" ou "hash") que permite que você mantenha o registro das alterações específicas confirmadas com quem as fez e quando. Os commits normalmente contêm uma mensagem do commit, que é uma breve descrição de quais alterações foram feitas. | A commit, or "revision", is an individual change to a file (or set of files). When you make a commit to save your work, Git creates a unique ID (a.k.a. the "SHA" or "hash") that allows you to keep record of the specific changes committed along with who made them and when. Commits usually contain a commit message which is a brief description of what changes were made. |
+
+
+
 
 ## commit author
 
@@ -169,6 +193,8 @@ A repository graph that shows all the commits made to a repository in the past y
 ## commit ID
 
 Also known as SHA. A 40-character checksum hash that identifies the commit.
+
+
 
 ## commit message
 
@@ -285,6 +311,18 @@ An indented block of code you can create with GitHub Flavored Markdown using tri
 
 When you use `git fetch`, you're adding changes from the remote repository to your local working branch without committing them. Unlike `git pull`, fetching allows you to review changes before committing them to your local branch.
 
+## fetch
+
+Ao usar `git fetch`, você está adicionando alterações do repositório remoto ao branch de trabalho local sem fazer commit delas. Ao contrário de `git pull`, a busca permite que você revise as alterações antes de fazer commit delas no branch local.
+
+## fetch
+
+| fetch                                                                                                                                                                                                                                                  | fetch                                                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ao usar `git fetch`, você está adicionando alterações do repositório remoto ao branch de trabalho local sem fazer commit delas. Ao contrário de `git pull`, a busca permite que você revise as alterações antes de fazer commit delas no branch local. | When you use `git fetch`, you're adding changes from the remote repository to your local working branch without committing them. Unlike `git pull`, fetching allows you to review changes before committing them to your local branch. |
+
+
+
 ## following (users)
 
 To get notifications about another user's contributions and activity.
@@ -297,6 +335,19 @@ A Git push that overwrites the remote repository with local changes without rega
 
 A fork is a personal copy of another user's repository that lives on your account. Forks allow you to freely make changes to a project without affecting the original upstream repository. You can also open a pull request in the upstream repository and keep your fork synced with the latest changes since both repositories are still connected.
 
+## fork
+
+Uma bifurcação é uma cópia do repositório de outro usuário que está em sua conta. Os forks permitem que você faça alterações livremente em um projeto sem afetar o repositório upstream original. Você também pode abrir uma solicitação pull no repositório upstream e manter o fork sincronizado com as alterações mais recentes, pois os dois repositórios ainda estão conectados.
+
+
+
+## fork
+
+| fork                                                                                                                                                                                                                                                                                                                                                                                  | fork                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Uma bifurcação é uma cópia do repositório de outro usuário que está em sua conta. Os forks permitem que você faça alterações livremente em um projeto sem afetar o repositório upstream original. Você também pode abrir uma solicitação pull no repositório upstream e manter o fork sincronizado com as alterações mais recentes, pois os dois repositórios ainda estão conectados. | A fork is a personal copy of another user's repository that lives on your account. Forks allow you to freely make changes to a project without affecting the original upstream repository. You can also open a pull request in the upstream repository and keep your fork synced with the latest changes since both repositories are still connected. |
+
+
 ## Free plan
 
 A user account billing plan that is free. Users can collaborate on unlimited public repositories with unlimited collaborators.
@@ -305,9 +356,14 @@ A user account billing plan that is free. Users can collaborate on unlimited pub
 
 A gist is a shareable file that you can edit, clone, and fork on GitHub. You can make a gist public or secret, although secret gists will be available to anyone with the URL.
 
+
+
 ## Git
 
-Git is an open source program for tracking changes in text files. It was written by the author of the Linux operating system, and is the core technology that GitHub, the social and user interface, is built on top of.
+| Git                                                                                                                                                                                                                                           | Git                                                                                                                                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| O Git é um programa de código aberto para acompanhamento de alterações em arquivos de texto. Ele foi escrito pelo autor do sistema operacional Linux e é a principal tecnologia na qual o GitHub, a interface social e do usuário, se baseia. | Git is an open source program for tracking changes in text files. It was written by the author of the Linux operating system, and is the core technology that GitHub, the social and user interface, is built on top of. |
+
 
 ## gitfile
 
@@ -469,6 +525,19 @@ A notification sent to a user by prefacing their username with the @ symbol. Use
 
 Merging takes the changes from one branch (in the same repository or from a fork), and applies them into another. This often happens as a "pull request" (which can be thought of as a request to merge), or via the command line. A merge can be done through a pull request via the GitHub.com web interface if there are no conflicting changes, or can always be done via the command line.
 
+## mesclar
+
+O merge pega as alterações de um branch (no mesmo repositório ou a partir de uma bifurcação) e as aplica em outro. Normalmente, isso ocorre por meio de uma "solicitação de pull" (que pode ser considerada uma solicitação de mesclagem) ou por meio da linha de comando. Uma mesclagem pode ser feita por meio de uma solicitação de pull pela interface da Web GitHub.com se não há alterações conflitantes ou sempre pode ser feita por meio da linha de comando.
+
+
+## merge
+
+| mesclar                                                                                                                                                                                                                                                                                                                                                                                                                                                               | merge                                                                                                                                                                                                                                                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| O merge pega as alterações de um branch (no mesmo repositório ou a partir de uma bifurcação) e as aplica em outro. Normalmente, isso ocorre por meio de uma "solicitação de pull" (que pode ser considerada uma solicitação de mesclagem) ou por meio da linha de comando. Uma mesclagem pode ser feita por meio de uma solicitação de pull pela interface da Web GitHub.com se não há alterações conflitantes ou sempre pode ser feita por meio da linha de comando. | Merging takes the changes from one branch (in the same repository or from a fork), and applies them into another. This often happens as a "pull request" (which can be thought of as a request to merge), or via the command line. A merge can be done through a pull request via the GitHub.com web interface if there are no conflicting changes, or can always be done via the command line. |
+
+
+
 ## merge conflict
 
 A difference that occurs between merged branches. Merge conflicts happen when people make different changes to the same line of the same file, or when one person edits a file and another person deletes the same file. The merge conflict must be resolved before you can merge the branches.
@@ -601,6 +670,20 @@ A public repository can be viewed by anyone, including people who aren't GitHub 
 
 Pull refers to when you are fetching in changes and merging them. For instance, if someone has edited the remote file you're both working on, you'll want to pull in those changes to your local copy so that it's up to date. See also [fetch](#fetch).
 
+## pull
+
+Pull refere-se a quando você busca alterações e as mescla. Por exemplo, se alguém editou o arquivo remoto no qual vocês dois estão trabalhando, o ideal é fazer pull dessas alterações na cópia local para que ele fique atualizado. Confira também [fetch](#fetch).
+
+
+## pull
+
+| pull                                                                                                                                                                                                                                                                 | pull                                                                                                                                                                                                                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pull refere-se a quando você busca alterações e as mescla. Por exemplo, se alguém editou o arquivo remoto no qual vocês dois estão trabalhando, o ideal é fazer pull dessas alterações na cópia local para que ele fique atualizado. Confira também [fetch](#fetch). | Pull refers to when you are fetching in changes and merging them. For instance, if someone has edited the remote file you're both working on, you'll want to pull in those changes to your local copy so that it's up to date. See also [fetch](#fetch). |
+
+
+
+
 ## pull access
 
 A synonym for read access.
@@ -623,7 +706,10 @@ A repository graph that shows the frequency of updates to a repository based on 
 
 ## push
 
-To push means to send your committed changes to a remote repository on GitHub.com. For instance, if you change something locally, you can push those changes so that others may access them.
+| efetuar push                                                                                                                                                                                                                          | push                                                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enviar por push significa enviar as alterações confirmadas para um repositório remoto no GitHub.com. Por exemplo, se você alterar algo localmente, poderá enviar por push essas alterações para que outras pessoas possam acessá-las. | To push means to send your committed changes to a remote repository on GitHub.com. For instance, if you change something locally, you can push those changes so that others may access them. |
+
 
 ## push a branch
 
@@ -669,9 +755,14 @@ The place where your code is stored: a repository on GitHub, another user's fork
 
 A GitHub Enterprise instance that provides redundancy for the primary GitHub Enterprise instance.
 
+
+
 ## repository
 
-A repository is the most basic element of GitHub. They're easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private.
+| Repositório                                                                                                                                                                                                                                                                                                              | Repository                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Um repositório é o elemento mais básico do GitHub. É mais fácil imaginá-lo como uma pasta de projetos. Um repositório contém todos os arquivos de projeto (incluindo a documentação) e armazena o histórico de revisão de cada arquivo. Os repositórios podem ter vários colaboradores e podem ser públicos ou privados. | A repository is the most basic element of GitHub. They're easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private. |
+
 
 ## repository cache
 

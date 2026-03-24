@@ -201,3 +201,39 @@ import {DevToolsv2} from '@site/src/components/InstructionsSite';
 <!-- List of Dev Tools -->
 <DevToolsv2 />
 
+## LabFromTemplate
+
+import LabFromTemplate from "@site/src/components/LabFromTemplate";
+
+```bash
+import LabFromTemplate from "@site/src/components/LabFromTemplate";
+```
+
+### LAB00
+```md
+<!-- Criar repositório no GitHub com base no template do laboratório -->
+<LabFromTemplate labNumber="LAB00" />
+```
+
+<LabFromTemplate labNumber="LAB00" />
+
+---
+
+## LabFromScratch
+
+import LabFromScratch from "@site/src/components/LabFromScratch";
+
+```bash
+import LabFromScratch from "@site/src/components/LabFromScratch";
+```
+
+
+### LAB00
+```md
+<!-- Criar repositório no GitHub com base no comando -->
+<LabFromScratch repoName="LAB00" opts="--add-readme -c -l mit -g C"/>
+```
+
+<LabFromScratch repoName="LAB00" opts="--add-readme -c -l mit -g C"/>
+
+---

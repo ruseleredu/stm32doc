@@ -47,3 +47,30 @@ export function EaDIncomplete() {
     );
 }
 
+
+// import {UserStatus} from '@site/src/components/AvisosSite';
+// <UserStatus status="online" />
+export function UserStatus({ status }) {
+    let statusMessage;
+
+    switch (status) {
+        case 'online':
+            statusMessage = <p style={{ color: 'green' }}>🟢 User is online.</p>;
+            break;
+        case 'offline':
+            statusMessage = <p style={{ color: 'red' }}>🔴 User is offline.</p>;
+            break;
+        case 'away':
+            statusMessage = <p style={{ color: 'orange' }}>🟠 User is away.</p>;
+            break;
+        default:
+            statusMessage = <p>🟡 Status is unknown.</p>;
+    }
+
+    return (
+        <div>
+            <h3>Current Status:</h3>
+            {statusMessage}
+        </div>
+    );
+}

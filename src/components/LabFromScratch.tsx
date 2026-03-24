@@ -28,19 +28,22 @@ export default function LabFromScratch({ repoName, opts = "" }) {
             {groups.map((group) => (
                 <TabItem key={group} value={group.toLowerCase()} label={group}>
                     <ul>
-                        <li><b>Grupo S22-{group}:</b> <a href={`https://github.com/ELT73A-S22-2025-2-${group}`} target="_blank" rel="noopener noreferrer">
-                            https://github.com/ELT73A-S22-2025-2-{group}
+                        <li><b>Grupo S22-{group}:</b> <a href={`https://github.com/ELT73A-S22-2026-1-${group}`} target="_blank" rel="noopener noreferrer">
+                            https://github.com/ELT73A-S22-2026-1-{group}
                         </a> </li>
                     </ul>
-
+                    <p>Use o comando abaixo para criar o repositório no GitHub:</p>
                     <ThemeCodeBlock className="language-bash">
-                        gh repo create ELT73A-S22-2025-2-{group}/{repoName} {opts}
+                        gh repo create ELT73A-S22-2026-1-{group}/{repoName} {opts}
                     </ThemeCodeBlock>
-
+                    <p>Visualize o repositório:</p>
                     <ThemeCodeBlock className="language-bash">
-                        gh repo view ELT73A-S22-2025-2-{group}/{repoName} --web
+                        gh repo view ELT73A-S22-2026-1-{group}/{repoName} --web
                     </ThemeCodeBlock>
-
+                    <p>Abra o repositório clonado no VS Code:</p>
+                    <ThemeCodeBlock className="language-bash">
+                        code {repoName} --profile "STM32"
+                    </ThemeCodeBlock>
                 </TabItem>
             ))}
         </Tabs>

@@ -43,6 +43,10 @@ export default function LabFromTemplate({ labNumber, opts = "" }) {
                         <ThemeCodeBlock className="language-bash">
                             gh repo create ELT73A-S22-2026-1-{group}/{labNumber} --private -p ELT73A-LAB-TPL/{labNumber} {opts}
                         </ThemeCodeBlock>
+                        <p>Visualize o repositório:</p>
+                        <ThemeCodeBlock className="language-bash">
+                            gh repo view ELT73A-S22-2026-1-{group}/{labNumber} --web
+                        </ThemeCodeBlock>
                         <p>Abra o repositório clonado no VS Code:</p>
                         <ThemeCodeBlock className="language-bash">
                             code {labNumber} --profile "STM32"

@@ -12,16 +12,13 @@ import Link from '@docusaurus/Link';
 <Link to="/docs/stm32cubeclt">STM32CubeCLT</Link>
 <Link to="/docs/stm32cubeprg">STM32CubeProg</Link>
 <Link to="/docs/stm32cubemon">STM32CubeMonitor</Link>
-
 <Link to="/docs/stm32cubeide">STM32CubeIDE</Link>
-
 <Link to="/docs/git">git</Link>
 <Link to="/docs/github-cli">GitHub CLI</Link>
 <Link to="/docs/vs-code">Visual Studio Code</Link>
-
-
 <Link to="/docs/stm32cubetools">STM32Cube Tools</Link>
 */
+
 // import {VerifyDev1} from '@site/src/components/InstructionsSite';
 // <!-- Verifique o seu ambiente dev, git, gh e code -->
 // <VerifyDev1 />
@@ -146,8 +143,6 @@ export function GitConfig() {
     );
 }
 
-
-
 // import {STM32Tools} from '@site/src/components/InstructionsSite';
 // <!-- List of STM32Cube Tools -->
 // <STM32Tools />
@@ -193,7 +188,6 @@ export function STM32Tools() {
     );
 }
 
-
 // import {STM32Toolsv2} from '@site/src/components/InstructionsSite';
 // <!-- List of STM32Cube Tools -->
 // <STM32Toolsv2 />
@@ -231,7 +225,6 @@ export function STM32Toolsv2() {
         </Tabs>
     );
 }
-
 
 // import {STM32ToolsFull} from '@site/src/components/InstructionsSite';
 // <!-- List of STM32Cube Tools -->

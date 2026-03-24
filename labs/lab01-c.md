@@ -1,6 +1,8 @@
 ---
-title: Laboratório 01 - C
+title: Laboratório 01 - draft
 description: Uso e setup do C
+hide_title: true
+draft: true  # <--- Use this key
 ---
 
 import Tabs from "@theme/Tabs";

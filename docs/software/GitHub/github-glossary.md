@@ -143,7 +143,7 @@ Intervalo de tempo do seu plano de cobrança.
 
 ## clean
 
-Uma árvore de trabalho está limpa se ela corresponder à revisão referenciada pelo HEAD atual. Confira também [sujo](#dirty).
+Uma árvore de trabalho está limpa se ela corresponder à revisão referenciada pelo HEAD atual. Confira também [sujo](https://docs.github.com/pt/get-started/learning-about-github/github-glossary#dirty).
 
 ## clone
 
@@ -543,7 +543,7 @@ Alguém que gerencia um repositório. Essa pessoa pode ajudar na triagem de prob
 
 ## marcar
 
-Uma verificação é um tipo de verificação de status no GitHub. Confira [Verificações de status](#status-checks).
+Uma verificação é um tipo de verificação de status no GitHub. Confira [Verificações de status](https://docs.github.com/en/get-started/learning-about-github/github-glossary#status-checks).
 
 ## Markdown
 

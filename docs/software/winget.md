@@ -7,6 +7,8 @@ slug: /winget
 
 ## Use WinGet to install and manage applications
 
+[WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget/) is a command line tool enabling users to discover, install, upgrade, remove and configure applications on Windows 10, Windows 11, and Windows Server 2025 computers. This tool is the client interface to the Windows Package Manager service.
+
 O programa utilitário de linha de comando winget permite instalar aplicativos e outros pacotes a partir da linha de comando.
 
 :::note

@@ -411,4 +411,30 @@ export function DevToolsv2() {
     );
 }
 
-
+// import {GitLogOut} from '@site/src/components/InstructionsSite';
+// <!-- Logout do seu ambiente dev, git e gh -->
+// <GitLogOut />
+export function GitLogOut() {
+    return (
+        <div>
+            <Details summary={<summary>Faça Logout do seu ambiente de desenvolvimento!</summary>}>
+                <p>Para o <Link to="/docs/git">git</Link> "esquecer" suas informações salvas:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git credential-manager erase
+                </ThemeCodeBlock>
+                <p>Ou liste suas credenciais:</p>
+                <ThemeCodeBlock className="language-bash">
+                    cmdkey /list | findstr "github"
+                </ThemeCodeBlock>
+                <p>Exclua a credencial:</p>
+                <ThemeCodeBlock className="language-bash">
+                    cmdkey /delete:git:https://github.com
+                </ThemeCodeBlock>
+                <p>Logout do <Link to="/docs/github-cli">GitHub CLI</Link>:</p>
+                <ThemeCodeBlock className="language-bash">
+                    gh auth logout
+                </ThemeCodeBlock>
+            </Details>
+        </div >
+    );
+}

@@ -105,6 +105,25 @@ import {GitConfig} from '@site/src/components/InstructionsSite';
 
 ---
 
+
+### GitLogOut
+
+```bash
+import {GitLogOut} from '@site/src/components/InstructionsSite';
+```
+
+import {GitLogOut} from '@site/src/components/InstructionsSite';
+
+```md
+<!-- Logout do seu ambiente dev, git e gh -->
+<GitLogOut />
+```
+
+<!-- Logout do seu ambiente dev, git e gh -->
+<GitLogOut />
+
+---
+
 ### STM32Tools
 
 ```bash
@@ -181,3 +200,4 @@ import {DevToolsv2} from '@site/src/components/InstructionsSite';
 
 <!-- List of Dev Tools -->
 <DevToolsv2 />
+

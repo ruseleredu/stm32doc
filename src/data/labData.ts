@@ -22,7 +22,7 @@ export const labData: LabRow[] = [
         hrefi: "/labs/lab00", // internal page
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1748058", // external
 
-        templateLabel: "Template 00",
+        templateLabel: "TPL00",
         templateHrefi: "/tpls/tpl00",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB00",
 
@@ -34,7 +34,7 @@ export const labData: LabRow[] = [
         tarefa: "LAB01",
         hrefi: "/labs/lab01",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1948813", // external
-        templateLabel: "Template 01",
+        templateLabel: "TPL01",
         templateHrefi: "/tpls/tpl01",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB01",
 
@@ -47,7 +47,7 @@ export const labData: LabRow[] = [
         hrefi: "/labs/lab02",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1761057", // external
 
-        templateLabel: "Template 02",
+        templateLabel: "TPL02",
         templateHrefi: "/tpls/tpl02",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB02",
 
@@ -59,7 +59,7 @@ export const labData: LabRow[] = [
         tarefa: "LAB03",
         hrefi: "/labs/lab03",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1769726", // external
-        templateLabel: "Template 03",
+        templateLabel: "TPL03",
         templateHrefi: "/tpls/tpl03",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB03",
 
@@ -71,7 +71,7 @@ export const labData: LabRow[] = [
         tarefa: "LAB04",
         hrefi: "/labs/lab04",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1770581", // external
-        templateLabel: "Template 04",
+        templateLabel: "TPL04",
         templateHrefi: "/tpls/tpl04",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB04",
 
@@ -83,7 +83,7 @@ export const labData: LabRow[] = [
         tarefa: "LAB05",
         hrefi: "/labs/lab05",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1773187", // external
-        templateLabel: "Template 05",
+        templateLabel: "TPL05",
         templateHrefi: "/tpls/tpl05",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB05",
 
@@ -95,7 +95,7 @@ export const labData: LabRow[] = [
         tarefa: "LAB06",
         hrefi: "/labs/lab06",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1776628", // external
-        templateLabel: "Template 06",
+        templateLabel: "TPL06",
         templateHrefi: "/tpls/tpl06",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB06",
 
@@ -107,7 +107,7 @@ export const labData: LabRow[] = [
         tarefa: "LAB07",
         hrefi: "/labs/lab07",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1782502", // external
-        templateLabel: "Template 07",
+        templateLabel: "TPL07",
         templateHrefi: "/tpls/tpl07",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB07",
 
@@ -119,7 +119,7 @@ export const labData: LabRow[] = [
         tarefa: "LAB08",
         hrefi: "/labs/lab08",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1783994", // external
-        templateLabel: "Template 08",
+        templateLabel: "TPL08",
         templateHrefi: "/tpls/tpl08",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB08",
 
@@ -131,7 +131,7 @@ export const labData: LabRow[] = [
         tarefa: "LAB09",
         hrefi: "/labs/lab09",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1889891", // external
-        templateLabel: "Template 09",
+        templateLabel: "TPL09",
         templateHrefi: "/tpls/tpl09",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB09",
 
@@ -143,7 +143,7 @@ export const labData: LabRow[] = [
         tarefa: "LAB10",
         hrefi: "/labs/lab10",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1889891", // external
-        templateLabel: "Template 10",
+        templateLabel: "TPL10",
         templateHrefi: "/tpls/tpl10",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB10",
 
@@ -155,7 +155,7 @@ export const labData: LabRow[] = [
         tarefa: "LAB11",
         hrefi: "/labs/lab11",
         hrefe: "https://moodle.utfpr.edu.br/mod/assign/view.php?id=1889891", // external
-        templateLabel: "Template 11",
+        templateLabel: "TPL11",
         templateHrefi: "/tpls/tpl11",
         templateHrefe: "https://github.com/ELT73A-LAB-TPL/LAB11",
 

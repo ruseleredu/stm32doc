@@ -13,49 +13,6 @@ import GroupTable from '@site/src/components/GroupTable';
 ## Tabela dos LABs com links externos 
 <LabTable internal={false} />
 
-
-## Aulas de Laboratório (LABs) TODO
-
-| LABs                 | start/open  | end/close   | Conteúdo                                                        |
-| -------------------- | ----------- | ----------- | --------------------------------------------------------------- |
-| [LAB00](/labs/lab00) | 18-Aug-2025 | 25-Aug-2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
-| [LAB01](/labs/lab01) | 25-Aug-2025 | 01-Sep-2025 | Revisão da programação em C;                                    |
-| [LAB02](/labs/lab02) | 01-Sep-2025 | 08-Sep-2025 | Processo de compilação, gravação e commit de código;            |
-| [LAB03](/labs/lab03) | 15-Sep-2025 | 22-Sep-2025 | Interrupções via GPIO e Temporizadores (Timers);                |
-| [LAB04](/labs/lab04) | 22-Sep-2025 | 29-Sep-2025 | Módulo PWM; Conversor ADC;                                      |
-| [LAB05](/labs/lab05) | 29-Sep-2025 | 06-Oct-2025 | DMA: Direct memory access (Acesso direto à memória);            |
-| [LAB06](/labs/lab06) | 06-Oct-2025 | 13-Oct-2025 | Uso do STM32CubeMonitor; Visualização de variáveis;             |
-| [LAB07](/labs/lab07) | 13-Oct-2025 | 20-Oct-2025 | Uso do STM32CubeMonitor; MQTT, IoT;                             |
-|                      | 20-Oct-2025 | 27-Oct-2025 | Realização do SEI-SICITE 2025 no Campus Curitiba;               |
-| [LAB08](/labs/lab08) | 03-Nov-2025 | 10-Nov-2025 | Uso do STM32CubeMonitor; InfluDB;                               |
-| [LAB09](/labs/lab09) | 10-Nov-2025 | 17-Nov-2025 | Introdução ao FreeRTOS;                                         |
-|                      | 17-Nov-2025 | 24-Nov-2025 | Desenvolvimento do Projeto Final;                               |
-|                      | 24-Nov-2025 | 01-Dec-2025 | Desenvolvimento do Projeto Final;                               |
-|                      | 01-Dec-2025 | 08-Dec-2025 | Desenvolvimento do Projeto Final;                               |
-|                      | 08-Dec-2025 | 15-Dec-2025 | Desenvolvimento do Projeto Final;                               |
-|                      | 15-Dec-2025 | 22-Dec-2025 | Fechamento da disciplina;                                       |
-
-## Atividades Assíncronas (EaD) TODO
-
-| quiz                | start/open  | end/close   | description                                                     |
-| ------------------- | ----------- | ----------- | --------------------------------------------------------------- |
-|                     | 18-Aug-2025 | 25-Aug-2025 | Apresentação da Disicplina; Materiais utilizados na disciplina; |
-| [Q01](/quiz/quiz01) | 25-Aug-2025 | 01-Sep-2025 | Revisão da programação em C;                                    |
-| [Q02](/quiz/quiz02) | 01-Sep-2025 | 08-Sep-2025 | Processo de compilação, gravação e commit de código;            |
-| [Q03](/quiz/quiz03) | 15-Sep-2025 | 22-Sep-2025 | Interrupções via GPIO e Temporizadores (Timers);                |
-| [Q04](/quiz/quiz04) | 22-Sep-2025 | 29-Sep-2025 | Módulo PWM; Conversor ADC;                                      |
-| [Q05](/quiz/quiz05) | 29-Sep-2025 | 06-Oct-2025 | DMA: Direct memory access (Acesso direto à memória);            |
-| [Q06](/quiz/quiz06) | 06-Oct-2025 | 13-Oct-2025 | Uso do STM32CubeMonitor; Visualização de variáveis;             |
-| [Q07](/quiz/quiz07) | 13-Oct-2025 | 20-Oct-2025 | Uso do STM32CubeMonitor; MQTT, IoT;                             |
-|                     | 20-Oct-2025 | 27-Oct-2025 | Realização do SEI-SICITE 2025 no Campus Curitiba;               |
-| [Q08](/quiz/quiz08) | 03-Nov-2025 | 10-Nov-2025 | Uso do STM32CubeMonitor; InfluDB;                               |
-| [Q09](/quiz/quiz09) | 10-Nov-2025 | 17-Nov-2025 | Introdução ao FreeRTOS;                                         |
-| [Q10](/quiz/quiz10) | 17-Nov-2025 | 24-Nov-2025 | Desenvolvimento do Projeto Final;                               |
-|                     | 24-Nov-2025 | 01-Dec-2025 | Desenvolvimento do Projeto Final;                               |
-|                     | 01-Dec-2025 | 08-Dec-2025 | Desenvolvimento do Projeto Final;                               |
-|                     | 08-Dec-2025 | 15-Dec-2025 | Desenvolvimento do Projeto Final;                               |
-|                     | 15-Dec-2025 | 22-Dec-2025 | Fechamento da disciplina;                                       |
-
 --- 
 
 | quiz | start/open  | end/close            | description                                                                        |
@@ -123,16 +80,6 @@ import GroupTable from '@site/src/components/GroupTable';
 | ELT73A-S22 | 06-07-2026  | 20:20 | 23:00 | Desenvolvimento do Projeto Final;                                                  |
 | ELT73A-S22 | 13-07-2026  | 20:20 | 23:00 | Fechamento da disciplina;                                                          |
 
-
-## Calendário Acadêmico de 2026
-
-[Calendário Acadêmico de 2026](/pdf/CT2026.pdf)
-
-![Calendário Acadêmico de 2026](/img/CT2026.png)
-
-## Organizações
-
-<GroupTable semester="2026-1" />
 
 ## Projeto Final
 

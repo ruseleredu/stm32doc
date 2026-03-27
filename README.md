@@ -21,7 +21,9 @@ npm install --save @docusaurus/theme-mermaid
 npm install --save remark-math@6 rehype-katex@7
 ```
 
-Emoji
+[Emoji](https://www.npmjs.com/package/remark-emoji)
+
+- https://emojidb.org/remark-emojis
 
 ```bash
 npm install remark-emoji

@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const GITHUB_EMOJI_API = 'https://api.github.com/emojis';
-const OUTPUT_FILE = path.join(process.cwd(), 'docs', 'emojis.mdx');
+const OUTPUT_FILE = path.join(process.cwd(), 'docs/tutorial-basics', 'emojis.mdx');
 
 async function run() {
     try {
@@ -15,13 +15,13 @@ async function run() {
 
         const header = [
             '---',
-            'title: Emoji Reference',
-            'sidebar_label: 🎭 Emoji List',
+            'title: GitHub Emoji Reference',
+            'sidebar_label: 🎭 GitHub Emoji List',
             '---',
             '',
             "import EmojiTable from '@site/src/components/EmojiTable';",
             '',
-            '# 🎭 Emoji Reference',
+            '# 🎭 GitHub Emoji Reference',
             '',
             ':::info',
             'Click any shortcode or icon to copy it to your clipboard!',

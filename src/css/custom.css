@@ -61,3 +61,22 @@
 .emoji-search-container tr {
   transition: opacity 0.1s ease-in-out;
 }
+
+.emoji-search-container input {
+  position: sticky;
+  top: calc(
+    var(--ifm-navbar-height) + 1rem
+  ); /* Sits below the Docusaurus navbar */
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add a fade to the rows for a smoother feel */
+.emoji-table-container tr {
+  transition: opacity 0.2s ease;
+}
+
+.emoji-table-container td {
+  padding: 12px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}

@@ -33,3 +33,21 @@
 .footer__link-item svg {
   display: none;
 }
+
+.emoji-table-container table {
+  display: table;
+  width: 100%;
+}
+
+.emoji-table-container td {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.emoji-table-container td:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.emoji-table-container code {
+  user-select: all;
+}

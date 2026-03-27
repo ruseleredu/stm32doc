@@ -5,6 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 /* Enabling math equations */
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import remarkEmoji from 'remark-emoji'; // enable emoji shortcodes (like :rocket:)
 
 import footer from "./footer";
 import navbarItems from "./navbar"; // Import your new navbar file
@@ -75,6 +76,7 @@ const config: Config = {
           editUrl: "https://github.com/ruseleredu/stm32doc/edit/main/",
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
+          beforeDefaultRemarkPlugins: [remarkEmoji], // enable emoji shortcodes (like :rocket:)
         },
         blog: {
           showReadingTime: true,
@@ -107,6 +109,7 @@ const config: Config = {
         sidebarPath: require.resolve("./sidebarslabs.js"), // Separate sidebar for LAB docs
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
+        beforeDefaultRemarkPlugins: [remarkEmoji], // enable emoji shortcodes (like :rocket:)
         // ... other options specific to your API docs
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
@@ -122,6 +125,7 @@ const config: Config = {
         sidebarPath: require.resolve("./sidebarsquiz.js"), // Separate sidebar for Quiz docs
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
+        beforeDefaultRemarkPlugins: [remarkEmoji], // enable emoji shortcodes (like :rocket:)
         // ... other options specific to your API docs
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
@@ -135,6 +139,9 @@ const config: Config = {
         path: "projects", // Path to your API docs folder
         routeBasePath: "projects", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarsproj.js"), // Separate sidebar for Quiz docs
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+        beforeDefaultRemarkPlugins: [remarkEmoji], // enable emoji shortcodes (like :rocket:)
         // ... other options specific to your API docs
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,

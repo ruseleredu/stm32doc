@@ -21,6 +21,12 @@ npm install --save @docusaurus/theme-mermaid
 npm install --save remark-math@6 rehype-katex@7
 ```
 
+Emoji
+
+```bash
+npm install remark-emoji
+```
+
 ## Clone repo
 
 ```bash
@@ -85,3 +91,4 @@ node scripts/check-groups.js 2026-1
 ```bash
 node scripts/check-groups.js 2025-2
 ```
+

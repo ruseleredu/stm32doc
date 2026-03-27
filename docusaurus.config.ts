@@ -155,6 +155,9 @@ const config: Config = {
         path: "tpls", // Path to your API docs folder
         routeBasePath: "tpls", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarstpls.js"), // Separate sidebar for Quiz docs
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+        beforeDefaultRemarkPlugins: [remarkEmoji], // enable emoji shortcodes (like :rocket:)
         // ... other options specific to your API docs
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,

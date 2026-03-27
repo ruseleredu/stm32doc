@@ -51,3 +51,13 @@
 .emoji-table-container code {
   user-select: all;
 }
+
+.emoji-search-container input:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+}
+
+.emoji-search-container tr {
+  transition: opacity 0.1s ease-in-out;
+}

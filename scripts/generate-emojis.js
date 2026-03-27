@@ -23,16 +23,18 @@ async function run() {
             '',
             '# 🎭 Emoji Reference',
             '',
-            'Click an icon to copy the emoji or click the name to copy the shortcode.',
+            ':::info',
+            'Click any shortcode or icon to copy it to your clipboard!',
+            ':::',
             '',
             '<EmojiTable>',
             '',
-            '| Icon | Name | URL (for reference) |',
-            '| :---: | :--- | :--- |',
+            '| Icon | Shortcode |',
+            '| :---: | :--- |',
         ].join('\n');
 
         const rows = names
-            .map((name) => `| <img src="${emojis[name]}" width="25" /> | \`${name}\` | [link](${emojis[name]}) |`)
+            .map((name) => `| :${name}: | \`:${name}:\` |`)
             .join('\n');
 
         fs.writeFileSync(OUTPUT_FILE, header + '\n' + rows + '\n\n</EmojiTable>');

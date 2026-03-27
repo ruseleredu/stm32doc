@@ -100,7 +100,7 @@ Arquiteturas computacionais; Programação de Microcontroladores; Operações de
 
 [Calendário Acadêmico de 2026](/pdf/CT2026.pdf)
 
-## Referências
+## Referências 
 
 - Git SCM: https://git-scm.com/downloads
 - GitHub Desktop: https://desktop.github.com/download/

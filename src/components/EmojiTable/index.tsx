@@ -16,7 +16,7 @@ export default function EmojiTable({ children }) {
             <table onClick={(e) => {
                 const target = e.target as HTMLElement;
 
-                // If they click the image, copy the image source/URL 
+                // If they click the image, copy the image source/URL
                 if (target.tagName === 'IMG') {
                     const src = (target as HTMLImageElement).src;
                     copyToClipboard(src, "URL");

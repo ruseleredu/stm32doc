@@ -8,7 +8,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsApoio} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
+import {DevToolsv2,GitConfig,STM32Toolsv2} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 02
@@ -29,7 +29,6 @@ Processo de compilação, gravação e commit de código;
 
 - [ ] Crie uma conta no [my.st.com](https://www.st.com/content/st_com/en/user-registration.html);
 - [ ] Instale o [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html#get-software);
-- [ ] Instale o [STM32CubeCLT](https://www.st.com/en/development-tools/stm32cubeclt.html#get-software);
 - [ ] Instale o [ST-MCU-Finder](https://www.st.com/en/development-tools/st-mcu-finder-pc.html#get-software);
 - [ ] Instale o [STM32CubeProg](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software);
 - [ ] Crie um perfil no Visual Studio Code chamado `STM32`;
@@ -41,7 +40,7 @@ Processo de compilação, gravação e commit de código;
 ## Verifique o seu ambiente de desenvolvimento
 
 <!-- List of Dev Tools -->
-<DevTools />
+<DevToolsv2 />
 
 <!-- Configure o git -->
 <GitConfig />
@@ -49,7 +48,7 @@ Processo de compilação, gravação e commit de código;
 ---
 
 <!-- List of STM32Cube Tools -->
-<STM32Tools />
+<STM32Toolsv2 />
 
 ## Crie um novo repositório com base no template do LAB02
 

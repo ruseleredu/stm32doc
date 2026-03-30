@@ -8,7 +8,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsApoio} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {VerifyDev1,VerifyDev2,GitConfig,STM32Tools,DevToolsv2} from '@site/src/components/InstructionsSite';
+import {VerifyDev1,VerifyDev2,GitConfig,STM32Toolsv2,DevToolsv2} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 01

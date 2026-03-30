@@ -1,6 +1,6 @@
 ---
 id: my-hidden-page
-title: Secret Page
+title: ㊙️ Secret Page
 #hide_title: true
 #draft: true  # <--- Use this key
 ---

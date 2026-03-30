@@ -1,5 +1,5 @@
 ---
-title:  Adding Glossary to Docusaurus
+title: 🧮 Adding Glossary to Docusaurus
 
 ---
 

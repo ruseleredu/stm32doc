@@ -1,6 +1,6 @@
 ---
 id: vscode-setup
-title: How to Setup VScode for Docusausrus
+title: 🚀 How to Setup VScode for Docusausrus
 slug: /vscode-setup
 ---
 

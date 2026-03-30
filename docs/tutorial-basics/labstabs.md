@@ -1,6 +1,6 @@
 ---
 id: components-showcase
-title: Components Show Case
+title: 💼 Components Show Case
 slug: /components-showcase
 ---
 

@@ -51,3 +51,36 @@ If your commit is already on GitHub or a shared branch, do not use reset. Resett
 ```bash
 git revert HEAD
 ```
+
+## Git and GitHub LogOut
+
+### The Git Way (Recommended)
+Since Git usually handles these credentials, you can tell it to "forget" your stored information. Run this command in your terminal (Command Prompt, PowerShell, or Git Bash):
+
+```bash
+git credential-manager erase
+```
+
+After running this, type the following and press Enter (you may need to press `Ctrl+Z` or `Ctrl+D` to finish the command):
+```bash
+host=github.com
+protocol=https
+```
+This forces the manager to locate and delete the specific token associated with GitHub.
+
+### Using the Windows cmdkey (PowerShell/CMD)
+
+Windows has a built-in tool called cmdkey that interacts directly with the Windows Credential Manager.
+
+```bash
+cmdkey /list | findstr "github"
+```
+
+```bash
+cmdkey /delete:git:https://github.com
+```
+Using the GitHub CLI (gh)
+
+```bash
+gh auth logout
+```

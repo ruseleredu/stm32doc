@@ -111,6 +111,19 @@ code --list-extensions --profile "STM32"
 
 </details>
 
+## Diagrama de pinos do STM32F4x1
+
+---
+
+![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
+
+O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pinagem é descrita na figura a seguir.
+
+![ST-LINK/V2 Clone](/img/ST-LINK_V2_Clone_Header.png)
+
+---
+
+
 ## Como carregar um script do STM32CubeMX
 
 - https://www.st.com/resource/en/user_manual/um1718-stm32cubemx-for-stm32-configuration-and-initialization-c-code-generation-stmicroelectronics.pdf

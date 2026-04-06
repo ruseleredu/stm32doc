@@ -77,13 +77,11 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 ![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
 
----
-
 O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pinagem é descrita na figura a seguir.
 
 ![ST-LINK/V2 Clone](/img/ST-LINK_V2_Clone_Header.png)
 
-
+---
 
 
 ```c title="Core/Scr/main.c"

@@ -85,8 +85,11 @@ Esta atividade de laboratório tem como objetivo utilizar o STM32CubeMonitor. Ca
 
 ![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
 
----
+O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pinagem é descrita na figura a seguir.
 
+![ST-LINK/V2 Clone](/img/ST-LINK_V2_Clone_Header.png)
+
+---
 
 ## User Code
 ### Timer 2 com interrupção e saída PWM no canal 1

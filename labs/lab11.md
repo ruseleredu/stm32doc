@@ -1,7 +1,7 @@
 ---
 sidebar_position: 14
 title: Laboratório 11
-description: Introdução as aulas de laboratório
+description: Uso do display OLED SSD1306
 ---
 
 import Tabs from "@theme/Tabs";
@@ -110,12 +110,16 @@ Esta atividade de laboratório tem como objetivo utilizar o PlatformIO. Cada ite
 - [ ] Verificação do PLatformIO - 70%
 - [ ] Link do repositório no GitHub (hyperlink) - 10%
 
-
+  
 ## Diagrama de pinos do STM32F4x1
 
 ---
 
 ![STM32F4x1 microcontroller pinout diagram;](/img/MiniSTM32F4x1/STM32F4x1_PinoutDiagram_RichardBalint.png)
+
+O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pinagem é descrita na figura a seguir.
+
+![ST-LINK/V2 Clone](/img/ST-LINK_V2_Clone_Header.png)
 
 ---
 

@@ -1,0 +1,8 @@
+<map id="LL_PLL_ConfigSystemClock_HSI" name="LL_PLL_ConfigSystemClock_HSI">
+<area shape="rect" id="node1" title="This function configures system clock at maximum frequency with HSI as clock source of the PLL." alt="" coords="5,89,232,116"/>
+<area shape="rect" id="node2" href="$group__UTILS__LL__Private__Functions.html#ga320bd51e9a0bfdf2fa1da4a24bb05fc0" title="Function to enable PLL and switch system clock to PLL." alt="" coords="291,23,492,65"/>
+<area shape="rect" id="node5" href="$group__UTILS__LL__Private__Functions.html#gae40ed31572a8b64837e7f6d8eda0f4e2" title="Function to check that PLL can be modified." alt="" coords="280,89,503,116"/>
+<area shape="rect" id="node6" href="$group__UTILS__LL__Private__Functions.html#ga4242342336a76627fc39a7e145dbf3c7" title="Function to check that PLL can be modified." alt="" coords="322,140,461,167"/>
+<area shape="rect" id="node3" href="$group__UTILS__EF__SYSTEM.html#ga74f71dc4b93a3b99e5f9e042e85e2ce5" title="Update number of Flash wait states in line with new frequency and current voltage range." alt="" coords="565,5,715,32"/>
+<area shape="rect" id="node4" href="$group__UTILS__EF__SYSTEM.html#ga5af902d59c4c2d9dc5e189df0bc71ecd" title="This function sets directly SystemCoreClock CMSIS variable." alt="" coords="551,56,729,83"/>
+</map>

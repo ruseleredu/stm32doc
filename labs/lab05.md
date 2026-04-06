@@ -8,7 +8,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsApoio} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {DevToolsv2,GitConfig,STM32Toolsv2} from '@site/src/components/InstructionsSite';
+import {DevToolsv2,GitConfig,STM32Toolsv2,GitCommit} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 05
@@ -67,6 +67,9 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB05" opts="-c" />
 
+<!-- Git Commit -->
+<GitCommit />
+
 Carregue o script do STM32CubeMX com [LoadMX](/docs/loadmx)
 
 ```bash
@@ -84,29 +87,6 @@ O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pin
 ![ST-LINK/V2 Clone](/img/ST-LINK_V2_Clone_Header.png)
 
 ---
-
-
-## Como fazer commit da atualizações
-Verifique o status do repositório
-```bash
-git status
-```
-Adicione os arquivos modificados
-```bash
-git add .
-```
-Realize o commit das alterações
-```bash
-git commit -m "My message for this commit!"
-```
-Envie para o repositório remoto (GitHub)
-```bash
-git push
-```
-Vizualize o log de alterações
-```bash
-git log
-```
 
 ## User Code
 ### Timer 2 com interrupção e saída PWM no canal 1

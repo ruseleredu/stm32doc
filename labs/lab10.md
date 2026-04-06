@@ -9,7 +9,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsApoio} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {DevToolsv2,GitConfig,STM32Toolsv2} from '@site/src/components/InstructionsSite';
+import {DevToolsv2,GitConfig,STM32Toolsv2,GitCommit} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 10
@@ -58,6 +58,8 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB10" opts="-c" />
 
+<!-- Git Commit -->
+<GitCommit />
 
 ## Instruções do LAB - TODO
 

@@ -1,5 +1,5 @@
 ---
-title: Disciplina
+title: 🏛 Disciplina
 description: Introdução da disciplina.
 sidebar_label: "Disciplina"
 sidebar_position: 1

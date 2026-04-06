@@ -8,8 +8,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsApoio} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {VerifyDev1,VerifyDev2,GitConfig,STM32Toolsv2,DevToolsv2} from '@site/src/components/InstructionsSite';
+import {VerifyDev1,VerifyDev2,GitConfig,STM32Toolsv2,DevToolsv2,GitLogOut,GitCommit} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
+
 
 # Laboratório 01
 
@@ -51,7 +52,6 @@ Git e GitHub; Ambiente de desenvolvimento;
 <!-- Verifique o seu ambiente dev, git, gh e code -->
 <VerifyDev1 />
 
----
 
 ## Crie um novo repositório com base no template do LAB01
 
@@ -59,6 +59,9 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 
 <!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
 <LabFromTemplate labNumber="LAB01" opts="-c" />
+
+<!-- Git Commit -->
+<GitCommit />
 
 ## Git e GitHub
 
@@ -472,4 +475,6 @@ Esta atividade de laboratório tem como objetivo verificar a configuração adeq
 - [ ] Adicione o professor como membro da organização - 10%
 - [ ] Envie o link da organização e do repositório no GitHub (hyperlink) - 20%
 
-
+---
+<!-- Logout do seu ambiente dev, git e gh -->
+<GitLogOut />

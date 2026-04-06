@@ -464,6 +464,11 @@ export function GitCommit() {
                 <ThemeCodeBlock className="language-bash">
                     git log
                 </ThemeCodeBlock>
+
+                <p>Vizualize no GitHub:</p>
+                <ThemeCodeBlock className="language-bash">
+                    gh repo view --web
+                </ThemeCodeBlock>
             </Details>
         </div >
     );

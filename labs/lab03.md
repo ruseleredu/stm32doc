@@ -8,10 +8,11 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsApoio} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {DevToolsv2,GitConfig,STM32Toolsv2,GitCommit} from '@site/src/components/InstructionsSite';
+import {DevToolsv2,GitConfig,STM32Toolsv2,GitCommit,NewBranch} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 03
+
 
 <!-- Info de que este conteúdo é de apoio! -->
 <LABsApoio />
@@ -86,6 +87,57 @@ O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pin
 
 ---
 
+## Edite o seu código
+
+```c title="Core/Scr/main.c"
+int main(void)
+{
+
+  /* USER CODE BEGIN 1 */
+
+  /* USER CODE END 1 */
+
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* USER CODE BEGIN Init */
+
+  /* USER CODE END Init */
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+  /* USER CODE BEGIN SysInit */
+
+  /* USER CODE END SysInit */
+
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  /* USER CODE BEGIN 2 */
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+  }
+  /* USER CODE END 3 */
+}
+```
+
+---
+
+## Crie uma branch nova
+
+<!-- Como criar uma nova branch -->
+<NewBranch />
+
 
 ```c title="Core/Scr/main.c"
 /* Infinite loop */
@@ -128,7 +180,7 @@ while (1)
 /* USER CODE BEGIN WHILE */
 while (1)
 {
-  // highlight-begin
+  // highlight-start
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // LED ON
   HAL_Delay(100); /* Insert delay 100 ms */
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET); // LED OFF
@@ -144,7 +196,66 @@ while (1)
 ```
 
 
+### Toggle with HAL_GPIO_WritePin and HAL_Delay
+```c
+// Toggle built-in LED attached to PC13
+HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // LED ON
+HAL_Delay(100); /* Insert delay 100 ms */
+HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET); // LED OFF
+HAL_Delay(100); /* Insert delay 100 ms */
+```
 
+### Toggle with HAL_GPIO_TogglePin
+
+```c
+// Toggle built-in LED attached to PC13
+HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+HAL_Delay(100); /* Insert delay 100 ms */
+```
+
+### Toggle with HAL_GPIO_WritePin if Button is pressed
+```c
+// If Button Is Pressed
+if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0))
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET); // LED OFF
+else
+   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // LED ON
+```
+
+
+
+
+## Como carregar um script do STM32CubeMX
+
+Call for Help (--help, -h, /?)
+
+```bash
+LoadMX --help
+```
+
+Run [STM32CubeMX](/docs/stm32cubemx) interactively with [LoadMX](/docs/loadmx)
+
+```bash
+LoadMX -i
+```
+
+To generate a script
+
+```bash
+export script ScriptToLoad.txt
+```
+
+```bash
+LoadMX ProjectName FinalScript.txt
+```
+
+```bash
+code ProjectName --profile "STM32"
+```
+
+```bash
+code . --profile "STM32"
+```
 
 ## Referências
 - [MiniF4x1Cx_V31 SchDoc](/pdf/MiniF4x1Cx_V31.pdf)

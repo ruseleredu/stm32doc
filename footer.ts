@@ -185,6 +185,10 @@ const footer: ThemeConfig["footer"] = {
                     label: "STM32-base",
                     href: "https://stm32-base.org/",
                 },
+                {
+                    label: "STM32CubeF4",
+                    href: "https://github.com/STMicroelectronics/STM32CubeF4/",
+                },
             ],
         },
         {

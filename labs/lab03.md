@@ -104,6 +104,49 @@ while (1)
 ```
 
 
+
+```c title="Core/Scr/main.c"
+/* Infinite loop */
+/* USER CODE BEGIN WHILE */
+while (1)
+{
+  // highlight-next-line
+  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+  HAL_Delay(100); /* Insert delay 100 ms */
+  /* USER CODE END WHILE */
+
+  /* USER CODE BEGIN 3 */
+  // highlight-next-line
+  // Place your code HERE!
+}
+/* USER CODE END 3 */
+```
+
+
+```c title="Core/Scr/main.c"
+/* Infinite loop */
+/* USER CODE BEGIN WHILE */
+while (1)
+{
+  // highlight-begin
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // LED ON
+  HAL_Delay(100); /* Insert delay 100 ms */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET); // LED OFF
+  HAL_Delay(100); /* Insert delay 100 ms */
+  // highlight-end
+  /* USER CODE END WHILE */
+
+  /* USER CODE BEGIN 3 */
+  // highlight-next-line
+  // Place your code HERE!
+}
+/* USER CODE END 3 */
+```
+
+
+
+
 ## Referências
 - [MiniF4x1Cx_V31 SchDoc](/pdf/MiniF4x1Cx_V31.pdf)
 - [STM32F411xC Datasheet](/pdf/DS10314.pdf)
+- https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1

@@ -473,3 +473,62 @@ export function GitCommit() {
         </div >
     );
 }
+
+
+
+
+// import {NewBranch} from '@site/src/components/InstructionsSite';
+// <!-- Como criar uma nova branch -->
+// <NewBranch />
+export function NewBranch() {
+    return (
+        <div>
+            <Details summary={<summary>Como criar uma nova branch</summary>}>
+                <p>Verifique o status do repositório:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git status
+                </ThemeCodeBlock>
+
+                <p>Crie uma nova branch:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git branch new-feature
+                </ThemeCodeBlock>
+
+                <p>Altere para a nova branch:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git checkout new-feature
+                </ThemeCodeBlock>
+
+                <p>Mostra as branches:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git branch
+                </ThemeCodeBlock>
+
+                <p>Envie a nova branch para o repositório remoto:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git push --set-upstream origin new-feature
+                </ThemeCodeBlock>
+
+                <p>Compara as branches:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git diff main new-feature
+                </ThemeCodeBlock>
+
+                <p>Retorna para a branch principal:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git checkout main
+                </ThemeCodeBlock>
+
+                <p>Mescla a branch nova na branch principal:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git merge new-feature
+                </ThemeCodeBlock>
+
+                <p>Vizualize no GitHub:</p>
+                <ThemeCodeBlock className="language-bash">
+                    gh repo view --web
+                </ThemeCodeBlock>
+            </Details>
+        </div >
+    );
+}

@@ -8,7 +8,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {LABsApoio} from '@site/src/components/AvisosSite';
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {DevTools,GitConfig,STM32Tools} from '@site/src/components/InstructionsSite';
+import {DevToolsv2,GitConfig,STM32Toolsv2} from '@site/src/components/InstructionsSite';
 import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 07
@@ -40,7 +40,7 @@ Uso do STM32CubeMonitor; MQTT, IoT;
 ## Verifique o seu ambiente de desenvolvimento
 
 <!-- List of Dev Tools -->
-<DevTools />
+<DevToolsv2 />
 
 <!-- Configure o git -->
 <GitConfig />
@@ -48,7 +48,7 @@ Uso do STM32CubeMonitor; MQTT, IoT;
 ---
 
 <!-- List of STM32Cube Tools -->
-<STM32Tools />
+<STM32Toolsv2 />
 
 ## Crie um novo repositório com base no template do LAB07
 

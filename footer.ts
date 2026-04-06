@@ -178,7 +178,7 @@ const footer: ThemeConfig["footer"] = {
                     href: "https://stm32world.com/wiki/Main_Page",
                 },
                 {
-                    label: "ST STM32F411",
+                    label: "STM32F411",
                     href: "https://www.st.com/en/microcontrollers-microprocessors/stm32f411.html",
                 },
                 {

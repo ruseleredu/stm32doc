@@ -102,3 +102,8 @@ while (1)
 }
 /* USER CODE END 3 */
 ```
+
+
+## Referências
+- [MiniF4x1Cx_V31 SchDoc](/pdf/MiniF4x1Cx_V31.pdf)
+- [STM32F411xC Datasheet](/pdf/DS10314.pdf)

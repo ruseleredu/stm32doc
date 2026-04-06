@@ -28,3 +28,4 @@ git clone --depth 1 https://github.com/STMicroelectronics/stm32f4xx-hal-driver.g
 ```
 
 - [STM32F411xE User Manual](https://ruseleredu.github.io/stm32doc/doxygen/stm32f4xx/index.html)
+  

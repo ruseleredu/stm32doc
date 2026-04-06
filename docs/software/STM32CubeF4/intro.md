@@ -20,6 +20,11 @@ git clone --recursive https://github.com/STMicroelectronics/STM32CubeF4.git
 ```bash
 git clone --recursive --depth 1 https://github.com/STMicroelectronics/STM32CubeF4.git
 ```
+## STM32CubeF4 HAL Driver MCU Component
 
-## [STM32F411xE User Manual](/manuals/stm32f411/index.html)
 
+```bash
+git clone --depth 1 https://github.com/STMicroelectronics/stm32f4xx-hal-driver.git
+```
+
+- [STM32F411xE User Manual](https://ruseleredu.github.io/stm32doc/doxygen/stm32f4xx/index.html)

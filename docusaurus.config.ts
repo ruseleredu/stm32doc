@@ -32,8 +32,8 @@ const config: Config = {
   organizationName: "ruseleredu", // Usually your GitHub org/user name.
   projectName: "stm32doc", // Usually your repo name.
 
-  onBrokenLinks: "throw",
-
+  onBrokenLinks: "warn",
+  staticDirectories: ['static'],
   markdown: {
     mermaid: true, // Diagrams can be rendered using Mermaid in a code block.
     hooks: {

@@ -1,0 +1,8 @@
+<map id="HAL_InitTick" name="HAL_InitTick">
+<area shape="rect" id="node1" title="This function configures the RTC_WKUP as a time base source. The time source is configured to have 1m..." alt="" coords="5,107,108,133"/>
+<area shape="rect" id="node2" href="$group__CORTEX__Exported__Functions__Group1.html#gaaad4492c1b25e006d69948a15790352a" title=" " alt="" coords="181,5,342,32"/>
+<area shape="rect" id="node3" href="$group__CORTEX__Exported__Functions__Group1.html#ga8581a82025a4780efd00876a66e3e91b" title=" " alt="" coords="180,56,343,83"/>
+<area shape="rect" id="node4" href="$group__RCC__Exported__Functions__Group1.html#gaaf070da42c717e9d2d79e858b647b782" title=" " alt="" coords="184,107,339,133"/>
+<area shape="rect" id="node5" href="$group__RCCEx__Exported__Functions__Group1.html#ga0c0f61a1e2f47cc81bc43d83ba3e0d95" title=" " alt="" coords="156,157,367,184"/>
+<area shape="rect" id="node6" href="$group__RTC__Exported__Functions__Group1.html#gaa6b53830aa3e2efaf210c0b1d3e5f4a4" title=" " alt="" coords="208,208,315,235"/>
+</map>

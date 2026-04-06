@@ -124,6 +124,24 @@ import {GitLogOut} from '@site/src/components/InstructionsSite';
 
 ---
 
+### GitCommit
+
+```bash
+import {GitCommit} from '@site/src/components/InstructionsSite';
+```
+
+import {GitCommit} from '@site/src/components/InstructionsSite';
+
+```md
+<!-- Git Commit -->
+<GitCommit />
+```
+
+<!-- Git Commit -->
+<GitCommit />
+
+---
+
 ### STM32Tools
 
 ```bash

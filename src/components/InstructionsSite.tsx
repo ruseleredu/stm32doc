@@ -431,3 +431,40 @@ export function GitLogOut() {
         </div >
     );
 }
+
+
+// import {GitCommit} from '@site/src/components/InstructionsSite';
+// <!-- Configure o git -->
+// <GitCommit />
+export function GitCommit() {
+    return (
+        <div>
+            <Details summary={<summary>Como fazer commit da atualizações</summary>}>
+                <p>Verifique o status do repositório:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git status
+                </ThemeCodeBlock>
+
+                <p>Adicione os arquivos modificados:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git add .
+                </ThemeCodeBlock>
+
+                <p>Realize o <Link to="/docs/git-best-practices">commit</Link> das alterações:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git commit -m "Descrição breve das alterações realizadas!"
+                </ThemeCodeBlock>
+
+                <p>Envie para o repositório remoto (GitHub):</p>
+                <ThemeCodeBlock className="language-bash">
+                    git push
+                </ThemeCodeBlock>
+
+                <p>Vizualize o log de alterações:</p>
+                <ThemeCodeBlock className="language-bash">
+                    git log
+                </ThemeCodeBlock>
+            </Details>
+        </div >
+    );
+}

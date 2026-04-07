@@ -13,10 +13,10 @@ import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 04
 
-<!-- Info de que este conteúdo é de apoio! -->
+{/* Info de que este conteúdo é de apoio! */}
 <LABsApoio />
 
-<!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
+{/* Tabela com link para atividade, inicio, fim e descrição do LAB! */}
 <div style={{ display: "flex", justifyContent: "center" }}>
   <LabTable index={4} internal={false} />
 </div>
@@ -49,25 +49,25 @@ Esta atividade de laboratório tem como objetivo verificar a interrupção via G
 
 ## Verifique o seu ambiente de desenvolvimento
 
-<!-- List of Dev Tools -->
+{/* List of Dev Tools */}
 <DevToolsv2 />
 
-<!-- Configure o git -->
+{/* Configure o git */}
 <GitConfig />
 
 ---
 
-<!-- List of STM32Cube Tools -->
+{/* List of STM32Cube Tools */}
 <STM32Toolsv2 />
 
 ## Crie um novo repositório com base no template do LAB04
 
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
 
-<!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
+{/* Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. */}
 <LabFromTemplate labNumber="LAB04" opts="-c" />
 
-<!-- Git Commit -->
+{/* Git Commit */}
 <GitCommit />
 
 Generate code with TIM2 and EXT INT

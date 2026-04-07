@@ -19,10 +19,10 @@ import {LABsIncomplete,EaDIncomplete,LABsApoio} from '@site/src/components/Aviso
 ### LABsIncomplete
 
 ```md
-<!-- Alerta de que este conteúdo de laboratório está incompleto! -->
+{/* Alerta de que este conteúdo de laboratório está incompleto! */}
 <LABsIncomplete />
 ```
-<!-- Alerta de que este conteúdo de laboratório está incompleto! -->
+{/* Alerta de que este conteúdo de laboratório está incompleto! */}
 <LABsIncomplete />
 
 ---
@@ -30,10 +30,10 @@ import {LABsIncomplete,EaDIncomplete,LABsApoio} from '@site/src/components/Aviso
 ### EaDIncomplete
 
 ```md
-<!-- Alerta de que este conteúdo de EaD está incompleto! -->
+{/* Alerta de que este conteúdo de EaD está incompleto! */}
 <EaDIncomplete />
 ```
-<!-- Alerta de que este conteúdo de EaD está incompleto! -->
+{/* Alerta de que este conteúdo de EaD está incompleto! */}
 <EaDIncomplete />
 
 ---
@@ -41,10 +41,10 @@ import {LABsIncomplete,EaDIncomplete,LABsApoio} from '@site/src/components/Aviso
 ### LABsApoio
 
 ```md
-<!-- Info de que este conteúdo é de apoio! -->
+{/* Info de que este conteúdo é de apoio! */}
 <LABsApoio />
 ```
-<!-- Info de que este conteúdo é de apoio! -->
+{/* Info de que este conteúdo é de apoio! */}
 <LABsApoio />
 
 ---
@@ -64,12 +64,12 @@ import {VerifyDev1} from '@site/src/components/InstructionsSite';
 ```
 
 ```md
-<!-- Verifique o seu ambiente dev, git, gh e code -->
+{/* Verifique o seu ambiente dev, git, gh e code */}
 <VerifyDev1 />
 
 ```
 
-<!-- Verifique o seu ambiente dev, git, gh e code -->
+{/* Verifique o seu ambiente dev, git, gh e code */}
 <VerifyDev1 />
 
 ---
@@ -81,10 +81,10 @@ import {VerifyDev2} from '@site/src/components/InstructionsSite';
 ```
 
 ```md
-<!-- Verifique o seu ambiente dev, git, gh, code, gcc e gdb -->
+{/* Verifique o seu ambiente dev, git, gh, code, gcc e gdb */}
 <VerifyDev2 />
 ```
-<!-- Verifique o seu ambiente dev, git, gh, code, gcc e gdb -->
+{/* Verifique o seu ambiente dev, git, gh, code, gcc e gdb */}
 <VerifyDev2 />
 
 ---
@@ -96,11 +96,11 @@ import {GitConfig} from '@site/src/components/InstructionsSite';
 ```
 
 ```md
-<!-- Configure o git -->
+{/* Configure o git */}
 <GitConfig />
 ```
 
-<!-- Configure o git -->
+{/* Configure o git */}
 <GitConfig />
 
 ---
@@ -115,11 +115,11 @@ import {GitLogOut} from '@site/src/components/InstructionsSite';
 import {GitLogOut} from '@site/src/components/InstructionsSite';
 
 ```md
-<!-- Logout do seu ambiente dev, git e gh -->
+{/* Logout do seu ambiente dev, git e gh */}
 <GitLogOut />
 ```
 
-<!-- Logout do seu ambiente dev, git e gh -->
+{/* Logout do seu ambiente dev, git e gh */}
 <GitLogOut />
 
 ---
@@ -133,11 +133,11 @@ import {GitCommit} from '@site/src/components/InstructionsSite';
 import {GitCommit} from '@site/src/components/InstructionsSite';
 
 ```md
-<!-- Git Commit -->
+{/* Git Commit */}
 <GitCommit />
 ```
 
-<!-- Git Commit -->
+{/* Git Commit */}
 <GitCommit />
 
 ---
@@ -149,11 +149,11 @@ import {STM32Tools} from '@site/src/components/InstructionsSite';
 ```
 
 ```md
-<!-- List of STM32Cube Tools -->
+{/* List of STM32Cube Tools */}
 <STM32Tools />
 ```
 
-<!-- List of STM32Cube Tools -->
+{/* List of STM32Cube Tools */}
 <STM32Tools />
 
 
@@ -166,11 +166,11 @@ import {STM32Toolsv2} from '@site/src/components/InstructionsSite';
 ```
 
 ```md
-<!-- List of STM32Cube Tools -->
+{/* List of STM32Cube Tools */}
 <STM32Toolsv2 />
 ```
 
-<!-- List of STM32Cube Tools -->
+{/* List of STM32Cube Tools */}
 <STM32Toolsv2 />
 
 ---
@@ -180,11 +180,11 @@ import {STM32ToolsFull} from '@site/src/components/InstructionsSite';
 ```
 
 ```md
-<!-- List of STM32Cube Tools -->
+{/* List of STM32Cube Tools */}
 <STM32ToolsFull />
 ```
 
-<!-- List of STM32Cube Tools -->
+{/* List of STM32Cube Tools */}
 <STM32ToolsFull />
 
 ---
@@ -196,11 +196,11 @@ import {DevTools} from '@site/src/components/InstructionsSite';
 ```
 
 ```md
-<!-- List of Dev Tools -->
+{/* List of Dev Tools */}
 <DevTools />
 ```
 
-<!-- List of Dev Tools -->
+{/* List of Dev Tools */}
 <DevTools />
 
 ---
@@ -212,11 +212,11 @@ import {DevToolsv2} from '@site/src/components/InstructionsSite';
 ```
 
 ```md
-<!-- List of Dev Tools -->
+{/* List of Dev Tools */}
 <DevToolsv2 />
 ```
 
-<!-- List of Dev Tools -->
+{/* List of Dev Tools */}
 <DevToolsv2 />
 
 ## LabFromTemplate
@@ -229,7 +229,7 @@ import LabFromTemplate from "@site/src/components/LabFromTemplate";
 
 ### LAB00
 ```md
-<!-- Criar repositório no GitHub com base no template do laboratório -->
+{/* Criar repositório no GitHub com base no template do laboratório */}
 <LabFromTemplate labNumber="LAB00" />
 ```
 
@@ -248,7 +248,7 @@ import LabFromScratch from "@site/src/components/LabFromScratch";
 
 ### LAB00
 ```md
-<!-- Criar repositório no GitHub com base no comando -->
+{/* Criar repositório no GitHub com base no comando */}
 <LabFromScratch repoName="LAB00" opts="--add-readme -c -l mit -g C"/>
 ```
 

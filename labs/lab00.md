@@ -13,10 +13,10 @@ import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 00
 
-<!-- Info de que este conteúdo é de apoio! -->
+{/* Info de que este conteúdo é de apoio! */}
 <LABsApoio />
 
-<!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
+{/* Tabela com link para atividade, inicio, fim e descrição do LAB! */}
 <div style={{ display: "flex", justifyContent: "center" }}>
   <LabTable index={0} internal={false} />
 </div>
@@ -36,17 +36,17 @@ Apresentação da Disicplina; Materiais utilizados na disciplina;
 
 ## Verifique o seu ambiente de desenvolvimento
 
-<!-- List of Dev Tools -->
+{/* List of Dev Tools */}
 <DevToolsv2 />
 
 ---
 
-<!-- Configure o git -->
+{/* Configure o git */}
 <GitConfig />
 
 ---
 
-<!-- Verifique o seu ambiente dev, git, gh e code -->
+{/* Verifique o seu ambiente dev, git, gh e code */}
 <VerifyDev1 />
 
 ---
@@ -54,10 +54,10 @@ Apresentação da Disicplina; Materiais utilizados na disciplina;
 
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
 
-<!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
+{/* Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. */}
 <LabFromTemplate labNumber="LAB00" opts="-c" />
 
-<!-- Git Commit -->
+{/* Git Commit */}
 <GitCommit />
 
 ## Uso do git e GitHub

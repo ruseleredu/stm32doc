@@ -11,7 +11,7 @@ import QuizTable from '@site/src/components/QuizTable';
 
 <EaDIncomplete />
 
-<!-- Tabela com link para atividade, inicio, fim e descrição do Quiz! -->
+{/* Tabela com link para atividade, inicio, fim e descrição do Quiz! */}
 <div style={{ display: "flex", justifyContent: "center" }}>
   <QuizTable index={9} internal={false} />
 </div>

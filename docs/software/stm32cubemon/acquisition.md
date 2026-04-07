@@ -149,7 +149,7 @@ The acquisition in node is designed to be typically back linked with one or seve
 
 basic flow for acquisition in node
 
-<!-- Definition probe config node  -->
+{/* Definition probe config node  */}
 ---
 
 ```bash

@@ -47,7 +47,7 @@ git --version
 
 How to config [git](https://git-scm.com/docs/git-config)
 
-<!-- Configure o git -->
+{/* Configure o git */}
 <GitConfig />
 
 --- 

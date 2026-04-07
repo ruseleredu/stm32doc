@@ -14,10 +14,10 @@ import LabTable from '@site/src/components/LabTable';
 
 # Laboratório 01
 
-<!-- Info de que este conteúdo é de apoio! -->
+{/* Info de que este conteúdo é de apoio! */}
 <LABsApoio />
 
-<!-- Tabela com link para atividade, inicio, fim e descrição do LAB! -->
+{/* Tabela com link para atividade, inicio, fim e descrição do LAB! */}
 <div style={{ display: "flex", justifyContent: "center" }}>
   <LabTable index={1} internal={false} />
 </div>
@@ -39,17 +39,17 @@ Git e GitHub; Ambiente de desenvolvimento;
 
 ## Verifique o seu ambiente de desenvolvimento
 
-<!-- List of Dev Tools -->
+{/* List of Dev Tools */}
 <DevToolsv2 />
 
 ---
 
-<!-- Configure o git -->
+{/* Configure o git */}
 <GitConfig />
 
 ---
 
-<!-- Verifique o seu ambiente dev, git, gh e code -->
+{/* Verifique o seu ambiente dev, git, gh e code */}
 <VerifyDev1 />
 
 
@@ -57,10 +57,10 @@ Git e GitHub; Ambiente de desenvolvimento;
 
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
 
-<!-- Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. -->
+{/* Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. */}
 <LabFromTemplate labNumber="LAB01" opts="-c" />
 
-<!-- Git Commit -->
+{/* Git Commit */}
 <GitCommit />
 
 ## Git e GitHub
@@ -476,5 +476,5 @@ Esta atividade de laboratório tem como objetivo verificar a configuração adeq
 - [ ] Envie o link da organização e do repositório no GitHub (hyperlink) - 20%
 
 ---
-<!-- Logout do seu ambiente dev, git e gh -->
+{/* Logout do seu ambiente dev, git e gh */}
 <GitLogOut />

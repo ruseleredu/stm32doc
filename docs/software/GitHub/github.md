@@ -26,10 +26,10 @@ How to config git
 
 --- 
 
-<!-- Configure o git -->
+{/* Configure o git */}
 <GitConfig />
 
 ---
 
-<!-- Verifique o seu ambiente dev, git, gh e code -->
+{/* Verifique o seu ambiente dev, git, gh e code */}
 <VerifyDev1 />

@@ -14,6 +14,7 @@
         <updated>2025-09-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[All these will be part of the blog post summary.]]></summary>
         <content type="html"><![CDATA[<p>All these will be part of the blog post summary.</p>
+<!-- -->
 <p>But anything from here on down will not be.</p>
 <ul>
 <li class=""><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer" class="">https://docusaurus.io/docs/blog</a></li>
@@ -32,6 +33,7 @@
         <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
         <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer" class="">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer" class="">blog plugin</a>.</p>
 <p>Here are a few tips you might find useful.</p>
+<!-- -->
 <p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
 <p>Regular blog authors can be added to <code>authors.yml</code>.</p>
 <p>The blog post date can be extracted from filenames, such as:</p>

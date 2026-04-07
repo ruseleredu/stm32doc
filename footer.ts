@@ -41,6 +41,10 @@ const footer: ThemeConfig["footer"] = {
                     label: "GitHub CLI",
                     href: "https://cli.github.com/manual/",
                 },
+                {
+                    label: "STM32CubeIDE",
+                    href: "https://dev.st.com/stm32cube-docs/stm32cubeide-vscode/",
+                },
             ],
         },
         {

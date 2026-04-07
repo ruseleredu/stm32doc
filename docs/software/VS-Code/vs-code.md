@@ -36,41 +36,6 @@ Launching from command line
 code .
 ```
 
-```json title=".vscode/extensions.json"
-{
-  "recommendations": [
-    "formulahendry.code-runner",
-    "ms-vscode.cmake-tools",
-    "ms-vscode.cpptools-themes",
-    "ms-vscode.cpptools-extension-pack",
-    "ms-vscode.cpptools",
-    "pkief.material-icon-theme",
-    "esbenp.prettier-vscode"
-    // Add other relevant extensions
-  ]
-}
-```
-
-```json title=".vscode/settings.json"
-{
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "files.exclude": {
-    "**/.git": true,
-    "**/node_modules": true,
-    "**/.docusaurus": true,
-    "**/build": true
-  },
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/.docusaurus": true,
-    "**/build": true
-  }
-}
-```
-
 ## VScode com compilador GCC e o depurador GDB
 
 Configure o Visual Studio Code para usar o compilador GCC e o depurador GDB
@@ -114,24 +79,3 @@ Only:
 - [STM32Cube Debug STLink GDB Server](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32cube-ide-debug-stlink-gdbserver)
   STM32Cube Debug Core
 
-```json title=".vscode/extensions.json"
-{
-  "recommendations": [
-    "ms-vscode.cpptools", // (dependencies to ms-vscode.cpptools-extension-pack)
-    "ms-vscode.cpptools-themes", // (dependencies to ms-vscode.cpptools-extension-pack)
-    "ms-vscode.cmake-tools", // (dependencies to ms-vscode.cpptools-extension-pack)
-    "twxs.cmake", // (dependencies to ms-vscode.cpptools-extension-pack)
-    "ms-vscode.cpptools-extension-pack", // Provides CMake and C++ file coloring, completion & support
-    "dan-c-underwood.arm", // Provides syntax highlighting for the Arm Assembly language
-    "zixuanwang.linkerscript", // Provides syntax highlighting for linker scripts
-    "ms-vscode.hexeditor", // Provides hex editor fo viewing & anipulating files in their raw hexadecimal representation
-    "trond-snekvik.gnu-mapfiles", // Provides syntax highlighting and symbol listing for GNU linker .map files
-    "jeff-hykin.better-cpp-syntax", // Provides syntax highlighting for C++
-    "marus25.cortex-debug", // Provides debug support on Arm Cortex-M
-    "mcu-debug.debug-tracker-vscode", // Dependencies to "marus25.cortex-debug"
-    "mcu-debug.memory-view", // Dependencies to "marus25.cortex-debug"
-    "mcu-debug.peripheral-viewer", // Dependencies to "marus25.cortex-debug"
-    "mcu-debug.rtos-views" // Dependencies to "marus25.cortex-debug"
-  ]
-}
-```

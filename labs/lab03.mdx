@@ -233,6 +233,81 @@ else
    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // LED ON
 ```
 
+## Crie um novo release e envie o arquivo
+
+### Create a New Release and Upload the File
+
+```bash
+gh release create v1.0.0 firmware.elf --title "Release v1.0.0" --notes "Initial build"
+```
+
+```bash
+gh release create v1.0.0 code03\build\Debug\code03.elf --title "Release v1.0.0" --notes "Initial build"
+```
+
+- v1.0.0: The tag name you want to create.
+- firmware.elf: The path to your file.
+- --title: The display name of the release.
+- --notes: A description of the changes.
+
+### Upload to an Existing Release
+
+If you have already created the release (perhaps via the web UI or a previous CI step) and just need to attach the .elf file:
+
+```bash
+gh release upload v1.0.0 firmware.elf
+```
+
+Note: If the file already exists on the release and you want to replace it, add the `--clobber` flag.
+
+```bash
+gh release upload v1.0.0 firmware.elf --clobber
+```
+
+### The "All-in-One" Command
+
+If you want to create a release, tag it, and upload your `.elf` file in one go without opening a browser, this is the most efficient syntax:
+
+```bash
+gh release create v1.0.0 ./path/to/your_file.elf --generate-notes
+```
+
+- --generate-notes: This is a lifesaver—it automatically builds a changelog based on your commit history since the last tag.
+
+Ex:
+
+```bash
+gh release create v1.1.0 code03\build\Debug\code03.elf  --generate-notes
+```
+
+:::tip
+If you find yourself typing the same versioning or file paths often, you can create a GH Alias. For example:
+
+```bash
+gh alias set deploy-elf 'release create $1 bin/\*.elf --generate-notes'
+```
+
+Then you'd just run:
+
+```bash
+gh deploy-elf v1.0.1
+```
+
+:::
+
+### Quick Verification
+
+Once the command finishes, you can verify the upload directly in your terminal without tab-switching to Chrome:
+
+```bash
+gh release view v1.1.0 --web
+```
+
+Flag,Purpose
+--clobber,Crucial if you need to re-upload. It overwrites an existing file of the same name.
+--verify-tag,Confirms the tag exists in the remote repo before trying to create a release.
+--latest,"Explicitly marks this release as the ""Latest"" (useful if you're uploading an older version)."
+
 ## Como carregar um script do STM32CubeMX
 
 Call for Help (--help, -h, /?)

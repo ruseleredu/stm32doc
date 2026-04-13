@@ -7,17 +7,24 @@ description: Introdução as aulas de laboratório
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {LABsApoio} from '@site/src/components/AvisosSite';
+import { LABsApoio } from "@site/src/components/AvisosSite";
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {DevToolsv2,GitConfig,STM32Toolsv2,GitCommit} from '@site/src/components/InstructionsSite';
-import LabTable from '@site/src/components/LabTable';
+import {
+  DevToolsv2,
+  GitConfig,
+  STM32Toolsv2,
+  GitCommit,
+} from "@site/src/components/InstructionsSite";
+import LabTable from "@site/src/components/LabTable";
 
 # Laboratório 10
 
 {/* Info de que este conteúdo é de apoio! */}
+
 <LABsApoio />
 
 {/* Tabela com link para atividade, inicio, fim e descrição do LAB! */}
+
 <div style={{ display: "flex", justifyContent: "center" }}>
   <LabTable index={10} internal={false} />
 </div>
@@ -41,24 +48,29 @@ Introdução ao FreeRTOS;
 ## Verifique o seu ambiente de desenvolvimento
 
 {/* List of Dev Tools */}
+
 <DevToolsv2 />
 
 {/* Configure o git */}
+
 <GitConfig />
 
 ---
 
 {/* List of STM32Cube Tools */}
+
 <STM32Toolsv2 />
 
-## Crie um novo repositório com base no template do LAB10
+## Crie um novo repositório com base no template do LAB10 {/* #new-repo-from-tpl */}
 
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
 
 {/* Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. */}
+
 <LabFromTemplate labNumber="LAB10" opts="-c" />
 
 {/* Git Commit */}
+
 <GitCommit />
 
 ## Instruções do LAB - TODO
@@ -77,12 +89,11 @@ Esta atividade de laboratório tem como objetivo utilizar o FreeRTOS. Cada item 
 - [ ] Envie o link do repositório no GitHub (hyperlink);
 
 ## Avaliação
+
 - [ ] Uso do template e código - 20%
 - [ ] Verificação do FreeRTOS - 70%
 - [ ] Link do repositório no GitHub (hyperlink) - 10%
 
-
-  
 ## Diagrama de pinos do STM32F4x1
 
 ---
@@ -96,8 +107,11 @@ O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pin
 ---
 
 ## User Code
+
 ### Timer 2 com interrupção e saída PWM no canal 1
+
 Inicialize o Timer 2 com suporte a rotina de interrupção e saída PWM no canal 1:
+
 ```c title="Src/main.c"
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
@@ -109,9 +123,10 @@ Inicialize o Timer 2 com suporte a rotina de interrupção e saída PWM no canal
   /* USER CODE END 2 */
 ```
 
-
 ### User Key
+
 Toggle no LED interno via interrupção do User Key:
+
 ```c title="Src/stm32f4xx_it.c"
 void EXTI0_IRQHandler(void)
 {
@@ -127,7 +142,9 @@ void EXTI0_IRQHandler(void)
 ```
 
 ### ADC1 na interrupção do Timer 2
+
 Inicie o ADC1 na interrupção do Timer 2:
+
 ```c title="Src/stm32f4xx_it.c"
 void TIM2_IRQHandler(void)
 {
@@ -143,9 +160,9 @@ void TIM2_IRQHandler(void)
 ```
 
 ### Leitura do AN1 e atualização do valor de comparação do PWM
+
 Na interrupção do ADC1, faça a leitura do AN1 e atualize o valor de comparação do PWM:  
 TIM2->CCR1 = HAL_ADC_GetValue(&hadc1);
-
 
 ```c title="Src/stm32f4xx_it.c"
 void ADC_IRQHandler(void)

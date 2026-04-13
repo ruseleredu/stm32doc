@@ -6,17 +6,24 @@ description: Uso do display OLED SSD1306
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {LABsApoio} from '@site/src/components/AvisosSite';
+import { LABsApoio } from "@site/src/components/AvisosSite";
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {STM32Toolsv2,GitConfig,DevToolsv2,GitCommit} from '@site/src/components/InstructionsSite';
-import LabTable from '@site/src/components/LabTable';
+import {
+  STM32Toolsv2,
+  GitConfig,
+  DevToolsv2,
+  GitCommit,
+} from "@site/src/components/InstructionsSite";
+import LabTable from "@site/src/components/LabTable";
 
 # Laboratório 11
 
 {/* Info de que este conteúdo é de apoio! */}
+
 <LABsApoio />
 
 {/* Tabela com link para atividade, inicio, fim e descrição do LAB! */}
+
 <div style={{ display: "flex", justifyContent: "center" }}>
   <LabTable index={11} internal={false} />
 </div>
@@ -30,17 +37,18 @@ import LabTable from '@site/src/components/LabTable';
 Display OLED 0.96″ 128×64 I2C Azul
 
 Recursos:
+
 - https://github.com/afiskon/stm32-ssd1306
 - https://www.youtube.com/watch?v=97_Vyph9EzM
 - https://lvgl.io/tools/imageconverter
 - https://github.com/sbrin/lopaka
 - https://github.com/olikraus/u8g2
 - https://www.youtube.com/watch?v=Eyvzw_ujcS0
-  
 
 ![](/img/lab11/2025-11-17-16-31-45.png)
 
 More:
+
 - https://www.youtube.com/watch?v=97_Vyph9EzM
 - https://github.com/lexus2k/ssd1306
 - https://www.makerhero.com/blog/controlando-um-display-oled-com-a-biblioteca-ssd1306/
@@ -51,14 +59,15 @@ More:
 - https://learn.adafruit.com/monochrome-oled-breakouts/downloads
 - https://wokwi.com/projects/309427357921313345
 
-
 ### Uso do stm32-i2c-lcd-1602
- STM32: LCD 1602 w/ I2C adapter usage example
- - https://github.com/afiskon/stm32-i2c-lcd-1602
- - https://deepbluembedded.com/stm32-i2c-lcd-library-example-16x2-20x4-multiple-lcds/
- - https://github.com/light-tech/LearnSTM32
- - https://controllerstech.com/i2c-lcd-in-stm32/
- - 
+
+STM32: LCD 1602 w/ I2C adapter usage example
+
+- https://github.com/afiskon/stm32-i2c-lcd-1602
+- https://deepbluembedded.com/stm32-i2c-lcd-library-example-16x2-20x4-multiple-lcds/
+- https://github.com/light-tech/LearnSTM32
+- https://controllerstech.com/i2c-lcd-in-stm32/
+-
 
 Introdução ao uso do [PlatformIO](/docs/platformio-intro);
 
@@ -70,28 +79,32 @@ Introdução ao uso do [PlatformIO](/docs/platformio-intro);
 - [ ] Instale os drivers for [ST-LINK](https://docs.platformio.org/en/latest/plus/debug-tools/stlink.html#debugging-tool-stlink) debug tool
 - [ ] Teste de geração e compilação de projeto para o STM32F411CEUx;
 
-
 ## Verifique o seu ambiente de desenvolvimento
 
 {/* List of Dev Tools */}
+
 <DevToolsv2 />
 
 {/* Configure o git */}
+
 <GitConfig />
 
 ---
 
 {/* List of STM32Cube Tools */}
+
 <STM32Toolsv2 />
 
-## Crie um novo repositório com base no template do LAB11
+## Crie um novo repositório com base no template do LAB11 {/* #new-repo-from-tpl */}
 
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
 
 {/* Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. */}
+
 <LabFromTemplate labNumber="LAB11" opts="-c" />
 
 {/* Git Commit */}
+
 <GitCommit />
 
 ## Instruções do LAB
@@ -106,13 +119,12 @@ Esta atividade de laboratório tem como objetivo utilizar o PlatformIO. Cada ite
 - [ ] Instale os drivers for [ST-LINK](https://docs.platformio.org/en/latest/plus/debug-tools/stlink.html#debugging-tool-stlink) debug tool
 - [ ] Envie o link do repositório no GitHub (hyperlink);
 
-
 ## Avaliação
+
 - [ ] Uso do template e código - 20%
 - [ ] Verificação do PLatformIO - 70%
 - [ ] Link do repositório no GitHub (hyperlink) - 10%
 
-  
 ## Diagrama de pinos do STM32F4x1
 
 ---
@@ -126,33 +138,34 @@ O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pin
 ---
 
 ## VS Code
+
 ### Configuração do terminal
- 
+
 ```json title="settings.json"
 {
-    // highlight-next-line
-    "terminal.integrated.defaultProfile.windows": "PIO CLI",
-    "terminal.integrated.profiles.windows": {
-        "Command Prompt": {
-            "path": [
-                "${env:windir}\\Sysnative\\cmd.exe",
-                "${env:windir}\\System32\\cmd.exe"
-            ],
-            "args": [],
-            "icon": "terminal-cmd"
-        },
-        // highlight-start
-        "PIO CLI": {
-            "path": "cmd.exe",
-            "args": [
-                "/k",
-                "${env:USERPROFILE}\\.platformio\\penv\\Scripts\\activate.bat && pio --version"
-            ],
-            "icon": "python",
-            "overrideName": true
-        }
-        // highlight-end
+  // highlight-next-line
+  "terminal.integrated.defaultProfile.windows": "PIO CLI",
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    // highlight-start
+    "PIO CLI": {
+      "path": "cmd.exe",
+      "args": [
+        "/k",
+        "${env:USERPROFILE}\\.platformio\\penv\\Scripts\\activate.bat && pio --version"
+      ],
+      "icon": "python",
+      "overrideName": true
     }
+    // highlight-end
+  }
 }
 ```
 
@@ -178,11 +191,14 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 ```
 
 ## STM32Cube HAL: debugging and unit testing
+
 - [Tutorials and Examples](https://docs.platformio.org/en/latest/tutorials/index.html)
 - [STM32Cube HAL and Nucleo-F401RE: debugging and unit testing](https://docs.platformio.org/en/latest/tutorials/ststm32/stm32cube_debugging_unit_testing.html)
 
 ### Pisca LED
+
 Definição do pino no arquivo main.h
+
 ```c title="src/main.h"
 #ifndef MAIN_H
 #define MAIN_H
@@ -197,6 +213,7 @@ Definição do pino no arquivo main.h
 ```
 
 Inicie LED_Init:
+
 ```c title="src/main.c"
 #include "main.h"
 
@@ -240,11 +257,10 @@ upload_protocol = stlink
 debug_tool = stlink
 ```
 
-
 ## Arduino
 
-
 Inicie LED_Init:
+
 ```c title="src/main.c"
 #include <Arduino.h>
 
@@ -271,7 +287,7 @@ void loop()
 }
 
 ```
- 
+
 ```ini title="platformio.ini"
 [env:blackpill_f411ce]
 platform = ststm32
@@ -281,11 +297,10 @@ upload_protocol = stlink
 debug_tool = stlink
 ```
 
-
-
 ## Frameworks
-- [STM32F411CE (128k RAM. 512k Flash)](https://docs.platformio.org/en/latest/boards/ststm32/genericSTM32F411CE.html) 
-  
+
+- [STM32F411CE (128k RAM. 512k Flash)](https://docs.platformio.org/en/latest/boards/ststm32/genericSTM32F411CE.html)
+
 | Name                                                                                                |                                                                                                                                                 Description                                                                                                                                                 |
 | :-------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [Arduino](https://docs.platformio.org/en/latest/frameworks/arduino.html#framework-arduino)          |                                      Arduino Wiring-based Framework allows writing cross-platform software to control devices attached to a wide range of Arduino boards to create all kinds of creative coding, interactive objects, spaces or physical experiences.                                       |

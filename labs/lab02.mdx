@@ -6,17 +6,24 @@ description: Introdução as aulas de laboratório
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {LABsApoio} from '@site/src/components/AvisosSite';
+import { LABsApoio } from "@site/src/components/AvisosSite";
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {DevToolsv2,GitConfig,STM32Toolsv2,GitCommit} from '@site/src/components/InstructionsSite';
-import LabTable from '@site/src/components/LabTable';
+import {
+  DevToolsv2,
+  GitConfig,
+  STM32Toolsv2,
+  GitCommit,
+} from "@site/src/components/InstructionsSite";
+import LabTable from "@site/src/components/LabTable";
 
 # Laboratório 02
 
 {/* Info de que este conteúdo é de apoio! */}
+
 <LABsApoio />
 
 {/* Tabela com link para atividade, inicio, fim e descrição do LAB! */}
+
 <div style={{ display: "flex", justifyContent: "center" }}>
   <LabTable index={2} internal={false} />
 </div>
@@ -40,29 +47,43 @@ Processo de compilação, gravação e commit de código;
 ## Verifique o seu ambiente de desenvolvimento
 
 {/* List of Dev Tools */}
+
 <DevToolsv2 />
 
 {/* Configure o git */}
+
 <GitConfig />
 
 ---
 
 {/* List of STM32Cube Tools */}
+
 <STM32Toolsv2 />
 
-## Crie um novo repositório com base no template do LAB02
+## Crie um novo repositório com base no template do LAB02 {/* #new-repo-from-tpl */}
 
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
 
 {/* Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. */}
+
 <LabFromTemplate labNumber="LAB02" opts="-c" />
 
 {/* Git Commit */}
+
 <GitCommit />
 
 ## Instalação do VScode e extensão para o STM32
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a5A4wAYuuOY?si=78Cd1dAWLqcsN9oG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/a5A4wAYuuOY?si=78Cd1dAWLqcsN9oG"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
 
 ```bash
 code --list-extensions --profile "STM32"
@@ -125,7 +146,6 @@ O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pin
 ![ST-LINK/V2 Clone](/img/ST-LINK_V2_Clone_Header.png)
 
 ---
-
 
 ## Como carregar um script do STM32CubeMX
 
@@ -209,7 +229,6 @@ Esta atividade de laboratório tem como objetivo verificar a configuração adeq
 - [ ] Commit e push dos arquivos gerados;
 - [ ] Envie o link da organização (hyperlink);
 - [ ] Envie o link do repositório no GitHub (hyperlink);
-
 
 ## Avaliação
 

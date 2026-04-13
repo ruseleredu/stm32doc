@@ -327,6 +327,56 @@ EXAMPLES
   $ gh repo license view MIT > LICENSE.md
 ```
 
+## Aliases
+
+Aliases can be used to make shortcuts for gh commands or to compose multiple commands.
+
+Run `gh help alias set` to learn more.
+
+- https://cli.github.com/manual/gh_alias
+
+### USAGE
+
+```bash
+  gh alias <command> [flags]
+
+AVAILABLE COMMANDS
+  delete:        Delete set aliases
+  import:        Import aliases from a YAML file
+  list:          List your aliases
+  set:           Create a shortcut for a gh command
+
+INHERITED FLAGS
+  --help   Show help for command
+
+LEARN MORE
+  Use `gh <command> <subcommand> --help` for more information about a command.
+  Read the manual at https://cli.github.com/manual
+  Learn about exit codes using `gh help exit-codes`
+  Learn about accessibility experiences using `gh help accessibility`
+```
+
+gh follows normal conventions regarding exit codes.
+
+- If a command completes successfully, the exit code will be 0
+- If a command fails for any reason, the exit code will be 1
+- If a command is running but gets cancelled, the exit code will be 2
+- If a command requires authentication, the exit code will be 4
+
+NOTE: It is possible that a particular command may have more exit codes, so it is a good
+practice to check documentation for the command if you are relying on exit codes to
+control some behavior.
+
+```bash
+gh alias list
+```
+
+- https://cli.github.com/manual/gh_alias_list
+
+```bash
+gh alias delete {<alias> | --all} [flags]
+```
+
 ## Releases
 
 Manage releases
@@ -490,11 +540,11 @@ gh deploy-elf v1.0.1
 :::
 
 ```bash
-gh release create v1.2.0 --generate-notes "./build/Release/YOUR_PROJECT.elf#Production-Firmware" "./build/Debug/YOUR_PROJECT.elf#Debug-Symbols"
+gh release create v1.1.0 --generate-notes "./build/Release/code03.elf#Production-Firmware" "./build/Debug/code03.elf#Debug-Symbols"
 ```
 
 ```bash
-gh release create v1.2.0 --generate-notes \
+gh release create v1.0.0 --generate-notes \
     "./build/Release/YOUR_PROJECT.elf#Production-Firmware" \
     "./build/Debug/YOUR_PROJECT.elf#Debug-Symbols"
 ```
@@ -504,8 +554,10 @@ gh release create v1.2.0 --generate-notes \
 Once the command finishes, you can verify the upload directly in your terminal without tab-switching to Chrome:
 
 ```bash
-gh release view v1.1.0 --web
+gh release view v1.0.0 --web
 ```
+
+cube arm-none-eabi-size ./build/Release/code03.elf
 
 Flag,Purpose
 --clobber,Crucial if you need to re-upload. It overwrites an existing file of the same name.

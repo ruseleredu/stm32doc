@@ -315,7 +315,7 @@ Usage:
 gh deploy-view v1.0.0
 ```
 
-## Como carregar um script do STM32CubeMX
+## Como carregar um script do STM32CubeMX com [LoadMX](/docs/loadmx) {/* #loadmx */}
 
 Call for Help (--help, -h, /?)
 
@@ -333,4 +333,20 @@ To generate a script
 
 ```bash
 export script ScriptToLoad.txt
+```
+
+Opens STM32CubeMX with provided Project Name and Script Name and loads default value for Code Generation (N)
+
+```bash
+LoadMX ProjectName ScriptName.txt
+```
+
+Opens STM32CubeMX with provided Project Name, Script Name and generate code
+
+```bash
+LoadMX ProjectName ScriptName.txt Y
+```
+
+```bash
+LoadMX TIM2EXTI0 TIM2EXTI0.txt
 ```

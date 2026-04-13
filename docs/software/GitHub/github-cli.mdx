@@ -5,7 +5,7 @@ description: GitHub CLI brings GitHub to your terminal. Free and open source.
 slug: /github-cli
 ---
 
-import ThemeCodeBlock from '@theme/CodeBlock';
+import ThemeCodeBlock from "@theme/CodeBlock";
 
 ## [Installing gh on Windows](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)
 
@@ -38,8 +38,6 @@ The Windows installer modifies your PATH. When using Windows Terminal, you will 
 ### Precompiled binaries
 
 [GitHub CLI releases](https://github.com/cli/cli/releases/latest) contain precompiled `exe` and `msi` binaries for `386`, `amd64` and `arm64` architectures.
-
-
 
 ## GitHub CLI manual
 
@@ -329,10 +327,11 @@ EXAMPLES
   $ gh repo license view MIT > LICENSE.md
 ```
 
-
 ## Releases
+
 Manage releases
-- https://cli.github.com/manual/gh_release 
+
+- https://cli.github.com/manual/gh_release
 
 ```bash
 gh release create [<tag>] [<filename>... | <pattern>...]
@@ -394,6 +393,7 @@ INHERITED FLAGS
 ```
 
 EXAMPLES
+
 ```bash
   # Interactively create a release
   $ gh release create
@@ -429,7 +429,91 @@ EXAMPLES
   $ gh release create v1.2.3 --fail-on-no-commits
 ```
 
-LEARN MORE
+### Create a New Release and Upload the File
+
+```bash
+gh release create v1.0.0 firmware.elf --title "Release v1.0.0" --notes "Initial build"
+```
+
+```bash
+gh release create v1.0.0 code03\build\Debug\code03.elf --title "Release v1.0.0" --notes "Initial build"
+```
+
+- v1.0.0: The tag name you want to create.
+- firmware.elf: The path to your file.
+- --title: The display name of the release.
+- --notes: A description of the changes.
+
+### Upload to an Existing Release
+
+If you have already created the release (perhaps via the web UI or a previous CI step) and just need to attach the .elf file:
+
+```bash
+gh release upload v1.0.0 firmware.elf
+```
+
+Note: If the file already exists on the release and you want to replace it, add the `--clobber` flag.
+
+```bash
+gh release upload v1.0.0 firmware.elf --clobber
+```
+
+### The "All-in-One" Command
+
+If you want to create a release, tag it, and upload your `.elf` file in one go without opening a browser, this is the most efficient syntax:
+
+```bash
+gh release create v1.0.0 ./path/to/your_file.elf --generate-notes
+```
+
+- --generate-notes: This is a lifesaver—it automatically builds a changelog based on your commit history since the last tag.
+
+Ex:
+
+```bash
+gh release create v1.1.0 code03\build\Debug\code03.elf  --generate-notes
+```
+
+:::tip
+If you find yourself typing the same versioning or file paths often, you can create a GH Alias. For example:
+
+```bash
+gh alias set deploy-elf 'release create $1 bin/\*.elf --generate-notes'
+```
+
+Then you'd just run:
+
+```bash
+gh deploy-elf v1.0.1
+```
+
+:::
+
+```bash
+gh release create v1.2.0 --generate-notes "./build/Release/YOUR_PROJECT.elf#Production-Firmware" "./build/Debug/YOUR_PROJECT.elf#Debug-Symbols"
+```
+
+```bash
+gh release create v1.2.0 --generate-notes \
+    "./build/Release/YOUR_PROJECT.elf#Production-Firmware" \
+    "./build/Debug/YOUR_PROJECT.elf#Debug-Symbols"
+```
+
+### Quick Verification
+
+Once the command finishes, you can verify the upload directly in your terminal without tab-switching to Chrome:
+
+```bash
+gh release view v1.1.0 --web
+```
+
+Flag,Purpose
+--clobber,Crucial if you need to re-upload. It overwrites an existing file of the same name.
+--verify-tag,Confirms the tag exists in the remote repo before trying to create a release.
+--latest,"Explicitly marks this release as the ""Latest"" (useful if you're uploading an older version)."
+
+## LEARN MORE
+
 - Use `gh <command> <subcommand> --help` for more information about a command.
 - Read the manual at https://cli.github.com/manual
 - Learn about exit codes using `gh help exit-codes`

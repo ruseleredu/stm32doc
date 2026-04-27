@@ -142,6 +142,13 @@ while (1)
 ```
 
 ```c title="Src/stm32f4xx_it.c"
+/* USER CODE BEGIN Includes */
+// highlight-next-line
+#include <stdbool.h>
+/* USER CODE END Includes */
+```
+
+```c title="Src/stm32f4xx_it.c"
 /* USER CODE BEGIN PV */
 // highlight-next-line
 extern bool BLUELED;
@@ -202,6 +209,7 @@ Na interrupção do ADC1, faça a leitura do AN1 e atualize o valor de comparaç
 
 ```c title="Src/main.c"
 /* USER CODE BEGIN PV */
+bool BLUELED = 0; // Flag to control LED state
 // highlight-start
 uint16_t adc1in1 = 0; // Variable to store ADC value
 float voltage = 0.0f; // Variable to store calculated voltage

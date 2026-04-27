@@ -194,6 +194,112 @@ void ADC_IRQHandler(void)
 }
 ```
 
+## Crie um novo release e envie o arquivo
+
+Se você deseja criar um release, nomeie a tag (etiqueta de lançamento) e carregue seu arquivo `.elf` de uma só vez, sem abrir um navegador, esta é a sintaxe mais eficiente:
+
+```bash
+gh release create v1.0.0 ./path/to/your_file.elf --generate-notes
+```
+
+- --generate-notes: Cria automaticamente um changelog com base no seu histórico de commits desde a última tag.
+
+Ex:
+
+```bash
+gh release create v1.1.0 ./build/Debug/*.elf --generate-notes
+```
+
+### Crie um [gh alias](/docs/github-cli#aliases) para deploy-debug
+
+```bash
+gh alias set deploy-debug 'tag="$1"; cp ./build/Debug/*.elf ./firmware-debug.elf && gh release create "$tag" ./firmware-debug.elf --generate-notes && rm ./firmware-debug.elf' --shell
+```
+
+Como funciona:
+
+- Considera a etiqueta de lançamento como $1.
+- Copia o ELF de ./build/Debug/\*.elf → ./firmware-debug.elf.
+- Executa gh release create com o arquivo renomeado.
+- Limpa removendo o arquivo renomeado temporário.
+
+Uso:
+
+```bash
+gh deploy-debug v1.0.0
+```
+
+### Crie um [gh alias](/docs/github-cli#aliases) para deploy-release
+
+```bash
+gh alias set deploy-release 'tag="$1"; cp ./build/Release/*.elf ./firmware-release.elf && gh release create "$tag" ./firmware-release.elf --generate-notes && rm ./firmware-release.elf' --shell
+```
+
+Como funciona:
+
+- Considera a etiqueta de lançamento como $1.
+- Copia o ELF de ./build/Release/\*.elf → ./firmware-release.elf.
+- Executa gh release create com o arquivo renomeado.
+- Limpa removendo o arquivo renomeado temporário.
+
+Uso:
+
+```bash
+gh deploy-release v1.0.0
+```
+
+### Crie um [gh alias](/docs/github-cli#aliases) para deploy-all
+
+```bash
+gh alias set deploy-all 'tag="$1"; cp ./build/Debug/*.elf ./firmware-debug.elf && cp ./build/Release/*.elf ./firmware-release.elf && gh release create "$tag" ./firmware-debug.elf ./firmware-release.elf --generate-notes && rm ./firmware-debug.elf ./firmware-release.elf' --shell
+```
+
+Como funciona:
+
+- Considera a etiqueta de lançamento como $1.
+- Copia o ELF de ./build/Debug/\*.elf → ./firmware-debug.elf.
+- Copia o ELF de ./build/Release/\*.elf → ./firmware-release.elf.
+- Executa gh release create com ambos os arquivos renomeados.
+- Limpa removendo os arquivos renomeados temporários.
+
+Uso:
+
+```bash
+gh deploy-all v1.0.0
+```
+
+### Rápida verificação do upload
+
+Assim que o comando terminar, você poderá verificar o upload diretamente em seu terminal usando:
+
+```bash
+gh release view v1.1.0 --web
+```
+
+### Crie um [gh alias](/docs/github-cli#aliases) para verificar o upload
+
+```bash
+gh alias set deploy-view 'gh release view "$1" --web' --shell
+```
+
+Como funciona:
+
+- Considera a etiqueta de lançamento como $1.
+- Executa gh release view com a opção --web para abrir a página do lançamento no navegador
+  Uso:
+
+```bash
+gh deploy-view v1.0.0
+```
+
+### Listar aliases
+
+Comando para listar os aliases criados:
+
+```bash
+gh alias list
+```
+
 ## Como carregar um script do STM32CubeMX com [LoadMX](/docs/loadmx)
 
 Call for Help (--help, -h, /?)

@@ -85,7 +85,7 @@ const navbarItems: NavbarItem[] = [
     { to: "/pdf/CT2026.pdf", label: "Calendário", position: "right", target: '_blank' },
     // { href: "https://www.utfpr.edu.br/alunos/calendario", label: "Calendário", position: "right" },
     {
-        href: 'pathname:///doxygen/stm32f4xx/index.html',
+        href: 'https://ruseleredu.github.io/stm32f4xx-hal-driver-doxygen/index.html',
         label: 'STM32CubeF4',
         position: 'right',
     },

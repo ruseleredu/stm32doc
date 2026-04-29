@@ -1,6 +1,0 @@
-<map id="hal&#45;driver/Inc/stm32f4xx_ll_usb.h" name="hal&#45;driver/Inc/stm32f4xx_ll_usb.h">
-<area shape="rect" id="node1" title="Header file of USB Low Layer HAL module." alt="" coords="108,5,291,47"/>
-<area shape="rect" id="node2" href="$stm32f4xx__hal__hcd_8h.html" title="Header file of HCD HAL module." alt="" coords="5,95,188,136"/>
-<area shape="rect" id="node4" href="$stm32f4xx__hal__pcd_8h.html" title="Header file of PCD HAL module." alt="" coords="212,95,395,136"/>
-<area shape="rect" id="node3" href="$stm32f4xx__hal__conf__template_8h.html" title="HAL configuration template file. This file should be copied to the application folder and renamed to ..." alt="" coords="108,184,291,225"/>
-</map>

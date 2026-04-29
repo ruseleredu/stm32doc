@@ -1,9 +1,0 @@
-<map id="hal&#45;driver/Inc/stm32f4xx_hal_flash.h" name="hal&#45;driver/Inc/stm32f4xx_hal_flash.h">
-<area shape="rect" id="node1" title="Header file of FLASH HAL module." alt="" coords="209,5,391,47"/>
-<area shape="rect" id="node2" href="$stm32f4xx__hal__def_8h.html" title="This file contains HAL common defines, enumeration, macros and structures definitions." alt="" coords="154,184,313,211"/>
-<area shape="rect" id="node6" href="$stm32f4xx__hal__flash__ex_8h.html" title="Header file of FLASH HAL Extension module." alt="" coords="204,102,396,129"/>
-<area shape="rect" id="node7" href="$stm32f4xx__hal__flash__ramfunc_8h.html" title="Header file of FLASH RAMFUNC driver." alt="" coords="420,95,577,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,259,109,285"/>
-<area shape="rect" id="node4" title=" " alt="" coords="133,259,333,285"/>
-<area shape="rect" id="node5" title=" " alt="" coords="357,259,432,285"/>
-</map>

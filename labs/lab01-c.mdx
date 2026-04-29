@@ -2,22 +2,31 @@
 title: Laboratório 01 - draft
 description: Uso e setup do C
 hide_title: true
-draft: true  # <--- Use this key
+draft: true # <--- Use this key
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {LABsApoio} from '@site/src/components/AvisosSite';
+import { LABsApoio } from "@site/src/components/AvisosSite";
 import LabFromTemplate from "@site/src/components/LabFromTemplate";
-import {VerifyDev1,VerifyDev2,GitConfig,STM32Tools,DevToolsv2,GitCommit} from '@site/src/components/InstructionsSite';
-import LabTable from '@site/src/components/LabTable';
+import {
+  VerifyDev1,
+  VerifyDev2,
+  GitConfig,
+  STM32Tools,
+  DevToolsv2,
+  GitCommit,
+} from "@site/src/components/InstructionsSite";
+import LabTable from "@site/src/components/LabTable";
 
 # Laboratório 01
 
 {/* Info de que este conteúdo é de apoio! */}
+
 <LABsApoio />
 
 {/* Tabela com link para atividade, inicio, fim e descrição do LAB! */}
+
 <div style={{ display: "flex", justifyContent: "center" }}>
   <LabTable index={1} internal={false} />
 </div>
@@ -36,20 +45,22 @@ Git e GitHub; Ambiente de desenvolvimento;
 - [ ] Ambiente de desenvolvimento;
 - [ ] Comandos básicos, git e GitHub;
 
-
 ## Verifique o seu ambiente de desenvolvimento
 
 {/* List of Dev Tools */}
+
 <DevToolsv2 />
 
 ---
 
 {/* Configure o git */}
+
 <GitConfig />
 
 ---
 
 {/* Verifique o seu ambiente dev, git, gh e code */}
+
 <VerifyDev1 />
 
 ---
@@ -59,22 +70,21 @@ Git e GitHub; Ambiente de desenvolvimento;
 Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub:
 
 {/* Gera instruções para criar o repositório no GitHub por grupo com base no template do laboratório. */}
+
 <LabFromTemplate labNumber="LAB01" opts="-c" />
 
 {/* Git Commit */}
+
 <GitCommit />
 
 ## Git e GitHub
 
 - [ ] Definições;
 - [ ] Uso do GitHub;
-  
 
 O GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.
 
 - https://docs.github.com/pt/get-started/learning-about-github/github-glossary
-
-
 
 ### [Git](https://git-scm.com/)
 
@@ -88,8 +98,6 @@ O GitHub é uma plataforma de hospedagem de código-fonte e arquivos com control
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Um repositório é o elemento mais básico do GitHub. É mais fácil imaginá-lo como uma pasta de projetos. Um repositório contém todos os arquivos de projeto (incluindo a documentação) e armazena o histórico de revisão de cada arquivo. Os repositórios podem ter vários colaboradores e podem ser públicos ou privados. | A repository is the most basic element of GitHub. They're easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private. |
 
-
-
 ### commit
 
 git-commit - Record changes to the repository
@@ -97,7 +105,6 @@ git-commit - Record changes to the repository
 | confirmar                                                                                                                                                                                                                                                                                                                                                                                                                                       | commit                                                                                                                                                                                                                                                                                                                                                                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Commit, ou "revisão", é uma alteração individual em um arquivo (ou conjunto de arquivos). Quando você faz um commit para salvar seu trabalho, o Git cria uma ID exclusiva (também conhecida como o "SHA" ou "hash") que permite que você mantenha o registro das alterações específicas confirmadas com quem as fez e quando. Os commits normalmente contêm uma mensagem do commit, que é uma breve descrição de quais alterações foram feitas. | A commit, or "revision", is an individual change to a file (or set of files). When you make a commit to save your work, Git creates a unique ID (a.k.a. the "SHA" or "hash") that allows you to keep record of the specific changes committed along with who made them and when. Commits usually contain a commit message which is a brief description of what changes were made. |
-
 
 ```bash
 git help commit
@@ -159,8 +166,7 @@ git-branch - List, create, or delete branches
 git help branch
 ```
 
-
-### checkout 
+### checkout
 
 git-checkout - Switch branches or restore working tree files
 
@@ -173,7 +179,6 @@ git help checkout
 ```
 
 ### fork
-
 
 | fork                                                                                                                                                                                                                                                                                                                                                                                  | fork                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -191,16 +196,15 @@ git-merge - Join two or more development histories together
 git help merge
 ```
 
-
 ## Exemplos
 
 ### [Iniciar um novo repositório e publicá-lo no GitHub](https://docs.github.com/pt/get-started/using-git/about-git#exemplo-iniciar-um-novo-reposit%C3%B3rio-e-public%C3%A1-lo-no-github)
 
 - `git init` inicializa um novo repositório Git e começa a acompanhar um diretório existente. Ele adiciona uma subpasta oculta dentro do diretório existente que contém a estrutura de dados interna necessária para o controle de versão.
--  `git add` prepara uma alteração. O Git controla as alterações na base de código de um desenvolvedor, mas é necessário testar e tirar um instantâneo das alterações para incluí-las no histórico do projeto. Este comando executa o teste, a primeira parte do processo de duas etapas. Todas as mudanças que são testadas irão tornar-se parte do próximo instantâneo e parte do histórico do projeto. O teste e o commit separados dão aos desenvolvedores total controle sobre o histórico do seu projeto sem alterar como eles codificam e funcionam.
--  `git commit` salva o instantâneo no histórico do projeto e conclui o processo de controle de alterações. Em suma, um commit funciona como tirar uma foto. Qualquer item que tenha sido preparado com `git add` passará a fazer parte do instantâneo com `git commit`.
--  `git push` atualiza o repositório remoto com quaisquer commits feitos localmente em um branch.
-  
+- `git add` prepara uma alteração. O Git controla as alterações na base de código de um desenvolvedor, mas é necessário testar e tirar um instantâneo das alterações para incluí-las no histórico do projeto. Este comando executa o teste, a primeira parte do processo de duas etapas. Todas as mudanças que são testadas irão tornar-se parte do próximo instantâneo e parte do histórico do projeto. O teste e o commit separados dão aos desenvolvedores total controle sobre o histórico do seu projeto sem alterar como eles codificam e funcionam.
+- `git commit` salva o instantâneo no histórico do projeto e conclui o processo de controle de alterações. Em suma, um commit funciona como tirar uma foto. Qualquer item que tenha sido preparado com `git add` passará a fazer parte do instantâneo com `git commit`.
+- `git push` atualiza o repositório remoto com quaisquer commits feitos localmente em um branch.
+
 ### create a new repository on the command line
 
 ```bash
@@ -230,7 +234,6 @@ git push -u origin main
 ```
 
 ### clone an existing repository from the command line
-
 
 ```bash
 git clone https://github.com/ELT73A-S22-2026-1-X/lab01-init.git
@@ -286,12 +289,11 @@ git commit -m "edit file1"
 
 # push changes to github
 git push
-```` 
+```
 
 ## Criando diagramas
 
 - https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams
-
 
 Here is a simple flow chart:
 
@@ -302,7 +304,8 @@ graph TD;
     B-->D;
     C-->D;
 ```
---- 
+
+---
 
 ```mermaid
   info
@@ -321,6 +324,7 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
 ## Static Badge
+
 - https://shields.io/badges
 
 ![Version](https://img.shields.io/badge/github-repo-blue?logo=github)
@@ -359,7 +363,16 @@ Configure o Visual Studio Code para usar o compilador GCC e o depurador GDB
 pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-R3l4Bc5jH4?si=WbfLdQtISBTG98d-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/-R3l4Bc5jH4?si=WbfLdQtISBTG98d-"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
 
 ## Check your MinGW installation
 
@@ -376,13 +389,31 @@ gdb --version
 
 Como formatar o seu código em C no VScode
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GsGjdF7TkoM?si=CTQkIU3wxt4tFkck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/GsGjdF7TkoM?si=CTQkIU3wxt4tFkck"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
 
 ## Escolha e configuração de temas no VScode
 
 Escolha e configuração de temas no VScode
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p1kprMBB9fQ?si=iPNpFzCl0s-8u58V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/p1kprMBB9fQ?si=iPNpFzCl0s-8u58V"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
 
 ```bash
 code --list-extensions --profile "Markdown"
@@ -433,7 +464,6 @@ code --list-extensions --profile "Markdown"
 }
 ```
 
-
 ```json title=".vscode/settings.json"
 {
   "workbench.iconTheme": "material-icon-theme",
@@ -450,8 +480,6 @@ code --list-extensions --profile "Markdown"
 }
 ```
 
-
-
 ```json title=".vscode/settings.json"
 {
   // Editor Layout for Writing
@@ -467,7 +495,7 @@ code --list-extensions --profile "Markdown"
   "markdown.preview.doubleClickToSwitchToEditor": true,
   "markdown.preview.scrollEditorWithPreview": true,
   "markdown.mermaid.theme": "dark",
-  
+
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -584,9 +612,6 @@ gh repo create ELT73A-S22-2025-2-X/LAB01 --public -c -l mit --add-readme -g C
 - [Melhores práticas do Git](/docs/git-best-practices).
 - [Folha de Dicas de Git do GitHub](/docs/github-git-cheat-sheet).
 
-
-
-
 ## Instruções TODO
 
 Esta atividade de laboratório tem como objetivo verificar a configuração adequada do ambiente de desenvolvimento para o STM32.
@@ -600,7 +625,6 @@ Esta atividade de laboratório tem como objetivo verificar a configuração adeq
 - [ ] Envie o link da organização (hyperlink);
 - [ ] Envie o link do repositório no GitHub (hyperlink);
 
-
 ## Avaliação TODO
 
 - [ ] Crie uma organização baseada no nome do grupo - 10%
@@ -609,5 +633,3 @@ Esta atividade de laboratório tem como objetivo verificar a configuração adeq
 - [ ] Crie um projeto em branco na pasta EmptyTest - 25%
 - [ ] Importe um projeto em branco na pasta CubeMxTest - 25%
 - [ ] Envie o link da organização e do repositório no GitHub (hyperlink) - 20%
-
-

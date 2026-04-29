@@ -13,6 +13,7 @@ import {
   GitConfig,
   STM32Toolsv2,
   GitCommit,
+  NewBranch,
 } from "@site/src/components/InstructionsSite";
 import LabTable from "@site/src/components/LabTable";
 
@@ -114,7 +115,13 @@ Learn how to use the GPIO EXTI0 interrupt feature on the STM32F411CEU6 microcont
   allowfullscreen
 ></iframe>
 
-Inicialize o Timer 2 com suporte a rotina de interrupção:
+## Crie uma branch nova
+
+Seguindo as boas práticas de desenvolvimento, crie uma branch nova para desenvolver a atividade do laboratório. Utilize um nome significativo para a branch, veja como criar uma nova branch utilizando como nome `new-feature`:
+
+<NewBranch />
+
+## Inicialize o Timer 2 com suporte a rotina de interrupção:
 
 ```c title="Src/main.c"
   /* Initialize all configured peripherals */
@@ -126,7 +133,7 @@ Inicialize o Timer 2 com suporte a rotina de interrupção:
   /* USER CODE END 2 */
 ```
 
-Toggle no LED interno via interrupção do User Key:
+## Toggle no LED interno via interrupção do User Key:
 
 ```c title="Src/stm32f4xx_it.c"
 void EXTI0_IRQHandler(void)
@@ -142,7 +149,7 @@ void EXTI0_IRQHandler(void)
 }
 ```
 
-Toggle no LED interno via interrupção do Timer 2 (1s):
+## Toggle no LED interno via interrupção do Timer 2 (1s):
 
 ```c title="Src/stm32f4xx_it.c"
 void TIM2_IRQHandler(void)

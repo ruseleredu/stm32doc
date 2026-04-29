@@ -13,6 +13,7 @@ import {
   GitConfig,
   STM32Toolsv2,
   GitCommit,
+  NewBranch,
 } from "@site/src/components/InstructionsSite";
 import LabTable from "@site/src/components/LabTable";
 
@@ -100,6 +101,12 @@ O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pin
 ![ST-LINK/V2 Clone](/img/ST-LINK_V2_Clone_Header.png)
 
 ---
+
+## Crie uma branch nova
+
+Seguindo as boas práticas de desenvolvimento, crie uma branch nova para desenvolver a atividade do laboratório. Utilize um nome significativo para a branch, veja como criar uma nova branch utilizando como nome `new-feature`:
+
+<NewBranch />
 
 ## Implemente o código para piscar o LED via interrupção do User KEY e leitura do ADC com atualização do PWM
 

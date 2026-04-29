@@ -148,9 +148,13 @@ int main(void)
 
 ## Crie uma branch nova
 
-{/* Como criar uma nova branch */}
+Seguindo as boas práticas de desenvolvimento, crie uma branch nova para desenvolver a atividade do laboratório. Utilize um nome significativo para a branch, veja como criar uma nova branch utilizando como nome `new-feature`:
 
 <NewBranch />
+
+## Coloque o seu código no local destinado para o código do usuário:
+
+Em um projeto gerado pelo STM32CubeMX, o código do usuário deve ser colocado dentro dos blocos de código delimitados por `USER CODE BEGIN` e `USER CODE END`. Esses blocos são preservados durante a regeneração do código, garantindo que suas modificações não sejam sobrescritas.
 
 ```c title="Core/Scr/main.c"
 /* Infinite loop */
@@ -167,6 +171,12 @@ while (1)
 }
 /* USER CODE END 3 */
 ```
+
+### Toggle com HAL_GPIO_TogglePin e HAL_Delay
+
+Veja o [STM32F4xx HAL Driver Documentation](/doxygen/stm32f4xx/index.html) para mais detalhes sobre as funções de GPIO e Delay.
+
+[View Doxygen Docs](pathname:///doxygen/stm32f4xx/index.html)
 
 ```c title="Core/Scr/main.c"
 /* Infinite loop */
@@ -184,6 +194,8 @@ while (1)
 }
 /* USER CODE END 3 */
 ```
+
+### Toggle com HAL_GPIO_WritePin e HAL_Delay
 
 ```c title="Core/Scr/main.c"
 /* Infinite loop */
@@ -205,25 +217,7 @@ while (1)
 /* USER CODE END 3 */
 ```
 
-### Toggle with HAL_GPIO_WritePin and HAL_Delay
-
-```c
-// Toggle built-in LED attached to PC13
-HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // LED ON
-HAL_Delay(100); /* Insert delay 100 ms */
-HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET); // LED OFF
-HAL_Delay(100); /* Insert delay 100 ms */
-```
-
-### Toggle with HAL_GPIO_TogglePin
-
-```c
-// Toggle built-in LED attached to PC13
-HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-HAL_Delay(100); /* Insert delay 100 ms */
-```
-
-### Toggle with HAL_GPIO_WritePin if Button is pressed
+### Toggle com HAL_GPIO_WritePin se o botão estiver pressionado
 
 ```c
 // If Button Is Pressed
@@ -235,13 +229,13 @@ else
 
 ## Crie um novo release e envie o arquivo
 
-If you want to create a release, tag it, and upload your `.elf` file in one go without opening a browser, this is the most efficient syntax:
+Se você deseja criar um release, nomeie a tag (etiqueta de lançamento) e carregue seu arquivo `.elf` de uma só vez, sem abrir um navegador, esta é a sintaxe mais eficiente:
 
 ```bash
 gh release create v1.0.0 ./path/to/your_file.elf --generate-notes
 ```
 
-- --generate-notes: This is a lifesaver, it automatically builds a changelog based on your commit history since the last tag.
+- --generate-notes: Cria automaticamente um changelog com base no seu histórico de commits desde a última tag.
 
 Ex:
 
@@ -255,14 +249,14 @@ gh release create v1.1.0 ./build/Debug/*.elf --generate-notes
 gh alias set deploy-debug 'tag="$1"; cp ./build/Debug/*.elf ./firmware-debug.elf && gh release create "$tag" ./firmware-debug.elf --generate-notes && rm ./firmware-debug.elf' --shell
 ```
 
-How it works
+Como funciona:
 
-- Takes the release tag as $1.
-- Copies the ELF from ./build/Debug/\*.elf → ./firmware-debug.elf.
-- Runs gh release create with the renamed file.
-- Cleans up by removing the temporary renamed file.
+- Considera a etiqueta de lançamento como $1.
+- Copia o ELF de ./build/Debug/\*.elf → ./firmware-debug.elf.
+- Executa gh release create com o arquivo renomeado.
+- Limpa removendo o arquivo renomeado temporário.
 
-Usage:
+Uso:
 
 ```bash
 gh deploy-debug v1.0.0
@@ -274,14 +268,14 @@ gh deploy-debug v1.0.0
 gh alias set deploy-release 'tag="$1"; cp ./build/Release/*.elf ./firmware-release.elf && gh release create "$tag" ./firmware-release.elf --generate-notes && rm ./firmware-release.elf' --shell
 ```
 
-How it works
+Como funciona:
 
-- Takes the release tag as $1.
-- Copies the ELF from ./build/Release/\*.elf → ./firmware-release.elf.
-- Runs gh release create with the renamed file.
-- Cleans up by removing the temporary renamed file.
+- Considera a etiqueta de lançamento como $1.
+- Copia o ELF de ./build/Release/\*.elf → ./firmware-release.elf.
+- Executa gh release create com o arquivo renomeado.
+- Limpa removendo o arquivo renomeado temporário.
 
-Usage:
+Uso:
 
 ```bash
 gh deploy-release v1.0.0
@@ -293,15 +287,15 @@ gh deploy-release v1.0.0
 gh alias set deploy-all 'tag="$1"; cp ./build/Debug/*.elf ./firmware-debug.elf && cp ./build/Release/*.elf ./firmware-release.elf && gh release create "$tag" ./firmware-debug.elf ./firmware-release.elf --generate-notes && rm ./firmware-debug.elf ./firmware-release.elf' --shell
 ```
 
-How it works
+Como funciona:
 
-- Takes the release tag as $1.
-- Copies the ELF from ./build/Debug/\*.elf → ./firmware-debug.elf.
-- Copies the ELF from ./build/Release/\*.elf → ./firmware-release.elf.
-- Runs gh release create with both renamed files.
-- Cleans up by removing the temporary renamed files.
+- Considera a etiqueta de lançamento como $1.
+- Copia o ELF de ./build/Debug/\*.elf → ./firmware-debug.elf.
+- Copia o ELF de ./build/Release/\*.elf → ./firmware-release.elf.
+- Executa gh release create com ambos os arquivos renomeados.
+- Limpa removendo os arquivos renomeados temporários.
 
-Usage:
+Uso:
 
 ```bash
 gh deploy-all v1.0.0
@@ -309,16 +303,11 @@ gh deploy-all v1.0.0
 
 ### Rápida verificação do upload
 
-Once the command finishes, you can verify the upload directly in your terminal without tab-switching to Chrome:
+Assim que o comando terminar, você poderá verificar o upload diretamente em seu terminal usando:
 
 ```bash
 gh release view v1.1.0 --web
 ```
-
-Flag,Purpose
---clobber, Crucial if you need to re-upload. It overwrites an existing file of the same name.
---verify-tag, Confirms the tag exists in the remote repo before trying to create a release.
---latest,"Explicitly marks this release as the ""Latest"" (useful if you're uploading an older version)."
 
 ### Crie um [gh alias](/docs/github-cli#aliases) para verificar o upload
 
@@ -326,10 +315,22 @@ Flag,Purpose
 gh alias set deploy-view 'gh release view "$1" --web' --shell
 ```
 
-Usage:
+Como funciona:
+
+- Considera a etiqueta de lançamento como $1.
+- Executa gh release view com a opção --web para abrir a página do lançamento no navegador
+  Uso:
 
 ```bash
 gh deploy-view v1.0.0
+```
+
+### Listar aliases
+
+Comando para listar os aliases criados:
+
+```bash
+gh alias list
 ```
 
 ## Como carregar um script do STM32CubeMX

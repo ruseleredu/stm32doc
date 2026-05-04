@@ -274,45 +274,6 @@ Uso:
 gh deploy-debug v1.0.0
 ```
 
-### Crie um [gh alias](/docs/github-cli#aliases) para deploy-release
-
-```bash
-gh alias set deploy-release 'tag="$1"; cp ./build/Release/*.elf ./firmware-release.elf && gh release create "$tag" ./firmware-release.elf --generate-notes && rm ./firmware-release.elf' --shell
-```
-
-Como funciona:
-
-- Considera a etiqueta de lançamento como $1.
-- Copia o ELF de ./build/Release/\*.elf → ./firmware-release.elf.
-- Executa gh release create com o arquivo renomeado.
-- Limpa removendo o arquivo renomeado temporário.
-
-Uso:
-
-```bash
-gh deploy-release v1.0.0
-```
-
-### Crie um [gh alias](/docs/github-cli#aliases) para deploy-all
-
-```bash
-gh alias set deploy-all 'tag="$1"; cp ./build/Debug/*.elf ./firmware-debug.elf && cp ./build/Release/*.elf ./firmware-release.elf && gh release create "$tag" ./firmware-debug.elf ./firmware-release.elf --generate-notes && rm ./firmware-debug.elf ./firmware-release.elf' --shell
-```
-
-Como funciona:
-
-- Considera a etiqueta de lançamento como $1.
-- Copia o ELF de ./build/Debug/\*.elf → ./firmware-debug.elf.
-- Copia o ELF de ./build/Release/\*.elf → ./firmware-release.elf.
-- Executa gh release create com ambos os arquivos renomeados.
-- Limpa removendo os arquivos renomeados temporários.
-
-Uso:
-
-```bash
-gh deploy-all v1.0.0
-```
-
 ### Rápida verificação do upload
 
 Assim que o comando terminar, você poderá verificar o upload diretamente em seu terminal usando:
@@ -344,3 +305,7 @@ Comando para listar os aliases criados:
 ```bash
 gh alias list
 ```
+
+## [STM32CubeMonitor](https://www.st.com/en/development-tools/stm32cubemonitor.html#section-get-software-table) - Monitoramento e Depuração em Tempo Real para STM32
+
+O [STM32CubeMonitor](/docs/stm32cubemonvideos) é uma ferramenta de monitoramento e depuração em tempo real para microcontroladores STM32. Ele permite que os desenvolvedores visualizem variáveis, monitorem o desempenho do sistema e depurem aplicativos de forma eficiente. Com uma interface intuitiva, o STM32CubeMonitor facilita a análise de dados e a identificação de problemas em projetos baseados em STM32, tornando-o uma escolha essencial para engenheiros e entusiastas que trabalham com esses microcontroladores.

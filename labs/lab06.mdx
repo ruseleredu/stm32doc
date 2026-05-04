@@ -309,3 +309,50 @@ gh alias list
 ## [STM32CubeMonitor](https://www.st.com/en/development-tools/stm32cubemonitor.html#section-get-software-table) - Monitoramento e Depuração em Tempo Real para STM32
 
 O [STM32CubeMonitor](/docs/stm32cubemonvideos) é uma ferramenta de monitoramento e depuração em tempo real para microcontroladores STM32. Ele permite que os desenvolvedores visualizem variáveis, monitorem o desempenho do sistema e depurem aplicativos de forma eficiente. Com uma interface intuitiva, o STM32CubeMonitor facilita a análise de dados e a identificação de problemas em projetos baseados em STM32, tornando-o uma escolha essencial para engenheiros e entusiastas que trabalham com esses microcontroladores.
+
+- https://jsonformatter.org/
+
+```json
+{
+  "payload": {
+    "variablelist": [
+      {
+        "address": "0x200000bc",
+        "type": 1,
+        "value": "0"
+      }
+    ],
+    "accesspoint": 0
+  },
+  "topic": "write"
+}
+```
+
+```json
+{
+  "payload": {
+    "variablelist": [
+      {
+        "address": "0x200000bc",
+        "type": 1,
+        "value": "1"
+      }
+    ],
+    "accesspoint": 0
+  },
+  "topic": "write"
+}
+```
+
+```json
+{
+  "variablelist": [
+    {
+      "address": "0x200000bc",
+      "type": 1,
+      "value": "{{payload}}"
+    }
+  ],
+  "accesspoint": 0
+}
+```

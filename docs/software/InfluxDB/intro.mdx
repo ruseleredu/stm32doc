@@ -1,0 +1,67 @@
+---
+id: influxdata-intro
+title: Intro
+sidebar_position: 1
+description: Time series starts with InfluxDB - the open source time series database.
+slug: /influxdata-intro
+---
+
+## InfluxDB
+
+[InfluxDB](https://www.influxdata.com/) is an open-source time series database developed by InfluxData. It is designed to handle high write and query loads, making it ideal for applications that require real-time analytics and monitoring.
+
+## LAB07
+
+```bash
+docker exec -it influxdb-influxdb2-1 bash
+```
+
+```bash
+influx org create --name ELT73A-LAB07 --description ELT73A-LAB07
+```
+
+```bash
+influx user create --org ELT73A-LAB07 --name ELT73A-LAB07 --password stm32lab07
+```
+
+```bash
+for group in A B C D E F G H I J K L M X; do
+  influx bucket create --name Grupo-${group} --org ELT73A-LAB07
+done
+```
+
+```bash
+influx auth create --org ELT73A-LAB07 --user ELT73A-LAB07 --all-access
+```
+
+```bash
+IUN2S7MrM9Q37C8hBvCXX6bP7FyXjr1ZynwKkqrLopPgrCBkF3631FsCCavaH_rM3O4EDHb4p9SnhrfjswpbsA==
+```
+
+## LAB08
+
+```bash
+docker exec -it influxdb-influxdb2-1 bash
+```
+
+```bash
+influx org create --name ELT73A-LAB08 --description ELT73A-LAB08
+```
+
+```bash
+influx user create --org ELT73A-LAB08 --name ELT73A-LAB08 --password stm32lab08
+```
+
+```bash
+for group in A B C D E F G H I J K L M X; do
+  influx bucket create --name Grupo-${group} --org ELT73A-LAB08
+done
+```
+
+```bash
+influx auth create --org ELT73A-LAB08 --user ELT73A-LAB08 --all-access
+```
+
+```bash
+dYloVM6_GL85AHsOeqkk2FEfW8ma0sINox5cgw_cEagZO3LMc0jk2ZV9PQ-gDTaw-k-vpXtxf0nWeNtwZXnBTA==
+```

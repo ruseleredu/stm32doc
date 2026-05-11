@@ -356,3 +356,41 @@ O [STM32CubeMonitor](/docs/stm32cubemonvideos) é uma ferramenta de monitorament
   "accesspoint": 0
 }
 ```
+
+## Como carregar um script do STM32CubeMX com [LoadMX](/docs/loadmx)
+
+Call for Help (--help, -h, /?)
+
+```bash
+LoadMX --help
+```
+
+Run STM32CubeMX interactively with [LoadMX](/docs/loadmx)
+
+```bash
+LoadMX -i
+```
+
+To generate a script
+
+```bash
+export script ScriptToLoad.txt
+```
+
+Generate code with TIM2 and EXT INT
+
+```bash
+LoadMX TIM2EXTI0 TIM2EXTI0.txt
+```
+
+Generate code with TIM2, EXT INT and ADC1
+
+```bash
+LoadMX TIM2EXTI0ADC1 TIM2EXTI0ADC1.txt
+```
+
+Generate code with TIM2, EXT INT, ADC1 and PWM
+
+```bash
+LoadMX TIM2EXTI0ADC1PWM TIM2EXTI0ADC1PWM.txt
+```

@@ -1,0 +1,55 @@
+# SQL for Data & IoT: Introduction and Use Cases
+
+SQL (Structured Query Language) is the standard language for managing and manipulating relational databases like **SQLite**, **PostgreSQL**, and **MySQL**.
+
+---
+
+## 1. Core SQL Commands (The "Big Four")
+
+Most IoT applications rely on **CRUD** operations: Create, Read, Update, and Delete.
+
+| Operation  | SQL Command | IoT Context                                       |
+| :--------- | :---------- | :------------------------------------------------ |
+| **Create** | `INSERT`    | Saving a new sensor reading.                      |
+| **Read**   | `SELECT`    | Retrieving history for a chart.                   |
+| **Update** | `UPDATE`    | Changing a device's status (e.g., LED ON to OFF). |
+| **Delete** | `DELETE`    | Clearing logs older than 30 days.                 |
+
+---
+
+## 2. Common Use Cases
+
+### A. Logging Telemetry (Time-Series)
+
+Storing periodic data from ADCs, DHT22 sensors, or power meters.
+
+- **Query:** `INSERT INTO sensors (temp, humidity) VALUES (22.5, 45);`
+
+### B. Device Configuration & State
+
+Storing the last known state of a physical device so it persists after a power failure.
+
+- **Query:** `SELECT state FROM devices WHERE device_id = 'living_room_lamp';`
+
+### C. Data Aggregation (Analytics)
+
+Finding averages or peaks over a specific timeframe.
+
+- **Query:** `SELECT AVG(voltage) FROM power_logs WHERE timestamp > DATETIME('now', '-1 hour');`
+
+---
+
+## 3. SQL Syntax Cheat Sheet
+
+### Creating a Table
+
+Before inserting data, you must define the "container."
+
+```sql
+CREATE TABLE IF NOT EXISTS sensor_logs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    sensor_name TEXT,
+    reading REAL
+);
+```

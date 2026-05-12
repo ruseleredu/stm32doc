@@ -242,7 +242,7 @@ void DMA2_Stream0_IRQHandler(void)
 }
 ```
 
-### For SQlite
+### SQlite
 
 - https://sqlite.org/
 - https://flows.nodered.org/node/node-red-node-sqlite
@@ -251,25 +251,25 @@ void DMA2_Stream0_IRQHandler(void)
 CREATE TABLE IF NOT EXISTS sensor_data (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-    adc1in1 INTEGER,
+    ADC1IN1 INTEGER,
     voltage1 REAL,
-    adc1in2 INTEGER,
+    ADC1IN2 INTEGER,
     voltage2 REAL,
-    blueled INTEGER
+    BLUELED INTEGER
 );
 ```
 
 ```js
-let adc1Value = Math.floor(Math.random() * 4096);
-let adc2Value = Math.floor(Math.random() * 4096);
-let v1 = (adc1Value * 3.3) / 4095;
-let v2 = (adc2Value * 3.3) / 4095;
-let led = Math.round(Math.random());
+let ADC1IN1 = Math.floor(Math.random() * 4096);
+let ADC1IN2 = Math.floor(Math.random() * 4096);
+let voltage1 = (ADC1IN1 * 3.3) / 4095;
+let voltage2 = (ADC1IN2 * 3.3) / 4095;
+let BLUELED = Math.round(Math.random());
 
 // Create the SQL Insert Statement
 // Replace 'sensor_data' with your actual table name
-msg.topic = `INSERT INTO sensor_data (adc1in1, voltage1, adc1in2, voltage2, blueled) 
-             VALUES (${adc1Value}, ${v1}, ${adc2Value}, ${v2}, ${led});`;
+msg.topic = `INSERT INTO sensor_data (ADC1IN1, voltage1, ADC1IN2, voltage2, BLUELED) 
+             VALUES (${ADC1IN1}, ${voltage1}, ${ADC1IN2}, ${voltage2}, ${BLUELED});`;
 
 return msg;
 ```
@@ -298,7 +298,7 @@ if (msg.payload.length > 0) {
 const d = msg.payload;
 
 // Constructing the query with rounded voltage values
-msg.topic = `INSERT INTO sensor_readings (adc1, adc2, led, volt1, volt2) 
+msg.topic = `INSERT INTO sensor_readings (ADC1IN1, ADC1IN2, BLUELED, voltage1, voltage2) 
              VALUES (${d.ADC1IN1}, ${d.ADC1IN2}, ${d.BLUELED}, ${d.voltage1.toFixed(2)}, ${d.voltage2.toFixed(2)});`;
 
 // Ensure payload is an empty array so the SQLite node executes the topic string
@@ -312,20 +312,22 @@ Create DB
 ```sql
 CREATE TABLE IF NOT EXISTS sensor_readings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    adc1 INTEGER,
-    adc2 INTEGER,
-    led INTEGER,
-    volt1 REAL,
-    volt2 REAL,
+    ADC1IN1 INTEGER,
+    ADC1IN2 INTEGER,
+    BLUELED INTEGER,
+    voltage1 REAL,
+    voltage2 REAL,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 ```
+
+### Versão simplificada sem as colunas de tensão:
 
 ```js
 const d = msg.payload;
 
 // Constructing the query with rounded voltage values
-msg.topic = `INSERT INTO sensor_readings (adc1, adc2, led) 
+msg.topic = `INSERT INTO sensor_readings (ADC1IN1, ADC1IN2, BLUELED) 
              VALUES (${d.ADC1IN1}, ${d.ADC1IN2}, ${d.BLUELED});`;
 
 // Ensure payload is an empty array so the SQLite node executes the topic string
@@ -339,9 +341,9 @@ Create DB
 ```sql
 CREATE TABLE IF NOT EXISTS sensor_readings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    adc1 INTEGER,
-    adc2 INTEGER,
-    led INTEGER,
+    ADC1IN1 INTEGER,
+    ADC1IN2 INTEGER,
+    BLUELED INTEGER,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 ```
@@ -349,13 +351,13 @@ CREATE TABLE IF NOT EXISTS sensor_readings (
 Calculation Node (Function after the SQLite node):
 
 ```js
-msg.topic = "SELECT adc1 FROM sensor_readings ORDER BY id DESC LIMIT 1;";
+msg.topic = "SELECT ADC1IN1 FROM sensor_readings ORDER BY id DESC LIMIT 1;";
 return msg;
 ```
 
 ```js
 if (msg.payload.length > 0) {
-  let adc_1 = msg.payload[0].adc1;
+  let adc_1 = msg.payload[0].ADC1IN1;
 
   // Perform the conversion
   let voltage1 = (adc_1 * 3.3) / 4095;
@@ -372,15 +374,15 @@ Or:
 ```js
 // The math: (adc1 * 3.3) / 4095
 msg.topic =
-  "SELECT (adc1 * 3.3 / 4095) AS calc_voltage FROM sensor_readings ORDER BY id DESC LIMIT 1;";
+  "SELECT (ADC1IN1 * 3.3 / 4095) AS voltage1 FROM sensor_readings ORDER BY id DESC LIMIT 1;";
 return msg;
 ```
 
 Average of the Last "X" Records
 
 ```js
-msg.topic = `SELECT AVG(adc1) AS mean_adc1 
-             FROM (SELECT adc1 FROM sensor_readings ORDER BY id DESC LIMIT 5);`;
+msg.topic = `SELECT AVG(ADC1IN1) AS mean_adc1 
+             FROM (SELECT ADC1IN1 FROM sensor_readings ORDER BY id DESC LIMIT 5);`;
 return msg;
 ```
 
@@ -398,11 +400,11 @@ let adc2Value = Math.floor(Math.random() * 4096);
 
 msg.topic = "InfluxData";
 msg.payload = {
-  adc1in1: adc1Value,
+  ADC1IN1: adc1Value,
   voltage1: (adc1Value * 3.3) / 4095,
-  adc1in2: adc2Value,
+  ADC1IN2: adc2Value,
   voltage2: (adc2Value * 3.3) / 4095,
-  blueled: Math.round(Math.random()),
+  BLUELED: Math.round(Math.random()),
 };
 return msg;
 ```
@@ -419,11 +421,11 @@ const toVolts = (val) => parseFloat(((val * 3.3) / 4095).toFixed(3));
 
 msg.topic = "sensor_data"; // Useful for organizing in Node-RED
 msg.payload = {
-  adc1in1: adc1,
+  ADC1IN1: adc1,
   voltage1: toVolts(adc1),
-  adc1in2: adc2,
+  ADC1IN2: adc2,
   voltage2: toVolts(adc2),
-  blueled: Math.random() > 0.5 ? 1 : 0,
+  BLUELED: Math.random() > 0.5 ? 1 : 0,
 };
 
 return msg;

@@ -22,3 +22,18 @@ slug: /sqlite-intro
 
 - https://sqlitebrowser.org/
 - https://sqliteonline.com/
+
+```bash
+docker run -d --name=sqlitebrowser -e PUID=1000 -e PGID=1000 -p 3000:3000 -p 3001:3001 --shm-size="1gb" --restart unless-stopped lscr.io/linuxserver/sqlitebrowser:latest
+```
+
+## SQLite Viewer Web App
+
+- https://inloop.github.io/sqlite-viewer/
+- https://beta.sqliteviewer.app/
+
+## SQLite Viewer for VS Code
+
+- https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer
+
+.sqlite is the default file extension for SQLite database files.

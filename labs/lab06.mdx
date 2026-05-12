@@ -239,23 +239,15 @@ void ADC_IRQHandler(void)
 }
 ```
 
-## Crie um novo release e envie o arquivo
+## VS Code Terminal Configuration
 
-Se você deseja criar um release, nomeie a tag (etiqueta de lançamento) e carregue seu arquivo `.elf` de uma só vez, sem abrir um navegador, esta é a sintaxe mais eficiente:
+Configure `Git Bash` como terminal integrado do Visual Studio Code para evitar problemas de formatação de texto e comandos:
 
-```bash
-gh release create v1.0.0 ./path/to/your_file.elf --generate-notes
+```json title="VSCode Settings"
+"terminal.integrated.defaultProfile.windows": "Git Bash",
 ```
 
-- --generate-notes: Cria automaticamente um changelog com base no seu histórico de commits desde a última tag.
-
-Ex:
-
-```bash
-gh release create v1.1.0 ./build/Debug/*.elf --generate-notes
-```
-
-### Crie um [gh alias](/docs/github-cli#aliases) para deploy-debug
+## Crie um [gh alias](/docs/github-cli#aliases) para deploy-debug
 
 ```bash
 gh alias set deploy-debug 'tag="$1"; cp ./build/Debug/*.elf ./firmware-debug.elf && gh release create "$tag" ./firmware-debug.elf --generate-notes && rm ./firmware-debug.elf' --shell
@@ -279,31 +271,7 @@ gh deploy-debug v1.0.0
 Assim que o comando terminar, você poderá verificar o upload diretamente em seu terminal usando:
 
 ```bash
-gh release view v1.1.0 --web
-```
-
-### Crie um [gh alias](/docs/github-cli#aliases) para verificar o upload
-
-```bash
-gh alias set deploy-view 'gh release view "$1" --web' --shell
-```
-
-Como funciona:
-
-- Considera a etiqueta de lançamento como $1.
-- Executa gh release view com a opção --web para abrir a página do lançamento no navegador
-  Uso:
-
-```bash
-gh deploy-view v1.0.0
-```
-
-### Listar aliases
-
-Comando para listar os aliases criados:
-
-```bash
-gh alias list
+gh release view v1.0.0 --web
 ```
 
 ## [STM32CubeMonitor](https://www.st.com/en/development-tools/stm32cubemonitor.html#section-get-software-table) - Monitoramento e Depuração em Tempo Real para STM32

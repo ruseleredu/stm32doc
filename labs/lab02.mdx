@@ -217,6 +217,41 @@ Opens STM32CubeMX with provided Project Name, Script Name and generate code
 LoadMX ProjectName ScriptToLoad.txt Y
 ```
 
+## VS Code Terminal Configuration
+
+Configure `Git Bash` como terminal integrado do Visual Studio Code para evitar problemas de formatação de texto e comandos:
+
+```json title="VSCode Settings"
+"terminal.integrated.defaultProfile.windows": "Git Bash",
+```
+
+## Crie um [gh alias](/docs/github-cli#aliases) para deploy-debug
+
+```bash
+gh alias set deploy-debug 'tag="$1"; cp ./build/Debug/*.elf ./firmware-debug.elf && gh release create "$tag" ./firmware-debug.elf --generate-notes && rm ./firmware-debug.elf' --shell
+```
+
+Como funciona:
+
+- Considera a etiqueta de lançamento como $1.
+- Copia o ELF de ./build/Debug/\*.elf → ./firmware-debug.elf.
+- Executa gh release create com o arquivo renomeado.
+- Limpa removendo o arquivo renomeado temporário.
+
+Uso:
+
+```bash
+gh deploy-debug v1.0.0
+```
+
+### Rápida verificação do upload
+
+Assim que o comando terminar, você poderá verificar o upload diretamente em seu terminal usando:
+
+```bash
+gh release view v1.0.0 --web
+```
+
 ## Instruções
 
 Esta atividade de laboratório tem como objetivo verificar a configuração adequada do ambiente de desenvolvimento para o STM32.

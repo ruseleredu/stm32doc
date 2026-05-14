@@ -206,8 +206,8 @@ Na interrupção do ADC1, faça a leitura do AN1 e atualize o valor de comparaç
 ```c title="Src/main.c"
 /* USER CODE BEGIN PV */
 // highlight-start
-uint16_t adc1in1 = 0; // Variable to store ADC value
-float voltage = 0.0f; // Variable to store calculated voltage
+uint16_t ADC1IN1 = 0; // Variable to store ADC value
+float voltage1 = 0.0f; // Variable to store calculated voltage
 // highlight-end
 /* USER CODE END PV */
 ```
@@ -216,8 +216,8 @@ float voltage = 0.0f; // Variable to store calculated voltage
 /* USER CODE BEGIN PV */
 extern bool BLUELED; // Flag to control the blue LED
 // highlight-start
-extern uint16_t adc1in1; // Variable to store ADC value
-extern float voltage; // Variable to store calculated voltage
+extern uint16_t ADC1IN1; // Variable to store ADC value
+extern float voltage1; // Variable to store calculated voltage
 // highlight-end
 /* USER CODE END PV */
 ```
@@ -231,9 +231,9 @@ void ADC_IRQHandler(void)
   HAL_ADC_IRQHandler(&hadc1);
   /* USER CODE BEGIN ADC_IRQn 1 */
   // highlight-start
-  adc1in1 = HAL_ADC_GetValue(&hadc1); // Read ADC value
-  TIM2->CCR1 = adc1in1; // Update PWM duty cycle
-  voltage = (adc1in1*3.3)/4095; // Convert ADC value to voltage
+  ADC1IN1 = HAL_ADC_GetValue(&hadc1); // Read ADC value
+  TIM2->CCR1 = ADC1IN1; // Update PWM duty cycle
+  voltage1 = (ADC1IN1*3.3)/4095; // Convert ADC value to voltage
   // highlight-end
   /* USER CODE END ADC_IRQn 1 */
 }

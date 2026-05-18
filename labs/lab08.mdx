@@ -143,9 +143,11 @@ Implemente a lógica para acionar o LED azul via flag BLUELED:
 
 ```c title="Src/main.c"
 /* USER CODE BEGIN PD */
+// highlight-start
 #define AVG_SLOPE   2.5f     // mV/°C
 #define V_AT_25C    0.76f    // Volts
 #define V_REF_INT   1.21f    // Internal reference voltage
+// highlight-end
 /* USER CODE END PD */
 ```
 
@@ -247,20 +249,18 @@ void TIM2_IRQHandler(void)
 }
 ```
 
+- `HAL_ADC_ConvCpltCallback()` é uma função de alto nível fornecida pela ST (STMicroelectronics) para facilitar a vida do desenvolvedor.
+  Ela é chamada automaticamente quando uma conversão ADC é concluída e os dados estão prontos para serem processados. O uso dessa função é recomendado porque ela abstrai a complexidade de lidar diretamente com as interrupções de ADC e o gerenciamento de buffers, permitindo que o desenvolvedor se concentre na lógica de aplicação em vez de detalhes de baixo nível.
+
 ```c title="Src/stm32f4xx_it.c"
-void DMA2_Stream0_IRQHandler(void)
+/* USER CODE BEGIN 1 */
+// highlight-start
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 0 */
-  // highlight-start
   // Conversion Complete & DMA Transfer Complete As Well
   ADC1IN1 = AD_RES_BUFFER[0];
   TEMPSENSOR = AD_RES_BUFFER[1];
   VREFINT = AD_RES_BUFFER[2];
-  // highlight-end
-  /* USER CODE END DMA2_Stream0_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_adc1);
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 1 */
-  // highlight-start
   voltage1 = (ADC1IN1 * 3.3) / 4095;
   // 1. Calculate the actual VREF (VDDA)
   // This compensates for power supply fluctuations
@@ -273,10 +273,10 @@ void DMA2_Stream0_IRQHandler(void)
   // Note: Some datasheets use (V_sense - V_25) / Slope + 25.
   // Check your specific RM; usually, if Slope is positive, it's (V_sense - V_at_25).
   temp = ((v_sense - V_AT_25C) * 1000.0f / AVG_SLOPE) + 25.0f;
-  TIM2->CCR1 = ADC1IN1;  // PWM CH1
-  // highlight-end
-  /* USER CODE END DMA2_Stream0_IRQn 1 */
+  TIM2->CCR1 = ADC1IN1;  // PWM CH1 duty cycle update based on ADC1IN1
 }
+// highlight-end
+/* USER CODE END 1 */
 ```
 
 ### SQLite
@@ -284,31 +284,123 @@ void DMA2_Stream0_IRQHandler(void)
 - https://sqlite.org/
 - https://inloop.github.io/sqlite-viewer/
 - https://flows.nodered.org/node/node-red-node-sqlite
-- https://databaseschool.com/series/high-performance-sqlite/videos/1
+
+Formato de dados para injeção no SQLite:
+
+- https://jsonformatter.org/
+- https://jsonformatter.org/
+
+```json
+{
+  "payload": {
+    "ADC1IN1": 1769,
+    "BLUELED": 0,
+    "temp": 18.937469482421875,
+    "TEMPSENSOR": 1004,
+    "v_ref": 3.037982940673828,
+    "v_sense": 0.7448436617851257,
+    "voltage1": 1.4255677461624146,
+    "VREFINT": 1631
+  },
+  "topic": "data"
+}
+```
+
+Template para a criação da tabela de dados do sensor:
 
 ```SQL
 CREATE TABLE IF NOT EXISTS sensor_data (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
     ADC1IN1 INTEGER,
+    BLUELED INTEGER,
+    TEMPSENSOR INTEGER,
+    VREFINT INTEGER,
     voltage1 REAL,
-    ADC1IN2 INTEGER,
-    voltage2 REAL,
-    BLUELED INTEGER
+    v_ref REAL,
+    v_sense REAL,
+    temp REAL
 );
 ```
 
-```js
-let ADC1IN1 = Math.floor(Math.random() * 4096);
-let ADC1IN2 = Math.floor(Math.random() * 4096);
-let voltage1 = (ADC1IN1 * 3.3) / 4095;
-let voltage2 = (ADC1IN2 * 3.3) / 4095;
-let BLUELED = Math.round(Math.random());
+Código para injeção de dados simulados no SQLite:
 
-// Create the SQL Insert Statement
+```js
+// Define the missing calibration constants (Typical STM32 values)
+const V_AT_25C = 0.76; // Volts at 25°C
+const AVG_SLOPE = 2.5; // mV/°C
+
+// Generate mock data
+let ADC1IN1 = Math.floor(Math.random() * 4096);
+let BLUELED = Math.round(Math.random());
+let voltage1 = (ADC1IN1 * 3.3) / 4095;
+let TEMPSENSOR = Math.floor(Math.random() * 1000) + 500;
+
+let v_ref = (1.21 * 4095) / (Math.floor(Math.random() * 1000) + 1000);
+let v_sense = (TEMPSENSOR * v_ref) / 4095;
+
+// FIXED: Removed the 'f' suffixes from 1000.0 and 25.0
+let temp = ((v_sense - V_AT_25C) * 1000.0) / AVG_SLOPE + 25.0;
+let VREFINT = Math.floor(Math.random() * 1000) + 1000;
+
+// Format the decimals safely before sending to SQL
+voltage1 = Number(voltage1.toFixed(2));
+v_ref = Number(v_ref.toFixed(2));
+v_sense = Number(v_sense.toFixed(2));
+temp = Number(temp.toFixed(2));
+
+// Prepare the SQL query statement
 // Replace 'sensor_data' with your actual table name
-msg.topic = `INSERT INTO sensor_data (ADC1IN1, voltage1, ADC1IN2, voltage2, BLUELED) 
-             VALUES (${ADC1IN1}, ${voltage1}, ${ADC1IN2}, ${voltage2}, ${BLUELED});`;
+msg.topic = `INSERT INTO sensor_data (ADC1IN1, voltage1, BLUELED, TEMPSENSOR, v_ref, v_sense, temp, VREFINT)
+             VALUES (${ADC1IN1}, ${voltage1}, ${BLUELED}, ${TEMPSENSOR}, ${v_ref}, ${v_sense}, ${temp}, ${VREFINT});`;
+
+return msg;
+```
+
+Função para a leitura de dados via aquisição com STLINK e injeção no SQLite:
+
+```js
+// Navigate the nested structure
+const data = msg.payload.variabledata[0].y;
+
+// Construct the SQL query with the 8 variables
+// We include the 'x' value as our timestamp
+
+msg.topic = `INSERT INTO sensor_data (ADC1IN1, voltage1, BLUELED, TEMPSENSOR, v_ref, v_sense, temp, VREFINT)
+VALUES (
+                ${data.ADC1IN1}, 
+                ${data.voltage1.toFixed(2)}, 
+                ${data.BLUELED}, 
+                ${data.TEMPSENSOR}, 
+                ${data.v_ref.toFixed(2)}, 
+                ${data.v_sense.toFixed(2)}, 
+                ${data.temp.toFixed(2)}, 
+                ${data.VREFINT}
+             );`;
+// Clear payload to trigger the SQLite node
+msg.payload = [];
+
+return msg;
+```
+
+Versão simplificada sem as colunas de cálculos de tensão:
+
+```js
+// Navigate the nested structure
+const data = msg.payload.variabledata[0].y;
+
+// Construct the SQL query with the 8 variables
+// We include the 'x' value as our timestamp
+
+msg.topic = `INSERT INTO sensor_data (ADC1IN1, BLUELED, TEMPSENSOR, VREFINT)
+VALUES (
+                ${data.ADC1IN1}, 
+                ${data.BLUELED}, 
+                ${data.TEMPSENSOR}, 
+                ${data.VREFINT}
+             );`;
+// Clear payload to trigger the SQLite node
+msg.payload = [];
 
 return msg;
 ```
@@ -333,64 +425,10 @@ if (msg.payload.length > 0) {
 
 ## SQLite to insert data into the database
 
-```js
-const d = msg.payload;
-
-// Constructing the query with rounded voltage values
-msg.topic = `INSERT INTO sensor_readings (ADC1IN1, ADC1IN2, BLUELED, voltage1, voltage2) 
-             VALUES (${d.ADC1IN1}, ${d.ADC1IN2}, ${d.BLUELED}, ${d.voltage1.toFixed(2)}, ${d.voltage2.toFixed(2)});`;
-
-// Ensure payload is an empty array so the SQLite node executes the topic string
-msg.payload = [];
-
-return msg;
-```
-
-Create DB
-
-```sql
-CREATE TABLE IF NOT EXISTS sensor_readings (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    ADC1IN1 INTEGER,
-    ADC1IN2 INTEGER,
-    BLUELED INTEGER,
-    voltage1 REAL,
-    voltage2 REAL,
-    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-### Versão simplificada sem as colunas de tensão:
-
-```js
-const d = msg.payload;
-
-// Constructing the query with rounded voltage values
-msg.topic = `INSERT INTO sensor_readings (ADC1IN1, ADC1IN2, BLUELED) 
-             VALUES (${d.ADC1IN1}, ${d.ADC1IN2}, ${d.BLUELED});`;
-
-// Ensure payload is an empty array so the SQLite node executes the topic string
-msg.payload = [];
-
-return msg;
-```
-
-Create DB
-
-```sql
-CREATE TABLE IF NOT EXISTS sensor_readings (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    ADC1IN1 INTEGER,
-    ADC1IN2 INTEGER,
-    BLUELED INTEGER,
-    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-```
-
 Calculation Node (Function after the SQLite node):
 
 ```js
-msg.topic = "SELECT ADC1IN1 FROM sensor_readings ORDER BY id DESC LIMIT 1;";
+msg.topic = "SELECT ADC1IN1 FROM sensor_data ORDER BY id DESC LIMIT 1;";
 return msg;
 ```
 
@@ -413,7 +451,7 @@ Or:
 ```js
 // The math: (adc1 * 3.3) / 4095
 msg.topic =
-  "SELECT (ADC1IN1 * 3.3 / 4095) AS voltage1 FROM sensor_readings ORDER BY id DESC LIMIT 1;";
+  "SELECT (ADC1IN1 * 3.3 / 4095) AS voltage1 FROM sensor_data ORDER BY id DESC LIMIT 1;";
 return msg;
 ```
 
@@ -421,8 +459,32 @@ Average of the Last "X" Records
 
 ```js
 msg.topic = `SELECT AVG(ADC1IN1) AS mean_adc1 
-             FROM (SELECT ADC1IN1 FROM sensor_readings ORDER BY id DESC LIMIT 5);`;
+             FROM (SELECT ADC1IN1 FROM sensor_data ORDER BY id DESC LIMIT 5);`;
 return msg;
+```
+
+Como calcular a temperatura diretamente no SQL usando os dados brutos do sensor:
+
+```sql
+SELECT Round(( (
+               -- Step 2: v_sense calculation using the derived v_ref
+               ( TEMPSENSOR * ( ( 1.21 * 4095.0 ) / VREFINT ) ) / 4095.0
+               -- Step 3: Temperature conversion formula
+               - 0.76 ) * 1000.0 / 2.5 ) + 25.0, 2) AS calculated_temp
+FROM   sensor_data_full
+ORDER  BY id DESC
+LIMIT  1;
+```
+
+```sql
+SELECT
+    ROUND(
+        ((((TEMPSENSOR * 1.21 / VREFINT) - 0.76) * 1000.0 / 2.5) + 25.0),
+        2
+    ) AS optimized_temp
+FROM sensor_data
+ORDER BY id DESC
+LIMIT 1;
 ```
 
 ## VS Code Terminal Configuration

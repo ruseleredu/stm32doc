@@ -109,6 +109,12 @@ O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pin
 
 ---
 
+## Acesso Direto à Memória
+
+O DMA (Direct Memory Access, ou Acesso Direto à Memória) no microcontrolador STM32F411CEU6 é um periférico projetado para transferir dados em alta velocidade entre memórias e periféricos sem a intervenção da CPU.
+Isso é especialmente útil para operações que exigem grandes volumes de dados, como leitura de sensores, comunicação serial ou manipulação de buffers de áudio/vídeo, onde a CPU pode ficar sobrecarregada se tiver que gerenciar cada byte de dados.
+O DMA pode ser configurado para transferir dados de uma fonte (como um periférico ou memória) para um destino (outra memória ou periférico) de forma eficiente, liberando a CPU para realizar outras tarefas enquanto a transferência ocorre em segundo plano.
+
 ## User Code
 
 - https://deepbluembedded.com/stm32-adc-multi-channel-scan-continuous-mode-dma-poll-examples/
@@ -222,24 +228,23 @@ void TIM2_IRQHandler(void)
 }
 ```
 
+- `HAL_ADC_ConvCpltCallback()` é uma função de alto nível fornecida pela ST (STMicroelectronics) para facilitar a vida do desenvolvedor.
+  Ela é chamada automaticamente quando uma conversão ADC é concluída e os dados estão prontos para serem processados. O uso dessa função é recomendado porque ela abstrai a complexidade de lidar diretamente com as interrupções de ADC e o gerenciamento de buffers, permitindo que o desenvolvedor se concentre na lógica de aplicação em vez de detalhes de baixo nível.
+
 ```c title="Src/stm32f4xx_it.c"
-void DMA2_Stream0_IRQHandler(void)
+/* USER CODE BEGIN 1 */
+// highlight-start
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 0 */
-  // highlight-start
   // Conversion Complete & DMA Transfer Complete As Well
   ADC1IN1 = AD_RES_BUFFER[0];
   ADC1IN2 = AD_RES_BUFFER[1];
   voltage1 = (ADC1IN1 * 3.3) / 4095;
   voltage2 = (ADC1IN2 * 3.3) / 4095;
-  TIM2->CCR1 = ADC1IN1;  // PWM CH1
-  // highlight-end
-  /* USER CODE END DMA2_Stream0_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_adc1);
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 1 */
-
-  /* USER CODE END DMA2_Stream0_IRQn 1 */
+  TIM2->CCR1 = ADC1IN1;  // PWM CH1 duty cycle update based on ADC1IN1
 }
+// highlight-end
+/* USER CODE END 1 */
 ```
 
 ### SQLite
@@ -482,167 +487,4 @@ Generate code with TIM2, EXT INT, DMA (IN1 and IN2) and PWM
 
 ```bash
 LoadMX TIM2EXTI0ADC1PWMDMA TIM2EXTI0ADC1PWMDMA.txt
-```
-
-## STM32 Internal Temperature Sensor Reading
-
-- https://deepbluembedded.com/stm32-internal-temperature-sensor-reading-example/
-- https://stm32world.com/wiki/STM32_internal_temperature_and_voltage_reference
-- https://github.com/lbthomsen/blackpill
-
-```bash
-LoadMX TEMPSENSOR TEMPSENSOR.txt
-```
-
-```bash
-code . --profile="STM32"
-```
-
-### Src/main.c
-
-Implemente a lógica para acionar o LED azul via flag BLUELED:
-
-```c title="Src/main.c"
-/* USER CODE BEGIN Includes */
-// highlight-next-line
-#include <stdbool.h>
-/* USER CODE END Includes */
-```
-
-```c title="Src/main.c"
-/* USER CODE BEGIN PD */
-#define AVG_SLOPE   2.5f     // mV/°C
-#define V_AT_25C    0.76f    // Volts
-#define V_REF_INT   1.21f    // Internal reference voltage
-/* USER CODE END PD */
-```
-
-```c title="Src/main.c"
-/* USER CODE BEGIN PV */
-// highlight-start
-bool BLUELED = 0;
-uint32_t AD_RES_BUFFER[3];
-uint16_t ADC1IN1,TEMPSENSOR,VREFINT;
-float voltage1,v_ref,v_sense,temp;
-// highlight-end
-/* USER CODE END PV */
-```
-
-Inicialize o Timer 2 com suporte a rotina de interrupção e saída PWM no canal 1:
-
-```c title="Src/main.c"
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_ADC1_Init();
-  MX_TIM2_Init();
-  /* USER CODE BEGIN 2 */
-  // highlight-start
-  HAL_TIM_PWM_Start_IT(&htim2,TIM_CHANNEL_1);
-  // highlight-end
-  /* USER CODE END 2 */
-```
-
-Toggle no LED interno via interrupção do User Key:
-
-```c title="Scr/main.c"
-/* Infinite loop */
-/* USER CODE BEGIN WHILE */
-while (1)
-{
-// highlight-start
-  // Verify BLUELED Flag
-    if (BLUELED)
-      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // LED ON
-    else
-      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET); // LED OFF
-  // highlight-end
-  /* USER CODE END WHILE */
-
-  /* USER CODE BEGIN 3 */
-
-}
-/* USER CODE END 3 */
-```
-
-### Src/stm32f4xx_it.c
-
-```c title="Src/stm32f4xx_it.c"
-/* USER CODE BEGIN Includes */
-// highlight-next-line
-#include <stdbool.h>
-/* USER CODE END Includes */
-```
-
-```c title="Src/stm32f4xx_it.c"
-/* USER CODE BEGIN PV */
-// highlight-start
-extern bool BLUELED;
-extern uint32_t AD_RES_BUFFER[3];
-extern uint16_t ADC1IN1,TEMPSENSOR,VREFINT;
-extern float voltage1,v_ref,v_sense,temp;
-// highlight-end
-/* USER CODE END PV */
-```
-
-```c title="Src/stm32f4xx_it.c"
-void EXTI0_IRQHandler(void)
-{
-  /* USER CODE BEGIN EXTI0_IRQn 0 */
-  // Toggle BLUELED FLAG
-  // highlight-next-line
-  BLUELED = !BLUELED;
-  /* USER CODE END EXTI0_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(User_KEY_EXTI0_Pin);
-  /* USER CODE BEGIN EXTI0_IRQn 1 */
-
-  /* USER CODE END EXTI0_IRQn 1 */
-}
-```
-
-Inicie o ADC1 na interrupção do Timer 2:
-
-```c title="Src/stm32f4xx_it.c"
-void TIM2_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM2_IRQn 0 */
-
-  /* USER CODE END TIM2_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim2);
-  /* USER CODE BEGIN TIM2_IRQn 1 */
-  // highlight-next-line
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)AD_RES_BUFFER, 3);
-  /* USER CODE END TIM2_IRQn 1 */
-}
-```
-
-```c title="Src/stm32f4xx_it.c"
-void DMA2_Stream0_IRQHandler(void)
-{
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 0 */
-  // highlight-start
-  // Conversion Complete & DMA Transfer Complete As Well
-  ADC1IN1 = AD_RES_BUFFER[0];
-  TEMPSENSOR = AD_RES_BUFFER[1];
-  VREFINT = AD_RES_BUFFER[2];
-  // highlight-end
-  /* USER CODE END DMA2_Stream0_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_adc1);
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 1 */
-  // highlight-start
-  voltage1 = (ADC1IN1 * 3.3) / 4095;
-  // 1. Calculate the actual VREF (VDDA)
-  // This compensates for power supply fluctuations
-  v_ref = (V_REF_INT * 4095.0f) / (float)VREFINT;
-
-  // 2. Convert raw temperature sensor value to voltage
-  v_sense = ((float)TEMPSENSOR * v_ref) / 4095.0f;
-
-  // 3. Final Temperature in Celsius
-  // Note: Some datasheets use (V_sense - V_25) / Slope + 25.
-  // Check your specific RM; usually, if Slope is positive, it's (V_sense - V_at_25).
-  temp = ((v_sense - V_AT_25C) * 1000.0f / AVG_SLOPE) + 25.0f;
-  TIM2->CCR1 = ADC1IN1;  // PWM CH1
-  // highlight-end
-  /* USER CODE END DMA2_Stream0_IRQn 1 */
-}
 ```

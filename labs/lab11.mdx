@@ -33,6 +33,10 @@ import LabTable from "@site/src/components/LabTable";
 
 ## Conteúdo
 
+Code for OLED and LCD display using stm32f411ceu6
+
+- https://github.com/ELT73A-LAB-TPL/stm32f411ceu6-display
+
 ### Uso do display OLED SSD1306
 
 Display OLED 0.96″ 128×64 I2C Azul
@@ -68,7 +72,6 @@ STM32: LCD 1602 w/ I2C adapter usage example
 - https://deepbluembedded.com/stm32-i2c-lcd-library-example-16x2-20x4-multiple-lcds/
 - https://github.com/light-tech/LearnSTM32
 - https://controllerstech.com/i2c-lcd-in-stm32/
--
 
 Introdução ao uso do [PlatformIO](/docs/platformio-intro);
 
@@ -138,38 +141,6 @@ O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pin
 
 ---
 
-## VS Code
-
-### Configuração do terminal
-
-```json title="settings.json"
-{
-  // highlight-next-line
-  "terminal.integrated.defaultProfile.windows": "PIO CLI",
-  "terminal.integrated.profiles.windows": {
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    // highlight-start
-    "PIO CLI": {
-      "path": "cmd.exe",
-      "args": [
-        "/k",
-        "${env:USERPROFILE}\\.platformio\\penv\\Scripts\\activate.bat && pio --version"
-      ],
-      "icon": "python",
-      "overrideName": true
-    }
-    // highlight-end
-  }
-}
-```
-
 ## SSD1306 files
 
 ```c title="CMakeLists.txt"
@@ -191,123 +162,174 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 )
 ```
 
-## STM32Cube HAL: debugging and unit testing
+## STM32 Internal Temperature Sensor Reading
 
-- [Tutorials and Examples](https://docs.platformio.org/en/latest/tutorials/index.html)
-- [STM32Cube HAL and Nucleo-F401RE: debugging and unit testing](https://docs.platformio.org/en/latest/tutorials/ststm32/stm32cube_debugging_unit_testing.html)
+Seguem algumas referências para leitura do sensor de temperatura interna do STM32F4x1:
 
-### Pisca LED
+- https://deepbluembedded.com/stm32-internal-temperature-sensor-reading-example/
+- https://stm32world.com/wiki/STM32_internal_temperature_and_voltage_reference
+- https://github.com/lbthomsen/blackpill
 
-Definição do pino no arquivo main.h
+Carrege a base do projeto com o [LoadMX](/docs/loadmx)
 
-```c title="src/main.h"
-#ifndef MAIN_H
-#define MAIN_H
-
-#include "stm32f4xx_hal.h"
-
-#define LED_PIN                                GPIO_PIN_13
-#define LED_GPIO_PORT                          GPIOC
-#define LED_GPIO_CLK_ENABLE()                  __HAL_RCC_GPIOC_CLK_ENABLE()
-
-#endif // MAIN_H
+```bash
+LoadMX TEMPSENSOR TEMPSENSOR.txt
 ```
 
-Inicie LED_Init:
+Abra o projeto gerado no VS Code:
 
-```c title="src/main.c"
-#include "main.h"
+```bash
+code TEMPSENSOR --profile="STM32"
+```
 
-void LED_Init();
+### Src/main.c
 
-int main(void)
+Implemente a lógica para acionar o LED azul via flag BLUELED:
+
+```c title="Src/main.c"
+/* USER CODE BEGIN Includes */
+// highlight-next-line
+#include <stdbool.h>
+/* USER CODE END Includes */
+```
+
+```c title="Src/main.c"
+/* USER CODE BEGIN PD */
+// highlight-start
+#define AVG_SLOPE   2.5f     // mV/°C
+#define V_AT_25C    0.76f    // Volts
+#define V_REF_INT   1.21f    // Internal reference voltage
+// highlight-end
+/* USER CODE END PD */
+```
+
+```c title="Src/main.c"
+/* USER CODE BEGIN PV */
+// highlight-start
+bool BLUELED = 0;
+uint32_t AD_RES_BUFFER[3];
+uint16_t ADC1IN1,TEMPSENSOR,VREFINT;
+float voltage1,v_ref,v_sense,temp;
+// highlight-end
+/* USER CODE END PV */
+```
+
+Inicialize o Timer 2 com suporte a rotina de interrupção e saída PWM no canal 1:
+
+```c title="Src/main.c"
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_ADC1_Init();
+  MX_TIM2_Init();
+  /* USER CODE BEGIN 2 */
+  // highlight-start
+  HAL_TIM_PWM_Start_IT(&htim2,TIM_CHANNEL_1);
+  // highlight-end
+  /* USER CODE END 2 */
+```
+
+Toggle no LED interno via interrupção do User Key:
+
+```c title="Scr/main.c"
+/* Infinite loop */
+/* USER CODE BEGIN WHILE */
+while (1)
 {
-  HAL_Init();
-  LED_Init();
+// highlight-start
+  // Verify BLUELED Flag
+    if (BLUELED)
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // LED ON
+    else
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET); // LED OFF
+  // highlight-end
+  /* USER CODE END WHILE */
 
-  while (1)
-  {
-    HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
-    HAL_Delay(1000);
-  }
+  /* USER CODE BEGIN 3 */
+
 }
+/* USER CODE END 3 */
+```
 
-void LED_Init()
-{
-  LED_GPIO_CLK_ENABLE();
-  GPIO_InitTypeDef GPIO_InitStruct;
-  GPIO_InitStruct.Pin = LED_PIN;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
-  HAL_GPIO_Init(LED_GPIO_PORT, &GPIO_InitStruct);
-}
+### Src/stm32f4xx_it.c
 
-void SysTick_Handler(void)
+```c title="Src/stm32f4xx_it.c"
+/* USER CODE BEGIN Includes */
+// highlight-next-line
+#include <stdbool.h>
+/* USER CODE END Includes */
+```
+
+```c title="Src/stm32f4xx_it.c"
+/* USER CODE BEGIN PV */
+// highlight-start
+extern bool BLUELED;
+extern uint32_t AD_RES_BUFFER[3];
+extern uint16_t ADC1IN1,TEMPSENSOR,VREFINT;
+extern float voltage1,v_ref,v_sense,temp;
+// highlight-end
+/* USER CODE END PV */
+```
+
+```c title="Src/stm32f4xx_it.c"
+void EXTI0_IRQHandler(void)
 {
-  HAL_IncTick();
+  /* USER CODE BEGIN EXTI0_IRQn 0 */
+  // Toggle BLUELED FLAG
+  // highlight-next-line
+  BLUELED = !BLUELED;
+  /* USER CODE END EXTI0_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(User_KEY_EXTI0_Pin);
+  /* USER CODE BEGIN EXTI0_IRQn 1 */
+
+  /* USER CODE END EXTI0_IRQn 1 */
 }
 ```
 
-```ini title="platformio.ini"
-[env:blackpill_f411ce]
-platform = ststm32
-board = blackpill_f411ce
-framework = stm32cube
-upload_protocol = stlink
-debug_tool = stlink
-```
+Inicie o ADC1 na interrupção do Timer 2:
 
-## Arduino
-
-Inicie LED_Init:
-
-```c title="src/main.c"
-#include <Arduino.h>
-
-#ifndef LED_BUILTIN
-  #define LED_BUILTIN PC13
-#endif
-
-void setup()
+```c title="Src/stm32f4xx_it.c"
+void TIM2_IRQHandler(void)
 {
-  // initialize LED digital pin as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
-}
+  /* USER CODE BEGIN TIM2_IRQn 0 */
 
-void loop()
+  /* USER CODE END TIM2_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim2);
+  /* USER CODE BEGIN TIM2_IRQn 1 */
+  // highlight-next-line
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)AD_RES_BUFFER, 3);
+  /* USER CODE END TIM2_IRQn 1 */
+}
+```
+
+- `HAL_ADC_ConvCpltCallback()` é uma função de alto nível fornecida pela ST (STMicroelectronics) para facilitar a vida do desenvolvedor.
+  Ela é chamada automaticamente quando uma conversão ADC é concluída e os dados estão prontos para serem processados. O uso dessa função é recomendado porque ela abstrai a complexidade de lidar diretamente com as interrupções de ADC e o gerenciamento de buffers, permitindo que o desenvolvedor se concentre na lógica de aplicação em vez de detalhes de baixo nível.
+
+```c title="Src/stm32f4xx_it.c"
+/* USER CODE BEGIN 1 */
+// highlight-start
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-  // turn the LED on (HIGH is the voltage level)
-  digitalWrite(LED_BUILTIN, HIGH);
-  // wait for a second
-  delay(1000);
-  // turn the LED off by making the voltage LOW
-  digitalWrite(LED_BUILTIN, LOW);
-   // wait for a second
-  delay(1000);
+  // Conversion Complete & DMA Transfer Complete As Well
+  ADC1IN1 = AD_RES_BUFFER[0];
+  TEMPSENSOR = AD_RES_BUFFER[1];
+  VREFINT = AD_RES_BUFFER[2];
+  voltage1 = (ADC1IN1 * 3.3) / 4095;
+  // 1. Calculate the actual VREF (VDDA)
+  // This compensates for power supply fluctuations
+  v_ref = (V_REF_INT * 4095.0f) / (float)VREFINT;
+
+  // 2. Convert raw temperature sensor value to voltage
+  v_sense = ((float)TEMPSENSOR * v_ref) / 4095.0f;
+
+  // 3. Final Temperature in Celsius
+  // Note: Some datasheets use (V_sense - V_25) / Slope + 25.
+  // Check your specific RM; usually, if Slope is positive, it's (V_sense - V_at_25).
+  temp = ((v_sense - V_AT_25C) * 1000.0f / AVG_SLOPE) + 25.0f;
+  TIM2->CCR1 = ADC1IN1;  // PWM CH1 duty cycle update based on ADC1IN1
 }
-
+// highlight-end
+/* USER CODE END 1 */
 ```
-
-```ini title="platformio.ini"
-[env:blackpill_f411ce]
-platform = ststm32
-board = blackpill_f411ce
-framework = arduino
-upload_protocol = stlink
-debug_tool = stlink
-```
-
-## Frameworks
-
-- [STM32F411CE (128k RAM. 512k Flash)](https://docs.platformio.org/en/latest/boards/ststm32/genericSTM32F411CE.html)
-
-| Name                                                                                                |                                                                                                                                                 Description                                                                                                                                                 |
-| :-------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [Arduino](https://docs.platformio.org/en/latest/frameworks/arduino.html#framework-arduino)          |                                      Arduino Wiring-based Framework allows writing cross-platform software to control devices attached to a wide range of Arduino boards to create all kinds of creative coding, interactive objects, spaces or physical experiences.                                       |
-| [CMSIS](https://docs.platformio.org/en/latest/frameworks/cmsis.html#framework-cmsis)                |                                                                                                               Vendor-independent hardware abstraction layer for the Cortex-M processor series                                                                                                               |
-| [LibOpenCM3](https://docs.platformio.org/en/latest/frameworks/libopencm3.html#framework-libopencm3) |                                                                                              The libopencm3 project aims to create an open-source firmware library for various ARM Cortex-M microcontrollers.                                                                                               |
-| [STM32Cube](https://docs.platformio.org/en/latest/frameworks/stm32cube.html#framework-stm32cube)    | STM32Cube embedded software libraries, including: The HAL hardware abstraction layer, enabling portability between different STM32 devices via standardized API calls; The Low-Layer (LL) APIs, a light-weight, optimized, expert oriented set of APIs designed for both performance and runtime efficiency |
 
 ## VS Code Terminal Configuration
 

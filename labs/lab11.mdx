@@ -41,38 +41,6 @@ Code for OLED and LCD display using stm32f411ceu6
 
 Display OLED 0.96″ 128×64 I2C Azul
 
-Recursos:
-
-- https://github.com/afiskon/stm32-ssd1306
-- https://www.youtube.com/watch?v=97_Vyph9EzM
-- https://lvgl.io/tools/imageconverter
-- https://github.com/sbrin/lopaka
-- https://github.com/olikraus/u8g2
-- https://www.youtube.com/watch?v=Eyvzw_ujcS0
-
-![](/img/lab11/2025-11-17-16-31-45.png)
-
-More:
-
-- https://www.youtube.com/watch?v=97_Vyph9EzM
-- https://github.com/lexus2k/ssd1306
-- https://www.makerhero.com/blog/controlando-um-display-oled-com-a-biblioteca-ssd1306/
-- https://www.makerhero.com/blog/display-oled-i2c-raspberry-pi-pico/
-- https://github.com/John-Hatton/BlackPill_I2C_Display
-- https://controllerstech.com/oled-display-using-i2c-stm32/
-- https://www.youtube.com/watch?v=HtyPPSO52GY
-- https://learn.adafruit.com/monochrome-oled-breakouts/downloads
-- https://wokwi.com/projects/309427357921313345
-
-### Uso do stm32-i2c-lcd-1602
-
-STM32: LCD 1602 w/ I2C adapter usage example
-
-- https://github.com/afiskon/stm32-i2c-lcd-1602
-- https://deepbluembedded.com/stm32-i2c-lcd-library-example-16x2-20x4-multiple-lcds/
-- https://github.com/light-tech/LearnSTM32
-- https://controllerstech.com/i2c-lcd-in-stm32/
-
 Introdução ao uso do [PlatformIO](/docs/platformio-intro);
 
 - [ ] Crie um perfil no Visual Studio Code chamado `STM32IO`;
@@ -143,6 +111,11 @@ O debugger [ST-LINK/V2](/docs/st-link) possue um conector IDC de 10 pinos. A pin
 
 ## SSD1306 files
 
+STM32 library for working with OLEDs based on SSD1306, SH1106, SH1107 and SSD1309, supports I2C and SPI
+
+- https://github.com/afiskon/stm32-ssd1306
+- https://www.youtube.com/watch?v=97_Vyph9EzM
+
 ```c title="CMakeLists.txt"
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
@@ -162,6 +135,58 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 )
 ```
 
+```c title="Src/main.c"
+/* USER CODE BEGIN Includes */
+// highlight-start
+#include "ssd1306.h"
+#include "ssd1306_fonts.h" // Include the fonts header file located at
+#include "ssd1306_tests.h"
+// highlight-end
+/* USER CODE END Includes */
+```
+
+```c title="Src/main.c"
+/* USER CODE BEGIN 1 */
+// highlight-start
+char myText[] = "Hello, SSD1306!";
+char retVal;
+// highlight-end
+/* USER CODE END 1 */
+```
+
+```c title="Src/main.c"
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_I2C1_Init();
+  /* USER CODE BEGIN 2 */
+  // highlight-start
+  ssd1306_Init();
+  // ssd1306_Fill(White);
+  // ssd1306_UpdateScreen();
+
+  //  ssd1306_SetCursor(5, 5);
+  //  retVal = ssd1306_WriteString(myText, Font_7x10, White);
+  //  ssd1306_UpdateScreen();
+
+  // Run tests
+  ssd1306_TestAll();
+
+  // ssd1306_TestBorder();
+  // ssd1306_TestFonts1();
+  // ssd1306_TestFonts2();
+  // ssd1306_TestFPS();
+  // ssd1306_TestLine();
+  // ssd1306_TestRectangle();
+  // ssd1306_TestRectangleFill();
+  // ssd1306_TestRectangleInvert();
+  // ssd1306_TestCircle();
+  // ssd1306_TestArc();
+  // ssd1306_TestPolyline();
+  // ssd1306_TestDrawBitmap();
+  // highlight-end
+  /* USER CODE END 2 */
+```
+
 ## STM32 Internal Temperature Sensor Reading
 
 Seguem algumas referências para leitura do sensor de temperatura interna do STM32F4x1:
@@ -173,13 +198,13 @@ Seguem algumas referências para leitura do sensor de temperatura interna do STM
 Carrege a base do projeto com o [LoadMX](/docs/loadmx)
 
 ```bash
-LoadMX TEMPSENSOR TEMPSENSOR.txt
+LoadMX TEMPSENSORI2C TEMPSENSORI2C.txt
 ```
 
 Abra o projeto gerado no VS Code:
 
 ```bash
-code TEMPSENSOR --profile="STM32"
+code TEMPSENSORI2C --profile="STM32"
 ```
 
 ### Src/main.c
@@ -221,6 +246,7 @@ Inicialize o Timer 2 com suporte a rotina de interrupção e saída PWM no canal
   MX_GPIO_Init();
   MX_ADC1_Init();
   MX_TIM2_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   // highlight-start
   HAL_TIM_PWM_Start_IT(&htim2,TIM_CHANNEL_1);
@@ -336,7 +362,11 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 Configure `Git Bash` como terminal integrado do Visual Studio Code para evitar problemas de formatação de texto e comandos:
 
 ```json title=".vscode/settings.json"
-"terminal.integrated.defaultProfile.windows": "Git Bash",
+{
+  "editor.formatOnSave": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.formatOnPaste": true
+}
 ```
 
 ## Crie um [gh alias](/docs/github-cli#aliases) para deploy-debug
@@ -365,3 +395,35 @@ Assim que o comando terminar, você poderá verificar o upload diretamente em se
 ```bash
 gh release view v1.0.0 --web
 ```
+
+## Recursos OLED SSD1306:
+
+- https://github.com/afiskon/stm32-ssd1306
+- https://www.youtube.com/watch?v=97_Vyph9EzM
+- https://lvgl.io/tools/imageconverter
+- https://github.com/sbrin/lopaka
+- https://github.com/olikraus/u8g2
+- https://www.youtube.com/watch?v=Eyvzw_ujcS0
+
+![](/img/lab11/2025-11-17-16-31-45.png)
+
+### More:
+
+- https://www.youtube.com/watch?v=97_Vyph9EzM
+- https://github.com/lexus2k/ssd1306
+- https://www.makerhero.com/blog/controlando-um-display-oled-com-a-biblioteca-ssd1306/
+- https://www.makerhero.com/blog/display-oled-i2c-raspberry-pi-pico/
+- https://github.com/John-Hatton/BlackPill_I2C_Display
+- https://controllerstech.com/oled-display-using-i2c-stm32/
+- https://www.youtube.com/watch?v=HtyPPSO52GY
+- https://learn.adafruit.com/monochrome-oled-breakouts/downloads
+- https://wokwi.com/projects/309427357921313345
+
+### Uso do stm32-i2c-lcd-1602
+
+STM32: LCD 1602 w/ I2C adapter usage example
+
+- https://github.com/afiskon/stm32-i2c-lcd-1602
+- https://deepbluembedded.com/stm32-i2c-lcd-library-example-16x2-20x4-multiple-lcds/
+- https://github.com/light-tech/LearnSTM32
+- https://controllerstech.com/i2c-lcd-in-stm32/

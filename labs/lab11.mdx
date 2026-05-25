@@ -41,15 +41,30 @@ Code for OLED and LCD display using stm32f411ceu6
 
 Display OLED 0.96″ 128×64 I2C Azul
 
-Introdução ao uso do [PlatformIO](/docs/platformio-intro);
+## Instruções do LAB
 
-- [ ] Crie um perfil no Visual Studio Code chamado `STM32IO`;
-- [ ] Instale o [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode);
-- [ ] Configure o Visual Studio Code;
-- [ ] Configure o [PlatformIO Core](https://platformio.org/install/cli);
-- [ ] Edite a variável de ambiente `Path` e adicione `%USERPROFILE%\.platformio\penv\Scripts\`;
-- [ ] Instale os drivers for [ST-LINK](https://docs.platformio.org/en/latest/plus/debug-tools/stlink.html#debugging-tool-stlink) debug tool
-- [ ] Teste de geração e compilação de projeto para o STM32F411CEUx;
+Esta atividade de laboratório tem como objetivo configurar o display OLED SSD1306.
+Cada item equivale a 10% da nota.
+
+- [ ] Crie um repositório (LAB11) via template (https://github.com/ELT73A-LAB-TPL/LAB11) na organização e clone;
+- [ ] Importe e compile o código da pasta TEMPSENSORI2C
+- [ ] Verifique a configuração dos periféricos;
+- [ ] Configure o executável e probes no STM32CubeMonitor;
+- [ ] Deploy e Dashboard no STM32CubeMonitor;
+- [ ] Configure o SQLite no Node-RED;
+- [ ] Teste de injeção de dados no SQLite;
+- [ ] Leitura do ADC e injeção de dados no SQLite;
+- [ ] Commit e push do Node-RED export flow;
+- [ ] Envie o link do repositório no GitHub (hyperlink);
+
+## Avaliação
+
+- [ ] Uso do template e código - 20%
+- [ ] Configuração do STM32CubeMonitor - 20%
+- [ ] Configuração e teste do SQLite - 20%
+- [ ] Leitura do ADC e injeção de dados no SQLite - 20%
+- [ ] Commit e push do Node-RED export flow - 20%
+- [ ] Link do repositório no GitHub (hyperlink) - 10%
 
 ## Verifique o seu ambiente de desenvolvimento
 
@@ -78,24 +93,6 @@ Escolha o Grupo e entre com o comando abaixo para criar o repositório no GitHub
 {/* Git Commit */}
 
 <GitCommit />
-
-## Instruções do LAB
-
-Esta atividade de laboratório tem como objetivo utilizar o PlatformIO. Cada item equivale a 10% da nota.
-
-- [ ] Crie um perfil no Visual Studio Code chamado `STM32IO`;
-- [ ] Instale o [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode);
-- [ ] Configure o Visual Studio Code;
-- [ ] Configure o [PlatformIO Core](https://platformio.org/install/cli);
-- [ ] Edite a variável de ambiente `Path` e adicione `%USERPROFILE%\.platformio\penv\Scripts\`;
-- [ ] Instale os drivers for [ST-LINK](https://docs.platformio.org/en/latest/plus/debug-tools/stlink.html#debugging-tool-stlink) debug tool
-- [ ] Envie o link do repositório no GitHub (hyperlink);
-
-## Avaliação
-
-- [ ] Uso do template e código - 20%
-- [ ] Verificação do PLatformIO - 70%
-- [ ] Link do repositório no GitHub (hyperlink) - 10%
 
 ## Diagrama de pinos do STM32F4x1
 
@@ -169,7 +166,7 @@ char retVal;
   //  ssd1306_UpdateScreen();
 
   // Run tests
-  ssd1306_TestAll();
+  //ssd1306_TestAll();
 
   // ssd1306_TestBorder();
   // ssd1306_TestFonts1();
@@ -357,6 +354,74 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 /* USER CODE END 1 */
 ```
 
+You need to enable float support for printf/snprintf in your linker flags.
+
+```c title="cmake/gcc-arm-none-eabi.cmake"
+set(CMAKE_EXE_LINKER_FLAGS "${TARGET_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -T \"${CMAKE_SOURCE_DIR}/STM32F411XX_FLASH.ld\"")
+// highlight-next-line
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --specs=nano.specs -u _printf_float")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-Map=${CMAKE_PROJECT_NAME}.map -Wl,--gc-sections")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--print-memory-usage")
+set(TOOLCHAIN_LINK_LIBRARIES "m")
+```
+
+```c title="Src/main.c"
+char line1[32];
+char line2[32];
+
+while (1)
+{
+    snprintf(line1, sizeof(line1), "Volt: %.2f V", voltage1);
+    snprintf(line2, sizeof(line2), "Temp: %.1f C", temp);
+
+    ssd1306_Fill(Black);
+
+    ssd1306_SetCursor(0, 0);
+    ssd1306_WriteString(line1, Font_7x10, White);
+
+    ssd1306_SetCursor(0, 16);
+    ssd1306_WriteString(line2, Font_7x10, White);
+
+    ssd1306_UpdateScreen();
+
+    HAL_Delay(200);
+}
+```
+
+```c title="Src/main.c"
+#include <stdio.h>
+float temperature = 25.7f;
+char tempchar[16];
+
+snprintf(tempchar, sizeof(tempchar), "%.1f C", temperature);
+
+ssd1306_SetCursor(0,0);
+ssd1306_WriteString(tempchar, Font_7x10, White);
+ssd1306_UpdateScreen();
+
+
+#include <stdio.h>
+
+float temperature = 25.7f;
+char buffer[20];
+
+// Format temperature string
+snprintf(buffer, sizeof(buffer), "Temp: %.1f C", temperature);
+
+// Clear display
+ssd1306_Fill(Black);
+
+// Set cursor position
+ssd1306_SetCursor(0, 0);
+
+// Write text
+ssd1306_WriteString(buffer, Font_7x10, White);
+
+// Update OLED
+ssd1306_UpdateScreen();
+```
+
 ## VS Code Terminal Configuration
 
 Configure `Git Bash` como terminal integrado do Visual Studio Code para evitar problemas de formatação de texto e comandos:
@@ -396,7 +461,9 @@ Assim que o comando terminar, você poderá verificar o upload diretamente em se
 gh release view v1.0.0 --web
 ```
 
-## Recursos OLED SSD1306:
+## Referências
+
+### Recursos OLED SSD1306
 
 - https://github.com/afiskon/stm32-ssd1306
 - https://www.youtube.com/watch?v=97_Vyph9EzM
@@ -404,11 +471,6 @@ gh release view v1.0.0 --web
 - https://github.com/sbrin/lopaka
 - https://github.com/olikraus/u8g2
 - https://www.youtube.com/watch?v=Eyvzw_ujcS0
-
-![](/img/lab11/2025-11-17-16-31-45.png)
-
-### More:
-
 - https://www.youtube.com/watch?v=97_Vyph9EzM
 - https://github.com/lexus2k/ssd1306
 - https://www.makerhero.com/blog/controlando-um-display-oled-com-a-biblioteca-ssd1306/

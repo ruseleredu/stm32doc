@@ -43,7 +43,7 @@ export default function LabFromTemplate({ labNumber, opts = "" }) {
                         <ThemeCodeBlock className="language-bash">
                             gh repo create ELT73A-S22-2026-1-{group}/{labNumber} --private -p ELT73A-LAB-TPL/{labNumber} {opts}
                         </ThemeCodeBlock>
-                        <p>Visualize o repositório:</p>
+                        <p>Visualize o <a href={`https://github.com/ELT73A-S22-2026-1-${group}/${labNumber}`} target="_blank" rel="noopener noreferrer">repositório</a>:</p>
                         <ThemeCodeBlock className="language-bash">
                             gh repo view ELT73A-S22-2026-1-{group}/{labNumber} --web
                         </ThemeCodeBlock>
@@ -57,4 +57,3 @@ export default function LabFromTemplate({ labNumber, opts = "" }) {
         </Tabs>
     );
 }
-

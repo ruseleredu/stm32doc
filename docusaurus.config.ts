@@ -161,6 +161,12 @@ const config: Config = {
         showLastUpdateTime: true,
       },
     ],
+    [
+      "@cmfcmf/docusaurus-search-local",
+      {
+        // Options here
+      },
+    ],
   ],
   // ... rest of your config
 

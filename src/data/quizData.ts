@@ -26,7 +26,7 @@ export const quizData: QuizRow[] = [
         hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1756081",
         start: "23-Mar-2026",
         end: "30-Mar-2026",
-        descricao: "Revisão da programação em C; Ambiente de desenvolvimento VS Code; Uso do git e GitHub; ",
+        descricao: "Revisão da programação em C; Ambiente de desenvolvimento VS Code; Uso do git e GitHub;",
     },
     {
         quiz: "Q02",
@@ -74,7 +74,7 @@ export const quizData: QuizRow[] = [
         hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957569",
         start: "11-May-2026",
         end: "18-May-2026",
-        descricao: "DMA: Direct memory access (Acesso direto à memória);",
+        descricao: "ADC com DMA; Uso do STM32CubeMonitor; Manipulação de variáveis;",
     },
     {
         quiz: "Q08",
@@ -90,7 +90,7 @@ export const quizData: QuizRow[] = [
         hrefe: "https://moodle.utfpr.edu.br/mod/quiz/view.php?id=1957596",
         start: "25-May-2026",
         end: "01-Jun-2026",
-        descricao: "Uso do STM32CubeMonitor; InfluDB;",
+        descricao: "Uso do STM32CubeMonitor; SQLite;",
     },
     {
         quiz: "Q10",

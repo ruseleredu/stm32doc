@@ -113,7 +113,7 @@ export const labData: LabRow[] = [
 
         start: "11-May-2026",
         end: "18-May-2026",
-        conteudo: "DMA: Direct memory access (Acesso direto à memória);",
+        conteudo: "ADC com DMA; Uso do STM32CubeMonitor; Manipulação de variáveis;",
     },
     {
         tarefa: "LAB08",
@@ -137,7 +137,7 @@ export const labData: LabRow[] = [
 
         start: "25-May-2026",
         end: "01-Jun-2026",
-        conteudo: "Uso do STM32CubeMonitor; InfluDB;",
+        conteudo: "Uso do STM32CubeMonitor; SQLite;",
     },
     {
         tarefa: "LAB10",

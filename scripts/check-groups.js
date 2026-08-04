@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const args = process.argv.slice(2);
-const yearSuffix = args[0] || '2026-1';
+const yearSuffix = args[0] || '2026-2';
 const groups = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'X'];
 const outputPath = path.resolve(__dirname, '../src/data/groupStatus.json');
 

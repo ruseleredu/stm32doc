@@ -5,6 +5,12 @@ sidebar_label: "Disciplina"
 sidebar_position: 1
 ---
 
+import disciplinas from "@site/src/data/disciplinas.json";
+import TabelaPlanejamento from "@site/src/components/TabelaPlanejamento";
+
+export const disciplina = disciplinas.disciplinas.find(
+  (item) => item.slug === "elt73a-s22",
+);
 
 ## Objetivo
 
@@ -28,7 +34,9 @@ Arquiteturas computacionais; Programação de Microcontroladores; Operações de
 |   8   | Modulação PWM                                     | Aplicações de PWM para controle de interfaces e acionamento de motor                                                                                                                                                         |
 |   9   | Circuitos de interface                            | Avaliação de parâmetros elétricos, interfaces entre o microcontrolador e dispositivos (digitais e analógicos), exemplos de circuitos de interface, condicionamento de sinais (amplificação e filtragem), aplicações práticas |
 
+## Planejamento de Aulas
 
+<TabelaPlanejamento disciplina={disciplina} />
 
 ## Calendário Acadêmico de 2026
 

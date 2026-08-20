@@ -133,3 +133,13 @@ Esta atividade de laboratório tem como objetivo verificar a configuração inic
 - [ ] Link do seu perfil - 5%
 - [ ] Link do repositório no GitHub - 5%
 - [ ] Link da orgnização no GitHub - 5%
+
+## Teams
+
+```bash
+for letter in A B C D E F G H I J X; do
+  gh api --method POST orgs/ELT85B-N21-2026-2/teams \
+    -f name="Grupo-$letter" \
+    -f privacy="closed"
+done
+```

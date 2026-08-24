@@ -6,7 +6,7 @@ import Admonition from '@theme/Admonition';
 import Details from '@theme/Details';
 
 
-export default function LabFromTemplate({ labNumber, opts = "" }) {
+export default function LabFromTemplate({ labNumber, opts = "" }: { labNumber: string; opts?: string }) {
     // An array of your groups
     const groups = [
         "A",

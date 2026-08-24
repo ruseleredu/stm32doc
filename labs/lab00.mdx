@@ -149,3 +149,373 @@ for letter in A B C D E F G H I J X; do
     -f privacy="closed"
 done
 ```
+
+# LAB00 — VS Code + PlatformIO (ESP32/Arduino) + Wokwi + Git/CI
+
+**Objetivo:** montar o ambiente, simular no Wokwi, gravar o fluxo de trabalho no GitHub e validar a entrega com **CI (Autograde)**.
+
+**Repo do grupo:** `ELT73A-S22-2026-2/lab00-grupo-<letra>`  
+**Stack:** VS Code · PlatformIO · ESP32 · framework Arduino · Wokwi · GitHub Actions
+
+---
+
+## 0. O que este lab exercita
+
+| Camada              | Ferramenta            | Você pratica            |
+| ------------------- | --------------------- | ----------------------- |
+| Editor / projeto    | VS Code + PlatformIO  | Abrir, build, monitor   |
+| Hardware (simulado) | Wokwi                 | Simular ESP32 sem placa |
+| Hardware (opcional) | ESP32 real            | Upload + serial         |
+| Versionamento       | Git + GitHub          | commit / push           |
+| Nota automática     | Actions (`grade.yml`) | CI verde na `main`      |
+
+---
+
+## 1. Instalação (uma vez)
+
+### 1.1 Obrigatório
+
+1. [VS Code](https://code.visualstudio.com/)
+2. Extensão **PlatformIO IDE** (no VS Code: Extensions → “PlatformIO IDE”)
+3. [Git](https://git-scm.com/) + [GitHub CLI](https://cli.github.com/)
+4. Conta GitHub no time do seu grupo
+
+```bash
+gh auth login
+git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"
+```
+
+### 1.2 Recomendado para simulação
+
+- Extensão **Wokwi Simulator** no VS Code, **ou**
+- Uso pelo site [wokwi.com](https://wokwi.com) (com os arquivos do projeto)
+
+### 1.3 Opcional (placa física)
+
+- Cabo USB dados (não só carga)
+- Driver da USB-UART (CP210x / CH340, conforme a placa)
+- Placa **ESP32** (ex.: DevKit)
+
+---
+
+## 2. Abrir o projeto do lab
+
+```bash
+gh repo clone ELT73A-S22-2026-2/lab00-grupo-a
+cd lab00-grupo-a
+code .
+```
+
+No VS Code, aceite abrir como projeto **PlatformIO** (ícone de formiga na barra lateral).
+
+### Estrutura esperada (template)
+
+```text
+lab00-grupo-a/
+├── platformio.ini          ← ambiente ESP32 + Arduino
+├── src/main.cpp            ← setup() / loop()
+├── include/
+├── lib/
+├── test/
+├── wokwi/                  ← (se o template tiver) diagrama + diagram.json
+├── .github/workflows/      ← CI
+└── README.md
+```
+
+### `platformio.ini` (referência)
+
+```ini
+[env:esp32dev]
+platform = espressif32
+board = esp32dev
+framework = arduino
+monitor_speed = 115200
+```
+
+Outras boards comuns: `esp32-s3-devkitc-1`, `az-delivery-devkit-v4` — use a do template da disciplina.
+
+---
+
+## 3. PlatformIO no VS Code — comandos essenciais
+
+Na barra inferior / sidebar do PlatformIO:
+
+| Ação           | Ícone / comando CLI            |
+| -------------- | ------------------------------ |
+| Build          | ✓ Build · `pio run`            |
+| Upload         | → Upload · `pio run -t upload` |
+| Monitor serial | Plug · `pio device monitor`    |
+| Clean          | `pio run -t clean`             |
+| Test           | `pio test`                     |
+
+### No terminal integrado
+
+```bash
+pio run                 # compila
+pio run -t upload       # grava na ESP32
+pio device monitor      # Serial a 115200
+pio run -t upload && pio device monitor
+```
+
+Sair do monitor: `Ctrl+C` (às vezes `Ctrl+]`)
+
+### `src/main.cpp` mínimo (Arduino)
+
+```cpp
+#include <Arduino.h>
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+  Serial.println("LAB00 - ESP32 ok");
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(500);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(500);
+}
+```
+
+**Atividade:** altere a mensagem do `Serial.println` para incluir o **nome do grupo** e faça build.
+
+---
+
+## 4. Simulação com Wokwi
+
+Objetivo: validar lógica **sem depender da bancada**.
+
+### Opção A — Extensão Wokwi no VS Code
+
+1. Instale **Wokwi Simulator**
+2. No projeto, use/crie:
+   - `diagram.json` — circuito (ESP32, LED, fios)
+   - `wokwi.toml` — liga o firmware do PlatformIO ao simulador (conforme docs do template)
+3. Comando típico da extensão: **Start Simulator**
+4. Abra o monitor serial do Wokwi e veja o mesmo `Serial.println`
+
+### Opção B — Wokwi no navegador
+
+1. Acesse [wokwi.com](https://wokwi.com)
+2. Novo projeto → **ESP32**
+3. Cole o conteúdo de `src/main.cpp`
+4. Monte LED no GPIO do `LED_BUILTIN` (ou no GPIO que o template usar)
+5. **Start** e observe LED + serial
+
+### Exemplo mínimo de ideia de `diagram.json` (LED no GPIO 2)
+
+Muitos DevKit tratam LED embutido no GPIO 2 — confirme no template.
+
+**Checklist Wokwi**
+
+- [ ] Projeto simula e imprime no serial a mensagem do grupo
+- [ ] LED pisca conforme o `loop()`
+- [ ] Você não precisou da placa física para esta parte
+
+---
+
+## 5. Placa real (opcional, se houver ESP32)
+
+1. Conecte o USB
+2. Selecione a porta no PlatformIO (ou `pio device list`)
+3. Upload + monitor:
+
+```bash
+pio device list
+pio run -t upload
+pio device monitor
+```
+
+| Problema          | O que tentar                                     |
+| ----------------- | ------------------------------------------------ |
+| Porta não aparece | Cabo, driver, outro USB                          |
+| Upload fail       | Segurar BOOT na gravação (algumas placas)        |
+| Serial sem texto  | `monitor_speed = 115200` igual ao `Serial.begin` |
+
+---
+
+## 6. Git: salvar o trabalho e entregar
+
+Depois de **build ok** (e, se possível, Wokwi ok):
+
+```bash
+git status
+git add src/main.cpp README.md
+git commit -m "lab00: mensagem serial do grupo + LED"
+git push
+```
+
+README — seção mínima:
+
+```markdown
+## Integrantes
+
+- Nome 1
+- Nome 2
+
+## Como rodar
+
+- Build: `pio run`
+- Simulação: Wokwi (extensão ou site)
+- Placa: `pio run -t upload` && `pio device monitor`
+```
+
+---
+
+## 7. CI / Autograde (nota automática)
+
+O template traz `.github/workflows/grade.yml`, que no GitHub roda em geral:
+
+```bash
+pio run    # compila o firmware no runner
+```
+
+Após o push:
+
+```bash
+gh run list
+gh run view
+```
+
+| Resultado   | Significado neste lab                                   |
+| ----------- | ------------------------------------------------------- |
+| **success** | Firmware **compila** no mesmo tipo de ambiente do curso |
+| **failure** | Erro de build — corrija, commit, push de novo           |
+
+**O CI não liga Wokwi nem a placa física.**  
+Ele valida: projeto PlatformIO coerente + código que compila.
+
+---
+
+## 8. Roteiro da aula (ordem sugerida)
+
+| Tempo  | Atividade                                                          |
+| ------ | ------------------------------------------------------------------ |
+| 10 min | Clone, abrir no VS Code, inspecionar `platformio.ini` e `main.cpp` |
+| 15 min | `pio run` — primeiro build                                         |
+| 20 min | Wokwi — serial + LED                                               |
+| 10 min | (Opcional) upload na ESP32 real                                    |
+| 15 min | README, commit, push                                               |
+| 10 min | Conferir Actions verde                                             |
+
+---
+
+## 9. Critérios de entrega (LAB00)
+
+| Critério            | Evidência                                                     |
+| ------------------- | ------------------------------------------------------------- |
+| Ambiente PlatformIO | `pio run` local ok                                            |
+| Código identificado | `Serial.printf` / `println` com grupo                         |
+| Documentação        | README com integrantes e como rodar                           |
+| Simulação           | Descrição ou print: Wokwi funcionando (pedido pelo professor) |
+| GitHub              | Commits no repo do **grupo**                                  |
+| CI                  | Último workflow na `main` = **success**                       |
+
+---
+
+## 10. Fluxo mental (além do Git)
+
+```text
+Editar main.cpp no VS Code
+        ↓
+   pio run (build local)
+        ↓
+   Wokwi (simular)  e/ou  upload na ESP32
+        ↓
+   git commit + push
+        ↓
+   GitHub Actions: pio run de novo (nota/CI)
+```
+
+---
+
+## 11. Erros comuns (foco PlatformIO / Wokwi / ESP32)
+
+### Build
+
+```text
+Error: Unknown board ID '...'
+```
+
+→ Ajuste `board` no `platformio.ini` para o do template.
+
+```text
+'Serial' was not declared
+```
+
+→ Faltou `#include <Arduino.h>` ou framework não é `arduino`.
+
+### Serial
+
+- Baud do monitor ≠ `Serial.begin(115200)` → lixo na tela
+- `LED_BUILTIN` pode não existir em todas as boards → use GPIO numérico (ex. `2`)
+
+### Wokwi
+
+- GPIO do LED no diagrama ≠ GPIO no código → LED “não pisca”
+- Simulador não usa o último build → rode build de novo / restarte a simulação
+
+### CI vermelho, local verde
+
+- Arquivo não commitado (`git status`)
+- Mudança só local; falta `git push`
+
+### Push negado
+
+- Repo certo? `lab00-grupo-x`, não `lab00-template`
+- `gh auth status` + membership no time
+
+---
+
+## 12. Comandos de bolso
+
+```text
+abrir    →  code .
+build    →  pio run
+upload   →  pio run -t upload
+serial   →  pio device monitor
+simular  →  Wokwi (extensão ou site)
+salvar   →  git add . && git commit -m "msg" && git push
+ci       →  gh run list
+```
+
+---
+
+## 13. Branch / release (opcional neste lab)
+
+```bash
+# branch de experimento
+git checkout -b feature/blink-rapido
+# ... muda delays, testa no Wokwi ...
+git add . && git commit -m "lab00: blink mais rápido"
+git push -u origin feature/blink-rapido
+gh pr create --title "Blink rápido" --body "Testado no Wokwi"
+
+# após merge + CI verde
+git checkout main && git pull
+git tag -a v0.1.0 -m "LAB00: entrega ambiente ESP32"
+git push origin v0.1.0
+gh release create v0.1.0 --title "LAB00 v0.1.0" --generate-notes
+```
+
+---
+
+## 14. Para o professor
+
+| Recurso do curso          | Como o LAB00 valida                            |
+| ------------------------- | ---------------------------------------------- |
+| Template PlatformIO ESP32 | Clone já vem com `ini` + `main.cpp` + workflow |
+| Wokwi                     | Atividade de simulação na aula                 |
+| CI                        | `pio run` no Actions                           |
+| Times                     | Push só no `lab00-grupo-x`                     |
+
+**Template mínimo:** `platformio.ini` (esp32 + arduino), `src/main.cpp` (blink + Serial), `grade.yml` com `pio run`, README com instruções Wokwi.
+
+---
+
+### Resumo em uma frase
+
+O LAB00 não é só Git: é o **ciclo completo** — **VS Code/PlatformIO → Wokwi (e/ou placa) → commit → CI** — base dos labs seguintes de ESP32.

@@ -4,17 +4,9 @@ title: Organizações
 description: Organizações/Grupos das aulas de laboratório
 ---
 
-import GroupTable from "@site/src/components/GroupTable";
-
 # Organizações
 
 Como criar uma organização no GitHub
-
-## 2026.2
-
-### Turma S22
-
-<GroupTable semester="2026-2" />
 
 ---
 
@@ -239,3 +231,99 @@ gh repo list "$org" --limit 1000 --json nameWithOwner --jq '.[].nameWithOwner' |
 ```
 
 Just paste the script into your terminal and run it.
+
+## Uma org por grupo vs. times em uma única org
+
+Para o seu caso (labs `lab00`…`lab10`, templates, PlatformIO/STM32, automação com `gh`), **quase sempre a melhor opção é uma única organização com times (Grupo-A, Grupo-B, …)**.
+
+---
+
+### Comparação rápida
+
+| Critério                  | **1 org por grupo** (`ELT73A-S22-2026-2-A`, …) | **1 org + times** (`ELT73A-S22-2026-2` + `grupo-a`) |
+| ------------------------- | ---------------------------------------------- | --------------------------------------------------- |
+| Isolamento entre grupos   | Muito forte                                    | Bom (repos privados + permissão só do time)         |
+| Administração             | Pesada (N orgs)                                | Simples (1 org)                                     |
+| Criar labs em massa       | Script por org ou loop em N orgs               | Um loop só, mais simples                            |
+| Templates                 | Org de templates à parte ou copiar N vezes     | Um `lab00-template` na mesma org                    |
+| Times / membros           | Cada org tem seus membros                      | Times nativos + membership fácil                    |
+| Visão do professor        | Trocar de org o tempo todo                     | Tudo num só lugar                                   |
+| Limites do GitHub         | Risco de bater limite de orgs / convites       | Bem mais confortável                                |
+| Billing / settings        | Repetir política N vezes                       | Configurar uma vez                                  |
+| Autograding / CI          | Disperso                                       | Centralizado                                        |
+| “Aluno não vê o outro”    | Natural                                        | Com repo privado + só o time no repo, também ok     |
+| Complexidade para o aluno | URLs longas, várias orgs                       | Um padrão: `lab00-grupo-a`                          |
+
+---
+
+### Uma org por grupo
+
+**Vantagens**
+
+- Isolamento máximo (um grupo não “existe” na org do outro).
+- Cada grupo pode ter settings próprios (se um dia precisar).
+- Modelo parecido com “cada time = uma conta/org”.
+
+**Desvantagens**
+
+- Muitas orgs para criar, convidar alunos e manter.
+- Scripts e docs ficam mais longos (`ELT73A-S22-2026-2-A/LAB05`, …).
+- Template costuma ficar em outra org (`ELT73A-LAB-TPL`) e o fluxo `--template` / permissões complica.
+- Professor perde visão única (issues, Actions, busca de repos).
+- No plano educacional/free, gerenciar dezenas de orgs vira atrito real.
+
+**Faz sentido quando:** grupos são projetos longos, quase independentes, com admins diferentes, ou há requisito formal de isolamento total.
+
+---
+
+### Uma org + times (Grupo-A, Grupo-B, …)
+
+**Vantagens**
+
+- Um só lugar para templates, labs e projeto.
+- Times do GitHub são feitos para isso: membros + permissão em repos.
+- Automação simples (`lab00-grupo-a` … `lab00-grupo-x`).
+- Aluno clona um padrão fixo; professor lista tudo com um `gh repo list`.
+- Fácil conceder `push` só ao time certo.
+- README, CI e componentes Docusaurus ficam estáveis.
+
+**Desvantagens**
+
+- Todos os grupos “moram” na mesma org (nomes de repo precisam ser claros).
+- Se alguém errar permissão e deixar um repo interno/público demais, o isolamento cai — exige disciplina no script (`private` + team `push` só no repo do grupo).
+- Alunos da org podem, em alguns casos, _ver que a org existe_ e listar o que a política da org permitir (repos **privados** de outro time continuam inacessíveis sem permissão).
+
+**Faz sentido quando:** turma de disciplina, vários labs, mesmo professor, automação e templates — **o seu cenário**.
+
+---
+
+### Isolamento de verdade (o que importa na prática)
+
+O que impede o Grupo B de ver o código do Grupo A **não é** “org separada” por si só; é:
+
+1. Repositório **private**
+2. Time **só do grupo** com acesso (`push` / `pull`)
+3. Alunos **não** serem owners da org
+4. Scripts que nunca adicionam o time errado
+
+Com isso, **1 org + times** isola tão bem quanto N orgs para uso acadêmico normal.
+
+---
+
+### Recomendação para ELT73A / S22
+
+| Escolha                  | Recomendação                                                        |
+| ------------------------ | ------------------------------------------------------------------- |
+| **Padrão da disciplina** | **1 organização** `ELT73A-S22-2026-2` + times `Grupo-A` … `Grupo-X` |
+| Repos                    | `lab00-template`, `lab00-grupo-a`, …, `projeto-grupo-a`             |
+| Alunos                   | Membros do time; **não** owners                                     |
+| Templates                | Na mesma org, marcados como template                                |
+| Docs (Docusaurus)        | Componente com abas por grupo, como o `LabTeamMembers`              |
+
+Use **1 org por grupo** só se houver regra institucional de isolamento extremo ou cada grupo for um “mini-projeto” com gestão própria o semestre inteiro.
+
+---
+
+### Resumo em uma frase
+
+**Para laboratórios de uma turma: uma org com times é melhor** — menos trabalho, melhor automação, templates simples e isolamento suficiente com repos privados. **Uma org por grupo** só compensa se o isolamento administrativo total valer o custo operacional.

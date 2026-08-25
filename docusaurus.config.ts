@@ -171,6 +171,14 @@ const config: Config = {
   // ... rest of your config
 
   themeConfig: {
+    announcementBar: {
+      id: 'migration_stm32_to_esp32', // Mude este ID para forçar a reexibição se o usuário já tiver fechado
+      content:
+        '⚠️ <strong>Aviso de Migração:</strong> O kit de desenvolvimento do curso migrou do <strong>STM32F411 (Black Pill)</strong> para o <strong>ESP32-DevKitC</strong>. Novo repositório: <a href="https://ruseleredu.github.io/mic-docs/">ESP32</a>.',
+      backgroundColor: '#fff3cd', // Fundo amarelo claro (estilo aviso)
+      textColor: '#856404',       // Texto escuro proporcional
+      isCloseable: true,         // Permite ao usuário fechar a barra
+    },
     // Replace with your project's social card
     image: "img/ELT73A-BannerCourse.png",
     navbar: {
